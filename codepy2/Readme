@@ -22,8 +22,9 @@ Database creation:
   1) go in the impactor/resultat folder e.g. electron/resultat
   2) type ../../code/maketex.py
   3) the images for the different processes are created automatically
-  4) in paper/Electron.tex check that all the tex files automatically created in the resultat folder are there
-
+  4) do that for electron, photon, proton..
+  5) in paper/Electron.tex (etc) check that all the tex files automatically created in the resultat folder are there
+  6) in paper, type make (if latex is installed on your computer), that will create the pdf
 
 * TODO curing the database:
 --  check if all the papers cited in the files are present in the bibtex
