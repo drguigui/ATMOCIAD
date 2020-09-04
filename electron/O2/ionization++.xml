@@ -1,0 +1,78 @@
+<crs>
+	<Name>O2</Name>
+	<Collider>e</Collider>
+	<!-- Old version for that one -->
+	<title> O$_2$  + e $\rightarrow$ O${_{2}}{^{++}}$</title>
+	<Emin>10</Emin>
+	<Emax>100000</Emax>
+	<Cmax>3E-18</Cmax>
+	<Cmin>3E-21</Cmin>
+	<plotname>seff_O2_e_O2pp.pdf</plotname>
+	<Process name="O2+e->O2++" electrons="2" ions="1" threshold="36.13">
+		<legend>Old BDD </legend>
+		<Proc>O2++</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes> Probably from Rees </Notes>
+		<Species>
+			<Specie name="O2++" state="X"/>
+		</Species>
+		<Ionization/>
+		<Egrid unit="eV">
+			1.250E+01   1.350E+01   1.450E+01   1.550E+01   1.650E+01
+			1.750E+01   1.850E+01   1.950E+01   2.000E+01   2.075E+01
+			2.150E+01   2.225E+01   2.300E+01   2.500E+01   3.500E+01
+			5.000E+01   7.000E+01   9.000E+01   1.200E+02   1.600E+02
+			2.100E+02   2.700E+02   3.500E+02   4.500E+02   6.000E+02
+			8.000E+02   1.100E+03   1.500E+03   2.100E+03   2.900E+03
+			4.100E+03   5.700E+03   8.100E+03   1.130E+04   1.610E+04
+			2.250E+04   3.210E+04   4.490E+04   6.410E+04   8.970E+04
+		</Egrid>
+		<Cross unit="cm2" fact="0.005">
+			1.000E-18   3.560E-18   6.840E-18   1.030E-17   1.490E-17
+			1.970E-17   2.360E-17   2.830E-17   3.100E-17   3.440E-17
+			3.820E-17   4.230E-17   4.700E-17   6.200E-17   1.160E-16
+			1.900E-16   2.400E-16   2.600E-16   2.740E-16   2.640E-16
+			2.360E-16   2.110E-16   1.840E-16   1.580E-16   1.310E-16
+			1.070E-16   8.480E-17   6.700E-17   5.140E-17   4.020E-17
+			3.120E-17   2.370E-17   1.740E-17   1.300E-17   1.000E-17
+			7.750E-18   5.840E-18   4.210E-18   2.580E-18   1.340E-18
+		</Cross>
+	</Process>
+
+	<Process name="O2+e->O2++" electrons="2" ions="1" threshold="36.13">
+		<Ionization/>
+		<Species>
+			<Specie name="(O+ + O2++)" state="X"/>
+		</Species>
+		<Proc>O2++</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<legend>O2++ Straub with bratio</legend>
+		<Source type="adaptation">Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes>Straub + branching ratio BDD</Notes>
+		<Egrid unit="eV">
+			1.300000e+01	  1.550000e+01	  1.800000e+01	  2.300000e+01	  2.800000e+01
+			3.300000e+01	  3.800000e+01	  4.300000e+01	  4.800000e+01	  5.300000e+01
+			5.800000e+01	  6.300000e+01	  6.800000e+01	  7.300000e+01	  7.800000e+01
+			8.300000e+01	  8.800000e+01	  9.300000e+01	  9.800000e+01	  1.080000e+02
+			1.180000e+02	  1.380000e+02	  1.580000e+02	  1.780000e+02	  1.980000e+02
+			2.230000e+02	  2.480000e+02	  2.730000e+02	  2.980000e+02	  3.480000e+02
+			3.980000e+02	  4.480000e+02	  4.980000e+02	  5.480000e+02	  5.980000e+02
+			6.480000e+02	  6.980000e+02	  7.480000e+02	  7.980000e+02	  8.480000e+02
+			8.980000e+02	  9.480000e+02	  9.980000e+02
+		</Egrid>
+		<Cross unit="cm2" fact="0.015" uncertainty="40%" >
+			0.000000e+00	  0.000000e+00	  0.000000e+00	  1.670000e-18	  7.810000e-18
+			1.690000e-17	  2.580000e-17	  3.330000e-17	  4.190000e-17	  4.900000e-17
+			5.530000e-17	  6.210000e-17	  6.790000e-17	  7.170000e-17	  7.510000e-17
+			8.010000e-17	  8.270000e-17	  8.550000e-17	  8.710000e-17	  9.000000e-17
+			9.100000e-17	  9.130000e-17	  9.050000e-17	  8.910000e-17	  8.640000e-17
+			8.300000e-17	  7.940000e-17	  7.550000e-17	  7.210000e-17	  6.590000e-17
+			6.110000e-17	  5.620000e-17	  5.260000e-17	  4.870000e-17	  4.570000e-17
+			4.320000e-17	  4.150000e-17	  3.880000e-17	  3.690000e-17	  3.550000e-17
+			3.360000e-17	  3.260000e-17	  3.170000e-17
+		</Cross>
+	</Process>
+
+
+</crs>

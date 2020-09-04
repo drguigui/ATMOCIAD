@@ -1,0 +1,46 @@
+<crs>
+	<Name>H2</Name>
+	<Collider>e</Collider>
+	<title>H$_2$  + e $\rightarrow$ H$_2$(rot)</title>
+	<Emin>0.10</Emin>
+	<Emax>100</Emax>
+	<Cmax>1E-16</Cmax>
+	<Cmin>5E-19</Cmin>
+	<plotname>seff_H2_e_rot.pdf</plotname>
+
+
+
+	<Process name="H2+e -> H2(rot)" electrons="0" threshold="0.001">
+			<Species>
+				<Specie name="H2" state="rot"/>
+			</Species>
+			<legend>H2(rot)</legend>
+			<Proc>H2(rot)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Estimated uncertainty| from Helene</Notes>
+			<Recommended/>
+			<Extrapolated/>
+			<Excitation/>
+			<Egrid unit="eV">
+				4.670E-02 5.000E-02 5.350E-02 5.720E-02 6.130E-02 6.560E-02 7.020E-02
+				7.510E-02 8.040E-02 8.610E-02 9.210E-02 9.860E-02 1.055E-01 1.129E-01
+				1.208E-01 1.293E-01 1.407E-01 1.667E-01 1.975E-01 2.339E-01 2.771E-01
+				3.283E-01 3.889E-01 4.607E-01 5.457E-01 6.465E-01 7.660E-01 9.075E-01
+				1.075E+00 1.274E+00 1.509E+00 1.788E+00 2.118E+00 2.509E+00 2.972E+00
+				3.520E+00 3.962E+00 4.693E+00 5.557E+00 6.581E+00 7.794E+00 9.229E+00
+				1.093E+01 1.294E+01 1.532E+01 1.814E+01 2.148E+01 2.543E+01 3.011E+01
+				3.566E+01 4.223E+01 5.001E+01 5.922E+01 7.013E+01 8.304E+01 9.669E+01
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+				4.726E-19 6.930E-19 8.555E-19 9.782E-19 1.140E-18 1.231E-18 1.435E-18
+				1.986E-18 2.803E-18 3.395E-18 3.736E-18 4.112E-18 4.439E-18 4.792E-18
+				5.076E-18 5.274E-18 5.586E-18 6.637E-18 7.590E-18 8.679E-18 1.012E-17
+				1.179E-17 1.374E-17 1.664E-17 2.016E-17 2.442E-17 3.072E-17 3.793E-17
+				4.682E-17 5.780E-17 7.135E-17 8.808E-17 1.047E-16 1.152E-16 1.244E-16
+				1.292E-16 1.244E-16 1.244E-16 1.175E-16 1.088E-16 1.008E-16 8.818E-17
+				7.863E-17 6.494E-17 5.261E-17 4.345E-17 3.729E-17 3.139E-17 2.746E-17
+				2.448E-17 2.183E-17 1.984E-17 1.803E-17 1.639E-17 1.489E-17 1.380E-17
+			</Cross>
+		</Process>
+</crs>

@@ -1,0 +1,101 @@
+<crs>
+	<Name>CH4</Name>
+	<Collider>ph</Collider>
+
+	<title> CH$_4$  + $\lambda \rightarrow$ CH${_{3}}{^{+}}$ + H + e</title>
+	<Emin>14</Emin>
+	<Emax>1000</Emax>
+	<Cmax>5E-17</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CH4_ph_CH3p.pdf</plotname>
+	<lambplotname>seff_CH4_ph_CH3p_lambda.pdf</lambplotname>
+	<CH4>
+		<Process name="CH4+hv->CH3+" electrons="1" threshold="14.">
+			<Species>
+				<Specie name="CH3+" state="X"/>
+				<Specie name="H" state="X"/>
+			</Species>
+			<legend>CH$_3$$^+$ (BDD)</legend>
+			<Proc>CH$_3$$^+$ + H + e</Proc>
+			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted Torr ? origin, avakyan? </Notes>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<texnote title="CH$_3$$^+$ (BDD)">
+				Original source unknown. In the BDD review. It is probable a branching ratio from the simple ionization.
+				The data, in nm, have been adapted in eV from the Torr boxes.
+			</texnote>
+	
+			<Emin>15</Emin>
+			<Emax>532</Emax>
+			<Egrid unit="eV">
+			     15.042245	     15.706927	     16.014699
+			     16.093275	     16.203908	     17.121579	     17.628670	     18.393372
+			     19.688470	     19.869263	     20.333279	     21.218182	     21.603422
+			     22.364883	     23.669689	     26.174675	     26.650660	     29.274007
+			     33.210350	     33.684951	     38.375696	     40.813813	     40.877056
+			     43.633363	     45.460419	     48.374639	     55.793448	     72.323514
+			    103.320167	    185.967002	    330.624533	    532.807048
+			</Egrid>
+			<Cross unit="cm2">
+			  1.400000e-17	  1.990000e-17	  2.100000e-17
+			  2.120000e-17	  2.140000e-17	  2.040000e-17	  1.960000e-17	  1.850000e-17
+			  1.700000e-17	  1.680000e-17	  1.630000e-17	  1.550000e-17	  1.500000e-17
+			  1.420000e-17	  1.260000e-17	  9.500000e-18	  9.030000e-18	  6.870000e-18
+			  4.570000e-18	  4.370000e-18	  2.820000e-18	  2.310000e-18	  2.300000e-18
+			  1.790000e-18	  1.570000e-18	  1.310000e-18	  7.240000e-19	  1.740000e-19
+			  3.810000e-20	  7.880000e-21	  3.330000e-21	  2.190000e-21
+			</Cross>
+		</Process>
+		<Process name="CH4+hv->CH3+" electrons="1" threshold="14.">
+			<Species>
+				<Specie name="CH3+" state="X"/>
+				<Specie name="H" state="X"/>
+			</Species>
+			<legend>CH$_3$$^+$ (AMOP)</legend>
+			<Proc>CH$_3$$^+$ + H + e</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website. Estimate of uncertainty</Notes>
+			<EstimatedUncertainty/>
+			<Recommended/>
+			<texnote title="CH$_3$$^+$ (AMOP)">
+				Photoionization of CH$_4$ yielding CH$_3^+$ + H + e from the review of AMOP.
+				The uncertainty, not claimed by the review, is estimated at 30\%.
+				The data, in nm, have been directly adapted in eV.
+			</texnote>
+			<Emin>14.4</Emin>
+			<Emax>12400</Emax>
+			<Egrid unit="eV">
+			     14.445322	     14.576087
+			     14.693553	     14.760024	     14.884058	     14.992044	     15.382655
+			     15.562219	     16.039353	     16.116496	     16.228298	     16.610959
+			     17.255978	     17.750064	     18.010488	     18.078769	     18.249073
+			     18.461018	     18.466518	     18.731561	     18.776950	     19.454605
+			     19.701923	     20.117508	     20.520391	     20.677819	     21.350818
+			     21.573725	     22.339495	     23.002635	     23.235420	     23.415335
+			     23.580107	     24.387136	     26.101937	     26.976545	     27.430133
+			     28.567788	     29.604632	     33.150856	     34.155427	     34.593806
+			     40.824564	     44.598633	     49.593680	     78.471013	    123.984200
+			    196.800317	    290.361124	    309.960500	     311.518090	    392.355063
+			    525.356780	  12398.420000
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+			   9.220000e-18	  1.120000e-17
+			  1.330000e-17	  1.310000e-17	  1.560000e-17	  1.710000e-17	  1.980000e-17
+			  2.100000e-17	  2.250000e-17	  2.120000e-17	  2.350000e-17	  2.050000e-17
+			  2.080000e-17	  1.880000e-17	  2.010000e-17	  1.960000e-17	  1.800000e-17
+			  1.970000e-17	  1.880000e-17	  1.770000e-17	  1.820000e-17	  1.760000e-17
+			  1.760000e-17	  1.710000e-17	  1.490000e-17	  1.570000e-17	  1.390000e-17
+			  1.480000e-17	  1.240000e-17	  1.220000e-17	  1.030000e-17	  1.050000e-17
+			  1.150000e-17	  1.110000e-17	  9.290000e-18	  8.460000e-18	  9.040000e-18
+			  7.270000e-18	  7.440000e-18	  5.470000e-18	  3.990000e-18	  4.710000e-18
+			  1.400000e-18	  1.350000e-18	  1.200000e-18	  3.620000e-19	  9.230000e-20
+			  3.460000e-20	  1.290000e-20	  2.870000e-19	  2.190000e-19	  1.140000e-19
+			  5.490000e-20	  2.000000e-22
+			</Cross>
+		</Process>
+
+	</CH4>
+</crs>
+
+

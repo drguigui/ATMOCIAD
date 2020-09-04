@@ -1,0 +1,29 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+	<title>O + e $\rightarrow$ O(3s  $^3$P)</title>
+	<Emin>10</Emin>
+	<Emax>2000</Emax>
+	<Cmax>3E-17</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_O_e_3s3P.pdf</plotname>
+	<Process name="O+e->O(3s''3P)" electrons="0" threshold="14.">
+		<Species>
+			<Specie name="O" state="(3s'')3P"/>
+		</Species>
+		<legend>(3s'')3P Majeed</legend>
+		<Proc>O(3s"-3P)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Majeed 95</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			16	18	20	25	30
+			50	100	200	500	1000
+		</Egrid>
+		<Cross unit="cm2" fact="1E-17">
+			0.035	0.084	0.137	0.360	0.632
+			1.1	0.794	0.4	0.114	0.039
+		</Cross>
+	</Process>
+</crs>

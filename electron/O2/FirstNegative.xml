@@ -1,0 +1,45 @@
+<crs>
+	<Name>O2</Name>
+	<Collider>e</Collider>
+	<title> O$_2$  + e $\rightarrow$ O${_{2}}{^{+}}$(First Negative emission)</title>
+	<Emin>10</Emin>
+	<Emax>1000</Emax>
+	<Cmax>3E-18</Cmax>
+	<Cmin>8E-19</Cmin>
+	<plotname>seff_O2_e_O2pfirstneg.pdf</plotname>
+	<Process name="O2+e->O2+(FirstNegative)" electrons="1" threshold="19">
+		<legend>O2+ Itikawa</legend>
+		<Proc>O2+</Proc> <!-- Name for the processus -->
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review</Notes>
+		<Species>
+			<Specie name="O2+" state="FirstNegative"/>
+		</Species>
+		<Emission/>
+		<Egrid unit="eV">
+			19 20 22 25 30
+			35 40 50 60 70
+			80 90 100 120 140
+			160 180 200 220 240
+			260 280 300 325 350
+			375 400
+		</Egrid>
+		<Cross unit="cm2" fact="1E-18" uncertainty="24%">
+			1.5 1.84 4.03 7.00 11.5 
+			15.6 19.6 24.6 28.7 29.8 
+			31.1 30.1 32.1 31.6 29.2 
+			28.7 26.2 26.8 26.5 25.2 
+			23.0 24.7 21.8 21.7 23.4 
+			22.5 20.8 
+		</Cross>
+		<!--
+		     b4Sg- -> a4Pu
+			Terrel et al. 2004:
+		Ratio:
+			5631.9 ang: 8.9 / 32.1
+			5295.7 ang: 3 / 32.1
+			6026.4 ang: 5.31 / 32.1		
+		-->
+	</Process>
+</crs>

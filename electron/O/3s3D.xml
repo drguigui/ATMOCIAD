@@ -1,0 +1,134 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+	<title>O + e $\rightarrow$ O(3s  $^3$D)</title>
+	<Emin>10</Emin>
+	<Emax>100000</Emax>
+	<Cmax>1E-16</Cmax>
+	<Cmin>1E-20</Cmin>
+	<plotname>seff_O_e_3s3D.pdf</plotname>
+	<Process name="O+e->O(3S3D)" electrons="0" threshold="15.">
+		<Species>
+			<Specie name="O" state="(3S)3D"/>
+		</Species>
+		<legend>(3S)3D BDD</legend>
+		<Excitation/>
+		<Proc>O((3S)3D)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes> Probably from Rees </Notes>
+		<Egrid unit="eV">
+			1.550E+01   1.650E+01   1.750E+01   1.850E+01   1.950E+01
+			2.000E+01   2.075E+01   2.150E+01   2.225E+01   2.300E+01
+			2.500E+01   3.500E+01   5.000E+01   7.000E+01   9.000E+01
+			1.200E+02   1.600E+02   2.100E+02   2.700E+02   3.500E+02
+			4.500E+02   6.000E+02   8.000E+02   1.100E+03   1.500E+03
+			2.100E+03   2.900E+03   4.100E+03   5.700E+03   8.100E+03
+			1.130E+04   1.610E+04   2.250E+04   3.210E+04   4.490E+04
+			6.410E+04   8.970E+04
+		</Egrid>
+		<Cross unit="cm2">
+			6.000E-20   2.600E-19   6.710E-19   1.230E-18   1.870E-18
+			2.300E-18   2.680E-18   3.130E-18   3.650E-18   4.250E-18
+			6.400E-18   1.220E-17   1.700E-17   1.800E-17   1.770E-17
+			1.650E-17   1.460E-17   1.270E-17   1.100E-17   9.480E-18
+			8.040E-18   6.620E-18   5.360E-18   4.280E-18   3.500E-18
+			2.720E-18   2.160E-18   1.750E-18   1.390E-18   1.070E-18
+			8.300E-19   6.340E-19   5.030E-19   4.020E-19   3.140E-19
+			2.170E-19   1.320E-19
+		</Cross>
+	</Process>
+
+	<Process name="O+e->O(3S3D)" electrons="0" threshold="12.53">
+		<Species>
+			<Specie name="O" state="(3S)3D"/>
+		</Species>
+		<legend>(3S)3D Majeed</legend>
+		<Excitation/>
+		<Proc>O((3S)3D)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Majeed 95</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Recommended/>
+		<Notes> Review </Notes>
+		<Egrid unit="eV">
+			13	14	16	18	20
+			25	30	50	100	200
+			500	1000
+		</Egrid>
+		<Cross unit="cm2" fact="1E-17">
+			0.014	0.028	0.057	0.120	0.187
+			0.415	0.532	0.642	0.470	0.288
+			0.133	0.070
+		</Cross>
+	</Process>
+
+	<Process name="O+e->O(3S3D)" electrons="0" threshold="15.">
+		<Species>
+			<Specie name="O" state="(3S)3D"/>
+		</Species>
+		<legend>(3S)3D laher</legend>
+		<Excitation/>
+		<Proc>O((3S)3D)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Laher 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Egrid unit="eV">
+			13	13.5	14	14.5	15
+			16	17	18	19	20
+			22	25	28	30	35
+			40	45	50	55	60	
+			70	100	150	200	500	
+			1000	2000	5000	10000
+
+		</Egrid>
+		<Cross unit="cm2" fact="1E-18">
+			0.05	0.24	1.08	2.47	3.56
+			5.10	5.52	5.61	5.50	5.41
+			5.09	4.88	4.95	5.07	5.64
+			5.85	5.98	5.87	5.58	5.33
+			4.93	4.48	4.00	2.67	1.65
+			1.05	0.63	0.31	0.18
+		</Cross>
+	</Process>
+	<Process name="O+e->O(3S3D)" electrons="0" threshold="15.">
+		<Species>
+			<Specie name="O" state="(3S)3D"/>
+		</Species>
+		<legend>989A emission Zipf Erdman 85 </legend>
+		<Excitation/>
+		<Proc>O((3S)3D)</Proc>
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		
+		<Source type="measurement">Zipf Erdman 85</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Emission (3S)3D at 989 A </Notes>
+		<Egrid unit="eV">
+			15	20	25	30	35
+			40	45	50	60	70
+			80	90	100	125	150
+			175	200	225	250	275
+			300
+		</Egrid>
+		<Cross unit="cm2" fact="1E-17">
+			0.37	0.966	1.20	1.33	1.39
+			1.42	1.44	1.45	1.44	1.42
+			1.40	1.38	1.35	1.29	1.21
+			1.14	1.08	1.01	0.958	0.898
+			0.839
+		</Cross>
+	</Process>
+	<!--
+	<Process name="O+e->O(3S3D)" electrons="0" threshold="15.">
+		<Species>
+			<Specie name="O" state="(3S)3D"/>
+		</Species>
+		<legend>(3S)3D BDD</legend>
+		<Excitation/>
+		<Egrid unit="eV">
+		</Egrid>
+		<Cross unit="cm2">
+		</Cross>
+	</Process>
+	-->
+
+
+</crs>

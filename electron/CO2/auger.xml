@@ -1,0 +1,78 @@
+<crs>
+	<Name>CO2</Name>
+	<Collider>e</Collider>
+	<title>CO$_2$ + e $\rightarrow$ CO${_2}{^{++}}$(Auger)</title>
+	<Emin>300</Emin>
+	<Emax>1E5</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CO2_e_auger.pdf</plotname>
+	<explotname>seff_CO2_e_augerextr.pdf</explotname>
+	<CO2>
+<!--
+		K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006
+		and corresponds to the CH4 ratio
+		the ionization rate, wich was x by the ratio, comes from Shirai 2001
+		the ratio, defined between 400 and 5 KeV, was extrapolated (as a limit!)
+		the production ratio were computed on the basis of the K Shell photoionization
+		the auger energy and production is a barycenter of the energy and production of C and O
+		-->
+		<Process name="CO2 + e -> .45 x CO2++(KSHELL) 0.55 x CO2+(X) 0.55 x Fluo-auger(X) "  electrons="1" threshold="539">
+			<Ionization/>
+			<Species>
+				<Specie name="CO2++" state="X-KSHELL" number=".45"/>
+				<Specie name="CO2+" state="X" number="0.55"/>
+				<Specie name="Fluo-auger" state="Total-CO2" number="0.55"/>
+			</Species>
+			<Proc>CO2++(Auger)</Proc>
+			<legend>CO2++(Auger) - adaptation</legend>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Fremont 2006 + Shirai 2001+Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2001+Straub</Notes>
+			<EstimatedUncertainty/>
+			<Recommended/>
+			<Extrapolated/>
+
+			<texnote title="Notes for CO$_2^{++}$ K-Shell ionization, Fr\'emont 2006 + Straub 2004 + Shirai 2001">The K-Shell ionization of CO$_2$ by electron impact has not been studied in \cite{Fremont2006}, but we assumed that the K-Shell/single ionization ratio is close to the CH$_4$ one which is used here.
+				The total cross section has been computed by multiplying this ratio by the recommended ionization cross section, coming from \cite{Straub2004} and \cite{Shirai2001}.</texnote>
+			<Auger energy="335" fact=".45"/>
+			<Egrid unit="eV">
+				1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
+				6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04
+				4.62417256e+04   4.19914652e+04   3.81318035e+04   3.46268443e+04
+				3.14439907e+04   2.85536410e+04   2.59289143e+04   2.35453997e+04
+				2.13809300e+04   1.94153748e+04   1.76304540e+04   1.60095673e+04
+				1.45376400e+04   1.32009826e+04   1.19871640e+04   1.08848952e+04
+				9.88392484e+03   8.97494356e+03   8.14949759e+03   7.39991005e+03
+				6.71920954e+03   6.10106535e+03   5.53972857e+03   5.02997859e+03
+				4.56707460e+03   4.14671144e+03   3.76497963e+03   3.41832894e+03
+				3.10353543e+03   2.81767141e+03   2.55807828e+03   2.32234173e+03
+				2.10826935e+03   1.91387021e+03   1.73733634e+03   1.57702591e+03
+				1.43144800e+03   1.29924869e+03   1.17919848e+03   1.07018088e+03
+				9.71181989e+02   8.81281088e+02   7.99642073e+02   7.25505676e+02
+				6.58182409e+02   5.97046145e+02   5.41528299e+02   4.91112538e+02
+				4.45329982e+02   4.03754840e+02   3.66000449e+02   3.31715685e+02
+				3.00581687e+02
+			</Egrid>
+			<Cross unit="cm2" uncertainty="50%" >
+				1.14681254e-20   1.24949199e-20   1.36119258e-20   1.48268564e-20
+				1.61480570e-20   1.75845525e-20   1.91460989e-20   2.08432370e-20
+				2.26873502e-20   2.46907250e-20   2.68666152e-20   2.92293091e-20
+				3.17942007e-20   3.45778634e-20   3.75981271e-20   4.08741584e-20
+				4.44265427e-20   4.82773693e-20   5.24503173e-20   5.69707431e-20
+				6.18657675e-20   6.71643617e-20   7.28974316e-20   7.90978975e-20
+				8.58007686e-20   9.30432090e-20   1.00864594e-19   1.09306551e-19
+				1.18412984e-19   1.28230080e-19   1.38806281e-19   1.50192231e-19
+				1.62904314e-19   1.78287665e-19   1.91311114e-19   2.04248016e-19
+				2.17760137e-19   2.34481895e-19   2.52785508e-19   2.72126211e-19
+				2.85838675e-19   3.02534087e-19   3.20996561e-19   3.32239553e-19
+				3.45754475e-19   3.55786665e-19   3.58217877e-19   3.62716738e-19
+				3.61801771e-19   3.56400797e-19   3.46187773e-19   3.35008053e-19
+				3.14512613e-19   2.92986896e-19   2.59120654e-19   2.22093288e-19
+				1.81526794e-19   1.39539680e-19   9.01926663e-20   3.42246021e-20
+				1.05441310e-20
+			</Cross>
+		</Process>
+	</CO2>
+
+</crs>

@@ -1,0 +1,120 @@
+<CO>
+	<Name>CO</Name>
+	<Collider>e</Collider>
+	<title>CO + e $\rightarrow$ CO${^{++}}$(Auger)</title>
+	<Emin>300</Emin>
+	<Emax>1E5</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CO_e_auger.pdf</plotname>
+	<Process name="CO + e -> .52 x CO++(X-KSHELL) 0.48 x CO+(X) 0.48 x Fluo-auger(X-O) "  electrons="1" threshold="410">
+		<Ionization/>
+		<legend>Auger with Straub CO+ (recommended)</legend>
+		<Species>
+			<Specie name="CO++" state="X-O-KSHELL" number=".52"/>
+			<Specie name="CO+" state="X" number="0.48"/>
+			<Specie name="Fluo-auger" state="X-CO" number="0.52"/>
+		</Species>
+
+		<Proc>CO++(Auger)</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Fremont 2006 + Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Straub</Notes>
+		<EstimatedUncertainty/>
+		<Recommended/>
+		<Extrapolated/>
+
+		<texnote title="Notes for CO$^{++}$ K-Shell ionization, Fr\'emont 2006 + Straub2004">The K-Shell ionization of CO by electron impact has not been studied in \cite{Fremont2006}, but we assumed that the K-Shell/single ionization ratio is close to the CH$_4$ one which is used here.
+		 The total cross section has been computed by multiplying this ratio by the recommended ionization cross section, coming from \cite{Straub2004}.</texnote>
+		<Auger energy="330" fact=".52"/>
+		<Egrid unit="eV">
+			1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
+			6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04
+			4.62417256e+04   4.19914652e+04   3.81318035e+04   3.46268443e+04
+			3.14439907e+04   2.85536410e+04   2.59289143e+04   2.35453997e+04
+			2.13809300e+04   1.94153748e+04   1.76304540e+04   1.60095673e+04
+			1.45376400e+04   1.32009826e+04   1.19871640e+04   1.08848952e+04
+			9.88392484e+03   8.97494356e+03   8.14949759e+03   7.39991005e+03
+			6.71920954e+03   6.10106535e+03   5.53972857e+03   5.02997859e+03
+			4.56707460e+03   4.14671144e+03   3.76497963e+03   3.41832894e+03
+			3.10353543e+03   2.81767141e+03   2.55807828e+03   2.32234173e+03
+			2.10826935e+03   1.91387021e+03   1.73733634e+03   1.57702591e+03
+			1.43144800e+03   1.29924869e+03   1.17919848e+03   1.07018088e+03
+			9.71181989e+02   8.81281088e+02   7.99642073e+02   7.25505676e+02
+			6.58182409e+02   5.97046145e+02   5.41528299e+02   4.91112538e+02
+			4.45329982e+02   4.03754840e+02
+		</Egrid>
+		<Cross unit="cm2" uncertainty="50%" >
+			1.69629281e-20   1.81152111e-20   1.93457776e-20   2.06599477e-20
+			2.20634034e-20   2.35622130e-20   2.51628580e-20   2.68722606e-20
+			2.86978142e-20   3.06474156e-20   3.27294992e-20   3.49530736e-20
+			3.73277615e-20   3.98638407e-20   4.25722902e-20   4.54648370e-20
+			4.85540085e-20   5.18531868e-20   5.53766674e-20   5.91397228e-20
+			6.31586689e-20   6.74509377e-20   7.20351540e-20   7.69312184e-20
+			8.21603954e-20   8.77454086e-20   9.37105421e-20   1.00081750e-19
+			1.06886771e-19   1.14155260e-19   1.21918915e-19   1.30211628e-19
+			1.39466561e-19   1.50799597e-19   1.59947974e-19   1.68883543e-19
+			1.78173888e-19   1.89964049e-19   2.02902324e-19   2.16556667e-19
+			2.25683922e-19   2.37172523e-19   2.50065723e-19   2.57421600e-19
+			2.66687064e-19   2.73458318e-19   2.74644545e-19   2.77714486e-19
+			2.76965666e-19   2.73130171e-19   2.65954081e-19   2.58369634e-19
+			2.42833290e-19   2.26267834e-19   2.00511510e-19   1.72448739e-19
+			1.41447432e-19   1.09345374e-19 
+
+		</Cross>
+	</Process>
+
+	<Process name="CO + e -> .52 x CO++(X-KSHELL) 0.48 x CO+(X) 0.48 x Fluo-auger(X-O) "  electrons="1" threshold="410">
+		<Ionization/>
+		<legend>Auger with Shirai CO+</legend>
+		<Species>
+			<Specie name="CO++" state="X-O-KSHELL" number=".52"/>
+			<Specie name="CO+" state="X" number="0.48"/>
+			<Specie name="Fluo-auger" state="X-CO" number="0.52"/>
+		</Species>
+		<Auger energy="330" fact=".52"/>
+		<Proc>CO++(Auger)</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Fremont 2006 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2002</Notes>
+		<EstimatedUncertainty/>
+		<texnote title="Notes for CO$^{++}$ K-Shell ionization, Fr\'emont 2006 + Shirai2002">The K-Shell ionization of CO by electron impact has not been studied in \cite{Fremont2006}, but we assumed that the K-Shell/single ionization ratio is close to the CH$_4$ one which is used here.
+		 The total cross section has been computed by multiplying this ratio by the ionization cross section, coming from \cite{Shirai2002}.</texnote>
+		<Extrapolated/>
+		<Egrid unit="eV">
+			1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
+			6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04
+			4.62417256e+04   4.19914652e+04   3.81318035e+04   3.46268443e+04
+			3.14439907e+04   2.85536410e+04   2.59289143e+04   2.35453997e+04
+			2.13809300e+04   1.94153748e+04   1.76304540e+04   1.60095673e+04
+			1.45376400e+04   1.32009826e+04   1.19871640e+04   1.08848952e+04
+			9.88392484e+03   8.97494356e+03   8.14949759e+03   7.39991005e+03
+			6.71920954e+03   6.10106535e+03   5.53972857e+03   5.02997859e+03
+			4.56707460e+03   4.14671144e+03   3.76497963e+03   3.41832894e+03
+			3.10353543e+03   2.81767141e+03   2.55807828e+03   2.32234173e+03
+			2.10826935e+03   1.91387021e+03   1.73733634e+03   1.57702591e+03
+			1.43144800e+03   1.29924869e+03   1.17919848e+03   1.07018088e+03
+			9.71181989e+02   8.81281088e+02   7.99642073e+02   7.25505676e+02
+			6.58182409e+02   5.97046145e+02   5.41528299e+02   4.91112538e+02
+			4.45329982e+02   4.03754840e+02  
+		</Egrid>
+		<Cross unit="cm2" uncertainty="50%" >
+			4.06813664e-21   4.47677496e-21   4.92639960e-21   5.42110749e-21
+			5.96540187e-21   6.56423185e-21   7.22303564e-21   7.94778780e-21
+			8.74505072e-21   9.62203081e-21   1.05866396e-20   1.16475603e-20
+			1.28143198e-20   1.40973669e-20   1.55081568e-20   1.70592425e-20
+			1.87643724e-20   2.06385962e-20   2.26983767e-20   2.49617101e-20
+			2.74482524e-20   3.01794533e-20   3.31786958e-20   3.64714410e-20
+			4.00853773e-20   4.40505716e-20   4.83996195e-20   5.31677934e-20
+			5.83931822e-20   6.41168196e-20   7.03827929e-20   7.72383267e-20
+			8.49756734e-20   9.43417246e-20   1.02702598e-19   1.11247313e-19
+			1.20344097e-19   1.31488029e-19   1.43835369e-19   1.57114342e-19
+			1.67448644e-19   1.79812568e-19   1.93546987e-19   2.03196819e-19
+			2.14454352e-19   2.23749281e-19   2.28353672e-19   2.34304371e-19
+			2.36743234e-19   2.36134827e-19   2.32138050e-19   2.27237818e-19
+			2.15680810e-19   2.03005802e-19   1.81289062e-19   1.56791931e-19
+			1.29225416e-19   1.00096686e-19   
+		</Cross>
+	</Process>
+
+</CO>

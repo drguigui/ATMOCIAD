@@ -1,0 +1,90 @@
+<crs>
+	<Name>N2</Name>
+	<Collider>e</Collider>
+	<title> N$_2$  + e $\rightarrow$ N${_2}{a'^{1}S_u-}$</title>
+	<Emin>7</Emin>
+	<Emax>1200</Emax>
+	<Cmax>2E-17</Cmax>
+	<Cmin>1E-20</Cmin>
+	<plotname>seff_N2_e_ap1su-.pdf</plotname>
+	<Process name="a'1Su-" electrons="0" threshold="8.400000">
+		<Excitation/>
+		<Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+		<Species>
+			<Specie name="N2" state="a'1Su-"/>
+		</Species>
+		<legend>Tabata</legend>
+		<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Extrapolated/>
+		<Notes>Review of  Tabata/Shirai. Analytic functions. </Notes>
+		<Proc>N2(a'1Su-)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+
+		<uncertainty>50</uncertainty>
+		<Emin> 11.0 </Emin>
+		<Emax> 1000.0 </Emax>
+		<Equation type="3" article_id="N2" article_number="14"/>
+		<params>
+			6.090000e-01    1.550000e+00    6.230000e-03    2.630000e+00    8.260000e-03
+			2.100000e+00    2.720000e-02    1.061000e+00
+		</params>
+	</Process>
+	<Process name="N2+e->N2(a'1Su-)" electrons="0" threshold="8.399">
+		<Species>
+			<Specie name="N2" state="a'1Su-"/>
+		</Species>
+		<legend>Itikawa</legend>
+		<Proc>N2(a'1Su-)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			9.4	9.5	10	10.5	11	
+			11.5	12	12.5	13	13.5
+			14	14.5	15	15.5	16	
+			16.5	17	17.5	18	18.5
+			19	20	25	30	35	
+			40 45  50  
+		</Egrid>
+		<Cross unit="cm2" fact="1E-16" uncertainty="33%">
+			0.006	0.011	0.031	0.042	0.051
+			0.05	0.069	0.080	0.091	0.101
+			0.11	0.113	0.113	0.107	0.095
+			0.07	0.063	0.056	0.050	0.045
+			0.04	0.034	0.018	0.014	0.012
+			0.01 0.010 0.010 
+		</Cross>
+	</Process>
+	<Process name="N2+e->N2(a'1Su-)" electrons="0" threshold="8.399">
+		<Species>
+			<Specie name="N2" state="a'1Su-"/>
+		</Species>
+		<legend>Recommended for extrapolation</legend>
+		<Proc>N2(a'1Su-)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Itikawa 2006+ Tabata 2006</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>The data of Itikawa have been extrapolated with Tabata 2006, hence the estimated uncertainty</Notes>
+		<EstimatedUncertainty/>
+		<Recommended/>
+		<Extrapolated/>
+		<Excitation/>
+		<Egrid unit="eV">
+			9.4	9.5	10	10.5	11	
+			11.5	12	12.5	13	13.5
+			14	14.5	15	15.5	16	
+			16.5	17	17.5	18	18.5
+			19	20	25	30	35	
+			40 45  50  1E3
+		</Egrid>
+		<Cross unit="cm2" fact="1E-16" uncertainty="33%">
+			0.006	0.011	0.031	0.042	0.051
+			0.05	0.069	0.080	0.091	0.101
+			0.11	0.113	0.113	0.107	0.095
+			0.07	0.063	0.056	0.050	0.045
+			0.04	0.034	0.018	0.014	0.012
+			0.01 0.010 0.010 0.0004
+		</Cross>
+	</Process>
+</crs>
+

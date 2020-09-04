@@ -1,0 +1,29 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+	<title>O + e $\rightarrow$ O(4d  $^3$D)</title>
+	<Emin>10</Emin>
+	<Emax>2000</Emax>
+	<Cmax>3E-18</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_O_e_4d3D.pdf</plotname>
+	<Process name="O+e->O(4d3D)" electrons="0" threshold="12.8">
+		<Species>
+			<Specie name="O" state="(4d)3D"/>
+		</Species>
+		<legend>(4d)3D Majeed</legend>
+		<Proc>O(4d-3D)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Majeed 95</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			13	14	16	20	30
+			50	100	200	500	1000
+		</Egrid>
+		<Cross unit="cm2" fact="1E-17">
+			0.015	0.033	0.057	0.1	0.168
+			0.199	0.128	0.071	0.032	0.018
+		</Cross>
+	</Process>
+</crs>

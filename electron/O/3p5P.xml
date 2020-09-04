@@ -1,0 +1,95 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+	<title>O + e $\rightarrow$ O(3p  $^5$P)</title>
+	<Emin>10</Emin>
+	<Emax>12000</Emax>
+	<Cmax>3E-17</Cmax>
+	<Cmin>1E-27</Cmin>
+	<plotname>seff_O_e_3p5P.pdf</plotname>
+	<Process name="O+e->O(3P-5P)" electrons="0" threshold="10.73">
+		<Species>
+			<Specie name="O" state="(3p)5P"/>
+		</Species>
+		<legend>(3p)5P Laher 1990 (rec)</legend>
+		<Proc>O(3p-5P)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Laher 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Recommended/>
+		<Excitation/>
+		<Egrid unit="eV">
+			11.1	11.3	11.5	12	14
+			16	18	20	22	24
+			26	28	30	35	40
+			45	50	55	60	70
+			100	150	200	500	1000
+			2000	5000	10000
+		</Egrid>
+		<Cross unit="cm2" fact="1E-18" uncertainty="50%">
+			0.22	0.71	1	1.31	2.31
+			2.35	2.23	2.1	1.86	1.61
+			1.18	0.88	0.67	0.42	0.28	
+			0.2	0.14	0.11	0.08	0.05
+			0.018	5E-3	2E-3	1.45E-4	1.81E-5
+			2.26E-6	1.45E-7	1.81E-8
+		</Cross>
+	</Process>
+
+
+	<Process name="O+e->O(3P-5P)" electrons="0" threshold="10.73">
+		<Species>
+			<Specie name="O" state="(3p)5P"/>
+		</Species>
+		<legend>(3p)5P Majeed 95</legend>
+		<Proc>O(3p-5P)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Majeed 95</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			11	12	14	16	20
+			25	30	50	100
+		</Egrid>
+		<Cross unit="cm2" fact="1E-17" uncertainty="50%">
+			0.04	0.134	0.223	0.246	0.194
+			0.115	0.07	0.019	0.002
+		</Cross>
+	</Process>
+	<Process name="O+e->O(3P-5P) emission 777.4nm" electrons="0" threshold="10.">
+		<Species>
+			<Specie name="O" state="5P-777.4nm"/>
+		</Species>
+		<legend>O(5P) EMIT Julienne - Johnson (recommended)</legend>
+		<Proc>O(5P)</Proc>
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Johnson 05 and Julienne 1976 and Lanchester 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> The 777.4nm emission corresponds to ~75% of the O3P emission including cascades (emission cross section).
+			An analysis of the cross section itself shows the a part can be due to 8446; but it is not that important.
+		</Notes>
+		<Recommended/>
+		<Emission/>
+		<Egrid unit="eV">
+			9.51 10 11 12 13
+			14 15 16 17 18
+			19 20 21 22 23
+			24 25 26 28 30
+			32 35 40 45 50
+			60 70 80 90 100
+			120 140 160 180 200
+			250 300 400 500 600
+			800 1000 
+		</Egrid>
+		<Cross unit="cm2" uncertainty="20%" fact=".75E-18">
+			0 0.82 4.22 8.59 12.69
+			14.60 15.47 16.03 16.24 16.31
+			16.31 16.27 16.18 16.08 15.96
+			15.85 15.74 15.62 15.34 15.03
+			14.73 14.27 13.57 12.88 12.34
+			11.49 10.79 10.14 9.58 9.08
+			8.23 7.49 6.84 6.33 5.89
+			5.05 4.43 3.53 2.98 2.53
+			1.89 1.57
+		</Cross>
+	</Process>
+</crs>

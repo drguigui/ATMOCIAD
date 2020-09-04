@@ -1,0 +1,55 @@
+<crs>
+	<Name>CH4</Name>
+	<Collider>ph</Collider>
+
+	<title> CH$_4$  + $\lambda \rightarrow$ CH${^{+}}$ + H$_2$ + H + e</title>
+	<Emin>20</Emin>
+	<Emax>15000</Emax>
+	<Cmax>5E-19</Cmax>
+	<Cmin>1E-22</Cmin>
+	<plotname>seff_CH4_ph_CHp.pdf</plotname>
+	<lambplotname>seff_CH4_ph_CHp_lambda.pdf</lambplotname>
+	<CH4>	
+		<Process name="CH4 + ph -> CH+ +e" electrons="1" threshold="20">
+			<Species>
+				<Specie name="CH+" state="X"/>
+				<Specie name="H2" state="X"/>
+				<Specie name="H" state="X"/>
+			</Species>
+			<legend>CH$^+$ + H$_2$ + H + e</legend>
+			<Proc>CH$^+$ + H$_2$ + H + e</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website. Estimate of uncertainty</Notes>
+			<EstimatedUncertainty/>
+			<Recommended/>
+			<Emin>20.11</Emin>
+			<Emax>12400</Emax>
+			<texnote title="CH$^+$ (AMOP)">
+				Photoionization of CH$_4$ yielding CH$^+$ + H$_2$ + H + e from the review of AMOP.
+				The uncertainty, not claimed by the review, is estimated at 30\%.
+				The data, in nm, have been directly adapted in eV.
+			</texnote>
+			<Egrid unit="eV">
+				19.701923	     20.117508	     20.520391	     20.677819	     21.350818
+				21.573725	     22.339495	     23.002635	     23.235420	     23.415335
+				23.580107	     24.387136	     26.101937	     26.976545	     27.430133
+				28.567788	     29.604632	     33.150856	     34.155427	     34.593806
+				40.824564	     44.598633	     49.593680	     78.471013	    123.984200
+				196.800317	    290.361124	    309.960500	    311.518090	    392.355063
+				525.356780	  12398.420000
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+				0.000000e+00	  9.790000e-21	  1.650000e-20	  2.050000e-20	  3.030000e-20
+				3.680000e-20	  4.360000e-20	  6.870000e-20	  6.700000e-20	  7.250000e-20
+				8.410000e-20	  9.200000e-20	  1.180000e-19	  1.470000e-19	  1.840000e-19
+				2.030000e-19	  2.590000e-19	  2.890000e-19	  2.390000e-19	  2.970000e-19
+				1.490000e-19	  2.040000e-19	  2.440000e-19	  1.500000e-19	  5.430000e-20
+				2.500000e-20	  1.060000e-20	  2.310000e-19	  1.790000e-19	  9.730000e-20
+				4.880000e-20	  2.000000e-22
+			</Cross>
+		</Process>
+	</CH4>
+</crs>
+
+

@@ -1,0 +1,93 @@
+<crs>
+
+	<Name>CO2</Name>
+	<Collider>e</Collider>
+	<title>CO$_2$ + e $\rightarrow$ CO$_2$(v2)</title>
+	<Emin>0.1</Emin>
+	<Emax>32</Emax>
+	<Cmax>1E-15</Cmax>
+	<Cmin>1E-18</Cmin>
+	<plotname>seff_CO2_e_vib2.pdf</plotname>
+	<Process name="CO2+e -> vib2" electrons="0" threshold="0.16700000">
+		<Species>
+			<Specie name="CO2" state="vib2"/>
+		</Species>
+		<Excitation/>
+		<legend>CO2 vib2 Itikawa 2002</legend>
+		<Proc>CO2(vib2)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Itikawa 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes></Notes>
+		<Egrid unit="eV">
+			1.5 2  3  3.5 3.8
+			4  4.5 5  6  15  
+			30  
+		</Egrid>
+		<Cross unit="cm2" uncertainty="30%" fact="1E-16">
+			0.378 0.350 0.734 1.51 1.96 
+			1.97 1.42 0.938 0.576 0.120
+			0.153
+		</Cross>
+	</Process>
+
+
+	<Process name="CO2+e -> vib2" electrons="0" threshold="0.167">
+		<Species>
+			<Specie name="CO2" state="vib2"/>
+		</Species>
+		<Excitation/>
+		<Proc>CO2(vib2)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<legend>Dans la DB</legend>
+		<Notes> ? origin, avakyan? </Notes>
+		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Egrid unit="eV">
+			0.172       0.18       0.2       0.25     0.5
+			1.0         1.5        1.9       2.0      2.25
+			2.5         3.0        3.2       3.4      3.55
+			3.7         3.9        4.1       4.5      4.9
+			5.2         6.0        8.0       10.0
+		</Egrid>
+		<Cross unit="cm2">
+			0.3E-16     0.33E-16   0.35E-16  0.325E-16 0.117E-16
+			0.05E-16    0.04E-16   0.06E-16  0.08E-16  0.2E-16
+			0.4E-16     1.28E-16   1.57E-16  1.77E-16  1.78E-16
+			1.75E-16    1.6E-16    1.28E-16  0.88E-16  0.39E-16
+			0.33E-16    0.27E-16   0.25E-16   0.21e-16
+		</Cross>
+	</Process>
+
+	<Process name="CO2+e -> vib2" electrons="0" threshold="0.167">
+		<Species>
+			<Specie name="CO2" state="vib2"/>
+		</Species>
+		<legend>Recommended vib2 with correction for extrapolation</legend>
+		<Proc>CO2(vib2)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Itikawa 2002+BDD+extrapolation</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes></Notes>
+
+		<Excitation/>
+		<Recommended/>
+		<Extrapolated/>
+		<EstimatedUncertainty/>
+		<Egrid unit="eV">
+			0.172       0.18       0.2       0.25     0.5
+			1.0         1.5        1.9       2.0      2.25
+			2.5         3.0        3.2       3.4      3.55
+			3.7         3.9        4.1       4.5      4.9
+			5.2         6.0        8.0       10.0     30
+		</Egrid>
+		<Cross unit="cm2">
+			0.3E-16     0.33E-16   0.35E-16  0.325E-16 0.117E-16
+			0.05E-16    0.04E-16   0.06E-16  0.08E-16  0.2E-16
+			0.4E-16     1.28E-16   1.57E-16  1.77E-16  1.78E-16
+			1.75E-16    1.6E-16    1.28E-16  0.88E-16  0.39E-16
+			0.33E-16    0.27E-16   0.25E-16   0.21e-16 0.01E-17
+		</Cross>
+	</Process>
+
+
+
+</crs>
+

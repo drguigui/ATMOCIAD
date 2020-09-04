@@ -1,0 +1,144 @@
+<crs>
+
+	<Name>N2</Name>
+	<Collider>e</Collider>
+	<title> N$_2$  + e $\rightarrow$ N${^{++}}$</title>
+	<Emin>60</Emin>
+	<Emax>120000</Emax>
+	<Cmax>1E-17</Cmax>
+	<Cmin>1E-20</Cmin>
+	<plotname>seff_N2_e_Npp.pdf</plotname>
+	<Process name="N2+e->N++ + N" electrons="2" threshold="70">
+		<Species>
+			<Specie name="N" state=""/>
+			<Specie name="N++" state="X"/>
+		</Species>
+		<legend>N++ Itikawa</legend>
+		<Ionization/>
+		<Proc>N++</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review, based on Straub </Notes>
+		<Egrid unit="eV">
+			70	75	80	85	90	
+			95	100	110	120	140	
+			160	180	200	225	250	
+			275	300	350	400	450	
+			500	550	600	650	700	
+			750	800	850	900	950	
+			1000
+		</Egrid>
+		<Cross unit="cm2" fact="1E-16" uncertainty="6%">
+			0.000171 0.000658	0.00122		0.00204		0.00328	
+			0.00439	0.00495		0.00725		0.00927		0.0122	
+			0.0137	0.0154		0.0154		0.0154		0.0142	
+			0.0141	0.0128		0.0117		0.0103		0.00940	
+			0.00808	0.00796	0.00760	0.00701	0.00649	
+			0.00587	0.00594	0.00543	0.00522	0.00505	
+			0.00485
+		</Cross>
+	</Process>
+	<Process name="N2+e->N++ + N" electrons="2" threshold="70">
+		<Ionization/>
+		<Species>
+			<Specie name="N" state="X"/>
+			<Specie name="N++" state="X"/>
+		</Species>
+		<legend>N++ Straub</legend>
+		<Proc>N++</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="measurement">Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes>Data on website </Notes>
+		<Egrid unit="eV">
+			1.700000e+01    2.000000e+01    2.500000e+01    3.000000e+01    3.500000e+01
+			4.000000e+01    4.500000e+01    5.000000e+01    5.500000e+01    6.000000e+01
+			6.500000e+01    7.000000e+01    7.500000e+01    8.000000e+01    8.500000e+01
+			9.000000e+01    9.500000e+01    1.000000e+02    1.100000e+02    1.200000e+02
+			1.400000e+02    1.600000e+02    1.800000e+02    2.000000e+02    2.250000e+02
+			2.500000e+02    2.750000e+02    3.000000e+02    3.500000e+02    4.000000e+02
+			4.500000e+02    5.000000e+02    5.500000e+02    6.000000e+02    6.500000e+02
+			7.000000e+02    7.500000e+02    8.000000e+02    8.500000e+02    9.000000e+02
+			9.500000e+02    1.000000e+03
+		</Egrid>
+		<Cross unit="cm2" uncertainty="6%" >
+			0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00
+			0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00
+			0.000000e+00    1.710000e-20    6.580000e-20    1.220000e-19    2.040000e-19
+			3.280000e-19    4.390000e-19    4.950000e-19    7.250000e-19    9.270000e-19
+			1.220000e-18    1.370000e-18    1.540000e-18    1.540000e-18    1.540000e-18
+			1.420000e-18    1.410000e-18    1.280000e-18    1.170000e-18    1.030000e-18
+			9.400000e-19    8.080000e-19    7.960000e-19    7.600000e-19    7.010000e-19
+			6.490000e-19    5.870000e-19    5.940000e-19    5.430000e-19    5.220000e-19
+			5.050000e-19    4.850000e-19
+		</Cross>
+	</Process>
+
+	<Process name="N2+e->N++ + N" electrons="2" threshold="53.900000">
+		<Ionization/>
+		<Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+		<Species>
+			<Specie name="N" state="X"/>
+			<Specie name="N++" state="X"/>
+		</Species>
+		<legend>N++ tabata</legend>
+		<Proc>N++</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Extrapolated/>
+		<Notes>Review of Shirai, based on Straub. Analytic functions. </Notes>
+		<Emin> 70.0 </Emin>
+		<Emax> 1000.0 </Emax>
+		<uncertainty>10</uncertainty>
+		<Equation type="5" article_id="N2" article_number="50"/>
+		<params>
+			1.030000e-04    5.500000e+00    2.380000e-02   -1.730000e+00    4.470000e-02
+			8.700000e-01
+		</params>
+	</Process>
+
+	<Process name="N2+e->N++ + N" electrons="2" threshold="70">
+		<Ionization/>
+		<Species>
+			<Specie name="N" state="X"/>
+			<Specie name="N++" state="X"/>
+		</Species>
+		<legend>N++ Straub + Tabata (recommended)</legend>
+		<Proc>N++</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Straub 2004 + Tabata 2006</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>The data of Straub have been extrapolated with Tabata 2006, hence the estimated uncertainty</Notes>
+		<EstimatedUncertainty/>
+		<Recommended/>
+		<Extrapolated/>
+		<Egrid unit="eV">
+			6.500000e+01    7.000000e+01    7.500000e+01    8.000000e+01    8.500000e+01
+			9.000000e+01    9.500000e+01    1.000000e+02    1.100000e+02    1.200000e+02
+			1.400000e+02    1.600000e+02    1.800000e+02    2.000000e+02    2.250000e+02
+			2.500000e+02    2.750000e+02    3.000000e+02    3.500000e+02    4.000000e+02
+			4.500000e+02    5.000000e+02    5.500000e+02    6.000000e+02    6.500000e+02
+			7.000000e+02    7.500000e+02    8.000000e+02    8.500000e+02    9.000000e+02
+			9.500000e+02    1.000000e+03    1.25000000e+03
+			1.50000000e+03   1.75000000e+03   2.00000000e+03   2.50000000e+03
+			3.00000000e+03   4.00000000e+03   5.00000000e+03   7.50000000e+03
+			1.00000000e+04   2.00000000e+04   3.00000000e+04   4.00000000e+04
+			5.00000000e+04   6.00000000e+04   7.00000000e+04   8.00000000e+04
+			9.00000000e+04   1.00000000e+05
+		</Egrid>
+		<Cross unit="cm2" uncertainty="6%" >
+			0.000000e+00    1.710000e-20    6.580000e-20    1.220000e-19    2.040000e-19
+			3.280000e-19    4.390000e-19    4.950000e-19    7.250000e-19    9.270000e-19
+			1.220000e-18    1.370000e-18    1.540000e-18    1.540000e-18    1.540000e-18
+			1.420000e-18    1.410000e-18    1.280000e-18    1.170000e-18    1.030000e-18
+			9.400000e-19    8.080000e-19    7.960000e-19    7.600000e-19    7.010000e-19
+			6.490000e-19    5.870000e-19    5.940000e-19    5.430000e-19    5.220000e-19
+			5.050000e-19    4.850000e-19    4.07860017e-19
+			3.46058564e-19   3.01361266e-19   2.67452443e-19   2.19261560e-19
+			1.86527968e-19   1.44666988e-19   1.18862558e-19   8.32703750e-20
+			6.47313727e-20   3.53345367e-20   2.48119109e-20   1.93105056e-20
+			1.58993740e-20   1.35651441e-20   1.18612972e-20   1.05594867e-20
+			9.53041501e-21   8.69521166e-21
+		</Cross>
+	</Process>
+
+
+</crs>

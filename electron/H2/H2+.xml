@@ -1,0 +1,133 @@
+<crs>
+	<Name>H2</Name>
+	<Collider>e</Collider>
+	<title> H$_2$  + e $\rightarrow$ H${_2}{^{+}}$</title>
+	<Emin>10</Emin>
+	<Emax>120000</Emax>
+	<Cmax>3E-16</Cmax>
+	<Cmin>1E-18</Cmin>
+	<plotname>seff_H2_e_H2p.pdf</plotname>
+	<H2>
+		<Process name="H2 + e -> H2+" electrons="1" threshold="15.426">
+			<Ionization/>
+			<legend>Yoon/Itikawa</legend>
+			<Proc>H2+</Proc>
+			<Species>
+				<Specie name="H2+" state="X"/>
+			</Species>
+			<Source type="review">Yoon 2008</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Notes> Review, based on Straub </Notes>
+			<Egrid unit="eV">
+				30 35 40 45 50
+				55 60 65 70 75
+				80 85 90 95 100
+				110 120 140 160 180
+				200 225 250 275 300
+				350 400 450 500 550
+				600 650 700 750 800
+				850 900 950 1000
+			</Egrid>
+			<Cross unit="cm2" fact="1E-17" uncertainty="7%">
+				6.42 7.42 8.12 8.39 8.59
+				8.74 8.82 8.8 8.79 8.71
+				8.63 8.53 8.43 8.35 8.24
+				7.97 7.8 7.39 6.99 6.55
+				6.22 5.85 5.51 5.15 4.9 
+				4.43 4.07 3.72 3.49 3.17
+				2.98 2.84 2.66 2.56 2.42
+				2.34 2.22 2.1 1.99
+			</Cross>
+		</Process>
+
+		<Process name="H2 + e -> H2+" electrons="1" threshold="15.426">
+			<Ionization/>
+			<legend>Avakyan</legend>
+			<Proc>H2+</Proc>
+			<Species>
+				<Specie name="H2+" state="X"/>
+			</Species>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review, </Notes>
+			<Egrid unit="eV">
+				19  20  25  30  40  
+				50  60  70  80  100 
+				120 150 200 250 300 
+				400 500 600 700 800 
+				1000
+			</Egrid>
+			<Cross unit="cm2" fact="1E-17" uncertainty="15%">
+				2.18 2.77 5.14 6.74 8.30
+				8.80 8.92 8.85 8.70 8.30
+				7.90 7.35 6.50 5.80 5.20
+				4.40 3.75 3.25 2.85 2.60
+				2.11
+			</Cross>
+		</Process>
+		<Process name="H2 + e -> H2+" electrons="1" threshold="15.426">
+			<Ionization/>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<legend>Straub</legend>
+			<Proc>H2+</Proc>
+			<Species>
+				<Specie name="H2+" state="X"/>
+			</Species>
+			<Source type="measurement">Straub 1997</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>  </Notes>
+			<Egrid unit="eV">
+				17  20  25  30  35  
+				40  45  50  55  60  
+				65  70  75  80  85  
+				90  95  100 110 120 
+				140 160 180 200 225 
+				250 275 300 350 400 
+				450 500 550 600 650 
+				700 750 800 850 900 
+				950 1000
+			</Egrid>
+			<Cross unit="cm2" fact="1E-17" uncertainty="5%">
+				0.564	2.58	4.76	6.42	7.42	
+				8.12	8.39	8.59	8.74	8.82	
+				8.80	8.79	8.71	8.63	8.53	
+				8.43	8.35	8.24	7.97	7.80	
+				7.39	6.99	6.55	6.22	5.85	
+				5.51	5.15	4.90	4.43	4.07	
+				3.72	3.49	3.17	2.98	2.84	
+				2.66	2.56	2.42	2.34	2.22	
+				2.10	1.99	
+			</Cross>
+		</Process>
+		<Process name="H2 + e -> H2+" electrons="1" threshold="15.426">
+			<Ionization/>
+			<legend>Phelps</legend>
+			<Proc>H2+</Proc>
+			<Species>
+				<Specie name="H2+" state="X"/>
+			</Species>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Phelps</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>  </Notes>
+			<Egrid unit="eV">
+				0.0000 15.4000 19.5000 21.0000 23.0000
+				25.0000 28.0000 32.0000 40.0000 50.0000
+				70.0000 100.0000 150.0000 200.0000 300.0000
+				500.0000 700.0000 1000.0000 1500.0000 2000.0000
+				3000.0000 5000.0000 7000.0000 10000.0000
+			</Egrid>
+			<Cross unit="cm2" fact="1E-16" uncertainty="20%">
+				0.0000 0.0000 0.2490 0.3360 0.4390
+				0.5240 0.6310 0.7300 0.8650 0.9400
+				0.9670 0.9320 0.8000 0.7120 0.5710
+				0.4040 0.3160 0.2370 0.1720 0.1340
+				0.0970 0.0610 0.0460 0.0340 
+			</Cross>
+		</Process>
+	</H2>
+</crs>
+
+
+
+
+
+

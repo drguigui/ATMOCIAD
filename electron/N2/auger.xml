@@ -1,0 +1,79 @@
+<crs>
+	<Name>N2</Name>
+	<Collider>e</Collider>
+	<title> N$_2$  + e $\rightarrow$ N${_2}{^{++}}$ (K-SHELL)</title>
+	<Emin>300</Emin>
+	<Emax>120000</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-20</Cmin>
+	<plotname>seff_N2_e_N2pp_auger.pdf</plotname>
+	<N2>
+		<!--
+		K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006
+		and corresponds to the N - N2 ratio
+		the ionization rate, wich was x by the ratio, comes from Tabata Shirai 2006
+		the ratio, defined between 400 and 5 KeV, was extrapolated (as a limit!)
+		the production ratio were computed on the basis of the K Shell photoionization
+		-->
+		 <Process name="N2 + e -> .57 x N2++(X-KSHELL) 0.43 x O+(X) 0.43 x Fluo-auger(X) "  electrons="1" threshold="400">
+			 <Species>
+				 <Specie name="N2++" state="X-KSHELL" number=".57"/>
+				 <Specie name="N2+" state="X" number="0.43"/>
+				 <Specie name="Fluo-auger" state="X" number="0.43"/>
+			 </Species>
+			 <Ionization/>
+			 <Proc>N2++(Auger)</Proc>
+			 <legend>N2++(Auger)</legend>
+			 <Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			 <Source type="adaptation">Fremont 2006 + Tabata 2006</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			 <Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the N2 ratio. The ionization rate, wich was x by the ratio, comes from Tabata 2006</Notes>
+			 <EstimatedUncertainty/>
+			 <Recommended/>
+			 <Extrapolated/>
+			 <texnote title="Notes for N$_2^{++}$ K-Shell ionization, Fr\'emont + Tabata 2006">The K-Shell ionization of N$_2$ by electron impact has been studied in \cite{Fremont2006}. The ratio K-shell/simple ionization has been taken in that paper.
+				 The total cross section has been computed by multiplying this ratio by the recommended ionization cross section, coming from \cite{Tabata2006}.</texnote>
+			 
+			 <Auger energy="315" fact="0.57"/>
+			 <Egrid unit="eV">
+				 1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
+				 6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04
+				 4.62417256e+04   4.19914652e+04   3.81318035e+04   3.46268443e+04
+				 3.14439907e+04   2.85536410e+04   2.59289143e+04   2.35453997e+04
+				 2.13809300e+04   1.94153748e+04   1.76304540e+04   1.60095673e+04
+				 1.45376400e+04   1.32009826e+04   1.19871640e+04   1.08848952e+04
+				 9.88392484e+03   8.97494356e+03   8.14949759e+03   7.39991005e+03
+				 6.71920954e+03   6.10106535e+03   5.53972857e+03   5.02997859e+03
+				 4.56707460e+03   4.14671144e+03   3.76497963e+03   3.41832894e+03
+				 3.10353543e+03   2.81767141e+03   2.55807828e+03   2.32234173e+03
+				 2.10826935e+03   1.91387021e+03   1.73733634e+03   1.57702591e+03
+				 1.43144800e+03   1.29924869e+03   1.17919848e+03   1.07018088e+03
+				 9.71181989e+02   8.81281088e+02   7.99642073e+02   7.25505676e+02
+				 6.58182409e+02   5.97046145e+02   5.41528299e+02   4.91112538e+02
+				 4.45329982e+02   4.03754840e+02   
+			 </Egrid>
+			 <Cross unit="cm2" uncertainty="50%" >
+				 3.82228634e-20   4.01032143e-20   4.20706476e-20   4.41287701e-20
+				 4.62813014e-20   4.85320734e-20   5.08850299e-20   5.33442250e-20
+				 5.59138215e-20   5.85980879e-20   6.14013948e-20   6.43282108e-20
+				 6.73830963e-20   7.05706970e-20   7.38957358e-20   7.73630026e-20
+				 8.09773432e-20   8.47436459e-20   8.86668255e-20   9.27518058e-20
+				 9.70034988e-20   1.01426781e-19   1.06026466e-19   1.10807275e-19
+				 1.15773800e-19   1.20930466e-19   1.26281488e-19   1.31830818e-19
+				 1.37582089e-19   1.43538554e-19   1.50975735e-19   1.58879856e-19
+				 1.65329399e-19   1.71527505e-19   1.77476550e-19   1.83400486e-19
+				 1.89443112e-19   1.93116676e-19   1.95838175e-19   1.99323122e-19
+				 2.00585031e-19   1.98928217e-19   1.98728364e-19   1.95784073e-19
+				 1.90497451e-19   1.85209311e-19   1.77472171e-19   1.67959927e-19
+				 1.55228351e-19   1.40472660e-19   1.26868212e-19   1.08977705e-19
+				 9.15745195e-20   7.21812284e-20   5.47053374e-20   4.13821282e-20
+				 3.12394837e-20   2.35302124e-20   
+			 </Cross>
+		 </Process>
+	 </N2>
+ </crs>
+
+
+
+
+
+

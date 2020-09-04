@@ -1,0 +1,49 @@
+<crs>
+	<Name>CO</Name>
+	<Collider>e</Collider>
+	<title> CO  + e $\rightarrow$ elastic</title>
+	<Emin>1E-1</Emin>
+	<Emax>1000</Emax>
+	<Cmax>1E-14</Cmax>
+	<Cmin>1E-17</Cmin>
+	<plotname>seff_CO_e_elastic.pdf</plotname>
+	<ElasticCrs>
+		<legend>Elastic Kanik et al. 93</legend>
+		<Source type="review">Kanik 1993</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> </Notes>
+		<Recommended/>
+		<EstimatedUncertainty/>
+		<Egrid unit="eV">
+			0.1    1    2    3    4   5
+			6      7    8    9    10  
+			12     15   20   30   40  50
+			60     70   80   90   100 150
+			200    300  400   500 600 700
+			800 900 1000 
+		</Egrid>
+		<Cross unit="cm2" uncertainty="15%">
+			5.41E-16 13.56E-16 37.60E-16 23.20E-16 16.84e-16
+			14.9E-16 13E-16 12.2E-16 12E-16 11.7E-16 11.5E-16 11.2E-16 11E-16 
+			9.4E-16 7.8E-16 6.8E-16 6E-16 5.5E-16 5.1E-16 4.7E-16 4.4E-16
+			4.2E-16 3.3E-16 2.8E-16 2.21E-16 1.9E-16 1.65E-16 1.5E-16
+			1.38E-16 1.28E-16 1.2E-16 1.1E-16   
+		</Cross>
+	</ElasticCrs>
+
+	<ElasticCrs>
+		<Shirai/><!--Shirai et al 2001 analytic cross section -->
+		<legend>Elastic Shirai + kanik 1993</legend>
+		<legend>Shirai elastic scattering</legend>
+		<Source type="review">Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Extrapolated/>
+		<Notes> </Notes>
+		<Emin> 1.0 </Emin>
+		<Emax> 1000.0 </Emax>
+		<uncertainty>15</uncertainty>
+		<Equation type="3" article_id="CO2" article_number="2"/>
+		<params>
+			1.800000e+04    3.190000e+00    2.100000e-03    4.900000e+00    5.670000e+01
+			5.500000e-01    3.620000e-03    5.720000e-01
+		</params>
+	</ElasticCrs>
+</crs>

@@ -1,0 +1,32 @@
+<crs>
+	<Name>O2</Name>
+	<Collider>ph</Collider>
+	<title> O$_2$  + $\lambda \rightarrow$ O(${^{1}}$S) + O</title>
+	<Emin>11</Emin>
+	<Emax>14</Emax>
+	<Cmax>3E-18</Cmax>
+	<Cmin>2E-20</Cmin>
+	<plotname>seff_O2_ph_O1S.pdf</plotname>
+	<lambplotname>seff_O2_ph_O1S_lambda.pdf</lambplotname>
+	<O2>
+		<Process name="O2 + ph -> 1. x O(1S) "  electrons="0" threshold="11">
+			<Species>
+				<Specie name="O" state="1S" number="1."/>
+				<Specie name="O" state="X"/>
+			</Species>
+			<legend>O($^1$S) + O (BDD)</legend>
+			<Proc>O($^1$S) + O</Proc>
+			<Section>excitation</Section>
+			<Source type="adaptation">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted Torr. Origin Lawrence 73 needs rework  </Notes>
+			<Egrid unit="eV">
+				1.341350e+01	  1.287550e+01	  1.269004e+01	  1.253923e+01	  1.224797e+01
+				1.208753e+01	  1.205127e+01	  1.201502e+01	  1.190652e+01	  1.107002e+01
+			</Egrid>
+			<Cross unit="cm2" uncertainty="20%" >
+				5.126800e-19	  1.372020e-18	  1.236180e-18	  1.372020e-18	  1.144100e-19
+				1.532200e-19	  1.144100e-19	  1.018500e-19	  1.144100e-19	  8.525000e-20
+			</Cross>
+		</Process>
+	</O2>
+</crs>

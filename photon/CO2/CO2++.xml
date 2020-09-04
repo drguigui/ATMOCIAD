@@ -1,0 +1,85 @@
+<crs>
+	<Name>CO2</Name>
+	<Collider>ph</Collider>
+	<title> CO$_2$  + $\lambda \rightarrow$ CO${_{2}}{^{2+}}$ + 2e </title>
+	<Emin>37</Emin>
+	<Emax>10000</Emax>
+	<Cmax>3E-18</Cmax>
+	<Cmin>1E-22</Cmin>
+	<plotname>seff_CO2_ph_CO2pp.pdf</plotname>
+	<lambplotname>seff_CO2_ph_CO2pp_lambda.pdf</lambplotname>
+	<Process name="CO2 + ph -> 1. x CO2++(X) "  electrons="1" threshold="37.6">
+		<Species>
+			<Specie name="CO2++" state="X" number="1."/>
+		</Species>
+		<legend>CO$_2$$^{2+}$ + 2e (non Auger) (Avakyan 1998)</legend>
+		<Proc>CO$_2$$^{2+}$ + 2e (non Auger)</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Adapted Torr nm -> eV</Notes>
+		<Egrid unit="eV">
+			8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
+			4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
+			1.033202e+02	  7.232412e+01	  5.579289e+01	  4.898916e+01	  4.837464e+01
+			4.600400e+01	  4.363336e+01	  4.247571e+01	  4.110756e+01	  4.087706e+01
+			4.084543e+01	  4.081381e+01	  3.811393e+01	  3.455950e+01	  3.368495e+01
+			3.233550e+01	  2.927405e+01	  2.709776e+01	  2.663349e+01	  2.571016e+01
+			2.366971e+01	  2.245873e+01	  2.236488e+01	  2.179153e+01	  2.121818e+01
+			2.093611e+01	  2.050366e+01	  2.033328e+01	  2.001087e+01	  1.968847e+01
+			1.937648e+01	  1.839326e+01	  1.767472e+01	  1.762742e+01	  1.707432e+01
+			1.637257e+01	  1.620391e+01	  1.614859e+01	  1.609328e+01	  1.590010e+01
+			1.570693e+01	  1.559748e+01	  1.504220e+01	  1.418120e+01	  1.341350e+01
+			1.287550e+01	  1.269004e+01	  1.253923e+01
+		</Egrid>
+		<Cross unit="cm2" uncertainty="20%" >
+			3.000000e-23	  1.200000e-22	  5.000000e-22	  5.000000e-21	  1.300000e-20
+			2.600000e-20	  5.600000e-20	  9.000000e-20	  1.400000e-19	  3.500000e-19
+			9.000000e-19	  1.350000e-18	  1.250000e-18	  4.900000e-19	  6.500000e-19
+			4.900000e-19	  2.900000e-19	  4.900000e-19	  4.400000e-20	  1.060000e-19
+			4.400000e-20	  1.000000e-19	  4.400000e-20	  0.000000e+00	  0.000000e+00
+			0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			0.000000e+00	  0.000000e+00	  0.000000e+00
+		</Cross>
+	</Process>
+
+	<Process name="CO2 + hv -> CO2++" electrons="2" threshold="37.600">
+		<Species>
+			<Specie name="CO2++" state="X"/>
+		</Species>
+		<legend>CO$_2$$^{2+}$ + 2e (non Auger) (BDD)</legend>
+		<Proc>CO$_2$$^{2+}$ + 2e (non Auger)</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Adapted Masuoka94? Recommended by Lilensten. GG: adapted for extrapolation+estimate uncert </Notes>
+		<EstimatedUncertainty/>
+		<Egrid unit="eV">
+			38.000    39.000    40.000    41.000    42.000
+			43.000    44.000    45.000    46.000    47.000
+			48.000    49.000    50.000    52.000    54.000
+			56.000    58.000    60.000    62.000    64.000
+			66.000    68.000    70.000    72.500    75.000
+			77.500    80.000    82.500    85.000    87.500
+			90.000    92.500    95.000    97.500   100.000
+			250
+		</Egrid>
+		<Cross unit="cm2" uncertainty="50%">
+			3.9450E-21   1.0430E-20   1.4830E-20   1.7640E-20   2.9690E-20
+			3.2790E-20   3.5060E-20   3.9670E-20   4.4390E-20   4.1260E-20
+			3.8500E-20   4.3840E-20   4.8810E-20   5.3610E-20   6.4750E-20
+			6.2880E-20   7.1350E-20   7.4600E-20   7.5610E-20   7.6550E-20
+			7.2920E-20   6.8950E-20   6.5560E-20   6.1590E-20   5.7580E-20
+			5.4130E-20   4.9000E-20   4.4020E-20   3.9770E-20   3.8060E-20
+			3.6380E-20   3.5280E-20   3.4190E-20   3.3760E-20   3.3320E-20
+			2E-21
+		</Cross>
+	</Process>
+
+
+
+</crs>
+

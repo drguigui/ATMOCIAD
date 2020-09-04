@@ -1,0 +1,103 @@
+<crs>
+
+	<Name>CO2</Name>
+	<Collider>e</Collider>
+	<title>CO$_2$ + e $\rightarrow$ O(${^1}$S)</title>
+	<Emin>10</Emin>
+	<Emax>1.2E5</Emax>
+	<Cmax>1E-16</Cmax>
+	<Cmin>0.8E-19</Cmin>
+	<plotname>seff_CO2_e_O1S.pdf</plotname>
+	<Process name="CO2+e -> CO+ O(1S)" electrons="0" threshold="9.64">
+		<Species>
+			<Specie name="CO" state="X"/>
+			<Specie name="O" state="1S"/>
+		</Species>
+		<legend>O1S Leclair</legend>
+		<Proc>O(1S)</Proc> <!-- Name for the processus -->
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="measurement">Leclair 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Maybe the single measurement for that process</Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			12    14    16    18    20    24    28    
+			32    36    40    45    50    60    70    
+			80    90    100   120   140   160   180   
+			200   250   300   350   400   450   500   
+			600   700   800   900  1000
+		</Egrid>
+		<Cross unit="cm2" uncertainty="12%">
+			0.020E-16  0.051E-16  0.082E-16  0.103E-16  0.122E-16  0.146E-16  0.154E-16
+			0.160E-16  0.164E-16  0.167E-16  0.168E-16  0.169E-16  0.168E-16  0.165E-16
+			0.163E-16  0.160E-16  0.156E-16  0.150E-16  0.144E-16  0.138E-16  0.132E-16
+			0.127E-16  0.115E-16  0.104E-16  0.096E-16  0.091E-16  0.085E-16  0.080E-16
+			0.072E-16  0.065E-16  0.061E-16  0.057E-16  0.054E-16
+		</Cross>
+	</Process>
+	<Process name="CO2+e -> CO+ O(1S)" electrons="0" threshold="9.64">
+		<Species>
+			<Specie name="CO" state="X"/>
+			<Specie name="O" state="1S"/>
+		</Species>
+		<legend>O1S Recommended Leclair+extrapolation Shirai</legend>
+		<Recommended/>
+		<EstimatedUncertainty/>
+		<Extrapolated/>
+		<Source type="adaptation">Leclair 1994 + Shirai 2001</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Proc>O(1S)</Proc> <!-- Name for the processus -->
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Excitation/>
+		<Notes>Leclair data extrapolated with Shirai function (hence the estimated uncertainty)</Notes>
+		<Egrid unit="eV">
+			12    14    16    18    20
+			24    28    32    36    40
+			45    50    60    70    80
+			90    100   120   140   160
+			180   200   250   300   350
+			400   450   500   600   700
+			800   900  1000 1.25000000e+03 1.50000000e+03
+			1.75000000e+03   2.00000000e+03   2.50000000e+03 3.00000000e+03   4.00000000e+03
+			5.00000000e+03   7.50000000e+03 1.00000000e+04   2.00000000e+04   3.00000000e+04
+			4.00000000e+04 5.00000000e+04   6.00000000e+04   7.00000000e+04   8.00000000e+04
+			9.00000000e+04   1.00000000e+05
+		</Egrid>
+		<Cross unit="cm2" uncertainty="12%">
+			0.020E-16  0.051E-16  0.082E-16  0.103E-16  0.122E-16
+			0.146E-16  0.154E-16  0.160E-16  0.164E-16  0.167E-16
+			0.168E-16  0.169E-16  0.168E-16  0.165E-16  0.163E-16
+			0.160E-16  0.156E-16  0.150E-16  0.144E-16  0.138E-16
+			0.132E-16  0.127E-16  0.115E-16  0.104E-16  0.096E-16
+			0.091E-16  0.085E-16  0.080E-16  0.072E-16  0.065E-16
+			0.061E-16  0.057E-16  0.054E-16  4.58134949e-18 4.02913227e-18
+			3.60270540e-18   3.26255085e-18   2.75221630e-18   2.38617792e-18   1.89353178e-18
+			1.57549447e-18   1.11855479e-18   8.72462297e-19   4.72927481e-19   3.28395284e-19
+			2.52997201e-19   2.06462481e-19   1.74781012e-19   1.51771843e-19   1.34276406e-19
+			1.20509177e-19   1.09383292e-19
+		</Cross>
+	</Process>
+	<Process name="CO2+e -> CO+ O(1S)" electrons="0" threshold="11.000000">
+		<Shirai/><!--Shirai et al 2001 analytic cross section -->
+		<uncertainty>15</uncertainty>
+		<legend>Shirai O(1S) production</legend>
+		<Proc>O(1S)</Proc> <!-- Name for the processus -->
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Shirai 2001</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Excitation/>
+		<Extrapolated/>
+		<Notes>Review of Shirai. Analytic functions. </Notes>
+		<Species>
+			<Specie name="CO" state="X"/>
+			<Specie name="O" state="1S"/>
+		</Species>
+		<Emin> 12.0 </Emin>
+		<Emax> 1000.0 </Emax>
+		<Equation type="5" article_id="CO2" article_number="66"/>
+		<params>
+			3.160000e-01    1.046000e+00    1.210000e-02    1.320000e-01    5.140000e-02
+			9.300000e-01
+		</params>
+	</Process>
+
+
+</crs>
+

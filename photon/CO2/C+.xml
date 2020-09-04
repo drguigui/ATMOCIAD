@@ -1,0 +1,81 @@
+<crs>
+	<Name>CO2</Name>
+	<Collider>ph</Collider>
+	<title> CO$_2$  + $\lambda \rightarrow$ C${^{+}}$ + O$_2$ + e </title>
+	<Emin>22</Emin>
+	<Emax>15000</Emax>
+	<Cmax>3E-18</Cmax>
+	<Cmin>1E-22</Cmin>
+	<plotname>seff_CO2_ph_Cp.pdf</plotname>
+	<lambplotname>seff_CO2_ph_Cp_lambda.pdf</lambplotname>
+	<Process name="CO2 + ph -> C+ + O2" electrons="1" threshold="23">
+		<Species>
+			<Specie name="C+" state="X"/>
+		</Species>
+		<legend>C$^+$ + O$_2$ + e (AMOP)</legend>
+		<Proc>C$^+$ + O$_2$ + e</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website. Recommended because ok with sum 2 processes Jean; take into account high E, more consistent.  Estimated at 30% </Notes>
+			<EstimatedUncertainty/>
+			<Recommended/>
+			<Extrapolated/>
+		<Egrid unit="eV">
+			22.408133	     23.088305	     23.580107	     23.742666	     24.396734
+			24.420760	     24.435199	     28.502115	     40.811126	     45.920074
+			48.242879	     49.593680	     53.906174	     58.345506	     62.776810
+			67.018486	     71.874899	     81.837756	    102.891452	    133.316344
+			171.012690	    240.746019	    344.400556	    460.907807	    652.548421
+			991.873600	   1653.122667	   3099.605000	  12398.420000
+		</Egrid>
+		<Cross unit="cm2" uncertainty="30%">
+			0.000000e+00	  1.340000e-21	  2.830000e-21	  3.170000e-21	  4.810000e-21
+			5.060000e-21	  5.090000e-21	  2.760000e-20	  1.050000e-18	  1.760000e-18
+			1.990000e-18	  2.110000e-18	  2.370000e-18	  2.030000e-18	  2.220000e-18
+			2.380000e-18	  1.470000e-18	  6.210000e-19	  3.710000e-19	  2.620000e-19
+			1.610000e-19	  9.470000e-20	  4.510000e-20	  2.090000e-20	  1.660000e-19
+			6.520000e-20	  1.840000e-20	  2.970000e-21	  2.490000e-22
+		</Cross>
+	</Process>
+
+	<Process name="CO2 + hv -> C+ + O2" electrons="1" threshold="27.9">
+		<Species>
+			<Specie name="C+" state="X"/>
+			<Specie name="O2" state="X"/>
+		</Species>
+		<legend>C$^+$ + O$_2$ + e (BDD)</legend>
+		<Proc>C$^+$ + O$_2$ + e</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Adapted Torr ? origin, avakyan? </Notes>
+		<Egrid unit="eV">
+			27.900
+			29.172    30.000    31.000    32.000    33.000
+			34.000    35.000    36.000    37.000    38.000
+			39.000    40.000    41.000    42.000    43.000
+			44.000    45.000    46.000    47.000    48.000
+			49.000    50.000    52.000    54.000    56.000
+			58.000    60.000    62.000    64.000    66.000
+			68.000    70.000    72.500    75.000    77.500
+			80.000    82.500    85.000    87.500    90.000
+			92.500    95.000    97.500   100.000   153.540
+			222.390   263.790   330.610   459.180   604.780
+			953.690  1999.680  3350.810  6199.000
+		</Egrid>
+
+		<Cross unit="cm2">
+			4.4327E-19
+			4.3520E-19   4.5000E-19   6.3000E-19   8.8000E-19   1.3100E-18
+			1.6600E-18   2.0900E-18   2.3100E-18   2.3800E-18   2.3900E-18
+			2.2700E-18   2.0400E-18   1.8300E-18   1.6600E-18   1.5300E-18
+			1.4200E-18   1.3600E-18   1.3300E-18   1.3500E-18   1.3400E-18
+			1.3800E-18   1.4200E-18   1.5200E-18   1.4900E-18   1.4200E-18
+			1.3300E-18   1.1500E-18   9.8000E-19   8.8000E-19   7.8000E-19
+			7.0000E-19   6.2000E-19   5.7000E-19   5.3000E-19   4.5000E-19
+			4.2000E-19   3.9000E-19   3.7000E-19   3.3000E-19   3.0000E-19
+			2.8000E-19   2.7000E-19   2.3000E-19   2.1000E-19   8.4600E-20
+			3.4800E-20   2.2200E-20   1.6800E-20   7.8000E-21   3.9000E-21
+			1.3800E-21   1.4400E-22   3.6600E-23   9.0000E-24
+		</Cross>
+	</Process>
+</crs>

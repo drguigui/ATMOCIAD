@@ -1,0 +1,145 @@
+
+<crs>
+	<Name>CO2</Name>
+	<Collider>ph</Collider>
+	<title> CO$_2$  + $\lambda \rightarrow$ O($^{1}$S) + CO</title>
+	<Emin>8.9</Emin>
+	<Emax>18</Emax>
+	<Cmax>2E-16</Cmax>
+	<Cmin>5E-22</Cmin>
+	<plotname>seff_CO2_ph_O1S.pdf</plotname>
+	<lambplotname>seff_CO2_ph_O1S_lambda.pdf</lambplotname>
+	<CO2>
+		<Process name="CO2 + ph -> 1. x O(1S) "  electrons="0" threshold="9">
+			<Species>
+				<Specie name="O" state="1S" number="1."/>
+				<Specie name="CO" state="X"/>
+			</Species>
+			<legend>O($^1$S) + CO (Lawrence 1972)</legend>
+			<Proc>O($^1$S) + CO</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="measurement">Lawrence 1972 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, old database. Uncertainty in Lawrence: pb photodissciation ratio</Notes>
+			<Egrid unit="eV">
+				1.341350e+01	  1.287550e+01	  1.269004e+01	  1.253923e+01	  1.224797e+01
+				1.208753e+01	  1.205127e+01	  1.201502e+01	  1.190652e+01	  1.107002e+01
+				1.027043e+01	  1.019884e+01	  1.017574e+01
+			</Egrid>
+			<Cross unit="cm2" uncertainty="20%" >
+				2.415600e-17	  2.704000e-17	  2.340000e-17	  2.704000e-17	  1.350000e-17
+				1.314000e-17	  1.350000e-17	  8.760000e-18	  1.350000e-17	  2.500000e-17
+				8.190000e-21	  8.190000e-21	  8.190000e-21	
+			</Cross>
+		</Process>
+
+		<Process name="CO2 + ph -> 1. x O(1S) "  electrons="0" threshold="9">
+			<Species>
+				<Specie name="O" state="1S" number="1."/>
+				<Specie name="CO" state="X"/>
+			</Species>
+
+			<legend>O($^1$S) + CO (Lawrence 1972 + AMOP)</legend>
+			<Proc>O($^1$S) + CO</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="measurement">Lawrence 1972 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, Uncertainty in Lawrence: pb photodissciation ratio. AMOP for the total. But pb near Ly alpha</Notes>
+			<EstimatedUncertainty/>
+			<Extrapolated/>
+			<Egrid unit="eV">
+				9.    9.1   9.2   9.3   9.4   
+				9.5   9.6   9.7   9.8   9.9  
+				10.   10.1 10.2  10.3  10.4  
+				10.5  10.6  10.7  10.8  10.9  
+				11.   11.1  11.2  11.3 11.4  
+				11.5  11.6  11.7  11.8  11.9  
+				12.   12.1  12.2  12.3  12.4  
+				12.5 12.6  12.7  12.8  12.9  
+				13.   13.1  13.2  13.3  13.4  
+				13.5  13.6  13.7 13.8  13.9  
+				14.   14.1  14.2  14.3  14.4  
+				14.5  14.6  14.7  14.8  14.9 
+				15.   15.1  15.2  15.3  15.4  
+				15.5  15.6  15.7  15.8  15.9  
+				16.   16.1 16.2  16.3  16.4  
+				16.5  16.6  16.7  16.8  16.9  
+				17. 
+			</Egrid>
+			<Cross unit="cm2" uncertainty="20%" >
+				0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00 0.00000000e+00   
+				0.00000000e+00   0.00000000e+00   0.00000000e+00 0.00000000e+00   0.00000000e+00   
+				1.23314573e-20   1.40047257e-20 1.88929418e-20   2.08074077e-20   3.21619840e-20   
+				4.62301934e-20 9.07505663e-20   1.96450542e-18   5.19813862e-18   5.84943190e-18 
+				5.91968003e-17   3.69242868e-17   8.90092350e-18   6.10366479e-18 1.08272968e-16  
+				9.13087908e-18   1.97671330e-17   2.61770121e-17 8.45962111e-18   1.13098190e-17   
+				4.60472417e-17   1.48877682e-17 1.60426361e-17   5.28478628e-17   2.11661122e-17  
+				4.36537669e-17 2.09766158e-17   1.89396243e-17   1.70948298e-17   4.48292927e-17 
+				2.83770210e-17   2.76937004e-17   2.49292064e-17   1.20097158e-17 1.68355980e-17   
+				2.48197713e-17   2.95410311e-17   2.68719763e-17 2.22704576e-17   1.05659169e-17   
+				7.23525659e-18   4.91385592e-18 3.39409705e-18   2.65041482e-18   2.08013275e-18   
+				1.69577897e-18 1.52549017e-18   1.29436790e-18   1.07411859e-18   9.88221357e-19 
+				9.96047739e-19   1.26662526e-18   1.24332387e-18   1.37961318e-18 1.25539870e-18   
+				1.36496804e-18   1.51943106e-18   1.47214368e-18 1.39988932e-18   2.63968522e-18  
+				1.78212482e-18   1.43737027e-18 3.56445239e-18   2.28613348e-18   1.46527400e-18  
+				1.86961936e-18 8.75650571e-19   9.04706652e-19   5.12354448e-19   1.49113155e-18 
+				1.22340295e-18
+			</Cross>
+		</Process>
+
+		<Process name="CO2 + ph -> 1. x O(1S) "  electrons="0" threshold="9">
+			<Species>
+				<Specie name="O" state="1S" number="1."/>
+				<Specie name="CO" state="X"/>
+			</Species>
+
+			<legend>O($^1$S) + CO (Lawrence 1972 + AMOP, Ly-$\alpha$ corrected)</legend>
+			<Proc>O($^1$S) + CO</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="measurement">Lawrence 1972+AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, Uncertainty in Lawrence: pb photodissciation ratio. Correction near ly alpha</Notes>
+			<Recommended/>
+			<EstimatedUncertainty/>
+			<Extrapolated/>
+			<Egrid unit="eV">
+				9.    9.1   9.2   9.3   9.4   
+				9.5   9.6   9.7   9.8   9.9  
+				10.   10.1 10.2  10.3  10.4  
+				10.5  10.6  10.7  10.8  10.9  
+				11.   11.1  11.2  11.3 11.4  
+				11.5  11.6  11.7  11.8  11.9  
+				12.   12.1  12.2  12.3  12.4  
+				12.5 12.6  12.7  12.8  12.9  
+				13.   13.1  13.2  13.3  13.4  
+				13.5  13.6  13.7 13.8  13.9  
+				14.   14.1  14.2  14.3  14.4  
+				14.5  14.6  14.7  14.8  14.9 
+				15.   15.1  15.2  15.3  15.4  
+				15.5  15.6  15.7  15.8  15.9  
+				16.   16.1 16.2  16.3  16.4  
+				16.5  16.6  16.7  16.8  16.9  
+				17. 
+			</Egrid>
+			<Cross unit="cm2" uncertainty="20%" >
+				1.13901348e-27 7.77498840e-27 4.67690748e-26 2.65718580e-25 1.07688913e-24
+				6.23789235e-24 2.38531013e-23 9.50170409e-23 3.09621274e-22 1.05492369e-21
+				2.93613613e-21 6.43914497e-21 1.00764140e-20 9.87283419e-21 1.68722348e-20
+				3.15648779e-20 7.33051584e-20 1.76508090e-18 4.97989465e-18 5.84943190e-18
+				5.91968003e-17 3.69242868e-17 8.90092350e-18 6.10366479e-18 1.10664834e-16
+				9.60246166e-18 2.07076419e-17 2.73041827e-17 8.82657558e-18 1.18030558e-17
+				4.80748145e-17 1.55571174e-17 1.68080223e-17 5.53283964e-17 2.21389709e-17
+				4.56513109e-17 2.18146550e-17 1.94674047e-17 1.77719974e-17 4.70873987e-17
+				2.96311486e-17 2.87717912e-17 2.58706858e-17 1.24156297e-17 1.70973918e-17
+				2.50755337e-17 2.98051550e-17 2.74347433e-17 2.01672375e-17 1.07087849e-17
+				7.40715916e-18 5.00838774e-18 3.60656606e-18 2.80301423e-18 2.22317416e-18
+				1.78444111e-18 1.57538478e-18 1.34253286e-18 1.17891613e-18 1.12432639e-18
+				1.11352911e-18 1.38260289e-18 1.33348517e-18 1.48910490e-18 1.36362724e-18
+				1.49198595e-18 1.67122131e-18 1.62928312e-18 1.55889316e-18 2.95756433e-18
+				2.00892124e-18 1.63012054e-18 4.06681001e-18 2.62395628e-18 1.69181135e-18
+				2.17144430e-18 1.02299440e-18 1.06311888e-18 6.05565425e-19 1.77258920e-18
+				1.46267716e-18 
+			</Cross>
+		</Process>
+
+
+	</CO2>
+</crs>
+

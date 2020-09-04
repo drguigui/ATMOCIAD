@@ -1,0 +1,38 @@
+<crs>
+	<Name>O2</Name>
+	<Collider>e</Collider>
+	<title> O$_2$  + e $\rightarrow$ O(${^{1}}$S)</title>
+	<Emin>10</Emin>
+	<Emax>1E3</Emax>
+	<Cmax>1E-17</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_O2_e_O1S.pdf</plotname>
+	<Process name="O2 + e -> O(1S) + O" electrons="0" threshold="16.">
+		<Species>
+			<Specie name="O" state="1S-NOTOT"/>
+		</Species>
+		<legend>O(1S) LeClair 1993</legend>
+		<Proc>O(1S)</Proc>
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="measurement">LeClair 1993</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Emission: excitation to O(1S) is computed in the dissociation of O2. Small process</Notes>
+		<Recommended/>
+		<Extrapolated/>
+		<Egrid unit="eV">
+			16	20	24	28	32
+			36	40	45	50	60
+			70	80	90	100	120
+			140	160	180	200	250
+			300	350	400	450	500
+			600	700	800	900	1000
+		</Egrid>
+		<Cross unit="cm2" uncertainty="18%" fact="1E-18">
+			0.35	0.92	1.26	1.47	1.61
+			1.73	1.82	1.92	1.97	2.04
+			2.07	2.08	2.06	2.04	1.98
+			1.90	1.82	1.75	1.67	1.53
+			1.39	1.26	1.16	1.08	1.02
+			0.92	0.82	0.75	0.69	0.65
+		</Cross>
+	</Process>
+</crs>

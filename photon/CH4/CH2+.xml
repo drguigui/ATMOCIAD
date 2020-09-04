@@ -1,0 +1,61 @@
+<crs>
+	<Name>CH4</Name>
+	<Collider>ph</Collider>
+	<title> CH$_4$  + $\lambda \rightarrow$ CH${_{2}}{^{+}}$ + H$_2$ + e</title>
+	<Emin>14</Emin>
+	<Emax>15000</Emax>
+	<Cmax>5E-18</Cmax>
+	<Cmin>1E-22</Cmin>
+	<plotname>seff_CH4_ph_CH2p.pdf</plotname>
+	<lambplotname>seff_CH4_ph_CH2p_lambda.pdf</lambplotname>
+	<CH4>
+		<Process name="CH4 + ph -> CH2+ +H2" electrons="1" threshold="15">
+			<Species>
+				<Specie name="CH2+" state="X"/>
+				<Specie name="H2" state="X"/>
+			</Species>
+			<legend>CH$_2$$^+$ (AMOP)</legend>
+			<Proc>CH$_2$$^+$ + H$_2$ + e</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website. Estimate of uncertainty</Notes>
+			<EstimatedUncertainty/>
+			<Recommended/>
+			<Emin>15.4</Emin>
+			<Emax>12400</Emax>
+			<texnote title="CH$_2$$^+$ AMOP">
+				Photoionization of CH$_4$ yielding CH$_2^+$ + H$_2$ + e from the review of AMOP.
+				The uncertainty, not claimed by the review, is estimated at 30\%.
+				The data, in nm, have been directly adapted in eV.
+			</texnote>
+			<Egrid unit="ev">
+			     14.693553	     14.760024	     14.884058	     14.992044	     15.382655
+			     15.562219	     16.039353	     16.116496	     16.228298	     16.610959
+			     17.255978	     17.750064	     18.010488	     18.078769	     18.249073
+			     18.461018	     18.466518	     18.731561	     18.776950	     19.454605
+			     19.701923	     20.117508	     20.520391	     20.677819	     21.350818
+			     21.573725	     22.339495	     23.002635	     23.235420	     23.415335
+			     23.580107	     24.387136	     26.101937	     26.976545	     27.430133
+			     28.567788	     29.604632	     33.150856	     34.155427	     34.593806
+			     40.824564	     44.598633	     49.593680	     78.471013	    123.984200
+			    196.800317	    290.361124	    309.960500	     311.518090	    392.355063
+			    525.356780	  12398.420000
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+			  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  4.750000e-19
+			  5.970000e-19	  1.280000e-18	  1.200000e-18	  1.340000e-18	  1.190000e-18
+			  1.300000e-18	  1.240000e-18	  1.360000e-18	  1.340000e-18	  1.240000e-18
+			  1.390000e-18	  1.320000e-18	  1.270000e-18	  1.310000e-18	  1.320000e-18
+			  1.340000e-18	  1.330000e-18	  1.180000e-18	  1.250000e-18	  1.150000e-18
+			  1.220000e-18	  1.040000e-18	  1.080000e-18	  9.270000e-19	  9.510000e-19
+			  1.050000e-18	  1.060000e-18	  1.040000e-18	  1.060000e-18	  1.200000e-18
+			  1.110000e-18	  1.250000e-18	  1.200000e-18	  9.840000e-19	  1.220000e-18
+			  5.840000e-19	  6.030000e-19	  5.760000e-19	  2.240000e-19	  6.750000e-20
+			  2.830000e-20	  1.140000e-20	  2.500000e-19	  1.930000e-19	  1.030000e-19
+			  5.100000e-20	  2.000000e-22
+			</Cross>
+		</Process>
+	</CH4>
+</crs>
+
+

@@ -1,0 +1,31 @@
+<crs>
+	<Name>CO</Name>
+	<Collider>e</Collider>
+	<title>CO + e $\rightarrow$ O${^{++}}$</title>
+	<Emin>40</Emin>
+	<Emax>1E3</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-20</Cmin>
+	<plotname>seff_CO_e_Opp.pdf</plotname>
+	<Process name="CO + e -> O++" electrons="2" ions="1" threshold="59.800000">
+		<Ionization/>
+		<Shirai/><!--Shirai et al 2001 analytic cross section -->
+		<Species>
+			<Specie name="O++" state="X"/>
+		</Species>
+		<legend>O++ Shirai 2001</legend>
+		<Proc>O++</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Extrapolated/>
+		<Recommended/>
+		<Notes>Review of Shirai, based on Straub. Analytic functions. </Notes>
+		<uncertainty>20</uncertainty>
+		<Emin> 80.0 </Emin>
+		<Emax> 600.0 </Emax>
+		<Equation type="1" article_id="CO2" article_number="27"/>
+		<params>
+			1.040000e-04    1.970000e+00    1.050000e-01    7.100000e-01
+		</params>
+	</Process>
+</crs>

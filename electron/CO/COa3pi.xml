@@ -1,0 +1,44 @@
+<crs>
+	<Name>CO</Name>
+	<Collider>e</Collider>
+	<title>CO + e $\rightarrow$ CO(a${^3}\Pi$)</title>
+	<Emin>5</Emin>
+	<Emax>400</Emax>
+	<Cmax>3E-16</Cmax>
+	<Cmin>5E-19</Cmin>
+	<plotname>seff_CO_e_COa3pi.pdf</plotname>
+	<CO>
+
+		<Process name="CO+e -> CO(a3Pi)" electrons="0" threshold="6.14">
+			<Species>
+				<Specie name="CO" state="a3Pi"/>
+			</Species>
+			<Excitation/>
+			<Source type="measurement">Furlong and Newell 1996</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Proc>CO(a3Pi)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Notes> Furlong and Newell 1996: extrapolated Cyril </Notes>
+			<Recommended/>
+			<Extrapolated/>
+			<Egrid unit="eV">
+				6.14000		6.55000		7.46000		8.49000         9.65000
+				10.5600         11.5500		12.5900		13.5000		14.5000
+				15.4900		16.5300		17.5300		18.6300		19.5600	
+				20.7700		22.7200		24.6700		26.9800		29.0100
+				30.5700		35.5400		40.6800		45.6600		50.7000
+				60.6900		71.0900		83.5784		101.951		121.907
+				148.693		181.350		221.197		269.778		310.002
+			</Egrid>
+			<Cross unit="cm2" uncertainty="5%">
+				0.42500e-16	0.54300e-16     1.07000e-16     1.69600e-16     1.89200e-16
+				1.79300e-16	1.62900e-16	1.45400e-16	1.45500e-16	1.38900e-16
+				1.29900e-16	1.22500e-16	1.27200e-16	1.05200e-16	1.02200e-16
+				0.91000e-16	0.74500e-16	0.68100e-16	0.56600e-16	0.47100e-16
+				0.45300e-16	0.31700e-16	0.23100e-16	0.20800e-16	0.19200e-16
+				0.17200e-16	0.13600e-16	0.12000e-16 	0.08300e-16 	0.06200e-16
+				0.03200e-16	0.01867e-16 	0.01234e-16 	0.00891e-16 	0.00770e-16
+			</Cross>
+		</Process>
+
+	</CO>
+</crs>

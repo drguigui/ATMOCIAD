@@ -1,0 +1,66 @@
+<CH4>
+	<Name>CH4</Name>
+	<Collider>e</Collider>
+	<title> CH$_4$  + e $\rightarrow$ CH${_{4}}{^{++}}$ (K-Shell ionization)</title>
+	<Emin>200</Emin>
+	<Emax>120000</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-22</Cmin>
+	<plotname>seff_CH4_e_CH4pp_auger.pdf</plotname>
+	<Process name="CH4 + e -> .74 x CH4++(X-C-KSHELL) 0.26 x CH4+(X) 0.26 x Fluo-auger(X-C) "  electrons="1" threshold="282">
+		<Ionization/>
+		<Species>
+			<Specie name="CH4++" state="X" number=".74"/>
+			<Specie name="CH4+" state="X" number="0.26"/>
+			<Specie name="Fluo-auger" state="X-C" number="0.26"/>
+		</Species>
+
+		<Proc>CH4++(Auger)</Proc>
+		<legend>CH4++(Auger) - Adapt</legend>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Fremont 2006 + Shirai 2002+Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2002+Straub</Notes>
+		 <texnote title="Notes for CH$_4^{++}$ K-Shell ionization, Fr\'emont 2006 + Shirai 2002 + Straub 2004">The K-Shell ionization of CH$_4$ by electron impact has been studied in \cite{Fremont2006}. The ratio K-shell/simple ionization has been taken in that paper.
+			 The total cross section has been computed by multiplying this ratio by the recommended ionization cross section, coming from an adaptation of the work of \cite{Straub2004} with the analytic cross sections in \cite{Shirai2002}.</texnote>
+		<EstimatedUncertainty/>
+		<Recommended/>
+		<Extrapolated/>
+		<Auger energy="229" fact="0.26"/>
+		<Egrid unit="eV">
+			1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
+			6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04
+			4.62417256e+04   4.19914652e+04   3.81318035e+04   3.46268443e+04
+			3.14439907e+04   2.85536410e+04   2.59289143e+04   2.35453997e+04
+			2.13809300e+04   1.94153748e+04   1.76304540e+04   1.60095673e+04
+			1.45376400e+04   1.32009826e+04   1.19871640e+04   1.08848952e+04
+			9.88392484e+03   8.97494356e+03   8.14949759e+03   7.39991005e+03
+			6.71920954e+03   6.10106535e+03   5.53972857e+03   5.02997859e+03
+			4.56707460e+03   4.14671144e+03   3.76497963e+03   3.41832894e+03
+			3.10353543e+03   2.81767141e+03   2.55807828e+03   2.32234173e+03
+			2.10826935e+03   1.91387021e+03   1.73733634e+03   1.57702591e+03
+			1.43144800e+03   1.29924869e+03   1.17919848e+03   1.07018088e+03
+			9.71181989e+02   8.81281088e+02   7.99642073e+02   7.25505676e+02
+			6.58182409e+02   5.97046145e+02   5.41528299e+02   4.91112538e+02
+			4.45329982e+02   4.03754840e+02   3.66000449e+02   3.31715685e+02
+			3.00581687e+02   2.72308901e+02   2.46634383e+02   2.23319350e+02
+		</Egrid>
+		<Cross unit="cm2" uncertainty="50%" >
+			2.83024417e-21   3.12816034e-21   3.45736436e-21   3.82112914e-21
+			4.22308015e-21   4.66718695e-21   5.15780146e-21   5.69990171e-21
+			6.29856779e-21   6.96001431e-21   7.69042768e-21   8.49693907e-21
+			9.38804944e-21   1.03712954e-20   1.14561379e-20   1.26544886e-20
+			1.39782311e-20   1.54373210e-20   1.70408891e-20   1.88111013e-20
+			2.07652911e-20   2.29225980e-20   2.53041567e-20   2.79333061e-20
+			3.08322098e-20   3.40032644e-20   3.75007369e-20   4.13519904e-20
+			4.55562642e-20   5.01884813e-20   5.52923062e-20   6.09158812e-20
+			6.72185907e-20   7.48727242e-20   8.17344154e-20   8.87725101e-20
+			9.63391081e-20   1.05540878e-19   1.15763173e-19   1.26704135e-19
+			1.35354123e-19   1.45686745e-19   1.57143975e-19   1.65226022e-19
+			1.74639422e-19   1.82482379e-19   1.86397693e-19   1.91445779e-19
+			1.93499835e-19   1.91606194e-19   1.84629999e-19   1.83110102e-19
+			1.73666717e-19   1.62239159e-19   1.44879871e-19   1.25432571e-19
+			1.03083290e-19   7.98431768e-20   5.17934691e-20   1.97588785e-20
+			6.13572762e-21   1.82326188e-21   5.40037995e-22   1.59377782e-22
+		</Cross>
+	</Process>
+</CH4>

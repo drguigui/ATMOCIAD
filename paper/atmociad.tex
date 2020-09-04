@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage{graphicx}
+\usepackage{aas_macros}
+\usepackage{url}
+\usepackage{pdfpages}
+\usepackage{rotating}
+%\usepackage{prelim2e} % Pour faire le bas de page
+\usepackage{wrapfig}
+\usepackage{afterpage}
+\usepackage[square,numbers]{natbib}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{nomencl}
+\newcommand{\Prog}{AeroPlanets }
+\makenomenclature
+
+%\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+%\usepackage{pgf}
+\author{Guillaume Gronoff \\ Cyril Simon\\ Jean Lilensten}
+
+\title{The \textbf{AtMoCiad} database}
+\graphicspath{{images/}{../electron/resultat/}{../photon/resultat/}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+%\printnomenclature
+
+\nomenclature{BDD}{Old database. The database used in the very old versions of the Trans* codes. Typically used as a reference when actual references are lost.}
+\nomenclature{AtMoCiad}{The Atomic and Molecular Cross sections for ionization and airglow database. The database descripted in the present document.}
+
+\include{introduction}
+%\include{part1_biblio/saber_retrieval}
+
+\include{physics}
+
+\include{Photons}
+\include{Electrons}
+
+%\include{part1_photo/Photons}
+
+
+%\include{part2_electron/Electrons}
+%\include{part3_protons/Protons}
+
+\chapter{Sources for specific state or ions}
+\section{Automatic computation of the list}
+The list can be automatically generated from the different files, or the recommended cross section file.
+
+For consistency reasons, the following list was generated from the recommended set of data. The main reason lies in the non-recommended files: sometimes, the authors cannot discreminate between two species with their experiment, and then, gives the production for the two species (example: O$_2^{++}$ and O$^+$ cannot be discriminated in standard ion mass spectrometer). It is stated in the specie list for that cross section in the non-recommended set, while  in the recommended one, we tried to extract the species producted).
+
+%\section{Sources and plot reference for specie production}
+
+%\include{finalspecies}
+
+
+
+
+
+\include{evolution}
+\chapter{Conclusion}
+
+The \textbf{AtMoCiad} database, presented here, will soon be released on internet, with free access. Contrarily to older databases, the design, presented in the appendixes, was developed for frequent modification and updates. Moreover, it is intended to be extended and completed for the scientific community, by the scientific community.
+
+More than an useful tool for each user, \textbf{AtMoCiad} is also the basis for comparing the different codes developed by the modelers, along with a reference for the experimental community, and especially the laboratory that measure these cross sections.  
+
+
+
+\appendix
+\label{appendixes}
+%\section*{Appendix}
+\include{appendix/xmlfile}
+%\include{appendix/xmlplotting}
+%\include{appendix/webinterface}
+\printnomenclature
+\addcontentsline{toc}{chapter}{Nomenclature}
+
+
+\bibliographystyle{plainnat}
+\bibliography{atmociad}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+
+\end{document}

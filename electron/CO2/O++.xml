@@ -1,0 +1,167 @@
+<crs>
+
+	<Name>CO2</Name>
+	<Collider>e</Collider>
+	<title>CO$_2$ + e $\rightarrow$ O${^{++}}$</title>
+	<Emin>50</Emin>
+	<Emax>1.2E5</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-21</Cmin>
+	<figsize>2</figsize>
+	<plotname>seff_CO2_e_Opp.pdf</plotname>
+	<Process name="CO2+e ->O++" electrons="2" ions="1" threshold="54.20">
+		<Ionization/>
+		<Shirai/><!--Shirai et al 2001 analytic cross section -->
+		<Species>
+			<Specie name="O++" state="X"/>
+		</Species>
+		<legend>O++ Shirai 2001</legend>
+
+		<Proc>O++</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Shirai 2001</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+
+		<Extrapolated/>
+		<Notes>Review of Shirai, based on Straub. Analytic functions. </Notes>
+		<uncertainty>20</uncertainty>
+		<Emin> 80.0 </Emin>
+		<Emax> 1000.0 </Emax>
+		<Equation type="1" article_id="CO2" article_number="57"/>
+		<params>
+			1.400000e-05    2.520000e+00    1.460000e-01    9.000000e-01
+		</params>
+	</Process>
+
+
+
+
+	<Process name="CO2+e -> O++ " electrons="2" ions="1" threshold="54.20">
+		<Ionization/>
+		<legend>O++ Straub 2004</legend>
+		<Proc>O++</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="measurement">Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes>Data on website </Notes>
+		<Species>
+			<Specie name="O++" state="X"/>
+		</Species>
+		<Egrid unit="eV">
+			1.500000e+01    2.000000e+01    2.500000e+01    3.000000e+01    3.500000e+01
+			4.000000e+01    4.500000e+01    5.000000e+01    5.500000e+01    6.000000e+01
+			6.500000e+01    7.000000e+01    7.500000e+01    8.000000e+01    8.500000e+01
+			9.000000e+01    9.500000e+01    1.000000e+02    1.100000e+02    1.200000e+02
+			1.400000e+02    1.600000e+02    1.800000e+02    2.000000e+02    2.250000e+02
+			2.500000e+02    2.750000e+02    3.000000e+02    3.500000e+02    4.000000e+02
+			4.500000e+02    5.000000e+02    5.500000e+02    6.000000e+02    6.500000e+02
+			7.000000e+02    7.500000e+02    8.000000e+02    8.500000e+02    9.000000e+02
+			9.500000e+02    1.000000e+03
+		</Egrid>
+		<Cross unit="cm2" uncertainty="11%" >
+			0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00
+			0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00
+			0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00
+			0.000000e+00    1.690000e-20    1.970000e-20    3.250000e-20    7.210000e-20
+			1.330000e-19    1.590000e-19    2.170000e-19    2.330000e-19    2.710000e-19
+			2.860000e-19    3.040000e-19    2.760000e-19    2.490000e-19    2.150000e-19
+			1.930000e-19    1.920000e-19    1.680000e-19    1.560000e-19    1.420000e-19
+			1.760000e-19    1.470000e-19    1.270000e-19    1.270000e-19    1.000000e-19
+			1.160000e-19    1.030000e-19
+		</Cross>
+	</Process>
+	<Process name="CO2+e -> O++ " electrons="2" ions="1" threshold="54.20">
+		<Ionization/>
+		<legend>O++ Itikawa 2002</legend>
+		<Proc>O++</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Itikawa 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review, based on Straub </Notes>
+		<Species>
+			<Specie name="O++" state="X"/>
+		</Species>
+		<Egrid unit="eV">
+			95
+			100 110 120 140 160
+			180 200 225 250 275
+			300 350 400 450 500
+			550 600 650 700 750
+			800 850 900 950 1000
+		</Egrid>
+		<Cross unit="cm2" uncertainty="11%" fact="1E-18">
+			0.0169
+			0.0197 0.0324 0.0721 0.133 0.159
+			0.217 0.233 0.271 0.286 0.304
+			0.276 0.249 0.215 0.193 0.192
+			0.168 0.156 0.142 0.176 0.147
+			0.127 0.127 0.100 0.116 0.103
+		</Cross>
+	</Process>
+
+
+	<Process name="CO2+e -> O++ " electrons="2" ions="1" threshold="54.20">
+		<Ionization/>
+		<Species>
+			<Specie name="O++" state="X"/>
+		</Species>
+		<legend>Dans la DB</legend>
+		<Proc>O++</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Notes> Probably from Rees </Notes>
+		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Egrid unit="eV">
+			80.0000 90.0000 100.0000 110.0000 125.0000
+			150.0000 175.0000 200.0000 225.0000 250.0000
+			275.0000 300.0000
+		</Egrid>
+		<Cross unit="cm2" >
+			1.05e-20 2.68E-20 6.72E-20 8.38E-20 0.00103E-16
+			0.00210E-16 0.00241E-16 0.00302E-16 0.00381E-16 0.00343E-16
+			0.00342E-16 0.00326E-16
+		</Cross>
+	</Process>
+
+	<Process name="CO2+e -> O++ " electrons="2" ions="1" threshold="54.20">
+		<Ionization/>
+		<legend>Recommended O++ Straub 2004 + extrapolation shirai</legend>
+		<Proc>O++</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Straub 2004 + Shirai 2001</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>The data of Straub have been extrapolated with Shirai 2001, hence the estimated uncertainty</Notes>
+		<EstimatedUncertainty/>
+		<Recommended/>
+		<Extrapolated/>
+		<Species>
+			<Specie name="O++" state="X"/>
+		</Species>
+		<Egrid unit="eV">
+			1.500000e+01    2.000000e+01    2.500000e+01    3.000000e+01    3.500000e+01
+			4.000000e+01    4.500000e+01    5.000000e+01    5.500000e+01    6.000000e+01
+			6.500000e+01    7.000000e+01    7.500000e+01    8.000000e+01    8.500000e+01
+			9.000000e+01    9.500000e+01    1.000000e+02    1.100000e+02    1.200000e+02
+			1.400000e+02    1.600000e+02    1.800000e+02    2.000000e+02    2.250000e+02
+			2.500000e+02    2.750000e+02    3.000000e+02    3.500000e+02    4.000000e+02
+			4.500000e+02    5.000000e+02    5.500000e+02    6.000000e+02    6.500000e+02
+			7.000000e+02    7.500000e+02    8.000000e+02    8.500000e+02    9.000000e+02
+			9.500000e+02    1.000000e+03    1.25000000e+03  1.50000000e+03   1.75000000e+03
+			2.00000000e+03  2.50000000e+03   3.00000000e+03   4.00000000e+03   5.00000000e+03
+			7.50000000e+03  1.00000000e+04   2.00000000e+04   3.00000000e+04   4.00000000e+04
+			5.00000000e+04  6.00000000e+04   7.00000000e+04   8.00000000e+04   9.00000000e+04
+			1.00000000e+05
+		</Egrid>
+		<Cross unit="cm2" uncertainty="11%" >
+			0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00
+			0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00
+			0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00    0.000000e+00
+			0.000000e+00    1.690000e-20    1.970000e-20    3.250000e-20    7.210000e-20
+			1.330000e-19    1.590000e-19    2.170000e-19    2.330000e-19    2.710000e-19
+			2.860000e-19    3.040000e-19    2.760000e-19    2.490000e-19    2.150000e-19
+			1.930000e-19    1.920000e-19    1.680000e-19    1.560000e-19    1.420000e-19
+			1.760000e-19    1.470000e-19    1.270000e-19    1.270000e-19    1.000000e-19
+			1.160000e-19    1.030000e-19    8.33053624e-20  7.02464264e-20   6.08634017e-20
+			5.37826415e-20  4.37809521e-20   3.70334716e-20   2.84685440e-20   2.32314805e-20
+			1.60757583e-20  1.23884321e-20   6.62256137e-21   4.59398945e-21   3.54460882e-21
+			2.89896685e-21   2.45985463e-21   2.14095160e-21   1.89834979e-21 1.70729877e-21
+			1.55275964e-21
+		</Cross>
+	</Process>
+
+</crs>

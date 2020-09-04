@@ -1,0 +1,41 @@
+<crs>
+	<Name>CO</Name>
+	<Collider>e</Collider>
+	<title>CO + e $\rightarrow$ O(${^3}$S)</title>
+	<Emin>20</Emin>
+	<Emax>400</Emax>
+	<Cmax>2E-18</Cmax>
+	<Cmin>7E-21</Cmin>
+	<plotname>seff_CO_e_O3S.pdf</plotname>
+	<CO>
+
+		<Process name="CO+e -> C+O(3S)" electrons="0" threshold="20">
+			<Species>
+				<Specie name="C" state="X"/>
+				<Specie name="O" state="3S"/>
+			</Species>
+			<Excitation/>
+			<Source type="measurement">Ajello 1971</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Proc>O(3S)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Notes>  </Notes>
+			<Recommended/>
+			<Egrid unit="eV">
+				22.2107		24.6524		27.0097		30.3754		33.2782
+				35.5112		36.9152		38.8782		40.4154		43.1273
+				45.4229		48.4708		52.4071		56.6631		61.2679
+				67.1158		73.5297		81.6174		91.7926		104.607
+				119.229		134.149		152.925		169.843		188.644
+				209.525		232.73		251.828		276.097		298.77
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+				0.123919E-19	0.518992E-19	0.801429E-19	1.14047E-19	1.47913E-19
+				1.98608E-19	2.49267E-19	3.05566E-19	3.56224E-19	4.0692E-19
+				4.57597E-19	5.08293E-19	5.53385E-19	5.98477E-19	6.37947E-19
+				6.83058E-19	7.16924E-19	7.50809E-19	7.7909E-19	7.96145E-19
+				7.96333E-19	7.79635E-19	7.62956E-19	7.34994E-19	7.0141E-19
+				6.67826E-19	6.2862E-19	5.89376E-19	5.44528E-19	4.99662E-19
+			</Cross>
+		</Process>
+	</CO>
+</crs>

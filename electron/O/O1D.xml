@@ -1,0 +1,103 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+	<title>O + e $\rightarrow$ O(${^1}$D)</title>
+	<Emin>1</Emin>
+	<Emax>12000</Emax>
+	<Cmax>1E-16</Cmax>
+	<Cmin>1E-25</Cmin>
+	<plotname>seff_O_e_O1D.pdf</plotname>
+	<Process name="O+e -> O(1D)" electrons="0" threshold="2.1">
+		<Species>
+			<Specie name="O" state="1D"/>
+		</Species>
+		<!-- Recommended by comparison with the Itikawa 90 paper: the decrease is too important in Laher -->
+		<legend>O(1D) old BDD (Rec)</legend>
+		<Proc>O(1D)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation"> Itikawa 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes> Adaptation from the early measurements Recommended by comparison with the Itikawa 90 paper: the decrease is too important in Laher</Notes>
+		<legend>1D BDD</legend>
+		<Recommended/>
+		<Extrapolated/>
+		<Excitation/>
+		<Egrid unit="eV">
+			2.100E+00   2.300E+00   2.500E+00   2.700E+00   2.900E+00
+			3.100E+00   3.300E+00   3.500E+00   3.700E+00   3.900E+00
+			4.100E+00   4.300E+00   4.500E+00   4.700E+00   4.900E+00
+			5.250E+00   5.750E+00   6.250E+00   6.750E+00   7.250E+00
+			7.750E+00   8.250E+00   8.750E+00   9.250E+00   9.750E+00
+			1.050E+01   1.150E+01   1.250E+01   1.350E+01   1.450E+01
+			1.550E+01   1.650E+01   1.750E+01   1.850E+01   1.950E+01
+			2.000E+01   2.075E+01   2.150E+01   2.225E+01   2.300E+01
+			2.500E+01   3.500E+01   5.000E+01   7.000E+01   9.000E+01
+			1.200E+02   1.600E+02
+
+		</Egrid>
+		<Cross unit="cm2" uncertainty="50%">
+			1.000E-18   3.870E-18   7.750E-18   1.140E-17   1.500E-17
+			1.720E-17   1.970E-17   2.250E-17   2.360E-17   2.470E-17
+			2.550E-17   2.590E-17   2.640E-17   2.680E-17   2.730E-17
+			2.750E-17   2.750E-17   2.730E-17   2.700E-17   2.650E-17
+			2.580E-17   2.510E-17   2.450E-17   2.400E-17   2.350E-17
+			2.270E-17   2.160E-17   2.050E-17   1.940E-17   1.850E-17
+			1.770E-17   1.710E-17   1.660E-17   1.610E-17   1.550E-17
+			1.530E-17   1.490E-17   1.460E-17   1.420E-17   1.390E-17
+			1.300E-17   9.560E-18   6.400E-18   4.060E-18   2.570E-18
+			1.520E-18   8.710E-19
+		</Cross>
+	</Process>
+
+	<Process name="O+e -> O(1D)" electrons="0" threshold="1.96">
+		<Species>
+			<Specie name="O" state="1D"/>
+		</Species>
+		<legend>O(1D) Laher</legend>
+		<Proc>O(1D)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Laher 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			2.1	2.4	2.7	3	4
+			4.4	4.8	5	6	7
+			8	9	10	12	14
+			16	18	20	25	30
+			40	45	50	55	70	
+			100	150	200	500	1000
+			2000	5000	10000
+		</Egrid>
+		<Cross unit="cm2" fact="1E-18" uncertainty="50%" >
+			0.82	5.41	10.7	15.4	24.9
+			26.7	27.7	28	28.3	27.4
+			26	24.4	22.8	19.8	17.1
+			14.8	12.9	11.2	8.07	5.90
+			3.34	2.58	2.02	1.61	0.87
+			0.33	0.11	0.05	0.0032	4E-4
+			5E-5	3.2E-6	4E-7
+		</Cross>
+	</Process>
+
+	<Process name="O+e -> O(1D)" electrons="0" threshold="1.96">
+		<Species>
+			<Specie name="O" state="1D"/>
+		</Species>
+		<legend>O(1D) Majeed</legend>
+		<Proc>O(1D)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Majeed 95</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			2.3	3	4	5.5	8
+			10	15	20	30	50
+			100
+		</Egrid>
+		<Cross unit="cm2" fact="1E-17" uncertainty="50%" >
+			0.274	1.55	3.95	5.41	4.59
+			3.61	2.1	1.33	0.681	0.290
+			0.081
+		</Cross>
+	</Process>
+
+</crs>

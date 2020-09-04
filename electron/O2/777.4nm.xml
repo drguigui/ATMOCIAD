@@ -1,0 +1,49 @@
+<crs>
+	<Name>O2</Name>
+	<Collider>e</Collider>
+	<title> O$_2$  + e $\rightarrow$ O (777.4 nm emission)</title>
+	<Emin>10</Emin>
+	<Emax>1000</Emax>
+	<Cmax>3E-18</Cmax>
+	<Cmin>8E-19</Cmin>
+	<plotname>seff_O2_e_O777_4nm.pdf</plotname>
+	<Process name="O2+e->O(777.4nm)" electrons="1" threshold="19">
+		<legend>777.4nm</legend>
+		<Proc>777.4nm</Proc> <!-- Name for the processus -->
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="measurement">Erdman 1987</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes></Notes>
+		<Species>
+			<Specie name="O" state="5P-777.4nm"/>
+		</Species>
+		<Emission/>
+		<Egrid unit="eV">
+			16   17   18   19   20   
+			22   24   26   28   30   
+			35   40   50   60   70   
+			80   90   100  125  150  
+			175  200  225  250  275  
+			300  325  350  375  400  
+			425  450  475  500  600  
+			700  800  900  1000 1200 
+			1400 1600 1800 2000 2200 
+			2400 2600 2800 3000 4000 
+			5000 6000 7000 8000 9000 
+			10000
+		</Egrid>
+		<Cross unit="cm2" fact="1E-19" uncertainty="15%">
+			0.44 3.5 6.18 8.88 11.0
+			15.2 17.5 19.1 20.5 21.6
+			24.  26.2 31.9 38.3 39.9
+			40.7 43.1 42.3 38.7 34.2
+			30.6 27.6 25.6 23.4 22.0
+			20.4 19.4 18.2 17.2 16.5
+			15.8 15.0 14.4 13.9 12.0
+			10.6 9.54 8.68 7.97 6.87
+			6.05 5.42 4.92 4.51 4.16
+			3.87 3.62 3.40 3.21 2.51
+			2.08 1.78 1.56 1.39 1.25
+			1.14
+		</Cross>
+	</Process>
+</crs>

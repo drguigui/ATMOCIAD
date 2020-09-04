@@ -1,0 +1,50 @@
+<crs>
+	<Name>CO</Name>
+	<Collider>e</Collider>
+	<title>CO + e $\rightarrow$ CO(A${^1}\Pi$)</title>
+	<Emin>5</Emin>
+	<Emax>1000</Emax>
+	<Cmax>1E-17</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_CO_e_COA1pi.pdf</plotname>
+	<CO>
+		<Process name="CO+e ->CO(A1Pi)" electrons="0" threshold="7.">
+			<Species>
+				<Specie name="CO" state="A1Pi"/>
+			</Species>
+			<Excitation/>
+			<Source type="measurement"> Beegle et al 99 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Proc>CO(A1Pi)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Notes> Beegle 1999 </Notes>
+			<Recommended/>
+			<Egrid unit="eV">
+				8	9	10	11	12
+				13	14	15	16	18
+				20	22	24	26	28
+				30	35	40	45	50
+				55	60	65	70	80
+				90	100	110	120	140
+				160	180	200	220	240
+				260	280	300	350	400
+				450	500	550	600	650	
+				700	750
+
+			</Egrid>
+			<Cross unit="cm2" uncertainty="25%">
+				0.341E-18	1.770E-18	3.073E-18	4.000E-18	4.862E-18
+				5.422E-18	5.755E-18	6.119E-18	6.368E-18	6.713E-18
+				6.930E-18	6.985E-18	6.967E-18	6.873E-18	6.703E-18
+				6.496E-18	5.995E-18	5.632E-18	5.308E-18	5.023E-18
+				4.773E-18	4.553E-18	4.359E-18	4.187E-18	3.895E-18
+				3.658E-18	3.460E-18	3.291E-18	3.145E-18	2.898E-18
+				2.692E-18	2.513E-18	2.354E-18	2.210E-18	2.080E-18
+				1.961E-18	1.852E-18	1.754E-18	1.548E-18	1.389E-18
+				1.265E-18	1.178E-18	1.110E-18	1.058E-18	1.017E-18
+				0.985E-18	0.958E-18
+			</Cross>
+		</Process>
+
+
+	</CO>
+</crs>

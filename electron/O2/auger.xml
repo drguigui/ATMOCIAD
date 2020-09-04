@@ -1,0 +1,77 @@
+<crs>
+	<Name>O2</Name>
+	<Collider>e</Collider>
+	<title> O$_2$  + e $\rightarrow$ O${_{2}}{^{++}}$ K-SHELL</title>
+	<Emin>400</Emin>
+	<Emax>20000</Emax>
+	<Cmax>2E-19</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_O2_e_O2pp_auger.pdf</plotname>
+	<O2>
+		<!--
+		K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006
+		and corresponds to the O ratio
+		the ionization rate, wich was x by the ratio, comes from Itikawa 2008
+		the ratio, defined between 400 and 5 KeV, was extrapolated (as a limit!)
+		the production ratio were computed on the basis of the K Shell photoionization
+		-->
+		<Process name="O2 + e -> .31 x O2++(X-KSHELL) 0.69 x O+(X) 0.69 x Fluo-auger(X) "  electrons="1" threshold="539">
+			<Species>
+				<Specie name="O2++" state="X-KSHELL" number=".31"/>
+				<Specie name="O2+" state="X" number="0.69"/>
+				<Specie name="Fluo-auger" state="X" number="0.69"/>
+			</Species>
+			<Ionization/>
+			<Proc>O2++(Auger)</Proc>
+			<legend>O2++(Auger) Adap</legend>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Fremont 2006 + Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the O ratio. The ionization rate, wich was x by the ratio, comes from Straub</Notes>
+		<texnote title="Notes for O$_2^{++}$ K-Shell ionization, Fr\'emont 2006 + Straub2004">The K-Shell ionization of O by electron impact has not been studied in \cite{Fremont2006}, but we assumed that the K-Shell/single ionization ratio is close to the O$_2$ one which is used here.
+		 The total cross section has been computed by multiplying this ratio by the recommended ionization cross section, coming from \cite{Straub2004}.</texnote>
+			<Recommended/>
+			<Extrapolated/>
+			<EstimatedUncertainty/>
+			<Auger  energy="456" fact="0.31"/>
+			<Egrid unit="eV">
+				1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
+				6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04
+				4.62417256e+04   4.19914652e+04   3.81318035e+04   3.46268443e+04
+				3.14439907e+04   2.85536410e+04   2.59289143e+04   2.35453997e+04
+				2.13809300e+04   1.94153748e+04   1.76304540e+04   1.60095673e+04
+				1.45376400e+04   1.32009826e+04   1.19871640e+04   1.08848952e+04
+				9.88392484e+03   8.97494356e+03   8.14949759e+03   7.39991005e+03
+				6.71920954e+03   6.10106535e+03   5.53972857e+03   5.02997859e+03
+				4.56707460e+03   4.14671144e+03   3.76497963e+03   3.41832894e+03
+				3.10353543e+03   2.81767141e+03   2.55807828e+03   2.32234173e+03
+				2.10826935e+03   1.91387021e+03   1.73733634e+03   1.57702591e+03
+				1.43144800e+03   1.29924869e+03   1.17919848e+03   1.07018088e+03
+				9.71181989e+02   8.81281088e+02   7.99642073e+02   7.25505676e+02
+				6.58182409e+02   5.97046145e+02   5.41528299e+02   
+			</Egrid>
+			<Cross unit="cm2" uncertainty="20%" >
+				3.55885151e-020   3.68381331e-020   3.81316389e-020   3.94705750e-020
+				4.08565388e-020   4.22911836e-020   4.37762216e-020   4.53134251e-020
+				4.69046293e-020   4.85517341e-020   5.02567068e-020   5.20215845e-020
+				5.38484765e-020   5.57395669e-020   5.76971176e-020   5.97234708e-020
+				6.18210524e-020   6.39923747e-020   6.62400401e-020   6.85667439e-020
+				7.09752783e-020   7.34685358e-020   7.60495134e-020   7.87213164e-020
+				8.14871624e-020   8.43503864e-020   8.73144448e-020   9.03829209e-020
+				9.35595296e-020   9.68481231e-020   1.00252726e-019   1.02325270e-019
+				1.04008843e-019   1.06999599e-019   1.08010112e-019   1.08052311e-019
+				1.08094561e-019   1.09279754e-019   1.09742836e-019   1.08779374e-019
+				1.06610113e-019   1.03517912e-019   1.01218693e-019   9.79130194e-020
+				9.40722038e-020   9.05355796e-020   8.49769320e-020   7.86879800e-020
+				7.15784064e-020   6.37751999e-020   5.28514452e-020   4.10792285e-020
+				2.94850646e-020   1.35175765e-020   2.30477062e-021 
+			</Cross>
+		</Process>
+	</O2>
+
+</crs>
+
+
+
+
+
+

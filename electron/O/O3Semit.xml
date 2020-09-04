@@ -1,0 +1,78 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+	<title>O + e $\rightarrow$ O(${^3}$S) emission (direct excitation + cascades)</title>
+	<Emin>9</Emin>
+	<Emax>120000</Emax>
+	<Cmax>5E-17</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_O_e_O3Semit.pdf</plotname>
+	<Process name="O+e->O(3S)" electrons="0" threshold="10.">
+		<Species>
+			<Specie name="O" state="3S"/>
+		</Species>
+		<Excitation/>
+		<Proc>O(3S)</Proc>
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes> Probably from Rees. Total: well suited for emissions! </Notes>
+		<Egrid unit="eV">
+			1.050E+01   1.150E+01   1.250E+01   1.350E+01   1.450E+01
+			1.550E+01   1.650E+01   1.750E+01   1.850E+01   1.950E+01
+			2.000E+01   2.075E+01   2.150E+01   2.225E+01   2.300E+01
+			2.500E+01   3.500E+01   5.000E+01   7.000E+01   9.000E+01
+			1.200E+02   1.600E+02   2.100E+02   2.700E+02   3.500E+02
+			4.500E+02   6.000E+02   8.000E+02   1.100E+03   1.500E+03
+			2.100E+03   2.900E+03   4.100E+03   5.700E+03   8.100E+03
+			1.130E+04   1.610E+04   2.250E+04   3.210E+04   4.490E+04
+			6.410E+04   8.970E+04
+		</Egrid>
+		<Cross unit="cm2">
+			1.650E-19   4.500E-19   1.220E-18   3.340E-18   9.090E-18
+			1.610E-17   1.850E-17   2.120E-17   2.440E-17   2.800E-17
+			3.000E-17   2.980E-17   2.970E-17   2.950E-17   2.940E-17
+			2.900E-17   2.670E-17   2.300E-17   2.000E-17   1.720E-17
+			1.520E-17   1.370E-17   9.210E-18   7.670E-18   6.340E-18
+			5.190E-18   4.170E-18   3.370E-18   2.660E-18   2.180E-18
+			1.660E-18   1.340E-18   9.900E-19   8.400E-19   6.560E-19
+			5.170E-19   4.410E-19   3.570E-19   2.600E-19   1.700E-19
+			9.040E-20   3.880E-20
+		</Cross>
+	</Process>
+
+	<Process name="O+e->O(3S)" electrons="0" threshold="10.">
+		<Species>
+			<Specie name="O" state="3S"/>
+		</Species>
+		<legend>O(3S) EMIT Johnson (recommended)</legend>
+		<Proc>O(3S)</Proc>
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Johnson 05</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Including cascades (emission cross section). </Notes>
+		<Recommended/>
+		<Excitation/>
+		<Egrid unit="eV">
+			9.51 10 11 12 13
+			14 15 16 17 18
+			19 20 21 22 23
+			24 25 26 28 30
+			32 35 40 45 50
+			60 70 80 90 100
+			120 140 160 180 200
+			250 300 400 500 600
+			800 1000 
+		</Egrid>
+		<Cross unit="cm2" uncertainty="20%" fact="1E-18">
+			0 0.82 4.22 8.59 12.69
+			14.60 15.47 16.03 16.24 16.31
+			16.31 16.27 16.18 16.08 15.96
+			15.85 15.74 15.62 15.34 15.03
+			14.73 14.27 13.57 12.88 12.34
+			11.49 10.79 10.14 9.58 9.08
+			8.23 7.49 6.84 6.33 5.89
+			5.05 4.43 3.53 2.98 2.53
+			1.89 1.57
+		</Cross>
+	</Process>
+
+</crs>

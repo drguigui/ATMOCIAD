@@ -1,0 +1,33 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+	<title>O + e $\rightarrow$ O(5d  $^3$D)</title>
+	<Emin>10</Emin>
+	<Emax>2000</Emax>
+	<Cmax>3E-18</Cmax>
+	<Cmin>1E-20</Cmin>
+	<plotname>seff_O_e_5d3D.pdf</plotname>
+	<Process name="O+e->O(5d3D)" electrons="0" threshold="13.">
+		<Species>
+			<Specie name="O" state="(5d)3D"/>
+		</Species>
+		<legend>(5d)3D Majeed</legend>
+		<legend>(4d)3P Majeed</legend>
+		<Proc>O(5d-3D)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Majeed 95</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			14	16	20	30	50
+			100	200	500	1000
+		</Egrid>
+		<Cross unit="cm2" fact="1E-17">
+			0.024	0.043	0.065	0.1	0.113	
+			0.073	0.04	0.02	0.01
+		</Cross>
+	</Process>
+
+
+
+</crs>

@@ -1,0 +1,54 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+
+	<title>O + e $\rightarrow$ O(2p5${^3}$P)</title>
+	<Emin>10</Emin>
+	<Emax>1200</Emax>
+	<Cmax>1E-16</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_O_e_2p53P.pdf</plotname>
+	<Process name="O+e->O(2p5 3P)" electrons="0" threshold="15.65">
+		<Species>
+			<Specie name="O" state="(2p5)3P"/>
+		</Species>
+		<legend>2p5 3P Majeed 95</legend>
+		<Proc>O(2p5-3P)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Majeed 95</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			16	18	20	25	30	41.5
+			50	100	200	500	1000
+		</Egrid>
+		<Cross unit="cm2" fact="1E-17" uncertainty="25%">
+			0.02	0.069	0.123	0.371	0.648	1.35
+			1.15	0.828	.420	0.120	0.041
+		</Cross>
+	</Process>
+
+
+	<Process name="O+e->O(2p5 3P)" electrons="0" threshold="15.65">
+		<Species>
+			<Specie name="O" state="(2p5)3P"/>
+		</Species>
+		<legend>2p5 3P Laher 90 (rec)</legend>
+		<Proc>O(2p5-3P)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Laher 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Recommended/>
+		<Excitation/>
+		<Egrid unit="eV">
+			16	18	20	25	30
+			40	45	50	55	70
+			100	150	200	
+		</Egrid>
+		<Cross unit="cm2" fact="1E-18" uncertainty="25%">
+			0.17	1.27	2.09	4.11	6.82
+			12.7	13.6	14.1	13.7	11.5
+			7.45	4.49	3.14
+		</Cross>
+	</Process>
+</crs>

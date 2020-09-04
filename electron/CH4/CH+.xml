@@ -1,0 +1,100 @@
+<crs>
+	<Name>CH4</Name>
+	<Collider>e</Collider>
+	<title> CH$_4$  + e $\rightarrow$ CH${^{+}}$ </title>
+	<Emin>10</Emin>
+	<Emax>120000</Emax>
+	<Cmax>1E-16</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CH4_e_CHp.pdf</plotname>
+
+
+	<Process name="" electrons="" threshold="24.14">
+		<Ionization/>
+		<legend>CH+ Straub</legend>
+		<Emin> 15.0 </Emin>
+		<Emax> 1000.0 </Emax>
+		<Proc>CH+</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="measurement">Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes>Data on website </Notes>
+		<Species>
+			<Specie name="CH+" state=""/>
+		</Species>
+		<Egrid unit="eV">
+			1.500000e+01	  1.750000e+01	  2.000000e+01	  2.250000e+01	  2.500000e+01
+			3.000000e+01	  3.500000e+01	  4.000000e+01	  4.500000e+01	  5.000000e+01
+			6.000000e+01	  7.000000e+01	  8.000000e+01	  9.000000e+01	  1.000000e+02
+			1.100000e+02	  1.250000e+02	  1.500000e+02	  1.750000e+02	  2.000000e+02
+			2.500000e+02	  3.000000e+02	  4.000000e+02	  5.000000e+02	  6.000000e+02
+			7.000000e+02	  8.000000e+02	  9.000000e+02	  1.000000e+03
+		</Egrid>
+		<Cross unit="cm2" uncertainty="6.5%" >
+			0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  4.100000e-19
+			2.920000e-18	  7.460000e-18	  1.120000e-17	  1.360000e-17	  1.440000e-17
+			1.630000e-17	  1.730000e-17	  1.720000e-17	  1.740000e-17	  1.670000e-17
+			1.630000e-17	  1.540000e-17	  1.400000e-17	  1.270000e-17	  1.160000e-17
+			9.810000e-18	  8.440000e-18	  6.430000e-18	  5.240000e-18	  4.350000e-18
+			3.780000e-18	  3.270000e-18	  3.020000e-18	  2.720000e-18
+		</Cross>
+	</Process>
+	<Process name="CH4+e -> CH+" electrons="1" threshold="24.140000">
+		<Shirai/><!--Shirai et al 2002 analytic cross section -->
+		<Species>
+			<Specie name="" state=""/>
+		</Species>
+		<legend>Shirai</legend>
+		<Proc>CH+</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Extrapolated/>
+		<Notes>Review of Shirai, based on Straub. Analytic functions. </Notes>
+		<uncertainty>10</uncertainty>
+		<Emin> 25.0 </Emin>
+		<Emax> 1000.0 </Emax>
+		<Equation type="9" article_id="CH4" article_number="11"/>
+		<params>
+			1.038000e-01    1.161000e+00    4.000000e-02    6.700000e-01    1.400000e-01
+			1.600000e+00
+		</params>
+	</Process>
+	<Process name="CH4+e -> CH+" electrons="1" threshold="24.140000">
+		<legend>Straub+ Shirai recommended</legend>
+		<Proc>CH+</Proc>
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+		<EstimatedUncertainty/>
+		<Recommended/>
+		<Extrapolated/>
+		<Species>
+			<Specie name="CH+" state="X"/>
+		</Species>
+		<Egrid unit="eV">
+			1.500000e+01	  1.750000e+01	  2.000000e+01	  2.250000e+01	  2.500000e+01
+			3.000000e+01	  3.500000e+01	  4.000000e+01	  4.500000e+01	  5.000000e+01
+			6.000000e+01	  7.000000e+01	  8.000000e+01	  9.000000e+01	  1.000000e+02
+			1.100000e+02	  1.250000e+02	  1.500000e+02	  1.750000e+02	  2.000000e+02
+			2.500000e+02	  3.000000e+02	  4.000000e+02	  5.000000e+02	  6.000000e+02
+			7.000000e+02	  8.000000e+02	  9.000000e+02	  1.000000e+03
+			1.25000000e+03  1.50000000e+03  1.75000000e+03   2.00000000e+03   2.50000000e+03   
+			3.00000000e+03  4.00000000e+03  5.00000000e+03   7.50000000e+03   1.00000000e+04 
+			2.00000000e+04  3.00000000e+04  4.00000000e+04   5.00000000e+04   6.00000000e+04   
+			7.00000000e+04  8.00000000e+04  9.00000000e+04   1.00000000e+05
+		</Egrid>
+		<Cross unit="cm2" uncertainty="6.5%" >
+			0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  4.100000e-19
+			2.920000e-18	  7.460000e-18	  1.120000e-17	  1.360000e-17	  1.440000e-17
+			1.630000e-17	  1.730000e-17	  1.720000e-17	  1.740000e-17	  1.670000e-17
+			1.630000e-17	  1.540000e-17	  1.400000e-17	  1.270000e-17	  1.160000e-17
+			9.810000e-18	  8.440000e-18	  6.430000e-18	  5.240000e-18	  4.350000e-18
+			3.780000e-18	  3.270000e-18	  3.020000e-18	  2.720000e-18
+			2.08067577e-18  1.69988517e-18  1.42514840e-18  1.21843496e-18  9.30034621e-19   
+			7.40305310e-19  5.09812002e-19  3.77842780e-19  2.14848542e-19  1.41997508e-19 
+			5.05488917e-20  2.71696274e-20  1.73993052e-20  1.22858155e-20  9.23404190e-21   
+			7.24808812e-21  5.87377448e-21  4.87796937e-21  4.13018541e-21
+		</Cross>
+	</Process>
+
+
+</crs>

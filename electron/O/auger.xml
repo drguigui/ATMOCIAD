@@ -1,0 +1,63 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+	<title>O + e $\rightarrow$ O${^{++}}$(Auger)</title>
+	<Emin>500</Emin>
+	<Emax>1E4</Emax>
+	<Cmax>1E-19</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_O_e_auger.pdf</plotname>
+	<O>
+		<!--
+		K-Shell ionization:  Comes from Glupe and mehlhorn 67
+		the threshold comes from itikawa (it was necessary to use it for scaling the energy!)
+		-->
+		<Process name="O + e -> .31 x O++(X-KSHELL) 0.69 x O+(X) 0.69 x Fluo-auger(X) "  electrons="1" threshold="539">
+			<Ionization/>
+			<Species>
+				<Specie name="O++" state="X-KSHELL" number=".31"/>
+				<Specie name="O+" state="X" number="0.69"/>
+				<Specie name="Fluo-auger" state="X" number="0.69"/>
+			</Species>
+			<Auger energy="474" fact="0.31"/>
+			<legend>K-Shell Glupe 67</legend>
+			<Proc>O++(Auger)</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="measurement">Glupe Mehlhorn 1967</Source>
+			<Notes>K-Shell ionization: measured. Plausible extrapolation</Notes>
+			<Recommended/>
+			<Extrapolated/>
+			<texnote title="Notes for O$^{++}$ K-Shell ionization, Glupe 1967">The K-Shell ionization of O by electron impact has been studied in \cite{Glupe1967}. It has been extrapolated here. </texnote>
+
+			<Egrid unit="eV">
+				603.18412 618.51867 633.85861 649.19316 664.52771
+				679.86765 710.25647 725.59641 740.93096 756.23856
+				771.5785 786.91305 802.2476 802.53327 879.52403
+				909.91285 1046.37148 1182.49054 1333.77706 1409.28018
+				1605.51391 1816.57014 2042.49199 2223.24564 2328.63631
+				2524.35799 2674.80367 2945.66734 3216.47172 3412.05865
+				3562.41809 3863.3364 4149.19505 4450.05946 4751.00472
+				5127.17282 5503.2978 5819.2596 6330.8784 6722.0846
+				7233.7034 7790.4904 8347.2774 8889.0802 9114.8134
+			</Egrid>
+			<Cross unit="cm2" uncertainty="15%"  fact="1E-20">
+				0.70892175 0.91869 1.1284575 1.338225 1.5479925
+				1.7577675 1.967415 2.1771825 2.38695 2.5757325
+				2.7855 2.9952675 3.2050425 3.4149225 4.69464
+				4.904295 5.6168475 6.0775425 6.6220725 6.7893975
+				7.165665 7.37391 7.4351175 7.4966775 7.49586
+				7.49433 7.409205 7.30215 7.153125 7.046655
+				6.89856 6.749295 6.60015 6.4089075 6.2806275
+				6.1097925 5.8969725 5.7475875 5.5337175 5.34177
+				5.148885 4.9346625 4.741425 4.590285 4.504575
+			</Cross>
+		</Process>
+	</O>
+
+</crs>
+
+
+
+
+
+

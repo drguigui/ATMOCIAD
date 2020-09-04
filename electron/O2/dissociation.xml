@@ -1,0 +1,33 @@
+<crs>
+	<Name>O2</Name>
+	<Collider>e</Collider>
+	<title> O$_2$  + e $\rightarrow$ 2 $\times$ O$^*$</title>
+	<Emin>10</Emin>
+	<Emax>1500</Emax>
+	<Cmax>1E-16</Cmax>
+	<Cmin>9E-18</Cmin>
+	<plotname>seff_O2_e_dissociation.pdf</plotname>
+	<O2>
+
+		<Process name="O2 + e -> O* + O* (total dissociation)" electrons="0" threshold="13">
+			<Species>
+				<Specie name="O" state="*" number="2"/>
+			</Species>
+			<Excitation/>
+			<Proc>2 O(*)</Proc> <!-- Name for the processus -->
+			<Section>dissociation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review </Notes>
+			<Egrid unit="eV">
+				13.5 18.5 21.0 23.5 28.5 
+				33.5 38.5 48.5 58.5 73.5 
+				98.5 148.5 198.5 1000 
+			</Egrid>
+			<Cross unit="cm2" fact="1E-16" uncertainty="34%">
+				0.220 0.529 0.565 0.525 0.587
+				0.663 0.610 0.534 0.444 0.366
+				0.331 0.296 0.291 0.15
+			</Cross>
+		</Process>
+	</O2>
+</crs>

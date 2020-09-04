@@ -1,0 +1,39 @@
+
+<crs>
+	<Name>O2</Name>
+	<Collider>ph</Collider>
+	<title> O$_2$  + $\lambda \rightarrow$ O(${^{1}}$D) + O</title>
+	<Emin>6.8</Emin>
+	<Emax>10</Emax>
+	<Cmax>3E-17</Cmax>
+	<Cmin>2E-19</Cmin>
+	<plotname>seff_O2_ph_O1D.pdf</plotname>
+	<lambplotname>seff_O2_ph_O1D_lambda.pdf</lambplotname>
+	<O2>
+		<Process name="O2 + ph -> 1. x O(1D) "  electrons="0" threshold="7">
+			<Species>
+				<Specie name="O" state="1D" number="1."/>
+				<Specie name="O" state="X"/>
+			</Species>
+			<legend>O($^1$D) + O (BDD)</legend>
+			<Proc>O($^1$D) + O</Proc>
+			<Section>excitation</Section>
+			<Source type="adaptation">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted from Torr boxes, based on Slanger 77 (?). Needs re-work Slanger 77 + Lee 2K 2001 </Notes>
+			<Egrid unit="eV">
+			  1.341350e+01	  1.287550e+01	  1.269004e+01	  1.253923e+01	  1.224797e+01
+			  1.208753e+01	  1.205127e+01	  1.201502e+01	  1.190652e+01	  1.107002e+01
+			  1.027043e+01	  1.019884e+01	  1.017574e+01	  9.849943e+00	  9.293594e+00
+			  8.952978e+00	  8.703324e+00	  8.408124e+00	  8.132297e+00	  7.873997e+00
+			  7.631603e+00	  7.403691e+00	  7.189000e+00
+			</Egrid>
+			<Cross unit="cm2" uncertainty="20%" >
+			  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			  1.200000e-17	  1.500000e-17	  1.300000e-17	  1.000000e-17	  6.000000e-18
+			  3.400000e-18	  1.500000e-18	  5.000000e-19
+			</Cross>
+		</Process>
+	</O2>
+</crs>

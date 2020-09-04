@@ -1,0 +1,46 @@
+<crs>
+	<Name>N2</Name>
+	<Collider>ph</Collider>
+	<title> N$_2$  + $\lambda \rightarrow$ N${_{2}}{^{2+}}$ + 2e</title>
+	<Emin>40</Emin>
+	<Emax>600</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_N2_ph_N2pp.pdf</plotname>
+	<lambplotname>seff_N2_ph_N2pp_lambda.pdf</lambplotname>
+	<N2>
+
+		<Process name="N2 + hv -> N2++ + 2e " electrons="2" ions="1" threshold="43.6">
+			<Species>
+				<Specie name="N2++" state="X"/>
+			</Species>
+
+			<legend>N$_2$$^{2+}$ + 2e (BDD)</legend>
+			<Proc>N$_2$$^{2+}$ + 2e</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Notes>Adapted Torr nm -> eV, old database. Ress + bratio?</Notes>
+			<Source type="unknown">Pb Ress</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<EstimatedUncertainty/>
+			<Egrid unit="eV">
+				12.015021	     12.087529	     12.103222	     12.690037	     12.724681
+				13.413558	     14.181130	     15.042245	     15.706927	     16.014699
+				16.093275	     16.203908	     17.121579	     17.628670	     18.393372
+				19.688470	     19.869263	     20.333279	     21.218182	     21.603422
+				22.364883	     23.669689	     26.174675	     26.650660	     29.274007
+				33.210350	     33.684951	     38.375696	     40.813813	     40.877056
+				43.633363	     45.460419	     48.374639	     55.793448	     72.323514
+				103.320167	    185.967002	    330.624533	    532.807048
+			</Egrid>
+			<Cross unit="cm2" uncertainty="50%">
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  3.000000e-20	  2.900000e-20
+				1.500000e-20	  6.400000e-20	  1.500000e-19	  1.200000e-19	  1.500000e-19
+				9.500000e-20	  2.100000e-20	  3.800000e-21	  2.700000e-21
+			</Cross>
+		</Process>
+	</N2>
+</crs>

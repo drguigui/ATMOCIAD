@@ -1,0 +1,110 @@
+<crs>
+	<Name>CO2</Name>
+	<Collider>e</Collider>
+	<title>CO$_2$ + e $\rightarrow$ CO${_2}{^{+}}$(A)</title>
+	<Emin>10</Emin>
+	<Emax>3E3</Emax>
+	<Cmax>1E-16</Cmax>
+	<Cmin>1E-18</Cmin>
+	<plotname>seff_CO2_e_CO2pA.pdf</plotname>
+
+                <Process name="CO2+e -> CO2+(A)" electrons="0" threshold="17.300000">
+                        <Shirai/><!--Shirai et al 2001 analytic cross section -->
+                        <Species>
+                                <Specie name="CO2+" state="A-NOTOT"/>
+                        </Species>
+			<legend>Recommended CO2+(A) Shirai 2001</legend>
+			
+			<Recommended/>
+			<Extrapolated/>
+			<Proc>CO2+(A)</Proc> <!-- Name for the processus -->
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Notes>Review of Shirai, based on Straub. Emission section because the total ionization is computed elsewhere. </Notes>
+			<Source type="review">Shirai 2001</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+			
+			<uncertainty>25</uncertainty>
+                        <Emin> 20.0 </Emin>
+                        <Emax> 2000.0 </Emax>
+                        <Equation type="5" article_id="CO2" article_number="59"/>
+                        <params>
+				2.380000e-01    9.470000e-01    9.600000e-02    6.000000e-01    8.500000e-01
+				2.800000e+00
+                        </params>
+		</Process>
+
+		<Process name="CO2+e -> CO2+(A) " electrons="0" threshold="17.30000">
+			<legend>CO2+(A) Itikawa 2002</legend>
+			<Proc>CO2+(A)</Proc> <!-- Name for the processus -->
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2002</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+			<Notes>Shirai uncertainty, adapted, is about the same, but extrapolatable...</Notes>
+			<Species>
+				<Specie name="CO2+" state="A-NOTOT"/>
+			</Species>
+			<Egrid unit="eV">
+				18.8 19.9 21.1 22.4 23.7 
+				25.1 26.6 28.2 29.8 31.6 
+				33.5 35.4 37.5 39.8 42.1 
+				44.6 47.2 50.0 53.0 56.1 
+				59.5 63.0 66.7 70.7 74.8 
+				79.3 88.9 94.2 99.8 106  
+				112  119  126  133  141  
+				149  158  167  177  188  
+				199  211  223  236  250  
+				265  281  298  315  334  
+				354  375  397  
+			</Egrid>
+			<Cross unit="cm2" uncertainty="25%" fact="1E-16" >
+				0.0314 0.0494 0.0682 0.0873 0.107  
+				0.128  0.150  0.168  0.191  0.214  
+				0.233  0.256  0.280  0.304  0.331  
+				0.356  0.388  0.416  0.445  0.476  
+				0.508  0.541  0.579  0.615  0.646  
+				0.675  0.723  0.740  0.754  0.767  
+				0.776  0.784  0.790  0.796  0.796  
+				0.798  0.796  0.796  0.791  0.784  
+				0.775  0.763  0.750  0.734  0.718  
+				0.702  0.687  0.671  0.656  0.640  
+				0.624  0.609  0.593  
+			</Cross>
+		</Process>
+
+		<Process name="CO2+e -> CO2+(A) " electrons="0" threshold="17.32">
+			<Species>
+				<Specie name="CO2+" state="A-NOTOT"/>
+			</Species>
+			<Proc>CO2+(A)</Proc> <!-- Name for the processus -->
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<legend>Dans la DB</legend>
+
+			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+			<Notes>From Avakyan maybe?</Notes>
+			<Egrid unit="eV">
+				18.8 19.9 21.1 22.4 23.7
+				25.1 26.6 28.2 29.8 31.6
+				33.5 35.4 37.5 39.8 42.1
+				44.6 47.2 50.0 53.0 56.1
+				59.5 63.0 66.7 70.7 74.8
+				79.3 88.9 94.2 99.8 106.0 
+				112.0 119.0 126.0 133.0 141.0 
+				149.0 158.0 167.0 177.0 188.0 
+				199.0 211.0 223.0 236.0 250.0 
+				265.0 281.0 298.0 315.0 334.0 
+				354.0 375.0 397.0  		
+			</Egrid>
+			<Cross unit="cm2" uncertainty="25%" >
+				0.0314e-16 0.0494e-16 0.0682e-16 0.0873e-16 0.107e-16
+				0.128e-16 0.150e-16 0.168e-16 0.191e-16 0.214e-16
+				0.233e-16 0.256e-16 0.280e-16 0.304e-16 0.331e-16
+				0.356e-16 0.388e-16 0.416e-16 0.445e-16 0.476e-16
+				0.508e-16 0.541e-16 0.579e-16 0.615e-16 0.646e-16
+				0.675e-16 0.723e-16 0.740e-16 0.754e-16 0.767e-16
+				0.776e-16 0.784e-16 0.790e-16 0.796e-16 0.796e-16
+				0.798e-16 0.796e-16 0.796e-16 0.791e-16 0.784e-16
+				0.775e-16 0.763e-16 0.750e-16 0.734e-16 0.718e-16
+				0.702e-16 0.687e-16 0.671e-16 0.656e-16 0.640e-16
+				0.624e-16 0.609e-16 0.593e-16
+			</Cross>
+		</Process>
+
+</crs>

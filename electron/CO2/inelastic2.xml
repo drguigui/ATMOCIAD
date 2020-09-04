@@ -1,0 +1,40 @@
+<crs>
+	<Name>CO2</Name>
+	<Collider>e</Collider>
+	<title>CO$_2$ + e $\rightarrow$ inelastic2 8.60 eV</title>
+	<Emin>10</Emin>
+	<Emax>1000</Emax>
+	<Cmax>0.5E-17</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_CO2_e_inelastic2.pdf</plotname>
+
+
+	<Process name="CO2+e -> 8.60" electrons="0" threshold="8.60">
+		<Species>
+			<Specie name="CO2" state="8.60"/>
+		</Species>
+		<legend>8.60? dans la bdd</legend>
+		<Proc>CO2(8.60)</Proc>
+		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<legend>Dans la DB</legend>
+		<Excitation/>
+		<Notes> Probably from Rees??? </Notes>
+		<Egrid unit="eV">
+			15    25    35    45    55
+			65    75    85    95   105
+			115   125   135   145   155 
+			165   175   185   195   205
+			215   225   235   245   255  
+			265   275   285   295
+		</Egrid>
+		<Cross unit="cm2">
+			0.0863E-17  0.1514E-17  0.1619E-17  0.1578E-17  0.1497E-17  
+			0.1409E-17 0.1325E-17  0.1247E-17  0.1177E-17  0.1113E-17 
+			0.1056E-17 0.1004E-17 0.0958E-17 0.0915E-17  0.0876E-17  
+			0.0841E-17  0.0808E-17 0.0778E-17 0.075E-17  0.0724E-17
+			0.07E-17  0.0677E-17  0.0656E-17  0.0637E-17  0.0618E-17
+			0.0601E-17 0.0585E-17 0.0569E-17     0.0555E-17
+		</Cross>
+	</Process>
+</crs>

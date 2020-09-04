@@ -1,0 +1,67 @@
+<crs>
+	<Name>CO2</Name>
+	<Collider>e</Collider>
+
+
+	<title>CO$_2$  + e $\rightarrow$ CO(a$^3$$\Pi$) + O + e</title>
+	
+	
+	<Emin>30</Emin>
+	<Emax>3500</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CO2_e_COa3Pi.pdf</plotname>
+	<explotname>seff_CO2_e_COa3Pi.pdf</explotname>
+
+
+
+	<Process name="CO2+e -> CO(A3Pi)+ O" electrons="0" threshold="11.46">
+		<legend>Simon et al 2008</legend>
+		
+		<Proc>CO(a3Pi)</Proc>
+		<Notes> Avakyan 1998 divided by 2 to account for the Spicam observations on Mars </Notes>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation"> Avakyan 1998+Simon 2008 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Species>
+			<Specie name="CO" state="a3Pi"/>
+			<Specie name="O" state="X"/>
+		</Species>
+		<Excitation/>
+		<EstimatedUncertainty/>
+		<Egrid unit="eV">
+			16	20 	30 	40	50	60
+			80	100	120	150	200 	300 	1000
+		</Egrid>
+		<Cross unit="cm2" fact="0.5" uncertainty="75%">
+			0.7200E-16   1.4400E-16   2.0400E-16   2.2000E-16   2.3000E-16    2.3500E-16    
+			2.4000E-16   2.4000E-16   2.4000E-16   2.3500E-16   2.2500E-16    2.0000E-16    0.76000E-16
+		</Cross>
+	</Process>
+
+	<Process name="CO2+e -> CO(A3Pi)+ O" electrons="0" threshold="11.46">
+		<legend>Gronoff et al. 2011</legend>
+		
+		<Proc>CO(a3Pi)</Proc>
+		<Notes> Avakyan divided by 3 to account for both the theory and Mars observations: the measurements we calibrated with respect to a tracable source; however, that source was recalibrated with a factor 3 after publication of the measurements. Therefore, the measurement cross sections were re-calibrated. The observations at Mars with ESA/Mars Express' SPICAV instrument are better fitted with these observations. See Gronoff et al. 2012, and subsequent references.</Notes>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Avakyan +  Gronoff 2012</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Species>
+			<Specie name="CO" state="a3Pi"/>
+			<Specie name="O" state="X"/>
+		</Species>
+		<Excitation/>
+		<Recommended/>
+		<EstimatedUncertainty/>
+		<Egrid unit="eV">
+			16	20 	30 	40	50	60
+			80	100	120	150	200 	300 	1000
+		</Egrid>
+		<Cross unit="cm2" fact="0.33" uncertainty="25%">
+			0.7200E-16   1.4400E-16   2.0400E-16   2.2000E-16   2.3000E-16    2.3500E-16    
+			2.4000E-16   2.4000E-16   2.4000E-16   2.3500E-16   2.2500E-16    2.0000E-16    0.76000E-16
+		</Cross>
+	</Process>
+
+
+
+</crs>

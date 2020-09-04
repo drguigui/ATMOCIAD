@@ -1,0 +1,107 @@
+<crs>
+	<Name>CO</Name>
+	<Collider>e</Collider>
+	<title>CO + e $\rightarrow$ CO${^{+}}$</title>
+	<Emin>10</Emin>
+	<Emax>1.2E3</Emax>
+	<Cmax>5E-16</Cmax>
+	<Cmin>2E-18</Cmin>
+	<plotname>seff_CO_e_COp.pdf</plotname>
+	<Process name="CO + e -> CO+" electrons="1" ions="1" threshold="14.000000">
+		<Ionization/>
+		<Shirai/><!--Shirai et al 2001 analytic cross section -->
+		<Species>
+			<Specie name="CO+" state="X"/>
+		</Species>
+		<legend>CO+ Shirai 2001</legend>
+		<Proc>CO+</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Extrapolated/>
+		<Notes>Review of Shirai, based on Straub. Analytic functions. </Notes>
+		<Emin> 17.5 </Emin>
+		<Emax> 600.0 </Emax>
+		<uncertainty>12</uncertainty>
+		<Equation type="5" article_id="CO2" article_number="23"/>
+		<params>
+			1.825000e+00    1.829000e+00    1.390000e-02   -1.390000e-01    4.380000e-02
+			9.940000e-01
+		</params>
+	</Process>
+	<Process name="CO+e -> CO+ + e" electrons="1" threshold="14.01">
+		<Species>
+			<Specie name="CO+" state="X"/>
+		</Species>
+		<Proc>CO+</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<legend>Dans la BDD</legend>
+		<Source type="unknown">? Rees?</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes>Unknown origin </Notes>
+		<Ionization/>
+		<Egrid unit="eV">
+			0.0145E3 0.0150E3 0.0155E3 0.0160E3 0.0165E3 0.0170E3
+			0.0175E3 0.0180E3 0.0185E3 0.0190E3 0.0195E3 0.0200E3
+			0.0205E3 0.0210E3 0.0215E3 0.0220E3 0.0225E3 0.0230E3
+			0.0235E3 0.0240E3 0.0250E3 0.0260E3 0.0280E3 0.0300E3
+			0.0320E3 0.0340E3 0.0350E3 0.0360E3 0.0380E3 0.0400E3
+			0.0450E3 0.0500E3 0.0550E3 0.0600E3 0.0650E3 0.0700E3
+			0.0750E3 0.0800E3 0.0850E3 0.0900E3 0.0950E3 0.1000E3
+			0.1050E3 0.1100E3 0.1150E3 0.1200E3 0.1250E3 0.1300E3
+			0.1350E3 0.1400E3 0.1450E3 0.1500E3 0.1550E3 0.1600E3
+			0.1800E3 0.2000E3 0.2200E3 0.2400E3 0.2500E3 0.2600E3
+			0.2800E3 0.3000E3 0.3200E3 0.3400E3 0.3500E3 0.3600E3
+			0.3800E3 0.4000E3 0.4200E3 0.4400E3 0.4500E3 0.4600E3
+			0.4800E3 0.5000E3 0.5100E3 0.5500E3 0.6000E3 0.6500E3
+			0.7000E3 0.7500E3 0.8000E3 0.8500E3 0.9000E3 0.9500E3
+			1.0000E3
+		</Egrid>
+		<Cross unit="cm2">
+			0.0240E-16 0.0490E-16 0.0740E-16 0.1000E-16 0.1260E-16 0.1520E-16
+			0.1770E-16 0.2180E-16 0.2670E-16 0.3160E-16 0.3650E-16 0.4130E-16
+			0.4610E-16 0.5080E-16 0.5540E-16 0.6010E-16 0.6510E-16 0.7010E-16
+			0.7500E-16 0.7980E-16 0.8910E-16 0.9800E-16 1.1460E-16 1.2960E-16
+			1.4310E-16 1.5520E-16 1.6080E-16 1.6610E-16 1.7590E-16 1.8470E-16
+			2.0360E-16 2.1870E-16 2.3040E-16 2.3950E-16 2.4640E-16 2.5160E-16
+			2.5540E-16 2.5820E-16 2.6000E-16 2.6110E-16 2.6160E-16 2.6160E-16
+			2.6120E-16 2.6040E-16 2.5940E-16 2.5820E-16 2.5680E-16 2.5520E-16
+			2.5350E-16 2.5170E-16 2.4980E-16 2.4790E-16 2.4590E-16 2.4390E-16
+			2.3560E-16 2.2730E-16 2.1930E-16 2.1160E-16 2.0780E-16 2.0420E-16
+			1.9730E-16 1.9080E-16 1.8470E-16 1.7890E-16 1.7620E-16 1.7350E-16
+			1.6840E-16 1.6360E-16 1.5900E-16 1.5480E-16 1.5270E-16 1.5070E-16
+			1.4690E-16 1.4320E-16 1.4150E-16 1.3490E-16 1.2750E-16 1.2090E-16
+			1.1500E-16 1.0970E-16 1.0490E-16 1.0050E-16 0.9650E-16 0.9280E-16
+			0.8950E-16
+		</Cross>
+	</Process>
+	<Process name="CO+e -> CO+ + e" electrons="1" threshold="14.01">
+		<Ionization/>
+		<legend>CO+ Straub</legend>
+		<Proc>CO+</Proc> <!-- Name for the processus -->
+		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Recommended/>
+		<Extrapolated/>
+		<Source type="measurement">Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes>Data on website </Notes>
+		<Species>
+			<Specie name="CO+" state="X"/>
+		</Species>
+		<Egrid unit="eV">
+			1.500000e+01    2.000000e+01    2.500000e+01    3.000000e+01    3.500000e+01
+			4.000000e+01    5.000000e+01    6.000000e+01    7.000000e+01    8.000000e+01
+			9.000000e+01    1.000000e+02    1.250000e+02    1.500000e+02    2.000000e+02
+			2.500000e+02    3.000000e+02    4.000000e+02    5.000000e+02    7.000000e+02
+			1.000000e+03
+		</Egrid>
+		<Cross unit="cm2" uncertainty="5%" >
+			6.000000e-18    4.350000e-17    7.410000e-17    1.150000e-16    1.380000e-16
+			1.560000e-16    1.750000e-16    1.850000e-16    1.930000e-16    1.940000e-16
+			1.940000e-16    1.940000e-16    1.890000e-16    1.820000e-16    1.690000e-16
+			1.540000e-16    1.420000e-16    1.220000e-16    1.070000e-16    8.710000e-17
+			6.830000e-17
+		</Cross>
+	</Process>
+
+
+</crs>
+
+

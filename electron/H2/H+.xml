@@ -1,0 +1,106 @@
+<crs>
+	<Name>H2</Name>
+	<Collider>e</Collider>
+	<title> H$_2$  + e $\rightarrow$ H${^{+}}$</title>
+	<Emin>10</Emin>
+	<Emax>120000</Emax>
+	<Cmax>3E-16</Cmax>
+	<Cmin>1E-18</Cmin>
+	<plotname>seff_H2_e_Hp.pdf</plotname>
+	<H2>
+		<Process name="H2 + e -> H+" electrons="1" threshold="18.1">
+			<Ionization/>
+			<legend>Yoon/Itikawa</legend>
+			<Proc>H+</Proc>
+			<Species>
+				<Specie name="H+" state="X"/>
+			</Species>
+
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Yoon 2008</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review, based on Straub </Notes>
+			<Egrid unit="eV">
+				30 35 40 45 50
+				55 60 65 70 75
+				80 85 90 95 100
+				110 120 140 160 180
+				200 225 250 275 300
+				350 400 450 500 550
+				600 650 700 750 800
+				850 900 950 1000
+			</Egrid>
+			<Cross unit="cm2" fact="1E-18" uncertainty="7%">
+				0.86 1.76 2.87 4.08 4.82
+				5.72 6.25 6.82 7.05 7.37
+				7.39 7.51 7.54 7.61 7.59
+				7.44 7.24 6.71 6.39 5.92
+				5.45 5.05 4.5 4.12 3.92
+				3.39 2.94 2.6 2.41 2.11
+				1.97 1.81 1.71 1.59 1.49
+				1.37 1.35 1.25 1.17
+			</Cross>
+		</Process>
+
+		<Process name="H2 + e -> H+" electrons="1" threshold="18.1">
+			<Ionization/>
+			<legend>Avakyan</legend>
+			<Proc>H+</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Species>
+				<Specie name="H+" state="X"/>
+			</Species>
+			<Source type="review">Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review, </Notes>
+			<Egrid unit="eV">
+				19  20  25  30  40  
+				50  60  70  80  100 
+				120 150 200 250 300 
+				400 500 600 700 800 
+				1000
+			</Egrid>
+			<Cross unit="cm2" fact="1E-17" uncertainty="15%">
+				0.006 0.014 0.078 0.157 0.35
+				0.57 0.72 0.83 0.89 0.88
+				0.83 0.74 0.65 0.51 0.44
+				0.34 0.27 0.23 0.19 0.16
+				0.13
+			</Cross>
+		</Process>
+		<Process name="H2 + e -> H+" electrons="1" threshold="18.1">
+			<Ionization/>
+			<legend>Straub</legend>
+			<Proc>H2+</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Species>
+				<Specie name="H+" state="X"/>
+			</Species>
+			<Source type="measurement">Straub 1997</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>  </Notes>
+			<Egrid unit="eV">
+				25  30  35  40  45  
+				50  55  60  65  70  
+				75  80  85  90  95  
+				100 110 120 140 160 
+				180 200 225 250 275 
+				300 350 400 450 500 
+				550 600 650 700 750 
+				800 850 900 950 1000
+			</Egrid>
+			<Cross unit="cm2" fact="1E-18" uncertainty="5%">
+				0.422	0.856	1.76	2.87	4.08	
+				4.82	5.72	6.25	6.82	7.05	
+				7.37	7.39	7.51	7.54	7.61	
+				7.59	7.44	7.24	6.71	6.39	
+				5.92	5.45	5.05	4.50	4.12	
+				3.92	3.39	2.94	2.60	2.41	
+				2.11	1.97	1.81	1.71	1.59	
+				1.49	1.37	1.35	1.25	1.17	
+			</Cross>
+		</Process>
+	</H2>
+</crs>
+
+
+
+
+

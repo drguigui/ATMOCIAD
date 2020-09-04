@@ -1,0 +1,39 @@
+<crs>
+	<Name>CO2</Name>
+	<Collider>ph</Collider>
+	<title> CO$_2$  + $\lambda \rightarrow$ O($^{3}$S) + CO</title>
+	<Emin>15</Emin>
+	<Emax>25</Emax>
+	<Cmax>1E-19</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CO2_ph_O3S.pdf</plotname>
+	<lambplotname>seff_CO2_ph_O3S_lambda.pdf</lambplotname>
+	<CO2>
+		<Process name="CO2 + hv ->CO + O(3S)" electrons="0" threshold="16.44">
+			<Species>
+				<Specie name="CO" state="X"/>
+				<Specie name="O" state="3S"/>
+			</Species>
+
+			<legend>O($^3$S) + CO</legend>
+			<Proc>O($^3$S) + CO</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="measurement">Wu 1979 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, Pure data (no Torr adaptation), Wu (1979)</Notes>
+			<EstimatedUncertainty/>
+			<Recommended/>
+			<Extrapolated/>
+			<Egrid unit="eV">
+				16.304494	     16.655924	     17.262143	     17.633989	     18.132434
+				19.372359	     21.245409	     21.651873	     22.241568	     22.933966
+				23.632496
+
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+				0.0	  8.658951e-21	  1.729146e-20	  1.435632e-20	  4.647804e-21
+				0.0	 	0.0	  1.480788e-21	  7.241218e-21	  4.302016e-21
+				0.0
+			</Cross>
+		</Process>
+	</CO2>
+</crs>

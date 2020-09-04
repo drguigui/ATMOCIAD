@@ -1,0 +1,420 @@
+\chapter{The XML files}
+
+\nomenclature{XML}{eXtensible Markup Language: document format based on Markup. To simplify, it is a text (ASCII/UTF8....) document containing markups to define its structure, and the relations between the several parts of the text. }
+
+\nomenclature{XPath}{Set of techniques to easily navigate in a XML document. The basic concept is to follow the 'roots' to the 'leaves' of the document, by giving all the nodes. An example can be found in \ref{Hierarchy}. Thanks to the wide use of XML, notably in web-based technology, XPath techniques are implemented in several programming languages. For example, python has the ElementTree module, extensively used in the plotting and transforming examples. }
+
+\nomenclature{\Prog}{Software developed by G. Gronoff on the basis of the Trans* codes. It is an upper atmosphere of the earth and planet model, for computing ionization, dissociation and excitation. It has several modules for computing the emissions, for retrieval\ldots It is the first model using the \textbf{AtMoCiad} database, and its development was useful for determining the necessary parameters of the database xml files.}
+
+\section{Working with XML files}
+
+XML is a kind of standardized ASCII file. It looks like HTML, but strict (markup should be closed, no bracing like $<a><b></a></b>$ but $<a><b></b></a>$).
+It is well suited for defining configuration, especially for communication between different softwares. Unfortunately for scientific purpose, it does not explicitly defines the notion of array (some specific files format, like hdf, are more suited when dealing with very large data files): list of numbers are used as array for the following.
+
+Several advantages can be found in XML files:
+\begin{enumerate}
+	\item Flexibility: you can make a lot of commentaries: reading XML files does not depend on the position of your data (contrary  to the typical interface file in Fortran, for which the number of value to read has to be stated).
+	\item Size of data: you don't have to declare the size of your arrays, it is computed automatically.
+	\item Position of your information: you can put the information wherever you want! For example \Prog uses a XPath wrapper to read the file: it depends on the hierarchy and the name of the markup.
+	\item Possibility to duplicate markup. Typically the output of selected species production! You can select different species\ldots
+	\item Mixing strings and numbers! This allows  REALLY flexible softwares. Typically in this case, you define the species, and its cross section. Therefore, the addition of a new species can be straightforward\footnote{It is especially true in \Prog, you can define a new species in your database, then add its atmospheric model in the configuration file! In other terms, you can add a specie in a planet model without modifying the source code and so without recompilation.}.
+	\item Widely used formating system. It is easy to write
+\end{enumerate}
+
+Of course, when implementing a full support of XML files, you have to take into account several points:
+\begin{itemize}
+	\item XML is not a real user-computer interface. But editors exists, and it is the best format if you plan to add a web-based interface.
+	\item XML is not dedicated to large dataset. When dealing with very big files, you should consider using HDF (binary, but without endianness problems).
+	\item For the present database, the need for flexibility (frequent modifications), for interfacing  (plot, python, C++), and for ease of integration into a system dedicated for several planets, oriented us toward the direct use of XML files\footnote{For people considering using other file format, the best solution is to use python-elementtree to create a conversion software.}
+\end{itemize}
+
+As you can see, the authors of this documents highly encourage the use of the XML (and HDF) file format.
+
+Anyway, to have a comprehensive XML file, i.e. really flexible and usable in your model, several concepts needs to be understood.
+
+\subsection{Hierarchy}
+\label{Hierarchy}
+
+The hierarchy of the markup is very important. Hierarchy means dependence. It is well suited for large set of options.
+Example, to define the mass and the ground state of CO2, the XML way could be:
+\begin{verbatim}
+<!-- The XML comment are inside this king of strange brackets! -->
+<CO2>
+	<!-- Mass in amu -->
+	<mass>44.00995</mass>
+
+	<!-- List of possible states, beginning with the ground state -->
+	<states>
+		X
+	</states>
+	<!-- ... -->
+</CO2>
+\end{verbatim}
+
+Here, state and mass are hierarchically inferior to CO2. (Note the way we write commentaries $<!--$ $-->$). 
+Such writing allows to define several species, with the same template\footnote{Note to developers: XPath defines nodes to work with such templates.} .
+
+\begin{large}\textbf{In the following, the hierarchy for the options will be written in a XPATH-style.}
+\end{large}
+
+It means that the ``mass'' option in the precedent example will be presented as /CO2/mass. 
+
+
+\subsection{Markup keys}
+
+Sometimes\footnote{Strictly speaking, use of keys can be avoided in XML: it could be replaced by the use of a hierarchically inferior markup. Anyway, we sometimes prefer not to write the closing markup: understandable names are sometimes very long\ldots}, we can use a key inside the markup $<truc~key='42' >bla</truc>$.
+We use this option to add simple statements, like model type:
+\begin{verbatim}
+	<!-- altitude grid -->
+	<alt_grid>
+		<!--
+		use_model type:
+			0 : standard grid
+			1 : data
+		-->
+		<use_model type="0"/>
+		<!--
+			If we use a standard grid, the options are:
+				type 0 : exp decrease
+				type 1 : power law decrease
+				type 2 : constant width
+		-->
+			<st_grid type="0">
+				<altmin>120</altmin>
+				<altmax>300</altmax>
+				<number>50</number>
+			</st_grid>
+
+			<altdata></altdata>
+
+	</alt_grid>
+\end{verbatim}
+
+This facility is really powerful when we work with uncertainties:
+\begin{verbatim}
+			<Cross unit="cm2" uncertainty="30%">
+			...
+\end{verbatim}
+We can define the uncertainty for an array really easily. 
+
+
+\subsection{Numerical values}
+
+Two key are very important for the database, the ``fact'' and ``uncertainty'' keys.
+
+These are used a lot in the definition, and bad interpretation of the database could come from the misuse of these keys.
+
+\subsubsection{The ``fact'' key}
+The numerical values can be modified thanks to the ``fact'' key.
+For example:
+\begin{verbatim}
+
+<a fact='12'>1</a>
+\end{verbatim}
+will give a result of $12$ if it is treated as a numerical value.
+\subsubsection{The ``uncertainty'' key}
+
+As explained before, this key is used to define the uncertainty of the dataset. If used with a \% sign, it is perceived as a percentage. If not, it should be taken as the 1-$\sigma$  difference.
+
+
+\section{The  cross section files}
+
+The cross section XML files are the core of the database. They can easily be modified, transformed into other kind of files, or automatically plotted with the specific tools.
+
+These standardized files also contains information to automatically create the web and pdf interfaces to the database. The photoionization cross sections files are the simplest, because more information are needed for the electron files. Therefore, we will describe the photon files before the improvements in the electron files.
+
+The recommended cross section files are the dataset that should be used in the different softwares. In \Prog, these XML files are directly used as inputs.
+
+
+\subsection{The heading of the cross section files}
+
+
+To ensure the validity of the documents, it start and ends with the ``$<$crs$>$/$<$/crs$>$'' markup. 
+The cross sections, should be put in the valid format inside a SPECIE markup. For example, for a file with CO$_2$ and O$^+$ cross sections, the file should look like:
+
+\begin{verbatim}
+<crs>
+	...
+	<CO2>
+		...
+	</CO2>
+	...
+
+	<O_PLUS>
+		...
+	</O_PLUS>
+</crs>
+\end{verbatim}
+
+Because the `+'  character is not allowed inside the XML markup name, it has to be transformed into \_PLUS in the database.
+
+Strictly speaking, the cross section files are meant to describe only one species, and only one kind of interaction. 
+
+
+This allows an automatic plot and some other automatic interactions, by putting some markup specific to that file.
+
+For example, if one file contains the cross sections for one process, from different sources. We could define a specific title, limits for an automatic plot, plotname...
+
+
+\paragraph{/crs/Name :} The name of the species that reacts. (*)\footnote{(*) stands for mandatory options.}
+\paragraph{/crs/Collider :} The name of the particle that impact with the species (ph for photons, e for electrons, and soon p for protons). (*)
+\paragraph{/crs/RecommendedFile :} If the RecommendedFile markup is present, the system knowns that it is likely to be the whole set for the different cross sections. It is notably used inside the plotting system to plot the name of the process for each cross section, and not the extended legend.
+\paragraph{/crs/title :} Title of the cross section file, typically written in latex: the pylab library is able to transform formulae for the title of the plots. (*)
+\paragraph{/crs/Emin :} For plotting: lower energy boundary. (*)
+\paragraph{/crs/Emax :} For plotting: upper energy boundary. (*)
+\paragraph{/crs/Cmin :} For plotting: lower cross section boundary. (*)
+\paragraph{/crs/Cmax :} For plotting: upper cross section boundary. (*)
+\paragraph{/crs/plotname :} The name of the standard plot (no extrapolation, abscissa unit is energy in eV). (*)
+\paragraph{/crs/lambplotname :} If present, creates a plot against wavelength (no extrapolation, abscissa unit is in angstrom).
+\paragraph{/crs/explotname :} If present, extrapolates the standard plot (extrapolation, abscissa unit is energy in eV)
+\paragraph{/crs/exlambplotname :} If present, extrapolates the wavelength plot (extrapolation, abscissa unit is in angstrom).
+
+
+
+
+\paragraph{Example: the header for the recommended CO$_2$ + $\lambda$ cross section file}
+
+
+\begin{verbatim}
+<crs>
+	<Name>CO2</Name>
+	<Collider>ph</Collider>
+	<RecommendedFile/>
+	<title> CO$_2$  + $\lambda$</title>
+	<Emin>5</Emin>
+	<Emax>1E5</Emax>
+	<Cmax>1E-15</Cmax>
+	<Cmin>1E-28</Cmin>
+	<plotname>seff_CO2_ph_recommended.pdf</plotname>
+	<lambplotname>seff_CO2_ph_recommended_lambda.pdf</lambplotname>
+	<explotname>seff_CO2_ph_recommendedex.pdf</explotname>
+	<exlambplotname>seff_CO2_ph_recommended_lambdaex.pdf</exlambplotname>
+	<CO2>
+		...
+	</CO2>
+</crs>
+\end{verbatim}
+
+
+
+\subsection{The photoionization cross section file (cross section basic file)}
+
+The cross sections works like the species file concerning the name (except that the highest markup\footnote{All the files will have an highest markup now: it allows to look at the XML file with firefox, and therefore to allows firefox to detect the XML errors!} is ``crs''.
+
+\paragraph{ /crs/species}
+The species markup. Highest markup for the real definition.
+
+\paragraph{/crs/species/TotalCrs}
+\label{cross_sec_photoioni_total}
+
+This markup allows to define the total cross section. Very useful when we know it: it is really more precise than sum up ionization cross section.
+
+The typical use of this markup is : 
+\begin{verbatim}
+		<TotalCrs>
+			<Egrid unit="eV">
+			</Egrid>
+			<Cross unit="cm2">
+			</Cross>
+		</TotalCrs>
+\end{verbatim}
+
+Typically, the unit can have the uncertainty key:
+\begin{verbatim}
+	<Cross unit="cm2"  uncertainty="30%">
+	<Cross unit="cm2"  uncertainty="O.1">
+\end{verbatim}
+
+You can define an 1$\sigma$ uncertainty in percentage: very useful when your cross section varies on a huge range of parameters!
+But you can also give a relative uncertainty, in the example, 0.1 stands for $\pm0.1$.
+
+In both sub-markup, a ``unit'' key is defined. It is not used in \Prog now\footnote{Boost has a unit module\ldots}, but:
+\begin{itemize}
+	\item It is better when you check your data.
+	\item It allows to be used of the standard units for the code.
+	\item It can really be useful when used with other sources.
+\end{itemize}
+
+Now, the only accepted units are ``eV'' for the energy grid and ``cm2'' for the cross sections.
+
+
+Of course, you could use the ``fact'' option to modify the  global value, this is the best way to transform Barn into cm$^2$\ldots
+
+% WARNING: if you do MonteCarlo simulation, the total cross section is not checked against the sum of the other cross sections! The reason is simple: when the total cross section is defined, the other cross sections are regarded as a factor for the computed flux. Therefore, you can use several cross section for the processes.
+%Example : process $CO_2+h\nu\rightarrow CO^+ + O^*$ can have a subprocess $CO_2+h\nu\rightarrow CO^+ + O(^1S)$.
+
+%\paragraph{/crs/species/ZeroCrs}
+%If you do not have a cross section for the species, you can define ZeroCrs.
+
+\paragraph{/crs/species/TotalCrsIsTheSum}
+As stated in the main document, for photoionization, it is better to have a total absorption cross section, instead of adding the other cross sections, because the uncertainty of the flux would be decoupled from the uncertainties of each processes which can be variable.
+Anyway, if you do not have a total cross section, just add
+\begin{verbatim}
+<TotalCrsIsTheSum/>
+\end{verbatim}
+it allows to define that the total cross section is the sum of the other.
+
+%\paragraph{/crs/species/DisableTotalCrsWarning}
+%In some very special cases, no total crs is computed or defined. This must be used.
+
+\paragraph{/crs/species/Process}
+keys: name of the process, number of electrons, and threshold.
+It is also possible to add ions, very useful when double ionization. Note that the number of ions of electrons are floating point values\footnote{Useful when the produced species are determined with a branching ratio.}!
+
+The number of electrons could be 0 even if there is an ionization. This is a technique used to take into account one excited state of an ion while the total ionization is computed through a more precise cross section.
+
+
+\begin{verbatim}
+		<Process name="" electrons="" threshold="">
+		<!-- also possible:
+		<Process name="" electrons="" threshold="" ions="">
+		-->
+			<Species>
+				<Specie name="" state=""/>
+				<Specie name="" state="" number=""/>
+			</Species>
+			<Egrid unit="eV">
+			</Egrid>
+			<Cross unit="cm2">
+			</Cross>
+		</Process>
+\end{verbatim}
+
+\paragraph{/crs/species/Process/Species}
+The Species defines a list of species created through the process.
+\paragraph{/crs/species/Process/Species/Specie}
+One of the created species (you can have several species, or 0! -but it is not really useful unless this is necessary for total crs sum- ).
+The key for the species is its name and its state. The state can be X. It allows to compute the production of excited states!
+One of the very important point for the species state is the possibility to add ``-NOTOT'' at the end of the state.
+ It defines that the state created for the species has already been counted in the total species production.
+
+ For example, the electron production for CO$_2^+$ can be computed without taking into account the different states. But if we need the A state, we have to add the Itikawa 2002 cross section. If we need both total production (accurate) and A state production, we just need to add -NOTOT at the end of the state name like in this example. 
+
+If we do not have the precision for the state computed, typically for an ion, the best way is to define the excited state as ``Total''. 
+\begin{verbatim}
+		<!--  Itikawa 2002  for CO2+(A)-->
+		<Process name="CO2+e -> CO2+(A) " electrons="0" threshold="17.32">
+			<Species>
+				<Specie name="CO2+" state="A-NOTOT"/>
+			</Species>
+			<!-- The ionization is not taken
+			into account, because
+			it is a subproduct of the total ionization
+			-->
+		...
+		</Process>
+\end{verbatim}
+
+On the contrary, some processes defines the production of the X, A, B,\ldots states. But not the total production. In that case, we do not add the -NOTOT at the end, and, by detecting that fact, we know that we must add each processes to get the total production.
+
+The addition of -NOTOT is therefore specific to the recommended file, and depends on the whole set of cross sections.
+
+
+
+
+\subsubsection{Concerning the electron production}
+The electron production is computed by adding the electron production of all processes, thanks to the number of electrons parameters. If you want to define a subprocess, you must let the number of electron produced at 0!
+
+\subsubsection{Shirai cross sections}
+%The electron cross sections from Shirai et al. (2001,2002 and Tabata,Shirai 2006) can also be included (if one day, this kind of parametrisation of cross section is done for photoionisation, it could be installed also).
+The electron cross sections from \citet{Shirai2001,Shirai2002,Tabata2006} can also be included (if one day, this kind of parametrisation of cross section is done for photoionisation, it could be adapted too).
+
+\paragraph{/crs/species/Process/Shirai} To define that we are using the Shirai/Tabata cross sections. An example of the interface for these cross sections files could be seen in the section \ref{autoplottingsystem}.
+\paragraph{/crs/species/Process/Emin} The minimum energy where it is defined (For non-Shirai system, it is the energy of the first non-zero data point. It can be automatically determined there. )
+\paragraph{/crs/species/Process/Emax} The maximum energy where it is defined (For non-Shirai system, it is the energy of the last non-zero data point. When the system is extrapolated, it could be a point defined for having a good shape, or the point where the extrapolation is expected to be valid It can be automatically determined there.).
+.
+\paragraph{/crs/species/Process/Equation} Gives the type of the equation, and the article id (and the number in the article, but not used).
+
+\paragraph{/crs/species/Process/params} Gives the parameters for the cross section.
+
+
+\begin{verbatim}
+<Process name=``CO2+e -> O + C'' electrons=``O'' threshold=``11.100000''>
+		<Shirai/><!--Shirai et al 2001 analytic cross section -->
+	<Species>
+		<Specie name=``C'' state=``X''/>
+		<Specie name=``O'' state=``X'' number=``2''/>
+	</Species>
+	<Emin> 13.5 </Emin>
+	<Emax> 199.0 </Emax>
+	<Equation type=``1'' article_id=``CO2'' article_number=``36''/>
+	<params>
+		7.040000e-01	  1.084000e+00	  2.680000e-02	  5.700000e-01
+	</params>
+</Process>
+\end{verbatim}
+\subsection{The Electron cross section file (extends the standard cross section!)}
+
+The electron cross section is basically the same file as the photoionization cross section\footnote{Heritage in C++! A fantastic concept!} .
+The main difference is that the total cross section is not used. So, we generally define it as TotalCrsIsTheSum.
+
+The total cross section is replaced by elastic, ionization and excitation cross sections (ionization and excitation are the inelastic cross sections, these cross sections have technically almost no differences, except being computed separately).
+
+\paragraph{/crs/species/ElasticCrs}
+Elastic cross section, defined like every other cross sections.
+%If NoStdExtrapolate is set, the Log Log interpolation will be used to extrapolate the data. If the markup is not set, the elastic extrapolation is used: the energy decrease is proportional to $E^{-0.65}$ between 400 and 2000 eV, and is proportional to $E^{-1}$ above that energy.
+
+
+
+\paragraph{/crs/species/ExcitationCrs, /crs/species/IonizationCrs}
+Allows to define total excitation and ionization cross sections.
+These options are NOT RECOMMENDED. Because energy conservation for electron impact is computed by using thresholds: energy conservation is not computed in that case!
+
+We recommend to use Excitation and Ionization!
+
+\paragraph{/crs/species/Process/Excitation}
+Allows to specify that this is an excitation process that should be use to compute the total excitation cross section. 
+
+\paragraph{/crs/species/Process/Ionization}
+Allows to specify that this is an ionization process that should be use to compute the total excitation cross section. 
+\subsubsection{Concerning the total electron production}
+The total electron production is computed by adding the ionization process results (computed by the number of electrons).
+Therefore, if you use a subprocess (of a previously defined process), you should consider that its ionization is already taken into account.
+If you defines that this sub-process creates also an electron, if the first process creates an electron, the result will be a double-ionization (probably not what you want in that case).
+
+When more than one electron are created in the process, the electrons production is correctly stored, but for the electron flux, all the energy is put inside one electron.
+
+When there is an Auger process, the Auger electron is correctly put in the flux.
+
+\subsubsection{Auger electron computation}
+
+The Auger electron process is taken into account in \Prog. The principle is simple: a suborbit is ionized (creates one electrons) and one electron of an upper orbits falls to that orbit, creating a photon that is absorbed by the species itself; therefore, creating another ionization.
+This leads to a double ionization, with a second electron very specific: it has the energy of the transition; it is an auger electron.
+
+In the \textbf{photoionization} and \textbf{electron impact} cross section, you can add the Auger process simply by defining a cross section, and adding the Auger markup:
+
+\paragraph{/crs/species/Process/Auger}
+Allows to define the Auger process, and the Auger electron energy:
+\begin{verbatim}
+<Auger energy="500"/>
+\end{verbatim}
+
+
+Several Auger electrons can be created in one process, with different efficiency, you can simply do:
+
+\begin{verbatim}
+<Auger energy="500" fact="0.5"/>
+<Auger energy="800" fact="0.5"/>
+\end{verbatim}
+
+If no efficiency is defined, it is considered to be one.
+
+
+\subsection{The recommended data set cross section}
+
+The recommended data set cross section works technically like the other files.
+The main difference is the ``/crs/RecommendedFile'' in its heading.
+This markup could be used for discriminating against the other types, for example by displaying the process and 
+not the sources when plotting. 
+
+The recommended data set is not automatically created from the other files right now. This may become true in the future, and, in that case, people writing the database should not care about the consistency between the other files and the recommended data set.
+
+
+
+
+
+
+
+
+
+

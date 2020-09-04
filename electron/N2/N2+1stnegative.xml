@@ -1,0 +1,126 @@
+<crs>
+	<Name>N2</Name>
+	<Collider>e</Collider>
+	<title> N$_2$  + e $\rightarrow$ N${_2}{^{+}}(B-X)$ (First negative)</title>
+	<Emin>10</Emin>
+	<Emax>120000</Emax>
+	<Cmax>3E-16</Cmax>
+	<Cmin>1E-18</Cmin>
+	<plotname>seff_N2_e_N2pfirstnegative.pdf</plotname>
+
+		 <Process name="N2+e->N2+( 391.4nm - first negative)" electrons="0" threshold="18">
+			 <Species>
+				 <Specie name="N2+" state="391.4nm - first negative-NOTOT"/>
+			 </Species>
+			 <Proc>N2(391.4)</Proc>
+			 <legend>N2(391.4 nm) Itikawa</legend>
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2006</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> First negative 319.4 nm </Notes>
+			 <Egrid unit="eV">
+				 19	19.2	19.6	20	21	
+				 22	23	24	25	26	
+				 27	30	35	40	45	
+				 50	55	60	70	80	
+				 90	100	110	120	140	
+				 160	180	200	250	300	
+				 330	400	450	500	600	
+				 700 800 900 1000 
+			 </Egrid>
+			 <Cross unit="cm2" fact="1E-18" uncertainty="15%">
+				 0.103	0.205	0.408	0.608	1.15	
+				 1.68	2.22	2.77	3.31	3.86	
+				 4.41	6.10	8.60	10.3	11.6	
+				 12.5	13.1	13.6	14.2	14.6
+				 14.7	14.8	14.8	14.7	14.3
+				 13.9	13.4	12.9	12.0	11.1
+				 10.6	9.53	8.85	8.33	7.45
+				 6.74 6.17 5.70 5.30
+			 </Cross>
+		 </Process>
+                <Process name="N2+e->N2+( 391.4nm - first negative)" electrons="0" threshold="18.800000">
+                        <Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+			 <Species>
+				 <Specie name="N2+" state="391.4nm - first negative-NOTOT"/>
+			 </Species>
+			<Proc>N2(391.4)</Proc>
+			 <legend>N2(391.4 nm) Tabata</legend>
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Tabata 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> First negative 319.4 nm </Notes>
+			<Emin> 19.0 </Emin>
+			<EstimatedUncertainty/>
+			<uncertainty>20</uncertainty>
+                        <Emax> 10000.0 </Emax>
+                        <Equation type="5" article_id="N2" article_number="54"/>
+                        <params>
+                          9.260000e-02    1.030000e+00    5.250000e-02    2.700000e-01    1.050000e-01
+                          9.100000e-01
+                        </params>
+                </Process>
+                <Process name="N2+e->N2+( 391.4nm - first negative)" electrons="0" threshold="18.800000">
+                        <Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+			<Proc>N2(427.8)</Proc>
+                        <Species>
+				 <Specie name="N2+" state="427.8 nm - first negative-NOTOT"/>
+                        </Species>
+			 <legend>N2(427.8 nm) Tabata</legend>
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Tabata 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> First negative 427.8 nm </Notes>
+			<EstimatedUncertainty/>
+			<uncertainty>20</uncertainty>
+                        <Emin> 20.5 </Emin>
+                        <Emax> 399.0 </Emax>
+                        <Equation type="1" article_id="N2" article_number="55"/>
+                        <params>
+                          2.760000e-02    5.880000e-01    1.330000e-01    8.700000e-01
+                        </params>
+                </Process>
+                <Process name="N2+e->N2+( 391.4nm - first negative)" electrons="0" threshold="18.800000">
+                        <Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+			<Proc>N2(470.9)</Proc>
+                        <Species>
+				 <Specie name="N2+" state="470.9 nm - first negative-NOTOT"/>
+                        </Species>
+			<EstimatedUncertainty/>
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Tabata 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> First negative 470.9 nm </Notes>
+			 <legend>N2(470.9 nm) Tabata</legend>
+			<uncertainty>20</uncertainty>
+                        <Emin> 20.5 </Emin>
+                        <Emax> 399.0 </Emax>
+                        <Equation type="5" article_id="N2" article_number="56"/>
+                        <params>
+                          1.510000e-01    2.720000e+00    2.360000e-03   -8.520000e-01    9.840000e-03
+                          5.640000e-01
+                        </params>
+                </Process>
+
+                <Process name="N2+e->N2+( 391.4nm - first negative)" electrons="0" threshold="19.000000">
+                        <Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+			<Proc>N2(358.2)</Proc>
+                        <Species>
+				 <Specie name="N2+" state="358.2 nm - first negative-NOTOT"/>
+                        </Species>
+			 <legend>N2(358.2 nm) Tabata</legend>
+			<EstimatedUncertainty/>
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Tabata 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> First negative 358.2 nm </Notes>
+			<uncertainty>20</uncertainty>
+                        <Emin> 29.2 </Emin>
+                        <Emax> 400.0 </Emax>
+                        <Equation type="1" article_id="N2" article_number="57"/>
+                        <params>
+                          6.260000e-03    7.110000e-01    8.770000e-02    6.490000e-01
+                        </params>
+                </Process>
+
+
+
+
+
+
+</crs>

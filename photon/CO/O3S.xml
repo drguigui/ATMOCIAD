@@ -1,0 +1,96 @@
+<crs>
+	<Name>CO</Name>
+	<Collider>ph</Collider>
+	
+	<title> CO + $\lambda \rightarrow$ O(${^{3}}$S) + C</title>
+	<Emin>17</Emin>
+	<Emax>50</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-22</Cmin>
+	<plotname>seff_CO_ph_O3S.pdf</plotname>
+	<lambplotname>seff_CO_ph_O3S_lambda.pdf</lambplotname>
+	<CO>
+
+
+		<Process name="CO + hv ->C + O(3S)" electrons="0" threshold="18.4">
+			<Species>
+				<Specie name="C" state="X"/>
+				<Specie name="O" state="3S"/>
+			</Species>
+
+			<legend>O($^3$S) + C (BDD)</legend>
+			<Proc>O($^3$S) + C</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="measurement">Wu 1979 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, old bdd</Notes>
+			<Egrid unit="eV">
+				12.015137	     12.087764	     12.103104	     12.690297	     12.724158
+				13.413848	     14.180968	     15.042975	     15.706131	     16.014492
+				16.093484	     16.204967	     17.122525	     17.628921	     18.392553
+				19.689408	     19.869263	     20.331945	     21.219271	     21.603799
+				22.363672	     23.670141	     26.173570	     26.651806	     29.276080
+				33.213019	     33.682206	     38.373321	     40.811126	     40.878404
+				43.625686	     45.465420	     48.374639	     55.798470	     72.336173
+				103.320167	    185.883358	    330.624533	    532.121030
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				1.400000e-21	  2.100000e-21	  4.000000e-20	  1.330000e-19	  1.580000e-19
+				1.030000e-19	  8.000000e-20	  8.500000e-20	  7.900000e-20	  4.900000e-20
+				4.500000e-21	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+			</Cross>
+		</Process>
+
+		<Process name="CO + hv ->C + O(3S)" electrons="0" threshold="18.4">
+			<Species>
+				<Specie name="C" state="X"/>
+				<Specie name="O" state="3S"/>
+			</Species>
+
+			<legend>O($^3$S) + C (Wu 1979)</legend>
+			<Proc>O($^3$S) + C</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="measurement">Wu 1979 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, Pure data (no Torr adaptation)</Notes>
+			<Egrid unit="eV">
+				19.869335	     20.747451	     21.142242	     21.613486	     22.258787
+				22.841493	     23.572178	     24.271645	     25.405904	     30.305948
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+				6.386917e-22	  7.303867e-20	  1.232533e-19	  1.599374e-19	  1.096556e-19
+				8.450054e-20	  8.059516e-20	  8.055855e-20	  9.692858e-20	  3.683461e-20
+			</Cross>
+		</Process>
+
+		<Process name="CO + hv ->C + O(3S)" electrons="0" threshold="18.4">
+			<Species>
+				<Specie name="C" state="X"/>
+				<Specie name="O" state="3S"/>
+			</Species>
+			<legend>O($^3$S) + C (Wu 1979 + boundary adjustment)</legend>
+			<Proc>O($^3$S) + C</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Wu 1979 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, Pure data (no Torr adaptation)+ adjutements for boundaries</Notes>
+			<EstimatedUncertainty/>
+			<Recommended/>
+			<Extrapolated/>
+			<Egrid unit="eV">
+				18.4
+				19.869335	     20.747451	     21.142242	     21.613486	     22.258787
+				22.841493	     23.572178	     24.271645	     25.405904	     30.305948
+				33.213019	     33.682206
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+				0
+				6.386917e-22	  7.303867e-20	  1.232533e-19	  1.599374e-19	  1.096556e-19
+				8.450054e-20	  8.059516e-20	  8.055855e-20	  9.692858e-20	  3.683461e-20
+				4.500000e-21	  0.000000e+00
+			</Cross>
+		</Process>
+	</CO>
+</crs>

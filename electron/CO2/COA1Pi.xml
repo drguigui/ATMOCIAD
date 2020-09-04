@@ -1,0 +1,76 @@
+<crs>
+
+	<Name>CO2</Name>
+	<Collider>e</Collider>
+
+	<title>CO$_2$  + e $\rightarrow$ CO(A$^1$$\Pi$) + O + e</title>
+	
+	
+	<Emin>30</Emin>
+	<Emax>3500</Emax>
+	<Cmax>1E-18</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CO2_e_COa1Pi.pdf</plotname>
+	<explotname>seff_CO2_e_COa1Pi.pdf</explotname>
+
+	
+	
+	
+	
+	
+	
+	<Process name="CO2+e -> CO(A1Pi) + O" electrons="0" threshold="13.48">
+		<Excitation/>
+		<legend>CO(A1Pi) dans la bdd</legend>
+		<Proc>CO(A1Pi)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<legend>CO(A1Pi) Dans la DB</legend>
+		<Notes> Ajello 1971 for the cross section, but recalibrated to take into account the whole excitation, and not only one band emission </Notes>
+		<Recommended/>
+		<EstimatedUncertainty/>
+		<Source type="adaptation"> Ajello 1971+Simon2008 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Species>
+			<Specie name="O" state="X"/>
+			<Specie name="CO" state="A1Pi"/>
+		</Species>
+		<Egrid unit="eV">
+			30.0125		34.2077		38.9894		44.4394		50.6512
+			56.9809		64.9458		74.024		84.3712		94.9148
+			108.182		121.701		138.713		156.047		177.86
+			200.087		225.091		253.219		284.863
+		</Egrid>
+		<Cross unit="cm2" uncertainty="50%" >
+			1.28657E-18	1.27490E-18	1.26339E-18	1.26301E-18	1.26264E-18
+			1.25109E-18	1.25071E-18	1.23912E-18	1.21632E-18	1.19355E-18
+			1.18196E-18	1.15919E-18	1.13639E-18	1.10240E-18	1.06838E-18
+			1.02319E-18	0.966774E-18	0.921577E-18	0.865164E-18
+		</Cross>
+	</Process>
+	<Process name="CO2+e -> CO(A1Pi) + O" electrons="0" threshold="13.60">
+		<Excitation/>
+		<Shirai/><!--Shirai et al 2001 analytic cross section -->
+		<legend>Shirai emission CO A1Pi v=0/1/2</legend> 
+		<Proc>CO(A1Pi)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Shirai 2001</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Notes>Emission for CO(A1Pi) v=0/1/2</Notes>
+		<Extrapolated/>
+		<uncertainty>20</uncertainty>
+		<Species>
+			<Specie name="O" state="X"/>
+			<Specie name="CO" state="A1Pi"/>
+		</Species>
+		<Emin> 15.0 </Emin>
+		<Emax> 350.0 </Emax>
+		<Equation type="1" article_id="CO2" article_number="61"/>
+		<params>
+			1.140000e-02    5.700000e-01    1.280000e-02    3.730000e-01
+		</params>
+	</Process>
+
+
+
+
+
+
+</crs>

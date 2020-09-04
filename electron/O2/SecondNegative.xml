@@ -1,0 +1,42 @@
+<crs>
+	<Name>O2</Name>
+	<Collider>e</Collider>
+	<title> O$_2$  + e $\rightarrow$ O${_{2}}{^{+}}$(Second Negative emission)</title>
+	<Emin>10</Emin>
+	<Emax>1000</Emax>
+	<Cmax>3E-18</Cmax>
+	<Cmin>8E-19</Cmin>
+	<plotname>seff_O2_e_O2psecondneg.pdf</plotname>
+	<Process name="O2+e->O2+(SecondNegative)" electrons="1" threshold="18">
+		<legend>O2+ Itikawa</legend>
+		<Proc>O2+</Proc> <!-- Name for the processus -->
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review </Notes>
+		<Species>
+			<Specie name="O2+" state="SecondNegative"/>
+		</Species>
+		<Emission/>
+		<Egrid unit="eV">
+			18 19 20 22 25
+			30 35 40 50 60
+			70 80 90 100 120
+			140 160 180 200 220
+			240 260 280 300 325
+			350 375 400
+		</Egrid>
+		<Cross unit="cm2" fact="1E-18" uncertainty="24%">
+			0.097 0.21 0.32 0.84 1.82
+			3.07 4.45 5.50 7.44 8.86
+			9.58 10.1 10.4 10.2 10.6
+			10.9 10.8 10.4 10.4 9.79
+			9.66 9.22 8.78 8.57 8.28
+			8.23 8.09 7.72
+		</Cross>
+			<!--
+		     	A2Pu - X2Pg
+ 			Terrel et al. 2004:
+			
+		-->
+	</Process>
+</crs>
