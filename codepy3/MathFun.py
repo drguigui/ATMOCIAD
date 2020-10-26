@@ -1,11 +1,43 @@
 #!/usr/bin/env python
 # -*-Coding:Utf-8-*-
+
+""" Various interpolation and math functions needed for the other Python files in this package
+
+The code contains various math and interpolation functions needed to successfully run the other Python code in this directory
+
+Examples
+----------
+
+To use function, type in the following on the command line:
+
+    python MathFun.py 
+
+Make sure this Python code is in the same directory as the other Python scripts in this package. It is used by some of these scripts. 
+
+Arguments
+----------
+
+None
+
+Returns
+-------
+
+None
+
+Notes
+--------
+    
+Modules needed: pylab, powerlaw (defined in this package), scipy.optimize (leastsq)
+Notes created by B Hegyi, 10/26/20
+
+"""
+
 from pylab import *
 from powerlaw import powerlaw
 try:
 	from scipy.optimize import leastsq
 except:
-	print("zut leastsq not working!")
+	print("leastsq not working!")
 #from scipy import interpolate
 #from MathFlux import indirac, ingauss, inmaxw, normflux
 #from MathGrid import gridpow,gridexp,widthgrid,gridcst,gridpolo
@@ -21,96 +53,249 @@ except:
 
 
 def array_reverse(a):
-	""" To reverse an array"""
-	return a[::-1]
+    """To reverse an array
+    
+    Arguments
+    ----------
+
+    a: Numpy array
+        Any array of values
+    
+    Returns
+    -------
+    
+    Returns array, reversed from input 
+    
+    """
+    
+    #This is an array reversal function
+    
+    return a[::-1]
 
 
 
 def intlin(goldx,goldy,gnewx):
-	"""Linear interpolation and extrapolation used in Trans*. 
+    """Linear interpolation and extrapolation used in Trans*. 
 	When the values are out of border, there is a linear extrapolation
-	"""
-	oldx=goldx
-	oldy=goldy
-	newx=gnewx
-	reorder=False
-	newy=zeros(len(newx))
-
-	if(len(oldx)==0 or len(newx)==0):
-		return
-
-	if oldx[0]>oldx[-1]:
-		oldx=array_reverse(oldx)
-		oldy=array_reverse(oldy)
 	
-	if newx[0]>newx[-1]:
-		newx=array_reverse(newx)
-		reorder=True
+    Arguments
+    ----------
 
-	nin=len(oldx)
-	for i in range(len(newx)):
-		j=0
-		pasfini=True
+    goldx: Numpy array
+        Any 1D array of x-values [input]
+    goldy: Numpy array
+        Any 1D array of y-values [input]
+    gnewx: Numpy array
+        Any 1D array of desired of x-values [output]
 
-		while ((j<nin) and pasfini):
-			if newx[i]<oldx[0]:
-				newy[i]=oldy[1]-(oldx[1]-newx[i])*(oldy[1]-oldy[0])/(oldx[1]-oldx[0])
-				pasfini=False
-			elif  newx[i]>oldx[-1]:
-				newy[i]=oldy[-1]-(oldx[-1]-newx[i])*(oldy[-1]-oldy[-2])/(oldx[-1]-oldx[-2])
-				pasfini=False
-			elif newx[i]==oldx[j]:
-				newy[i]=oldy[j]
-				pasfini=False
-			elif newx[i]<oldx[j]:
-				if j==0:
-					newy[i]=oldy[j]-(oldx[j]-newx[i])*(oldy[1]-oldy[0])/(oldx[1]-oldx[0])
-				else:
-					newy[i]=oldy[j]-(oldx[j]-newx[i])*(oldy[j]-oldy[j-1])/(oldx[j]-oldx[j-1])
-				pasfini=False
-			j+=1
+    
+    Returns
+    -------
+    
+    newy: A 1D array of interpolated/extrapolated y-values 
+    
+    """
+    oldx=goldx
+    oldy=goldy
+    newx=gnewx
+    reorder=False
+    newy=zeros(len(newx))
+    
+    if(len(oldx)==0 or len(newx)==0):
+        return
+    
+    if oldx[0]>oldx[-1]:
+        oldx=array_reverse(oldx)
+        oldy=array_reverse(oldy)
+	
+    if newx[0]>newx[-1]:
+        newx=array_reverse(newx)
+        reorder=True
 
-	if reorder:
-		return array_reverse(newy)
-	return newy
+    nin=len(oldx)
+    for i in range(len(newx)):
+        j=0
+        pasfini=True
+        
+        while ((j<nin) and pasfini):
+            if newx[i]<oldx[0]:
+                newy[i]=oldy[1]-(oldx[1]-newx[i])*(oldy[1]-oldy[0])/(oldx[1]-oldx[0])
+                pasfini=False
+            elif  newx[i]>oldx[-1]:
+                newy[i]=oldy[-1]-(oldx[-1]-newx[i])*(oldy[-1]-oldy[-2])/(oldx[-1]-oldx[-2])
+                pasfini=False
+            elif newx[i]==oldx[j]:
+                newy[i]=oldy[j]
+                pasfini=False
+            elif newx[i]<oldx[j]:
+                if j==0:
+                    newy[i]=oldy[j]-(oldx[j]-newx[i])*(oldy[1]-oldy[0])/(oldx[1]-oldx[0])
+                else:
+                    newy[i]=oldy[j]-(oldx[j]-newx[i])*(oldy[j]-oldy[j-1])/(oldx[j]-oldx[j-1])
+                pasfini=False
+            j+=1
+            
+if reorder:
+    return array_reverse(newy)
+    return newy
 
 
 def intlog(oldx,oldy,newx):
-	"""Logarithmic interpolation and extrapolation"""
+	"""Logarithmic interpolation and extrapolation
+    
+    Arguments
+    ----------
+
+    oldx: Numpy array
+        Any 1D array of x-values [input]
+    oldy: Numpy array
+        Any 1D array of y-values [input]
+    newx: Numpy array
+        Any 1D array of desired of x-values [output]
+
+    
+    Returns
+    -------
+    
+    A 1D array of interpolated/extrapolated y-values, using a base-10 log interpolation (log-10 taken of x-values) 
+    
+    
+    """
 	return 10**(intlin(oldx,log10(oldy),newx))
 
 def intloglog(oldx,oldy,newx):
-	"""Logarithmic interpolation and extrapolation"""
+	"""Logarithmic interpolation and extrapolation
+    
+    Arguments
+    ----------
+
+    oldx: Numpy array
+        Any 1D array of x-values [input]
+    oldy: Numpy array
+        Any 1D array of y-values [input]
+    newx: Numpy array
+        Any 1D array of desired of x-values [output]
+
+    
+    Returns
+    -------
+    
+    A 1D array of interpolated/extrapolated y-values, using a base-10 log interpolation (log-10 taken of both x and y values) 
+    
+    """
+    
 	return 10**(intlin(log10(oldx),log10(oldy),log10(newx)))
 
 
 def splinterp(oldx,oldy,newx,k=3):
-	""" Scipy spline interpolation"""
+	""" Scipy spline interpolation
+    
+    Arguments
+    ----------
+
+    oldx: Numpy array
+        Any 1D array of x-values [input]
+    oldy: Numpy array
+        Any 1D array of y-values [input]
+    newx: Numpy array
+        Any 1D array of desired of x-values [output]
+
+    
+    Returns
+    -------
+    
+    New y-values from a spline interpolation, using new x-values  
+    
+    """
+    
 	sp=UnivariateSpline(oldx,oldy,k=k)
 	return sp(newx)
 
 
 def BetheOp(pvals,z):
-	A=pvals[0]
-	B=pvals[1]
-	C=pvals[2]
+    
+    """ Function using the Bethe Oppenheimer process for interpolation 
+    
+    Arguments
+    ----------
+
+    pvals: Numpy array (3 entries)
+    
+    z: Numpy array
+
+
+    
+    Returns
+    -------
+    
+    Bethe Oppenheimer values (tm1*tm2)  
+    
+    """
+    
+    A=pvals[0]
+    B=pvals[1]
+    C=pvals[2]
 	#return A/z*log(B*z)
-	tm1=A/z**C
-	tm2=log(B*z)
+    tm1=A/z**C
+    tm2=log(B*z)
 	#print A,len(tm1),B,len(tm2)a
-	if(len(tm2)!=len(tm1)):
-		tm2=zeros((len(tm1)))
-		for i in range(len(tm1)):
-			tm2[i]=log(B*z[i])
-	return tm1*tm2
+    if(len(tm2)!=len(tm1)):
+        tm2=zeros((len(tm1)))
+        for i in range(len(tm1)):
+            tm2[i]=log(B*z[i])
+        return tm1*tm2
 
 def BetheMin(pvals,z,compar):
-	return (compar)-(BetheOp(pvals,z))
+    
+    """ Comparison between Bethe Oppenheimer values and another array
+    
+    Arguments
+    ----------
+
+    pvals: Numpy array (3 entries)
+    
+    z: Numpy array
+    
+    compar: Numpy array
+    
+        comparison array
+
+
+    
+    Returns
+    -------
+    
+    Difference between comparison array and Bethe Oppenheimer array 
+    
+    """
+    
+    return (compar)-(BetheOp(pvals,z))
 
 
 def intbetheoppenheimer(oldx,oldy,newx):
 	"""We perform a least square fit to retrieve the A and B parameters of the 
-	Q=A E-1 ln(B E) equation. And then we interpolate the data through this equation"""
+	Q=A E-1 ln(B E) equation. And then we interpolate the data through this equation
+    
+    
+    Arguments
+    ----------
+
+    oldx: Numpy array
+        Any 1D array of x-values [input]
+    oldy: Numpy array
+        Any 1D array of y-values [input]
+    newx: Numpy array
+        Any 1D array of desired of x-values [output]
+
+
+    
+    Returns
+    -------
+    
+    A new array of y-values using the Bethe Oppenheimer interpolation 
+     
+    
+    """
 	pretrieve=array([1E-14,1E-3,1.])
 	pleast=leastsq(BetheMin,pretrieve,args=(oldx,oldy))
 	print("Bethe Oppenheimer parameters : ",pleast)
@@ -121,7 +306,22 @@ def intbetheoppenheimer(oldx,oldy,newx):
 
 
 def gaussangles(m):
-	"""Compute gaussian angles"""
+	"""Compute gaussian angles
+    
+    Arguments
+    ----------
+
+    m : integer
+        number of Gaussian angles
+    
+        
+    Returns
+    -------
+    
+    A dictionary with Gaussian angles and weights
+    
+    """
+    
 	tol=1E-15
 	if m<5:
 		tol=1E-30 # truc pour la precision
@@ -176,7 +376,23 @@ def gaussangles(m):
 
 
 def gaussa(m):
-	""" Return gaussian angle, weight"""
+	""" Return gaussian angle, weight
+    
+        Arguments
+    ----------
+
+    m : integer
+        number of Gaussian angles
+    
+        
+    Returns
+    -------
+    
+    A tuple with Gaussian angles and weights
+    
+    """
+    
+    
 	tol=1E-15
 	if m<5:
 		tol=1E-30 # truc pour la precision
@@ -248,13 +464,12 @@ class GaussianAngle:
 
 
 if __name__=="__main__":
-	print("salut les gars")
 	oldx=array(list(range(10)))
 	newx=array(list(range(100)))/5-5
 	oldy=oldx**2
 	newy=intlog(oldx,oldy,newx)
 
-	plot(oldx,oldy,label="ancien")
-	plot(newx,newy,label="nouveau")
+	plot(oldx,oldy,label="old")
+	plot(newx,newy,label="new")
 	legend()
 	show()

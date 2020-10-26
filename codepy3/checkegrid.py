@@ -1,6 +1,35 @@
 #!/usr/bin/env python
 # -*- coding:Utf-8 -*-
 
+
+""" Checks to see if cross-section data exist for all processes in the xml file
+
+Examples
+----------
+
+To use function, type in the following on the command line:
+
+    python checkegrid.py filename
+
+Arguments
+----------
+filename : str
+    The file location of the xml file that contains the cross-sections
+
+Returns
+-------
+
+None
+
+Notes
+--------
+
+If there is no issue loading the cross-sections from the xml file, then "No problem" will be printed. If there is a problem, then "Problem" will be printed, along with the name of the species. 
+    
+Notes created by B Hegyi, 10/19/20
+
+"""
+
 from powerlaw import powerlaw
 try:
     import xml.etree.ElementTree as ET # in python >=2.5
@@ -38,37 +67,37 @@ def PlotStdNode(vNode):
 	if dataenergy[0] > dataenergy[-1]:
 		for i in range(len(dataenergy)-1):
 			if not(dataenergy[i] > dataenergy[i+1]):
-				print("PROBLEME", leg)
+				print("Problem:", leg)
 				print(dataenergy[i], dataenergy[i+1])
 				return
 	else:
 		for i in range(len(dataenergy)-1):
 			if not(dataenergy[i] < dataenergy[i+1]):
-				print("PROBLEME", leg)
+				print("Problem:", leg)
 				print(dataenergy[i], dataenergy[i+1])
 				return
-	print("no pb")
+	print("No issues!")
 
 
 if __name__=="__main__":
 	if(len(sys.argv)<2):
-		print("veuillez donner un nom de fichier")
+		print("Please include a file name on the command line")
 		sys.exit()
 	filename=sys.argv[1]
-	print("Votre nom de fichier : ",filename)
+	print("File name : ",filename)
 	
 	xscale("log")
 	yscale("log")
 	
 	root=ET.parse(filename).getroot()
 	processlist=root.findall(".//Process")
-	print("Nous avons trouve ",len(processlist),"processus")
+	print("We have found",len(processlist),"processes")
 	
 	for proc in processlist:
 		if(0==len(proc.findall("Shirai"))):
 			PlotStdNode(proc)
 		else:
-			print("no pb")
+			print("No issues!")
 	#	print proc.attrib["name"]
 	#	print len(proc.findall("Ionization"))
 	#	print proc.find("Cross").text
@@ -78,16 +107,16 @@ if __name__=="__main__":
 		if(0==len(proc.findall("Shirai"))):
 			PlotStdNode(proc)
 		else:
-			print("no pb")
+			print("No issues!")
 	
 	processlist3=root.findall(".//TotalCrs")
 	for proc in processlist3:
 		if(0==len(proc.findall("Shirai"))):
 			PlotStdNode(proc)
 		else:
-			print("no pb")
+			print("No issues!")
 	
-	print("fini")
+	print("Finished")
 	
 
 
