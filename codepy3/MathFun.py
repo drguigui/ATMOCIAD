@@ -135,8 +135,8 @@ def intlin(goldx,goldy,gnewx):
                 pasfini=False
             j+=1
             
-if reorder:
-    return array_reverse(newy)
+    if reorder:
+        return array_reverse(newy)
     return newy
 
 
