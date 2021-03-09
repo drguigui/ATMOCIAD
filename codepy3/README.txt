@@ -8,4 +8,6 @@ Note: 10/26/20
 
 I have now added docstrings to most of the .py files and their associated functions/methods. These descriptions should now appear when looking at the help for each of these files. 
 
+Notes: 3/9/2021:
 
+I have now added 4 new files. These are the final versions of the .py files to parse the database. They are named the following: 
