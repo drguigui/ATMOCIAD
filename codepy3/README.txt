@@ -10,4 +10,5 @@ I have now added docstrings to most of the .py files and their associated functi
 
 Notes: 3/9/2021:
 
-I have now added 4 new files. These are the final versions of the .py files to parse the database. They are named the following: 
+I have now added 4 new files. These are the final versions of the .py files to parse the database. They are named the following: angread.xml, angextrapole.xml, energyread.xml, energyextrapole.xml.
+
