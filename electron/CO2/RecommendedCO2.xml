@@ -228,7 +228,7 @@
 			<Source type="adaptation"> Gronoff 2012</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Species>
 				<Specie name="CO" state="a3Pi"/>
-				<Specie name="O" state="X"/>
+				<Specie name="O" state="3P"/>
 			</Species>
 			<Excitation/>
 			<Recommended/>
@@ -255,7 +255,7 @@
 			<EstimatedUncertainty/>
 			<Source type="adaptation"> Ajello 1971+Simon2008 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Species>
-				<Specie name="O" state="X"/>
+				<Specie name="O" state="3P"/>
 				<Specie name="CO" state="A1Pi"/>
 			</Species>
 			<Egrid unit="eV">
@@ -392,7 +392,7 @@
 		<Process name="CO2+e -> CO+ + O" electrons="1" ions="1" threshold="19.5">
 			<Species>
 				<Specie name="CO+" state="X"/>
-				<Specie name="O" state="X"/>
+				<Specie name="O" state="3P"/>
 			</Species>
 			<Ionization/>
 			<Proc>CO+</Proc> <!-- Name for the processus -->
@@ -438,7 +438,7 @@
 		<Process name="CO2+e -> CO + O+" electrons="1" ions="1" threshold="19.1">
 			<Species>
 				<Specie name="CO" state="X"/>
-				<Specie name="O+" state="X"/>
+				<Specie name="O+" state="4S"/>
 			</Species>
 			<Ionization/>
 			<Proc>O+</Proc> <!-- Name for the processus -->

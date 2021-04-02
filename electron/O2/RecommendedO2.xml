@@ -314,7 +314,7 @@
 			<Species>
 				<!-- Uncertainty about the state of the O++ created -->
 				<Specie name="O++" state="X"/>
-				<Specie name="O" state="X"/>
+				<Specie name="O" state="3P"/>
 			</Species>
 			<legend>O++ Recommended</legend>
 			<Proc>O++</Proc> <!-- Name for the processus -->
