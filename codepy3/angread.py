@@ -625,4 +625,4 @@ if __name__=="__main__":
 	xlabel("Wavelength [$\AA$]")
 	ylabel("Cross section [cm$^2$]")
 	legend(loc="best")
-    
+    show()
