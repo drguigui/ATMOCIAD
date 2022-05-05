@@ -197,7 +197,7 @@ class NewShiraiCH4:
     def S14(self,E):
         return self.sigma*self.avals[0]*( log(E/self.thresh)+self.avals[1])/(self.thresh*E*(1+(self.avals[2]/(E-self.thresh))**self.avals[3]))
 
-	
+    
     def ReturnCrs(self,E):
 
         result={1: lambda x: self.S1(x),
@@ -303,15 +303,15 @@ class NewShiraiCO2:
     def S2(self,Ei):
         E=Ei-self.thresh
         return self.f1(E,self.avals[0],self.avals[1])+ self.f2(E,self.avals[2],self.avals[3],self.avals[4],self.avals[5])
-	
+    
     def S3(self,Ei):
         E=Ei-self.thresh
         return self.f2(E,self.avals[0],self.avals[1],self.avals[2],self.avals[3])+self.f2(E,self.avals[4],self.avals[5],self.avals[6],self.avals[7])
-	
+    
     def S4(self,Ei):
         E=Ei-self.thresh
         return self.f1(E,self.avals[0],self.avals[1])+ self.f2(E,self.avals[2],self.avals[3],self.avals[4],self.avals[5])+ self.f2(E,self.avals[6],self.avals[7],self.avals[8],self.avals[9])
-	
+    
     def S5(self,Ei):
         E=Ei-self.thresh
         return self.f3(E,self.avals[0],self.avals[1],self.avals[2],self.avals[3],self.avals[4],self.avals[5])
@@ -337,15 +337,15 @@ class NewShiraiCO2:
 
     def ReturnCrs(self,E):
         result={1: lambda x: self.S1(x),
-			2: lambda x: self.S2(x),
-			3: lambda x: self.S3(x),
-			4: lambda x: self.S4(x),
-			5: lambda x: self.S5(x),
-			6: lambda x: self.S6(x),
-			7: lambda x: self.S7(x),
-			8: lambda x: self.S8(x),
-			9: lambda x: self.S9(x),
-			10: lambda x: self.S10(x)}[self.eq](E)
+            2: lambda x: self.S2(x),
+            3: lambda x: self.S3(x),
+            4: lambda x: self.S4(x),
+            5: lambda x: self.S5(x),
+            6: lambda x: self.S6(x),
+            7: lambda x: self.S7(x),
+            8: lambda x: self.S8(x),
+            9: lambda x: self.S9(x),
+            10: lambda x: self.S10(x)}[self.eq](E)
         return result
 
 
@@ -424,7 +424,7 @@ class NewShiraiN2:
     def S1(self,Ei):
         E=Ei-self.thresh
         return self.f2(E,self.avals[0],self.avals[1],self.avals[2],self.avals[3])
-	
+    
     def S2(self,Ei):
         E=Ei-self.thresh
         return self.f2(E,self.avals[0],self.avals[1],self.avals[2],self.avals[3])+self.f2(E,self.avals[4],self.avals[5],self.avals[6],self.avals[3])
@@ -447,13 +447,13 @@ class NewShiraiN2:
 
     def ReturnCrs(self,E):
         result={1: lambda x: self.S1(x),
-			2: lambda x: self.S2(x),
-			3: lambda x: self.S3(x),
-			4: lambda x: self.S4(x),
-			5: lambda x: self.S5(x),
-			6: lambda x: self.S6(x),
-			7: lambda x: self.S7(x),
-			}[self.eq](E)
+            2: lambda x: self.S2(x),
+            3: lambda x: self.S3(x),
+            4: lambda x: self.S4(x),
+            5: lambda x: self.S5(x),
+            6: lambda x: self.S6(x),
+            7: lambda x: self.S7(x),
+            }[self.eq](E)
         return result
 
 
@@ -486,9 +486,9 @@ def PlotShiraiNode(vNode):
     if(0==len(vNode.findall("legend"))):
         leg=vNode.attrib["name"]
     else:
-    	leg=vNode.find("legend").text
+        leg=vNode.find("legend").text
     try:
-    	threshold=float(vNode.attrib["threshold"])
+        threshold=float(vNode.attrib["threshold"])
     except:
         threshold=0
     uncertainty=float(vNode.find("uncertainty").text)
@@ -499,7 +499,7 @@ def PlotShiraiNode(vNode):
     tip=int(vNode.find("Equation").attrib["type"])
     params=loadtxt(StringIO(vNode.find("params").text.replace("\n"," ")))
 
-#	def __init__(self,emin,emax,threshold,eqtype,dataeq):
+#   def __init__(self,emin,emax,threshold,eqtype,dataeq):
     if(tid=="CH4"):
         shirai=NewShiraiCH4(Emin,Emax,threshold,tip,params)
     if(tid=="CO2"):
@@ -544,19 +544,19 @@ def PlotStdNode(vNode):
             leg="Elastic"
     else:
         leg=vNode.find("legend").text
-	
+    
     fact=1
     if("fact" in list(vNode.find("Egrid").keys())):
         fact=float(vNode.find("Egrid").attrib.get("fact"))
-#	print "Your factor :",fact
-#	print loadtxt(StringIO((vNode.find("Egrid").text).replace("\n"," ")))
+#   print "Your factor :",fact
+#   print loadtxt(StringIO((vNode.find("Egrid").text).replace("\n"," ")))
     dataenergy=loadtxt(StringIO(vNode.find("Egrid").text.replace("\n"," ")))*fact
     fact=1
     if("fact" in list(vNode.find("Cross").keys())):
         t=float(vNode.find("Cross").attrib.get("fact"))
     print("Your factor :",fact)
     datacrs=loadtxt(StringIO(vNode.find("Cross").text.replace("\n"," ")))*fact
-#	print datacrs
+#   print datacrs
     uncertainty=0
     datauncert=zeros((len(datacrs)))
     if("uncertainty" in list(vNode.find("Cross").keys())):
@@ -570,9 +570,9 @@ def PlotStdNode(vNode):
             print("Uncertainty values")
             datauncert=ones((len(datacrs)))*value
 
-#	print datauncert
+#   print datauncert
 
-#	errorbar(datacrs,dataenergy,yerr=datauncert,label=leg)
+#   errorbar(datacrs,dataenergy,yerr=datauncert,label=leg)
     errorbar(enetoang(dataenergy),datacrs,yerr=datauncert,label=leg)
 
 
@@ -583,46 +583,46 @@ def PlotStdNode(vNode):
 #This section of the code pulls the input filename from the command line
 
 if __name__=="__main__":
-	if(len(sys.argv)<2):
-		print("Please include a file name on the command line")
-		exit()
+    if(len(sys.argv)<2):
+        print("Please include a file name on the command line")
+        exit()
 
-	filename=sys.argv[1]
-	print("File name : ",filename)
+    filename=sys.argv[1]
+    print("File name : ",filename)
     
-	
-	
-#This section of the code plots the cross-section plot vs. wavelength	
-	
-#	xscale("log")
-	yscale("log")
-	
-	root=ET.parse(filename).getroot()
-	processlist=root.findall(".//Process")
-	print("We have found ",len(processlist),"processes")
-	
-	for proc in processlist:
-		if(0==len(proc.findall("Shirai"))):
-			PlotStdNode(proc)
-		else:
-			PlotShiraiNode(proc)
-	#	print proc.attrib["name"]
-	#	print len(proc.findall("Ionization"))
-	#	print proc.find("Cross").text
+    
+    
+#This section of the code plots the cross-section plot vs. wavelength   
+    
+#   xscale("log")
+    yscale("log")
+    
+    root=ET.parse(filename).getroot()
+    processlist=root.findall(".//Process")
+    print("We have found ",len(processlist),"processes")
+    
+    for proc in processlist:
+        if(0==len(proc.findall("Shirai"))):
+            PlotStdNode(proc)
+        else:
+            PlotShiraiNode(proc)
+    #   print proc.attrib["name"]
+    #   print len(proc.findall("Ionization"))
+    #   print proc.find("Cross").text
  
-	processlist2=root.findall(".//ElasticCrs")
-	for proc in processlist2:
-		if(0==len(proc.findall("Shirai"))):
-			PlotStdNode(proc)
-		else:
-			PlotShiraiNode(proc)
-	
-	processlist3=root.findall(".//TotalCrs")
-	for proc in processlist3:
-		PlotStdNode(proc)
-	
-	title("Cross sections comparisons")
-	xlabel("Wavelength [$\AA$]")
-	ylabel("Cross section [cm$^2$]")
-	legend(loc="best")
+    processlist2=root.findall(".//ElasticCrs")
+    for proc in processlist2:
+        if(0==len(proc.findall("Shirai"))):
+            PlotStdNode(proc)
+        else:
+            PlotShiraiNode(proc)
+    
+    processlist3=root.findall(".//TotalCrs")
+    for proc in processlist3:
+        PlotStdNode(proc)
+    
+    title("Cross sections comparisons")
+    xlabel("Wavelength [$\AA$]")
+    ylabel("Cross section [cm$^2$]")
+    legend(loc="best")
     show()
