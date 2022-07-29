@@ -103,7 +103,22 @@
 				0.08	0.027
 			</Cross>
 		</Process>
-
+		<Process name="N2+e->N2(vib)v= 0 -> 2" electrons="0" threshold="0.500000">
+			<Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+			<Species>
+				<Specie name="N2" state="2"/>
+			</Species>
+			<Excitation/>
+			<Proc>N2(vib2)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Emin> 0.5 </Emin>
+			<Emax> 3440.0 </Emax>
+			<Equation type="0" article_id="N2" article_number="6"/>
+			<params>
+			  1.370000e+02	  5.820000e-01	  4.010000e-04	  1.280000e-01	  9.290000e-03
+			  1.545000e+00	  1.960000e+07	  7.820000e+00	  2.370000e-03	  5.870000e+00
+			</params>
+		</Process>
 		<Process name="N2+e->N2(A3Su+)" electrons="0" threshold="6.169">
 			<Species>
 				<Specie name="N2" state="A3Su+"/>

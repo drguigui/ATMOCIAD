@@ -206,7 +206,7 @@ class NewShiraiCH4:
 
 
 class NewShiraiCO2:
-	
+    
     """Processes cross-section data for an interaction with an electron using methods from reference
 
     Arguments
@@ -288,14 +288,14 @@ class NewShiraiCO2:
     def S2(self,Ei):
         E=Ei-self.thresh
         return self.f1(E,self.avals[0],self.avals[1])+ self.f2(E,self.avals[2],self.avals[3],self.avals[4],self.avals[5])
-	
+    
     def S3(self,Ei):
         E=Ei-self.thresh
         return self.f2(E,self.avals[0],self.avals[1],self.avals[2],self.avals[3])+self.f2(E,self.avals[4],self.avals[5],self.avals[6],self.avals[7])
     def S4(self,Ei):
         E=Ei-self.thresh
         return self.f1(E,self.avals[0],self.avals[1])+ self.f2(E,self.avals[2],self.avals[3],self.avals[4],self.avals[5])+ self.f2(E,self.avals[6],self.avals[7],self.avals[8],self.avals[9])
-	
+    
     def S5(self,Ei):
         E=Ei-self.thresh
         return self.f3(E,self.avals[0],self.avals[1],self.avals[2],self.avals[3],self.avals[4],self.avals[5])
@@ -317,15 +317,15 @@ class NewShiraiCO2:
     def ReturnCrs(self,E):
         
         result={1: lambda x: self.S1(x),
-			2: lambda x: self.S2(x),
-			3: lambda x: self.S3(x),
-			4: lambda x: self.S4(x),
-			5: lambda x: self.S5(x),
-			6: lambda x: self.S6(x),
-			7: lambda x: self.S7(x),
-			8: lambda x: self.S8(x),
-			9: lambda x: self.S9(x),
-			10: lambda x: self.S10(x)}[self.eq](E)
+            2: lambda x: self.S2(x),
+            3: lambda x: self.S3(x),
+            4: lambda x: self.S4(x),
+            5: lambda x: self.S5(x),
+            6: lambda x: self.S6(x),
+            7: lambda x: self.S7(x),
+            8: lambda x: self.S8(x),
+            9: lambda x: self.S9(x),
+            10: lambda x: self.S10(x)}[self.eq](E)
         return result
 
 
@@ -506,7 +506,7 @@ def PlotShiraiNode(vNode,teste):
     print("*********************************")
     print("---------------------------------")
     print("---------------------------------")
-	
+    
     datauncert=cross*uncertainty/100.
     errorbar(teste,cross,yerr=datauncert,label=leg)
 
@@ -549,7 +549,7 @@ def PlotStdNode(vNode,teste):
         print("Your factor :",fact)
     datacrs=loadtxt(StringIO(vNode.find("Cross").text.replace("\n"," ")))*fact
 
-	
+    
     uncertainty=0
     datauncert=zeros((len(datacrs)))
     if("uncertainty" in list(vNode.find("Cross").keys())):
@@ -582,50 +582,50 @@ def PlotStdNode(vNode,teste):
 #--This is where the file name is taken from the command line when this .py script is run
 
 if __name__=="__main__":
-	if(len(sys.argv)<2):
-		print("Please include a file name on the command line")
-		exit()
+    if(len(sys.argv)<2):
+        print("Please include a file name on the command line")
+        exit()
 
-	filename=sys.argv[1]
-	print("File name : ",filename)
-	
-	
-	
-# -- This is where the plot is created	
-	xscale("log")
-	yscale("log")
-	
-	root=ET.parse(filename).getroot()
-	processlist=root.findall(".//Process")
-	print("We have found ",len(processlist),"processes")   #These are all of the processes that we find in the xml file
-	
-	teste=powerlaw(0.1,100000,500)
-	for proc in processlist:
-		if(0==len(proc.findall("Shirai"))):
-			PlotStdNode(proc,teste)
-		else:
-			PlotShiraiNode(proc,teste)
+    filename=sys.argv[1]
+    print("File name : ",filename)
+    
+    
+    
+# -- This is where the plot is created  
+    xscale("log")
+    yscale("log")
+    
+    root=ET.parse(filename).getroot()
+    processlist=root.findall(".//Process")
+    print("We have found ",len(processlist),"processes")   #These are all of the processes that we find in the xml file
+    
+    teste=powerlaw(0.1,100000,500)
+    for proc in processlist:
+        if(0==len(proc.findall("Shirai"))):
+            PlotStdNode(proc,teste)
+        else:
+            PlotShiraiNode(proc,teste)
 
 
-	processlist2=root.findall(".//ElasticCrs")
-	for proc in processlist2:
-		if(0==len(proc.findall("Shirai"))):
-			PlotStdNode(proc,teste)
-		else:
-			PlotShiraiNode(proc,teste)
-	
-	processlist3=root.findall(".//TotalCrs")
-	for proc in processlist3:
-		PlotStdNode(proc,teste)
-	
-	
-	
-	title("Cross section comparisons")
-	xlabel("Energy [eV]")
-	ylabel("Cross section [cm$^2$]")
-	legend(loc="best")
-	show()
+    processlist2=root.findall(".//ElasticCrs")
+    for proc in processlist2:
+        if(0==len(proc.findall("Shirai"))):
+            PlotStdNode(proc,teste)
+        else:
+            PlotShiraiNode(proc,teste)
+    
+    processlist3=root.findall(".//TotalCrs")
+    for proc in processlist3:
+        PlotStdNode(proc,teste)
+    
+    
+    
+    title("Cross section comparisons")
+    xlabel("Energy [eV]")
+    ylabel("Cross section [cm$^2$]")
+    legend(loc="best")
+    show()
 
-	
+    
 
 

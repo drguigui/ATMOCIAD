@@ -173,7 +173,7 @@ class NewShiraiCH4:
     def S14(self,E):
         return self.sigma*self.avals[0]*( log(E/self.thresh)+self.avals[1])/(self.thresh*E*(1+(self.avals[2]/(E-self.thresh))**self.avals[3]))
 
-	
+    
     def ReturnCrs(self,E):
 
         result={1: lambda x: self.S1(x),
@@ -194,7 +194,7 @@ class NewShiraiCH4:
 
 
 class NewShiraiCO2:
-	
+    
     """Processes cross-section data for an interaction with an electron using methods from reference
 
     Arguments
@@ -253,15 +253,15 @@ class NewShiraiCO2:
     def S2(self,Ei):
         E=Ei-self.thresh
         return self.f1(E,self.avals[0],self.avals[1])+ self.f2(E,self.avals[2],self.avals[3],self.avals[4],self.avals[5])
-	
+    
     def S3(self,Ei):
         E=Ei-self.thresh
         return self.f2(E,self.avals[0],self.avals[1],self.avals[2],self.avals[3])+self.f2(E,self.avals[4],self.avals[5],self.avals[6],self.avals[7])
-	
+    
     def S4(self,Ei):
         E=Ei-self.thresh
         return self.f1(E,self.avals[0],self.avals[1])+ self.f2(E,self.avals[2],self.avals[3],self.avals[4],self.avals[5])+ self.f2(E,self.avals[6],self.avals[7],self.avals[8],self.avals[9])
-	
+    
     def S5(self,Ei):
         E=Ei-self.thresh
         return self.f3(E,self.avals[0],self.avals[1],self.avals[2],self.avals[3],self.avals[4],self.avals[5])
@@ -287,15 +287,15 @@ class NewShiraiCO2:
 
     def ReturnCrs(self,E):
         result={1: lambda x: self.S1(x),
-			2: lambda x: self.S2(x),
-			3: lambda x: self.S3(x),
-			4: lambda x: self.S4(x),
-			5: lambda x: self.S5(x),
-			6: lambda x: self.S6(x),
-			7: lambda x: self.S7(x),
-			8: lambda x: self.S8(x),
-			9: lambda x: self.S9(x),
-			10: lambda x: self.S10(x)}[self.eq](E)
+            2: lambda x: self.S2(x),
+            3: lambda x: self.S3(x),
+            4: lambda x: self.S4(x),
+            5: lambda x: self.S5(x),
+            6: lambda x: self.S6(x),
+            7: lambda x: self.S7(x),
+            8: lambda x: self.S8(x),
+            9: lambda x: self.S9(x),
+            10: lambda x: self.S10(x)}[self.eq](E)
         return result
 
 
@@ -381,13 +381,13 @@ class NewShiraiN2:
 
     def ReturnCrs(self,E):
         result={1: lambda x: self.S1(x),
-			2: lambda x: self.S2(x),
-			3: lambda x: self.S3(x),
-			4: lambda x: self.S4(x),
-			5: lambda x: self.S5(x),
-			6: lambda x: self.S6(x),
-			7: lambda x: self.S7(x),
-			}[self.eq](E)
+            2: lambda x: self.S2(x),
+            3: lambda x: self.S3(x),
+            4: lambda x: self.S4(x),
+            5: lambda x: self.S5(x),
+            6: lambda x: self.S6(x),
+            7: lambda x: self.S7(x),
+            }[self.eq](E)
         return result
 
 
@@ -397,7 +397,6 @@ class NewShiraiN2:
 
 def PlotShiraiNode(vNode):
     """Plot energy vs. cross-section line plot for species with Shirai coefficients
-    
     
     Arguments
     ----------
@@ -431,7 +430,7 @@ def PlotShiraiNode(vNode):
         tip=int(vNode.find("Equation").attrib["type"])
         params=loadtxt(StringIO(vNode.find("params").text.replace("\n"," ")))
 
-#	def __init__(self,emin,emax,threshold,eqtype,dataeq):
+#   def __init__(self,emin,emax,threshold,eqtype,dataeq):
         if(tid=="CH4"):
             shirai=NewShiraiCH4(Emin,Emax,threshold,tip,params)
         if(tid=="CO2"):
@@ -445,6 +444,109 @@ def PlotShiraiNode(vNode):
         cross=shirai.ReturnCrs(ene*1E-3)
         datauncert=cross*uncertainty/100.
         errorbar(ene,cross,yerr=datauncert,label=leg)
+
+
+
+def PlotSinghalNode(vCh):
+    """Plot energy vs. cross-section line plot for species with Singhal coefficients
+    
+    Arguments
+    ----------
+    vNode: flexible container object from ElementTree [output of root.findall function]
+    
+    Returns
+    -------
+    
+    None
+    
+    Notes
+    -------
+    
+    The legend, labels, and error bar information are found in the xml database. Plot created is output in a seperate window..
+    
+    """
+    parray = [float(k) for k in vCh.find("params").text.split()]
+    leg = vCh.find("Legend").text
+    OmegaP = False
+    CtypeP = False
+    Excite = False
+    Ion = False
+    if vCh.find("Omega") is None:
+        OmegaP = False 
+    else:
+        OmegaP = True
+        
+    if vCh.find("Ctype") is None:
+        CtypeP = False
+    else:
+        CtypeP = True
+        
+    if vCh.find("Excitation") is None:
+        Excite = False
+    else:
+        Excite = True
+    
+    if vCh.find("Ionization") is None:
+        Ion = False 
+    else:
+        Ion = True        
+    
+
+
+
+
+    E=array(powerlaw(0.1,10000,100))
+    Cross = zeros((len(E)))
+    print(type(E))
+    q0=6.513E-14
+    if Excite:
+        if OmegaP:
+                ratio = parray[0] / E
+                Term1 = (q0 * parray[5])/(parray[0] * parray[0])
+                Term2 = (1 - (ratio ** (parray[1]))) ** parray[2]
+                Term3 = ratio**parray[4]
+                Cross = Term1 * Term2 * Term3
+    
+        if CtypeP:
+                ratio = parray[0] / E
+                Term1 = (q0 * parray[5]) / (E * parray[0])
+                Term2 = (1-(ratio ** (parray[1]))) ** parray[2]
+                Term3 = log(exp(1) + (4.0 * parray[4] / ratio))
+                Cross = Term1 * Term2 * Term3
+    
+    if Ion:
+            Sigma_0 = 1E-16
+            A_E = (parray[1] / (E + parray[2])) * log((E / parray[3]) + parray[4]+(parray[5] / E))
+            Gamma = (parray[6] * E) / (E + parray[7])
+            T_0 = parray[8] - (parray[9] / (E + parray[10]))
+            T_m = 0.5*(E - parray[0])
+            Term1 = A_E
+            Term2 = Gamma
+            Term3 = arctan((T_m-T_0) / Gamma) + arctan(T_0 / Gamma)
+            Cross = Sigma_0 * Term1 * Term2 * Term3
+    
+
+
+
+
+
+    Cross[E < parray[0] ] = 0
+    uncertainty=0
+    datauncert=zeros((len(E)))
+    try:
+        uncertainty=float(vCh.find("uncertainty").text)
+        if (uncertainty.find("%")):
+            uncert=float(uncertainty.replace("%",""))/100
+            print("Uncertainty factor",uncert)
+            datauncert=Cross * uncert 
+        else:
+            datauncert = float(uncertainty) * Cross
+    except:
+        uncertainty = 0.5
+        datauncert= Cross * 0.5 
+        
+    errorbar(E, Cross,yerr=datauncert,label=leg)
+
 
 
 def PlotStdNode(vNode):
@@ -501,9 +603,9 @@ def PlotStdNode(vNode):
             print("Uncertainty Values")
             datauncert=ones((len(datacrs)))*value
 
-#	print datauncert
+#   print datauncert
 
-#	errorbar(datacrs,dataenergy,yerr=datauncert,label=leg)
+#   errorbar(datacrs,dataenergy,yerr=datauncert,label=leg)
     errorbar(dataenergy,datacrs,yerr=datauncert,label=leg)
 
 
@@ -514,59 +616,68 @@ def PlotStdNode(vNode):
 # -- This section of the code pulls the input filename from the command line
 
 if __name__=="__main__":
-	if(len(sys.argv)<2):
-		print("veuillez donner un nom de fichier")
+    if(len(sys.argv)<2):
+        print("veuillez donner un nom de fichier")
         #exit()
 
-	filename=sys.argv[1]
-	print("Your file name : ",filename)
-	
-	
-	# -- This section of the code plots the cross-section plot vs. energy
-	
-	xscale("log")
-	yscale("log")
-	
-	root=ET.parse(filename).getroot()
-	processlist=root.findall(".//Process")
-	print("We have found",len(processlist),"processus")
-	
-	for proc in processlist:
-		if(0==len(proc.findall("Shirai"))):
-			PlotStdNode(proc)
-		else:
-			PlotShiraiNode(proc)
-	#	print proc.attrib["name"]
-	#	print len(proc.findall("Ionization"))
-	#	print proc.find("Cross").text
+    filename=sys.argv[1]
+    print("Your file name : ",filename)
+    
+    
+    # -- This section of the code plots the cross-section plot vs. energy
+    
+    xscale("log")
+    yscale("log")
+    
+    root=ET.parse(filename).getroot()
+    processlist=root.findall(".//Process")
+    print("We have found",len(processlist),"processus")
+    
+    for proc in processlist:
+        if(0 == len(proc.findall("Singhal"))):
+            if(0==len(proc.findall("Shirai"))):
+                PlotStdNode(proc)
+            else:
+                PlotShiraiNode(proc)
+        else:
+            PlotSinghalNode(proc)
+    #   print proc.attrib["name"]
+    #   print len(proc.findall("Ionization"))
+    #   print proc.find("Cross").text
 
-	processlist2=root.findall(".//ElasticCrs")
-	for proc in processlist2:
-		if(0==len(proc.findall("Shirai"))):
-			if(0==len(proc.findall("use_hydrogen_function"))
-					and
-				0==len(proc.findall("use_proton_function"))
-					):
-				PlotStdNode(proc)
-		else:
-			PlotShiraiNode(proc)
-	
-	processlist3=root.findall(".//TotalCrs")
-	for proc in processlist3:
-		if(0==len(proc.findall("Shirai"))):
-			PlotStdNode(proc)
-		else:
-			PlotShiraiNode(proc)
-	
-	if root.findall(".//title"):
-		title(root.find(".//title").text)
-	else:
-		title("Cross sections comparisons")
-	xlabel("Energy [eV]")
-	ylabel("Cross section [cm$^2$]")
-	legend(loc="best")
-	show()
+    processlist2=root.findall(".//ElasticCrs")
+    for proc in processlist2:
 
-	
+        if(0 == len(proc.findall("Singhal"))):
+            if(0==len(proc.findall("Shirai"))):
+                if(0==len(proc.findall("use_hydrogen_function"))
+                        and
+                    0==len(proc.findall("use_proton_function"))
+                        ):
+                    PlotStdNode(proc)
+            else:
+                PlotShiraiNode(proc)
+        else:
+            PlotSinghalNode(proc)
+    
+    processlist3=root.findall(".//TotalCrs")
+    for proc in processlist3:
+        if(0 == len(proc.findall("Singhal"))):
+            if(0==len(proc.findall("Shirai"))):
+                PlotStdNode(proc)
+            else:
+                PlotShiraiNode(proc)
+        else:
+            PlotSinghalNode(proc)
+    if root.findall(".//title"):
+        title(root.find(".//title").text)
+    else:
+        title("Cross sections comparisons")
+    xlabel("Energy [eV]")
+    ylabel("Cross section [cm$^2$]")
+    legend(loc="best")
+    show()
+
+    
 
 
