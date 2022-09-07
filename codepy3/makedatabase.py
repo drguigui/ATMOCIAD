@@ -476,7 +476,7 @@ if __name__=="__main__":
     for i in files:
         print(("Processing file "+i))
     
-    (newsp,newcoll)=ReadFile(i,total,elastic,ionization,dissociation,excitation,emission,recommended)
+        (newsp,newcoll)=ReadFile(i,total,elastic,ionization,dissociation,excitation,emission,recommended)
 		#print i,newsp,newcoll
         #if newsp=="":
         #    print("error in the file ",i," the specie name is badly set")

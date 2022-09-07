@@ -81,7 +81,7 @@
 		</Process>
 		<Process name="O2 + e -> O2(v'=3)" electrons="0" threshold="6">
 			<Species>
-				<Specie name="O2" state="v'=3"/>
+				<Specie name="O2" state="v3"/>
 			</Species>
 			<Excitation/>
 			<Proc>v3</Proc> <!-- Name for the processus -->
@@ -99,30 +99,22 @@
 				0.0065
 			</Cross>
 		</Process>
+
 		<Process name="O2 + e -> O2(A1Dg)" electrons="0" threshold="0.977">
 			<Species>
 				<Specie name="O2" state="A1Dg"/>
 			</Species>
-			<Proc>A1Dg</Proc> <!-- Name for the processus -->
-			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
+			<Proc>A1Dg</Proc>
+			<Section>excitation</Section> 
+			<Source type="review">Itikawa 2009</Source> 
+			<Notes>Review</Notes>
 			<Excitation/>
-			<Egrid unit="eV">
-				5 
-				7 
-				10 
-				15 
-				20 
+			<Egrid unit="eV"> 5 7 10 15 20 
 			</Egrid>
 			<Cross unit="cm2" fact="1E-16" uncertainty="16%">
-				0.076
-				0.104
-				0.077 
-				0.042 			
-				0.023 	
+					0.076 0.104 0.077 0.042 0.023
 			</Cross>
-		</Process>
+		</Process> 
 		<Process name="O2 + e -> O2(b1Sg+)" electrons="0" threshold="1.627">
 			<Species>
 				<Specie name="O2" state="b1Sg+"/>
