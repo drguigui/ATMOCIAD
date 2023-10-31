@@ -15,13 +15,13 @@
 				<Specie name="CH3+" state="X"/>
 				<Specie name="H" state="X"/>
 			</Species>
-			<legend>CH$_3$$^+$ (BDD)</legend>
+			<legend>CH$_3$$^+$ (Lilensten)</legend>
 			<Proc>CH$_3$$^+$ + H + e</Proc>
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="unknown">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr ? origin, avakyan? </Notes>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<texnote title="CH$_3$$^+$ (BDD)">
-				Original source unknown. In the BDD review. It is probable a branching ratio from the simple ionization.
+				Original source unknown. In the BDD review in \cite{Lilensten2005b} . It is probable a branching ratio from the simple ionization.
 				The data, in nm, have been adapted in eV from the Torr boxes.
 			</texnote>
 	
@@ -51,15 +51,15 @@
 				<Specie name="CH3+" state="X"/>
 				<Specie name="H" state="X"/>
 			</Species>
-			<legend>CH$_3$$^+$ (AMOP)</legend>
+			<legend>CH$_3$$^+$ (PHIDRATES)</legend>
 			<Proc>CH$_3$$^+$ + H + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. Estimate of uncertainty</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
-			<texnote title="CH$_3$$^+$ (AMOP)">
-				Photoionization of CH$_4$ yielding CH$_3^+$ + H + e from the review of AMOP.
+			<texnote title="CH$_3$$^+$ (PHIDRATES)">
+				Photoionization of CH$_4$ yielding CH$_3^+$ + H + e from the review of PHIDRATES  \cite{Huebner2015}.
 				The uncertainty, not claimed by the review, is estimated at 30\%.
 				The data, in nm, have been directly adapted in eV.
 			</texnote>

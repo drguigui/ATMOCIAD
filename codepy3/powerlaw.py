@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:Utf-8 -*-
-
+from pylab import *
 """ Fits a power law function given a maximum, minimum value, and the number of points 
 
 The code takes the maximum and minimum value and creates a power law fit between the maximum and minimum. 

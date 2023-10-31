@@ -1,7 +1,7 @@
 <crs>
 	<Name>H2O</Name>
 	<Collider>ph</Collider>
-	<title> H$_2$O  + $\lambda \rightarrow$ H{_{2}}$O${^{+}}$ + e</title>
+	<title> H$_2$O  + $\lambda \rightarrow$ H${_{2}}O{^{+}}$ + e</title>
 	<Emin>10</Emin>
 	<Emax>20000</Emax>
 	<Cmax>1E-16</Cmax>

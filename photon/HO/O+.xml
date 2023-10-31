@@ -1,7 +1,7 @@
 <crs>
 	<Name>OH</Name>
 	<Collider>ph</Collider>
-	<title> OH  + $\lambda \rightarrow$ $OH${^{+}}$ + e</title>
+	<title> OH  + $\lambda \rightarrow$ OH${^{+}}$ + e</title>
 	<Emin>5</Emin>
 	<Emax>20000</Emax>
 	<Cmax>1E-16</Cmax>

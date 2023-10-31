@@ -1,7 +1,7 @@
 <crs>
 	<Name>H2O</Name>
 	<Collider>ph</Collider>
-	<title> H$_2$O  + $\lambda H + OH</title>
+	<title> H$_2$O  + $\lambda$ H + OH</title>
 	<Emin>6.5</Emin>
 	<Emax>25</Emax>
 	<Cmax>5E-16</Cmax>

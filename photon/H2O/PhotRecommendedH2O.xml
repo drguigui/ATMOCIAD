@@ -15,7 +15,7 @@
 		<TotalCrs>
 			<legend>H$_2$O Total</legend>
 			<Proc>H$_2$O Total</Proc>
-			<Source type="adaptation"> Avakyan 98 + AMOP + CFAMOL</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation"> Avakyan 98 + PHIDRATES + CFAMOL</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted from all the 3 sources above</Notes>
 			<Extrapolated/>
 			<EstimatedUncertainty/>
@@ -3663,11 +3663,11 @@
 				<Specie name="O" state="1D"/>
 				<Specie name="H2" state="X"/>
 			</Species>
-			<legend>O($^1$D) + H$_2$ (AMOP)</legend>
+			<legend>O($^1$D) + H$_2$ (PHIDRATES)</legend>
 			<Proc>O($^1$D) + H$_2$</Proc>
 
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm - eV, website. </Notes>
 			<Recommended/>
 			<Egrid unit="eV">
@@ -3749,10 +3749,10 @@
 				<Specie name="O" state="X" number="1."/>
 			</Species>
 			<Recommended/>
-			<legend>O + H + H (AMOP)</legend>
+			<legend>O + H + H (PHIDRATES)</legend>
 			<Proc>O + H + H </Proc>
 			<Section>dissociation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm - eV, website. </Notes>
 			<Egrid unit="eV">
 			       9.507991	      9.537246	      9.918736	      9.958570
@@ -3829,10 +3829,10 @@
 				<Specie name="OH" state="X"/>
 				<Specie name="H" state="X"/>
 			</Species>
-			<legend>OH + H (AMOP)</legend>
+			<legend>OH + H (PHIDRATES)</legend>
 			<Proc>OH + H</Proc>
 			<Section>dissociation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm - eV, website. </Notes>
 			<Egrid unit="eV">
 			      6.665817	      6.701849	      6.888011
@@ -3916,10 +3916,10 @@
 			<Species>
 				<Specie name="H+" state="X" number="1."/>
 			</Species>
-			<legend>H$^+$ + products + e (AMOP)</legend>
+			<legend>H$^+$ + products + e (PHIDRATES)</legend>
 			<Proc>H$^+$ + products + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website</Notes>
 			<Recommended/>
 			<Egrid unit="eV">
@@ -3946,10 +3946,10 @@
 			<Species>
 				<Specie name="O+" state="X"/>
 			</Species>
-			<legend>O$^+$ + products + e (AMOP)</legend>
+			<legend>O$^+$ + products + e (PHIDRATES)</legend>
 			<Proc>O$^+$ + products + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website</Notes>
 			<Recommended/>
 			<Egrid unit="eV">
@@ -3976,10 +3976,10 @@
 			<Species>
 				<Specie name="H2O+" state="X" number="1."/>
 			</Species>
-			<legend>H$_2$O$^+$ + e (AMOP)</legend>
+			<legend>H$_2$O$^+$ + e (PHIDRATES)</legend>
 			<Proc>H$_2$O$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website</Notes>
 			<Egrid unit="eV">
 			     12.677321

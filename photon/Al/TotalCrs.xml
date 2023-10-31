@@ -13,8 +13,8 @@
 		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website</Notes>
 		<texnote title="Al total absorption (PHIDRATES)">
-			Total photoabsorption of Al from the review of AMOP: the total ionization was considered being the total cross section.
-			The uncertainty, not claimed by the review, is estimated at 20\%.
+			Total photoabsorption of Al from the review of the PHIDRATES \cite{Huebner2015}: the total ionization was considered being the total cross section.
+			The uncertainty, not claimed by the review, is estimated at 5\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>
 		<Emin>5.834551</Emin>
@@ -154,7 +154,7 @@
 			     413.280667	    619.921000	   1239.842000	   1565.457071	   1567.436157
 			  123984.200000
 			</Egrid>
-			<Cross unit="cm2" uncertainty="20%">
+			<Cross unit="cm2" uncertainty="5%">
 			   6.090000e-17	  4.780000e-17	  4.620000e-17	  1.270000e-16	  4.850000e-17
 			   4.310000e-17	  2.740000e-17	  1.800000e-17	  7.580000e-18	  5.110000e-18
 			   2.830000e-18	  1.350000e-18	  9.330000e-19	  6.600000e-19	  6.450000e-19

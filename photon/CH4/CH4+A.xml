@@ -3,7 +3,6 @@
 <crs>
 	<Name>CH4</Name>
 	<Collider>ph</Collider>
-	
 	<title> CH$_4$  + $\lambda \rightarrow$ CH${_{4}}{^{+}}$(A) + e</title>
 	<Emin>20</Emin>
 	<Emax>10000</Emax>
@@ -11,7 +10,6 @@
 	<Cmin>1E-24</Cmin>
 	<plotname>seff_CH4_ph_CH4pA.pdf</plotname>
 	<lambplotname>seff_CH4_ph_CH4pA_lambda.pdf</lambplotname>
-	
 	<CH4>
 		 <Process name="CH4 + ph -> CH4+(A) "  electrons="0" threshold="24">
 			<Species>
@@ -23,7 +21,7 @@
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Torr box</Notes>
 			<Recommended/>
-			<texnote title="CH$_ 4$$^+$ Auger, Avakyan 1998">Photoionization of CH$_4$ yielding CH$_4^+$($A$) + e from the review work of \cite{Avakyan1998}. Claimed uncertainty of 20\%. The reported values in \cite{Avakyan} were in nm, following the Torr boxes, and were adapted in eV for the database.
+			<texnote title="CH$_ 4$$^+$(A), Avakyan 1998">Photoionization of CH$_4$ yielding CH$_4^+$($A$) + e from the review work of \cite{Avakyan1998}. Claimed uncertainty of 20\%. The reported values in \cite{Avakyan1998} were in nm, following the Torr boxes, and were adapted in eV for the database.
 				Because this is not the total ionization of  CH$_4$, this cross section  has a -NOTOT kind of state, and it does not count for the creation of an electron. This is the \textbf{recommended} cross section for that state.
 			</texnote>
 			<Emin>23.7</Emin>

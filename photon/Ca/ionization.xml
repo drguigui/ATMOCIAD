@@ -23,7 +23,8 @@
 		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website</Notes>
 		<texnote title="Ca$^+$ + e (PHIDRATES)">
-			Photoionization of Ca yielding Ca$^+$ + e from the review of AMOP.
+			Photoionization of Ca yielding Ca$^+$ + e from the review of Phidrates \cite{Huebner2015}.
+.
 			The uncertainty, not claimed by the review, is estimated at 20\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>

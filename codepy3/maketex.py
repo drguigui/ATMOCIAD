@@ -31,6 +31,7 @@ def GetUnique(root,str):
     if(len(processlist)==1):
         return  processlist[0].text
     print("Error, impossible to find the node "+str+" in your file")
+    print("This is the length of the list",len(processlist))
     sys.exit()
 
 
@@ -190,7 +191,7 @@ def ReadFile(file,total,elastic,ionization,dissociation,excitation,emission,reco
 def printnodedico(process,sp,coll,cap):
     
     description=""
-    str="\\begin{sidewaystable}\n\centering \small\n\\begin{tabular}{|c||c|c|c|c|c|c|}\n \hline \n"
+    str="\\begin{sidewaystable}\n\centering \small\n  \n \\begin{adjustbox}{max width=\\textwidth} \n \\begin{tabular}{|c||c|c|c|c|c|c|}\n \hline \n"
     #str+=("Process & Reference & Threshold       & Range of energy  &   Uncertainty      &    Notes    &  Properties \\\\ \n \hline \n")
     str+=("Process & Reference & Threshold       & Range of energy  &   Uncertainty         &  Properties & Plots \\\\ \n \hline \n")
 #   print("^ Process    ^   Reference   ^ Threshold        ^ Range of energy  ^   Uncertainty      ^    Notes    ^  Properties  ^")
@@ -198,7 +199,7 @@ def printnodedico(process,sp,coll,cap):
         cnt=0
         if coll=="ph":
             coll="$\lambda$"
-        procname = sp+" + "+coll+" $\\rightarrow$ "+i
+        procname = sp+" + "+coll+" $\\rightarrow$ "+ cleanstr(i)
         description+="\subsubsection{"+procname+"}\n"
         for j in process[i]:
             prc=""
@@ -234,13 +235,13 @@ def printnodedico(process,sp,coll,cap):
             #str+=(" "+prc+" & "+type+"  "+j["Source"]+" & "+j["Threshold"]+" & "+j["Range"]+" & "+j["Uncertainty"]+ " & "+j["Notes"]+" & "+props+"\\\\ \n ")
             str+=cleanstr(" "+prc+" & "+type+"  "+j["Source"]+" & "+j["Threshold"]+" & "+j["Range"]+" & "+j["Uncertainty"]+" & "+props+" & ")+j["Plots"]+"\\\\ \n "
         str+="\hline\n"
-    str+="\end{tabular}\n \caption{"+cap+" for "+coll +" impact on "+cleanstr(sp)+"}\n\end{sidewaystable}\n"
+    str+="\end{tabular}  \n \end{adjustbox} \n \caption{"+cap+" for "+coll +" impact on "+cleanstr(sp)+"}\n\end{sidewaystable}\n"
     str+=("\n")
     description+="\n"
     return description+str  
 
 def printnodesimple(process,specie,collider,cap):
-    str="\\begin{sidewaystable}\n\centering \small\n\\begin{tabular}{|c|c|c|c|c|c|}\n \hline \n"
+    str="\\begin{sidewaystable}\n\centering \small \n \\begin{adjustbox}{max width=\\textwidth} \n\\begin{tabular}{|c|c|c|c|c|c|}\n \hline \n"
     description=""
     #str+=(" Reference & Threshold       & Range of energy  &   Uncertainty      &    Notes    &  Properties \\\\ \n \hline \n")
     if collider=="ph":
@@ -275,7 +276,7 @@ def printnodesimple(process,specie,collider,cap):
         #str+=(" "+type+"  "+j["Source"]+" & "+j["Threshold"]+" & "+j["Range"]+" & "+j["Uncertainty"]+ " & "+j["Notes"]+" & "+props+"\\\\ \n ")
         str+=cleanstr(" "+type+"  "+j["Source"]+" & "+j["Threshold"]+" & "+j["Range"]+" & "+j["Uncertainty"]+" & "+props+" & ")+j["Plots"]+"\\\\ \n "
         str+="\hline\n"
-    str+="\end{tabular}\n \caption{"+cap+" for "+collider +" impact on "+cleanstr(specie)+"} \n\end{sidewaystable}\n"
+    str+="\end{tabular}\n \end{adjustbox} \n\caption{"+cap+" for "+collider +" impact on "+cleanstr(specie)+"} \n\end{sidewaystable}\n"
     str+=("\n")
 
     return str
@@ -389,20 +390,16 @@ def cleanstr(str):
     str=str.replace("->","$\\rightarrow$")
     str=str.replace("CO2++","CO$_2^{++}$")
     str=str.replace("CO2+","CO$_2^+$")
-    str=str.replace("CO2","CO$_2$")
     str=str.replace("O2++","O$_2^{++}$")
     str=str.replace("O2+","O$_2^+$")
-    str=str.replace("O2","O$_2$")
     str=str.replace("H4+","H$_4^+$")
     str=str.replace("H4","H$_4$")
     str=str.replace("H3+","H$_3^+$")
     str=str.replace("H3","H$_3$")
     str=str.replace("H2+","H$_2^+$")
-    str=str.replace("H2","H$_2$")
     str=str.replace("H+","H$^+$")
     str=str.replace("N2++","N$_2^{++}$")
     str=str.replace("N2+","N$_2^{+}$")
-    str=str.replace("N2","N$_2$")
     str=str.replace("N++","N$^{++}$")
     str=str.replace("N+","N$^{+}$")
     str=str.replace("CO(A1Pi)","CO($A^1\Pi$)")
@@ -420,6 +417,12 @@ def cleanstr(str):
     str=str.replace("O+","O$^+$")
     str=str.replace("C++","C$^{++}$")
     str=str.replace("C+","C$^+$")
+    if not str.find("$"):
+        str = str.replace("_", "\_")
+    str=str.replace("H2","H$_2$")
+    str=str.replace("N2","N$_2$")
+    str=str.replace("O2","O$_2$")
+    str=str.replace("CO2","CO$_2$")
     return str
 if __name__=="__main__":
 

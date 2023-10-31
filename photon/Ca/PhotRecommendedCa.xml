@@ -2,7 +2,7 @@
 	<version nb="1" />
 	<Name>Ca</Name>
 	<Collider>ph</Collider>
-	<title> Ca + $\lambda</title>
+	<title> Ca + $\lambda$</title>
 	<Emin>6.828</Emin>
 	<Emax>124000</Emax>
 	<Cmax>1E-17</Cmax>
@@ -23,7 +23,7 @@
 		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website, adapted from the ionization</Notes>
 		<texnote title="Ca$^+$ + e (PHIDRATES)">
-			Photoabsorption of Ca adapted from the photoionization from the review of AMOP/ PHIDRATES.
+			Photoabsorption of Ca adapted from the photoionization from the review of AMOP/ PHIDRATES  \cite{Huebner2015}.
 			The uncertainty, not claimed by the review, is estimated at 20\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>
@@ -107,7 +107,7 @@
 			     352.227841	    352.327934	    413.280667	    442.326793	    442.484654
 			     619.921000	   1239.842000	   4025.461039	   4038.573290	 123984.200000
 			</Egrid>
-			<Cross unit="cm2">
+			<Cross unit="cm2"  uncertainty="5%">
 			   1.870000e-17	  1.180000e-17	  8.610000e-18	  6.140000e-18	  4.280000e-18
 			   2.950000e-18	  1.980000e-18	  1.270000e-18	  7.500000e-19	  5.470000e-19
 			   3.780000e-19	  2.410000e-19	  1.350000e-19	  5.840000e-20	  1.300000e-20

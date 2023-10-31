@@ -54,7 +54,7 @@
 			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr ? origin, avakyan? </Notes>
 			<texnote title="CH4 total absorption BDD">
-				Total photoabsorption of CH$_4$ from the review of the BDD.
+				Total photoabsorption of CH$_4$ from the review of the BDD \cite{Lilensten2005b}.
 				The data, in nm, have been directly adapted in eV.
 			</texnote>
 			<Emin>12</Emin>
@@ -83,14 +83,14 @@
 
 
 		<TotalCrs>
-			<legend>CH$_4$ Total (AMOP)</legend>
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<legend>CH$_4$ Total (PHIDRATES)</legend>
+			<Source type="review"> PHIDRATES</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. Recommended by comparison with other data</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
 			<Extrapolated/>
 			<texnote title="CH$_4$ total absorption recommended">
-				Total photoabsorption of CH$_4$ from the review of AMOP, adapted for extrapolation.
+				Total photoabsorption of CH$_4$ from the review of PHIDRATES  \cite{Huebner2015}., adapted for extrapolation.
 				The criteria was the consistency with the creation of CH3+ and CH2+ coming from Auger.
 				The uncertainty, not claimed by the review, is estimated at 30\%.
 				The data, in nm, have been directly adapted in eV.

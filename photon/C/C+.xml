@@ -19,7 +19,7 @@
 		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website</Notes>
 		<texnote title="C ionization (PHIDRATES)">
-			Total photoionization of C from the review of AMOP.
+			Total photoionization of C from the review of PHIDRATES \cite{Huebner2015}.
 			The uncertainty, not claimed by the review, is estimated at 20\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>

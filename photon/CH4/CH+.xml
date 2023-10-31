@@ -19,14 +19,14 @@
 			<legend>CH$^+$ + H$_2$ + H + e</legend>
 			<Proc>CH$^+$ + H$_2$ + H + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. Estimate of uncertainty</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Emin>20.11</Emin>
 			<Emax>12400</Emax>
-			<texnote title="CH$^+$ (AMOP)">
-				Photoionization of CH$_4$ yielding CH$^+$ + H$_2$ + H + e from the review of AMOP.
+			<texnote title="CH$^+$ (PHIDRATES)">
+				Photoionization of CH$_4$ yielding CH$^+$ + H$_2$ + H + e from the review of PHIDRATES  \cite{Huebner2015}.
 				The uncertainty, not claimed by the review, is estimated at 30\%.
 				The data, in nm, have been directly adapted in eV.
 			</texnote>

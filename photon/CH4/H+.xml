@@ -17,8 +17,8 @@
 			<legend>H$^+$ + CH$_3$ + e</legend>
 			<Proc>H$^+$ + CH$_3$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website. Estimate of uncertainty</Notes>
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website. Estimate of uncertainty. From  \cite{Huebner2015}.</Notes>
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">
 			     17.255978	     17.750064	     18.010488	     18.078769	     18.249073

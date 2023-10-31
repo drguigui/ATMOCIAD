@@ -2,7 +2,7 @@
 	<version nb="1" />
 	<Name>Si</Name>
 	<Collider>ph</Collider>
-	<title> Si + $\lambda</title>
+	<title> Si + $\lambda$</title>
 	<Emin>6.828</Emin>
 	<Emax>124000</Emax>
 	<Cmax>1E-17</Cmax>

@@ -2,7 +2,7 @@
 	<version nb="1" />
 	<Name>K</Name>
 	<Collider>ph</Collider>
-	<title> K + $\lambda</title>
+	<title> K + $\lambda$</title>
 	<Emin>6.828</Emin>
 	<Emax>124000</Emax>
 	<Cmax>1E-17</Cmax>

@@ -21,7 +21,7 @@
 
 			<Emin>13.4</Emin>
 			<Emax>8265</Emax>
-			<texnote title="CH$_4$$^+$ Auger (Avakyan 1998)">Photoionization of CH$_4$ yielding CH$_4$$^+$ (every states) + e from the review work of \cite{Avakyan1998}. Claimed uncertainty of 20\%. The reported values in \cite{Avakyan} were in nm, following the Torr boxes, and were adapted in eV for the database.  </texnote>
+			<texnote title="CH$_4$$^+$ (Avakyan 1998)">Photoionization of CH$_4$ yielding CH$_4^+$ (every states) + e from the review work of \cite{Avakyan1998}. Claimed uncertainty of 20\%. The reported values in \cite{Avakyan1998} were in nm, following the Torr boxes, and were adapted in eV for the database.  </texnote>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			  4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -60,7 +60,7 @@
 			<Notes>Adapted Torr ? origin, avakyan? </Notes>
 			<Emin>12.69</Emin>
 			<Emax>533</Emax>
-			<texnote title="CH$_4$$^+$ (BDD)">
+			<texnote title="CH$_4^+$ (BDD)">
 				CH$_4^+$ photoproduction from the BDD. Original work and uncertainty unknown.  
 			</texnote>
 			<Egrid unit="eV">
@@ -89,15 +89,15 @@
 			<Species>
 				<Specie name="CH4+" state="X"/>
 			</Species>
-			<legend>CH$_4$$^+$ (AMOP)</legend>	
+			<legend>CH$_4$$^+$ (PHIDRATES)</legend>	
 			<Proc>CH$_4$$^+$</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website</Notes>
 			
 			<Emin>13.3</Emin>
 			<Emax>12400</Emax>
-			<textnote title="CH$_4$$^+$ (AMOP)"> CH$_4$$^+$ production from the AMOP review.
+			<textnote title="CH$_4$$^+$ (PHIDRATES)"> CH$_4^+$ production from PHIDRATES  \cite{Huebner2015}.
 				This is the total yield, so it includes the effect of the Auger ionization.
 			</textnote>
 
@@ -143,13 +143,13 @@
 			<legend>CH$_4$$^+$ adap no-auger</legend>	
 			<Proc>CH$_4$$^+$</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation"> AMOP+avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation"> PHIDRATES + Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. No effect of auger</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
-			<textnote title="CH$_4^+$ AMOP, adapted for not taking Auger into account"> CH$_4^+$ production from the AMOP review.
+			<textnote title="CH$_4^+$ PHIDRATES, adapted for not taking Auger into account"> CH$_4^+$ production from the PHIDRATES review \cite{Huebner2015}.
 				But adapted to not take into account the yield of CH$_4^+$ from the K-SHELL ionization.
-				The uncertainty is estimated at 30\% (nothing claimed from AMOP). 
+				The uncertainty is estimated at 30\% (nothing claimed from PHIDRATES). 
 				This is the \textbf{recommended} cross section for the photoionization of CH$_4$.
 			</textnote>
 			<Emin>13.3</Emin>
