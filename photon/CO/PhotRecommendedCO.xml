@@ -16,7 +16,7 @@
 	<CO>
 		<TotalCrs>
 			<legend>Total CO recommended</legend>
-			<Source type="adaptation"> AMOP+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website Avakyan > 110eV </Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
@@ -177,10 +177,10 @@
 				<Specie name="O" state="1D"/>
 			</Species>
 
-			<legend>C($^1$D) + O($^1$D) AMOP</legend>
+			<legend>C($^1$D) + O($^1$D) PHIDRATES</legend>
 			<Proc>C($^1$D)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. Adaptation from a Branching ratio in McElroy and McConnel (1971): we estimate the uncertainty at 50%</Notes>
 			<EstimatedUncertainty/>
 			<Extrapolated/>
@@ -335,10 +335,10 @@
 				<Specie name="O" state="X"/>
 				<Specie name="C+" state="X"/>
 			</Species>
-			<legend>C$^+$ + O + e (AMOP)</legend>
+			<legend>C$^+$ + O + e (PHIDRATES)</legend>
 			<Proc>C$^+$ + O + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
@@ -381,11 +381,11 @@
 				<Specie name="C" state="X"/>
 				<Specie name="O+" state="X"/>
 			</Species>
-			<legend>O$^+$ + C + e (AMOP)</legend>	
+			<legend>O$^+$ + C + e (PHIDRATES)</legend>	
 			<Proc>O$^+$ + C + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website</Notes>
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website  \cite{Huebner2015}.</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">
@@ -427,7 +427,7 @@
 			<legend>CO$^+$ + e Recommended</legend>
 			<Proc>CO$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP+Avakyan+Masuoka 93 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES+Avakyan+Masuoka 93 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. Avakyan above 30 eV (Masuoka give results closer to avakyan at these E)</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
@@ -558,7 +558,7 @@
 			<Proc>CO$^{2+}$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV</Notes>
+			<Notes>Adapted Torr nm -> eV \cite{Avakyan1998}</Notes>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 				4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -599,7 +599,7 @@
 			<Proc>CO$^{2+}$ + e + $\lambda$ Auger (O)</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998) \cite{avakyan1998}</Notes>
 			<Auger energy="437" fact=".31"/>
 			<Recommended/>
 			<Egrid unit="eV">
@@ -619,7 +619,7 @@
 			<Proc>CO$^{2+}$ + e + $\lambda$ Auger (C)</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998) \cite{avakyan1998}</Notes>
 			<Auger energy="221" fact=".74"/>
 			<Recommended/>
 			<Egrid unit="eV">
@@ -641,7 +641,7 @@
 			<Proc>CO$^+$(A) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998) \cite{avakyan1998}</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			  4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -679,7 +679,7 @@
 			<Proc>CO$^+$(B) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998) \cite{avakyan1998}</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			  4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -717,7 +717,7 @@
 			<Proc>CO$^+$(C) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998) \cite{avakyan1998}</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			  4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -755,7 +755,7 @@
 			<Proc>CO$^+$(W) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998) \cite{avakyan1998}</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			  4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -793,7 +793,7 @@
 			<Proc>CO$^+$($^2$S) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998) \cite{avakyan1998}</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			  4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02

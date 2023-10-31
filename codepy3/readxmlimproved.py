@@ -2,7 +2,7 @@
 # -*- coding:Utf-8 -*-
 
 from powerlaw import powerlaw
-from MathFun import intloglog
+from MathFun import intloglog,extrapolate
 try:
     import xml.etree.ElementTree as ET # in python >=2.5
 except ImportError:
@@ -400,7 +400,7 @@ def PlotSinghalNode(vCh, bRfile, vIsEnergyTbl=False,vEtbl=[]):
 
 
 
-def PlotStdNode(vNode,bRfile,vIsLambda,vIsEnergyTbl=False,vEtbl=[]):
+def PlotStdNode(vNode,bRfile,vIsLambda,vIsEnergyTbl=False,vEtbl=[], isphoton=False):
     """ Function to plot a standard node"""
     leg=""
     if(0==len(vNode.findall("legend"))):
@@ -447,7 +447,10 @@ def PlotStdNode(vNode,bRfile,vIsLambda,vIsEnergyTbl=False,vEtbl=[]):
         if(vIsEnergyTbl):
             style = next(linestyleskwargs)
             print(style)
-            testcrs=intloglog(dataenergy,datacrs,vEtbl)
+            if isphoton:
+                testcrs=intloglog(dataenergy,datacrs,vEtbl)
+            else:            
+                testcrs=extrapolate(dataenergy,datacrs,vEtbl)
             if("threshold" in list(vNode.keys())):
                 threshold=float(vNode.attrib.get("threshold"))
                 for i in range(len(vEtbl)):
@@ -462,7 +465,11 @@ def PlotStdNode(vNode,bRfile,vIsLambda,vIsEnergyTbl=False,vEtbl=[]):
         if(vIsEnergyTbl):
             style = next(linestyleskwargs)
             print(style)
-            testcrs=intloglog(dataenergy,datacrs,vEtbl)
+            if isphoton:
+                testcrs=intloglog(dataenergy,datacrs,vEtbl)
+            else:            
+                testcrs=extrapolate(dataenergy,datacrs,vEtbl)
+            #testcrs=extrapolate(dataenergy,datacrs,vEtbl)
             if("threshold" in list(vNode.keys())):
                 threshold=float(vNode.attrib.get("threshold"))
                 for i in range(len(vEtbl)):
@@ -523,9 +530,14 @@ def CheckRoot(root):
 def PlotFile(filename):
     """ Performs the plot operations for the given file"""
     root=ET.parse(filename).getroot()
+    isphoton=False
+
+    
     
     titre,emin,emax,cmin,cmax,figname,lfig,efig,elfig,figmult=CheckRoot(root)
     
+    if lfig!="":
+        isphoton=True
     if figmult!=1:
         print("multiplication de la taille de votre figure")
         print(figmult)
@@ -546,7 +558,7 @@ def PlotFile(filename):
     for proc in processlist:
         if(0 == len(proc.findall("Singhal"))):
             if(0==len(proc.findall("Shirai"))):
-                PlotStdNode(proc,bRfile,False,False)
+                PlotStdNode(proc,bRfile,False,False,[], isphoton)
             else:
                 PlotShiraiNode(proc,bRfile,False,False)
         else:
@@ -555,7 +567,7 @@ def PlotFile(filename):
     for proc in processlist2:
         if(0 == len(proc.findall("Singhal"))):
             if(0==len(proc.findall("Shirai"))):
-                PlotStdNode(proc,bRfile,False,False)
+                PlotStdNode(proc,bRfile,False,False,[], isphoton)
             else:
                 PlotShiraiNode(proc,bRfile,False,False)
         else:
@@ -563,7 +575,7 @@ def PlotFile(filename):
     for proc in processlist3:
         if(0 == len(proc.findall("Singhal"))):
             if(0==len(proc.findall("Shirai"))):
-                PlotStdNode(proc,bRfile,False,False)
+                PlotStdNode(proc,bRfile,False,False,[], isphoton)
             else:
                 PlotShiraiNode(proc,bRfile,False)
         else:
@@ -577,9 +589,10 @@ def PlotFile(filename):
         xticks(arange(emin,emax+(emax-emin)/4,(emax-emin)/4),arange(emin,emax+(emax-emin)/4,(emax-emin)/4))
     legend(loc="best")
     savefig(figname)
-
+    isphoton=False
 
     if lfig!="":
+        isphoton=True
         clf()
         linestyleskwargs = cycle(lsty)
         xscale("linear")
@@ -588,19 +601,19 @@ def PlotFile(filename):
         for proc in processlist:
            if(0 == len(proc.findall("Singhal"))):
             if(0==len(proc.findall("Shirai"))):
-                PlotStdNode(proc,bRfile,True)
+                PlotStdNode(proc,bRfile,True,False,[], isphoton)
             else:
                 PlotShiraiNode(proc,bRfile,True)
         for proc in processlist2:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,True)
+                    PlotStdNode(proc,bRfile,True,False,[], isphoton)
                 else:
                     PlotShiraiNode(proc,bRfile,True)
         for proc in processlist3:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,True)
+                    PlotStdNode(proc,bRfile,True,False,[], isphoton)
                 else:
                     PlotShiraiNode(proc,bRfile,True)
     
@@ -623,7 +636,7 @@ def PlotFile(filename):
         for proc in processlist:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,False,True,Etbl)
+                    PlotStdNode(proc,bRfile,False,True,Etbl, isphoton)
                 else:
                     PlotShiraiNode(proc,bRfile,False,True,Etbl)
             else:
@@ -631,7 +644,7 @@ def PlotFile(filename):
         for proc in processlist2:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,False,True,Etbl)
+                    PlotStdNode(proc,bRfile,False,True,Etbl, isphoton)
                 else:
                     PlotShiraiNode(proc,bRfile,False,True,Etbl)
             else:
@@ -639,7 +652,7 @@ def PlotFile(filename):
         for proc in processlist3:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,False,True,Etbl)
+                    PlotStdNode(proc,bRfile,False,True,Etbl, isphoton)
                 else:
                     PlotShiraiNode(proc,bRfile,False,True,Etbl)
             else:
@@ -664,19 +677,19 @@ def PlotFile(filename):
         for proc in processlist:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,True,True,Etbl)
+                    PlotStdNode(proc,bRfile,True,True,Etbl, isphoton)
                 else:
                     PlotShiraiNode(proc,bRfile,True,True,Etbl)
         for proc in processlist2:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,True,True,Etbl)
+                    PlotStdNode(proc,bRfile,True,True,Etbl, isphoton)
                 else:
                     PlotShiraiNode(proc,bRfile,True,True,Etbl)
         for proc in processlist3:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,True,True,Etbl)
+                    PlotStdNode(proc,bRfile,True,True,Etbl, isphoton)
                 else:
                     PlotShiraiNode(proc,bRfile,True,True,Etbl)
     

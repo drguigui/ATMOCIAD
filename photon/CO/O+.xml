@@ -19,7 +19,7 @@
 			<Proc>O$^+$ + C + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr ? origin, avakyan? </Notes>
+			<Notes>Adapted Torr ? origin, avakyan? \cite{Witasse2002}</Notes>
 			<Egrid unit="eV">
 				12.015137	     12.087764	     12.103104	     12.690297	     12.724158
 				13.413848	     14.180968	     15.042975	     15.706131	     16.014492
@@ -47,11 +47,11 @@
 				<Specie name="C" state="X"/>
 				<Specie name="O+" state="X"/>
 			</Species>
-			<legend>O$^+$ + C + e (AMOP)</legend>	
+			<legend>O$^+$ + C + e (PHIDRATES)</legend>	
 			<Proc>O$^+$</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website</Notes>
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website  \cite{Huebner2015}.</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">

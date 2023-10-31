@@ -28,7 +28,7 @@
 			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
 
 
-			<texnote title="CO$_2$$^{2+}$ Auger (C) K-Shell (Avakyan 1998)">K-shell photoionization of CO$_2$, with excitation of the C, from the review work \cite{Avakyan1998}. Claimed uncertainty of 20\%. The rate for the double ionization (including the following dissociation, not studied) is 74\%, letting 26\% of Auger fluorescence. The energy of the Auger electron (ejected in the double ionization cases) is 223 eV. The reported values in \cite{Avakyan} were in nm, following several boxes, including lines, and were adapted in eV for the database.  </texnote>
+			<texnote title="CO$_2$$^{2+}$ Auger (C) K-Shell (Avakyan 1998)">K-shell photoionization of CO$_2$, with excitation of the C, from the review work \cite{Avakyan1998}. Claimed uncertainty of 20\%. The rate for the double ionization (including the following dissociation, not studied) is 74\%, letting 26\% of Auger fluorescence. The energy of the Auger electron (ejected in the double ionization cases) is 223 eV. The reported values in \cite{Avakyan1998} were in nm, following several boxes, including lines, and were adapted in eV for the database.  </texnote>
 			<Emin>340</Emin>
 			<Emax>830</Emax>
 			<Egrid unit="eV">

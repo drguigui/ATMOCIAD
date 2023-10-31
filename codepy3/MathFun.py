@@ -457,6 +457,49 @@ class GaussianAngle:
 		self.weight=append(gwt[::-1],gwt)
 		self.angzb=arccos(self.xmu)*180./pi
 
+import numpy as np
+from scipy.optimize import curve_fit
+
+def extrapolate(E, y, NewE, p=5, A_initial_guess=1):
+    # We are going to extrapolate using a Born function which is fitted on the last points of the function
+    # Define the extrapolation function for fitting
+    def extrapolation_function(E, A, c):
+        return A * E**(-1) * np.log(c * E)
+    
+    # Get the last p points from E and y for fitting
+    E_last_few = E[-p:]
+    y_last_few = y[-p:]
+    
+    # Fit the extrapolation function to the last few data points
+    WorkingExtrapolation=True
+    try:
+        params, _ = curve_fit(extrapolation_function, E_last_few, y_last_few, p0=[A_initial_guess, 1])
+        A_fitted, c_fitted = params
+    except:
+        A_fitted=1
+        c_fitted=1E-10
+        WorkingExtrapolation=False
+    
+    # Initialize an array to hold the result
+ #   result = np.empty_like(NewE)
+    result = intloglog(E, y, NewE)  
+    # Process each value in NewE
+    for i, value in enumerate(NewE):
+        if value < np.min(E):
+            result[i] = 0
+        elif value >np.max(E) and WorkingExtrapolation:
+            result[i] = extrapolation_function(value, A_fitted, c_fitted)
+#        else:
+            # we do nothing
+    
+    return result
+
+# Example usage:
+#E = np.linspace(1, 100, 100)  # Replace with your data
+#y = E**(-1) * np.log(2 * E) + 3  # Replace with your data
+#NewE = np.linspace(0, 200, 200)  # Replace with your desired extrapolation range
+
+#result = extrapolate(E, y, NewE, intloglog)
 
 
 

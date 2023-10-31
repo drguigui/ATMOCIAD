@@ -442,14 +442,15 @@ class NewShiraiN2:
 
 
 
-def PlotShiraiNode(vNode,teste):
+#def PlotShiraiNode(vNode,teste):
+def PlotShiraiNode(vNode,bRfile,vIsLambda,vIsEnergyTbl=False,vEtbl=[]):
     """Plotenergy vs. cross-section line plot for species with Shirai coefficients
     
     
     Arguments
     ----------
     vNode: flexible container object from ElementTree [output of root.findall function]
-    teste: array of energy values that will be used to calculate the cross sections
+    #ateste: array of energy values that will be used to calculate the cross sections
     
     Returns
     -------
@@ -468,6 +469,11 @@ def PlotShiraiNode(vNode,teste):
         leg=vNode.attrib["name"]
     else:
         leg=vNode.find("legend").text
+    
+    if bRfile:
+        if(0!=len(vNode.findall("Proc"))):
+            leg=vNode.find("Proc").text
+
     try:
         threshold=float(vNode.attrib["threshold"])
     except:
@@ -487,31 +493,144 @@ def PlotShiraiNode(vNode,teste):
     if(tid=="N2"):
         shirai=NewShiraiN2(Emin,Emax,threshold,tip,params)
 
+    ene=arange(Emin,Emax,(Emax-Emin)/100.)
+    ene=array(powerlaw(Emin,Emax,100))
+    # For the extrapolation
+    if vIsEnergyTbl:
+        ene=array(vEtbl)
+    cross=shirai.ReturnCrs(ene*1E-3)
 
-    cross=shirai.ReturnCrs(array(teste)*1E-3)
-    print("---------------------------------")
-    print("NODE ",leg)
-    print("---------------------------------")
-    for i in range(len(teste)):
+   # cross=shirai.ReturnCrs(array(teste)*1E-3)
+   # print("---------------------------------")
+   # print("NODE ",leg)
+   # print("---------------------------------")
+    for i in range(len(ene)):
         if(teste[i]<threshold):
             cross[i]=0
-        if(teste[i]>1000):
-            print(teste[i],cross[i])
-    print("---------------------------------")
-    print("---------------------------------")
-    print("*********************************")
-    newE=array([0.1,0.2,0.3,0.4,.5,0.6,0.7,0.8,0.9,1,300,400,500,600,700,800,900,1000,1250,1500,1750,2000,2500,3000,4000,5000,7500,10000,20000,30000,40000,50000,60000,70000,80000,90000,100000])
-    print(newE)
-    print(shirai.ReturnCrs(newE*1E-3))
-    print("*********************************")
-    print("---------------------------------")
-    print("---------------------------------")
+   #     if(teste[i]>1000):
+   #         print(teste[i],cross[i])
+   # print("---------------------------------")
+   # print("---------------------------------")
+   # print("*********************************")
+   # newE=array([0.1,0.2,0.3,0.4,.5,0.6,0.7,0.8,0.9,1,300,400,500,600,700,800,900,1000,1250,1500,1750,2000,2500,3000,4000,5000,7500,10000,20000,30000,40000,50000,60000,70000,80000,90000,100000])
+   # print(newE)
+   # print(shirai.ReturnCrs(newE*1E-3))
+   # print("*********************************")
+   # print("---------------------------------")
+   # print("---------------------------------")
     
     datauncert=cross*uncertainty/100.
-    errorbar(teste,cross,yerr=datauncert,label=leg)
+    if(vIsLambda):
+        errorbar(enetoang(ene),cross,yerr=datauncert,label=leg)
+    else:
+        errorbar(ene,cross,yerr=datauncert,label=leg)
 
 
-def PlotStdNode(vNode,teste):
+def PlotSinghalNode(vCh, bRfile, vIsEnergyTbl=False,vEtbl=[]):
+    """Plot energy vs. cross-section line plot for species with Singhal coefficients
+    
+    Arguments
+    ----------
+    vNode: flexible container object from ElementTree [output of root.findall function]
+    
+    Returns
+    -------
+    
+    None
+    
+    Notes
+    -------
+    
+    The legend, labels, and error bar information are found in the xml database. Plot created is output in a seperate window..
+    
+    """
+    parray = [float(k) for k in vCh.find("params").text.split()]
+    leg = vCh.find("Legend").text
+    OmegaP = False
+    CtypeP = False
+    Excite = False
+    Ion = False
+
+    if bRfile:
+        if(0!=len(vCh.findall("Proc"))):
+            leg=vCh.find("Proc").text
+
+    if vCh.find("Omega") is None:
+        OmegaP = False 
+    else:
+        OmegaP = True
+        
+    if vCh.find("Ctype") is None:
+        CtypeP = False
+    else:
+        CtypeP = True
+        
+    if vCh.find("Excitation") is None:
+        Excite = False
+    else:
+        Excite = True
+    
+    if vCh.find("Ionization") is None:
+        Ion = False 
+    else:
+        Ion = True        
+    E=array(powerlaw(0.1,10000,100))
+    if(vIsEnergyTbl):
+        E = array(vEtbl)
+    Cross = zeros((len(E)))
+    print(type(E))
+    q0=6.513E-14
+    if Excite:
+        if OmegaP:
+                ratio = parray[0] / E
+                Term1 = (q0 * parray[5])/(parray[0] * parray[0])
+                Term2 = (1 - (ratio ** (parray[1]))) ** parray[2]
+                Term3 = ratio**parray[4]
+                Cross = Term1 * Term2 * Term3
+    
+        if CtypeP:
+                ratio = parray[0] / E
+                Term1 = (q0 * parray[5]) / (E * parray[0])
+                Term2 = (1-(ratio ** (parray[1]))) ** parray[2]
+                Term3 = log(exp(1) + (4.0 * parray[4] / ratio))
+                Cross = Term1 * Term2 * Term3
+    
+    if Ion:
+            Sigma_0 = 1E-16
+            A_E = (parray[1] / (E + parray[2])) * log((E / parray[3]) + parray[4]+(parray[5] / E))
+            Gamma = (parray[6] * E) / (E + parray[7])
+            T_0 = parray[8] - (parray[9] / (E + parray[10]))
+            T_m = 0.5*(E - parray[0])
+            Term1 = A_E
+            Term2 = Gamma
+            Term3 = arctan((T_m-T_0) / Gamma) + arctan(T_0 / Gamma)
+            Cross = Sigma_0 * Term1 * Term2 * Term3
+    
+
+
+    Cross[E < parray[0] ] = 0
+    uncertainty=0
+    datauncert=zeros((len(E)))
+    try:
+        uncertainty=float(vCh.find("uncertainty").text)
+        if (uncertainty.find("%")):
+            uncert=float(uncertainty.replace("%",""))/100
+            print("Uncertainty factor",uncert)
+            datauncert=Cross * uncert 
+        else:
+            datauncert = float(uncertainty) * Cross
+    except:
+        uncertainty = 0.5
+        datauncert= Cross * 0.5 
+        
+    errorbar(E, Cross,yerr=datauncert,label=leg)
+
+
+
+
+
+#def PlotStdNode(vNode,teste):
+def PlotStdNode(vNode,bRfile,vIsLambda,vIsEnergyTbl=False,vEtbl=[]):
     """Plot wavelength vs. cross-section line plot for species with standard cross section values contained in the xml file
     
     
@@ -539,6 +658,10 @@ def PlotStdNode(vNode,teste):
             leg="Elastic"
     else:
         leg=vNode.find("legend").text
+    
+    if bRfile:
+        if(0!=len(vNode.findall("Proc"))):
+            leg=vNode.find("Proc").text
     fact=1
     if("fact" in list(vNode.find("Egrid").keys())):
         fact=float(vNode.find("Egrid").attrib.get("fact"))
@@ -562,17 +685,49 @@ def PlotStdNode(vNode,teste):
             value=float(uncertainty)*fact
             print("Uncertainty Value")
             datauncert=ones((len(datacrs)))*value
+    if(vIsEnergyTbl):
+        vEtbl=array(vEtbl)
+    if(vIsLambda):
+        if(vIsEnergyTbl):
+            #style = next(linestyleskwargs)
+            #print(style)
+            testcrs=intloglog(dataenergy,datacrs,vEtbl)
+            if("threshold" in list(vNode.keys())):
+                threshold=float(vNode.attrib.get("threshold"))
+                for i in range(len(vEtbl)):
+                    if(vEtbl[i]<threshold):
+                        testcrs[i]=0
+            plot(enetoang(vEtbl),testcrs)
+            errorbar(enetoang(dataenergy),datacrs,yerr=datauncert,label=leg)
+        else:
+            errorbar(enetoang(dataenergy),datacrs,yerr=datauncert,label=leg)
+
+    else:
+        if(vIsEnergyTbl):
+#            style = next(linestyleskwargs)
+#            print(style)
+            testcrs=intloglog(dataenergy,datacrs,vEtbl)
+            if("threshold" in list(vNode.keys())):
+                threshold=float(vNode.attrib.get("threshold"))
+                for i in range(len(vEtbl)):
+                    if(vEtbl[i]<threshold):
+                        testcrs[i]=0
+            plot((vEtbl),testcrs)
+            errorbar(dataenergy,datacrs,yerr=datauncert,label=leg)
+        else:
+            errorbar(dataenergy,datacrs,yerr=datauncert,label=leg)
+    
 
 
-    errorbar(dataenergy,datacrs,yerr=datauncert,label=leg)
-    testcrs=intloglog(dataenergy,datacrs,teste)
-    if("threshold" in list(vNode.keys())):
-        threshold=float(vNode.attrib.get("threshold"))
-        for i in range(len(teste)):
-            if(teste[i]<threshold):
-                testcrs[i]=0
+#    errorbar(dataenergy,datacrs,yerr=datauncert,label=leg)
+#    testcrs=intloglog(dataenergy,datacrs,teste)
+#    if("threshold" in list(vNode.keys())):
+#        threshold=float(vNode.attrib.get("threshold"))
+#        for i in range(len(teste)):
+#            if(teste[i]<threshold):
+#                testcrs[i]=0
 
-    plot(teste,testcrs)
+ #   plot(teste,testcrs)
 
 
 
@@ -598,29 +753,48 @@ if __name__=="__main__":
     root=ET.parse(filename).getroot()
     processlist=root.findall(".//Process")
     print("We have found ",len(processlist),"processes")   #These are all of the processes that we find in the xml file
-    
+ 
+    bRfile=False
+    if len(root.findall(".//RecommendedFile"))!=0:
+        bRfile=True
+           
     teste=powerlaw(0.1,100000,500)
     for proc in processlist:
-        if(0==len(proc.findall("Shirai"))):
-            PlotStdNode(proc,teste)
+        if(0 == len(proc.findall("Singhal"))):
+            if(0==len(proc.findall("Shirai"))):
+                PlotStdNode(proc,bRfile,False,True, teste)
+            else:
+                PlotShiraiNode(proc,bRfile,False,True, teste)
         else:
-            PlotShiraiNode(proc,teste)
+            PlotSinghalNode(proc, bRfile,True, teste)
 
 
     processlist2=root.findall(".//ElasticCrs")
     for proc in processlist2:
-        if(0==len(proc.findall("Shirai"))):
-            PlotStdNode(proc,teste)
+        if(0 == len(proc.findall("Singhal"))):
+            if(0==len(proc.findall("Shirai"))):
+                PlotStdNode(proc,bRfile,False,True, teste)
+            else:
+                PlotShiraiNode(proc,bRfile,False,True, teste)
         else:
-            PlotShiraiNode(proc,teste)
-    
+            PlotSinghalNode(proc, bRfile,True, teste)
     processlist3=root.findall(".//TotalCrs")
     for proc in processlist3:
-        PlotStdNode(proc,teste)
+        if(0 == len(proc.findall("Singhal"))):
+            if(0==len(proc.findall("Shirai"))):
+                PlotStdNode(proc,bRfile,False,True, teste)
+            else:
+                PlotShiraiNode(proc,bRfile,False,True, teste)
+        else:
+            PlotSinghalNode(proc, bRfile,True, teste)
     
-    
-    
-    title("Cross section comparisons")
+    if len(root.findall(".//title"))==0 :
+        titre = "Cross section comparisons"
+    else:
+        titre= "Cross section comparisons" + root.find(".//title").text
+
+
+    title(titre)
     xlabel("Energy [eV]")
     ylabel("Cross section [cm$^2$]")
     legend(loc="best")

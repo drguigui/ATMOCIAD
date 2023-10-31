@@ -19,11 +19,11 @@
 				<Specie name="O" state="1D"/>
 			</Species>
 
-			<legend>O($^1$D) + C($^1$D) (AMOP)</legend>
+			<legend>O($^1$D) + C($^1$D) (PHIDRATES + McElroy)</legend>
 			<Proc>O($^1$D) + C($^1$D)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website. Adaptation from a Branching ratio in McElroy and McConnel (1971): We estimate the uncertainty at 50%</Notes>
+			<Source type="adaptation"> PHIDRATES + McElroy </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website.  \cite{Huebner2015}. Adaptation from a Branching ratio in McElroy and McConnel (1971) \cite{Mcelroy1971}: We estimate the uncertainty at 50%</Notes>
 			<EstimatedUncertainty/>
 			<Extrapolated/>
 			<Egrid unit="eV">

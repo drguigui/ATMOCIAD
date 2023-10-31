@@ -47,7 +47,7 @@
 		<TotalCrs>
 			<legend>Total CO (BDD)</legend>
 			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr ? origin, Avakyan (1998)? </Notes>
+			<Notes>Adapted Torr ? origin, Avakyan (1998)?  \cite{Witasse2002}</Notes>
 			<Egrid unit="eV">
 				10 11
 				12.015137	     12.087764	     12.103104	     12.690297	     12.724158
@@ -73,8 +73,8 @@
 		</TotalCrs>
 
 		<TotalCrs>
-			<legend>Total CO (AMOP)</legend>
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<legend>Total CO (PHIDRATES)</legend>
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website</Notes>
 			<Egrid unit="eV">
 				11.091805	     11.944528	     11.949133	     12.087764	     12.450713
@@ -230,8 +230,8 @@
 
 		<TotalCrs>
 			<legend>Total CO Recommended</legend>
-			<Source type="adaptation"> AMOP+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, AMOP + Avakyan (1998) for energies E > 110 eV </Notes>
+			<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, PHIDRATES + Avakyan (1998) for energies E > 110 eV </Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">
