@@ -1,0 +1,106 @@
+<crs>
+	<Name>H2</Name>
+	<Collider>e</Collider>
+	<title> H$_2$  + e $\rightarrow$ H${_2}{B^1\Sigma, C1\Pi}$</title>
+	<Emin>10</Emin>
+	<Emax>120000</Emax>
+	<Cmax>3E-16</Cmax>
+	<Cmin>1E-18</Cmin>
+	<plotname>seff_H2_e_Rydberg.pdf</plotname>
+	<H2>
+
+		<Process name="H2+e -> H2(Rydberg)" electrons="0" threshold="15.5">
+			<Species>
+				<Specie name="H2" state="Rydberg"/>
+			</Species>
+			<legend>H2(Rydberg)</legend>
+			<Proc>H2(Rydberg)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Estimated uncertainty| from Helene</Notes>
+			<Recommended/>
+			<Extrapolated/>
+			<Excitation/>
+			<Egrid unit="eV">
+				1.600E+01 1.661E+01 1.724E+01 1.790E+01 1.859E+01 1.930E+01 2.004E+01
+				2.081E+01 2.161E+01 2.243E+01 2.329E+01 2.418E+01 2.511E+01 2.607E+01
+				2.707E+01 2.811E+01 2.918E+01 3.030E+01 3.146E+01 3.266E+01 3.392E+01
+				3.521E+01 3.656E+01 3.796E+01 3.942E+01 4.093E+01 4.249E+01 4.412E+01
+				4.581E+01 4.756E+01 4.938E+01 5.128E+01 5.324E+01 5.528E+01 5.740E+01
+				5.959E+01 6.187E+01 6.424E+01 6.670E+01 6.926E+01 7.191E+01 7.466E+01
+				7.752E+01 8.049E+01 8.357E+01 8.677E+01 9.010E+01 9.355E+01 9.713E+01
+				1.008E+02 1.047E+02 1.087E+02 1.129E+02 1.172E+02 1.217E+02 1.264E+02
+				1.312E+02 1.362E+02 1.414E+02 1.468E+02 1.525E+02 1.583E+02 1.644E+02
+				1.707E+02 1.772E+02 1.840E+02 1.910E+02 1.983E+02 2.059E+02 2.138E+02
+				2.220E+02 2.305E+02 2.393E+02 2.485E+02 2.580E+02 2.679E+02 2.782E+02
+				2.888E+02 2.999E+02 3.114E+02 3.233E+02 3.357E+02 3.485E+02 3.619E+02
+				3.757E+02 3.901E+02 4.050E+02 4.206E+02 4.367E+02 4.534E+02 4.707E+02
+				4.888E+02 5.075E+02 5.269E+02 5.471E+02 5.680E+02 5.898E+02 6.124E+02
+				6.358E+02 6.602E+02 6.855E+02 7.117E+02 7.390E+02 7.673E+02 7.966E+02
+				8.272E+02 8.588E+02 8.917E+02 9.259E+02 9.613E+02 9.759E+02
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+				6.198E-19 9.607E-19 1.459E-18 2.194E-18 3.199E-18 4.343E-18 5.718E-18
+				7.083E-18 8.169E-18 9.232E-18 9.915E-18 1.043E-17 1.076E-17 1.120E-17
+				1.179E-17 1.253E-17 1.332E-17 1.388E-17 1.460E-17 1.521E-17 1.584E-17
+				1.617E-17 1.667E-17 1.701E-17 1.718E-17 1.736E-17 1.753E-17 1.771E-17
+				1.790E-17 1.808E-17 1.808E-17 1.845E-17 1.845E-17 1.845E-17 1.863E-17
+				1.863E-17 1.863E-17 1.882E-17 1.882E-17 1.863E-17 1.863E-17 1.863E-17
+				1.863E-17 1.863E-17 1.844E-17 1.825E-17 1.806E-17 1.788E-17 1.788E-17
+				1.752E-17 1.716E-17 1.699E-17 1.682E-17 1.664E-17 1.631E-17 1.631E-17
+				1.598E-17 1.582E-17 1.550E-17 1.550E-17 1.518E-17 1.503E-17 1.472E-17
+				1.457E-17 1.428E-17 1.413E-17 1.385E-17 1.357E-17 1.329E-17 1.302E-17
+				1.289E-17 1.250E-17 1.237E-17 1.200E-17 1.176E-17 1.152E-17 1.129E-17
+				1.106E-17 1.084E-17 1.051E-17 1.030E-17 1.009E-17 9.885E-18 9.685E-18
+				9.393E-18 9.110E-18 9.017E-18 8.745E-18 8.568E-18 8.395E-18 8.142E-18
+				7.977E-18 7.816E-18 7.580E-18 7.351E-18 7.203E-18 6.985E-18 6.844E-18
+				6.638E-18 6.372E-18 6.243E-18 6.055E-18 5.933E-18 5.695E-18 5.524E-18
+				5.357E-18 5.249E-18 5.039E-18 4.887E-18 4.739E-18 4.644E-18
+			</Cross>
+		</Process>
+
+
+		<Process electrons="0" name="H2+e -> LySeries" threshold="16">
+			<Species>
+				<Specie name="H2" state="LySeries"/>
+			</Species>
+			<Legend>LySeries Singhal</Legend>
+			<Proc>H2(LySeries)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>16  0.85 1.464 -0.2 0.31 1.77 </params>
+			<AF>0</AF>
+			<Ctype/>
+		</Process>
+	
+		<Process electrons="0" name="H2+e -> WeSeries" threshold="16">
+			<Species>
+				<Specie name="H2" state="WeSeries"/>
+			</Species>
+			<Legend>WernerSeries Singhal</Legend>
+			<Proc>H2(WeSeries)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>16  0.85 1.464 0.08 0.31 2.23 </params>
+			<AF>0</AF>
+			<Ctype/>
+		</Process>	
+	
+</H2>
+</crs>
+
+
+
+
+
+

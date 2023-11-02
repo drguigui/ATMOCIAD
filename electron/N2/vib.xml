@@ -1,0 +1,117 @@
+<crs>
+	<Name>N2</Name>
+	<Collider>e</Collider>
+	<title> N$_2$  + e $\rightarrow$ N${^{+}}$</title>
+	<Emin>0.01</Emin>
+	<Emax>1200</Emax>
+	<Cmax>1E-16</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_N2_e_vib.pdf</plotname>
+
+		<Process name="N2+e->N2(vib)v= 0 -> 1" electrons="0" threshold="0.5">
+			<Species>
+				<Specie name="N2" state="v1"/>
+			</Species>
+			<Excitation/>
+			<Proc>N2(vib)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review </Notes>
+			<Egrid unit="eV">
+				0.5	1.0	1.5	1.98	2.1	
+				2.46	2.605	3.0	5.0	7.5	
+				10	15	18	20	22.5	
+				25	30	
+			</Egrid>
+			<Cross unit="cm2" fact="1E-16">
+				0.005	0.009	0.089	4.560	1.970
+				1.65	4.400	1.370	0.080	0.031
+				0.01	0.039	0.076	0.195	0.126
+				0.08	0.027
+			</Cross>
+		</Process>
+		<Process name="N2+e->N2(vib)v= 0 -> 1" electrons="0" threshold=".290000">
+			<Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+			<Species>
+				<Specie name="N2" state="2"/>
+			</Species>
+			<Excitation/>
+			<legend>vib1</legend>
+			<Proc>N2(vib) shirai</Proc>
+		<uncertainty>25</uncertainty>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Emin> 1.05 </Emin>
+			<Emax> 48.5 </Emax>
+			<Equation type="4" article_id="N2" article_number="5"/>
+			<Extrapolated/>
+			<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+			<Notes>Review of  Tabata/Shirai. Analytic functions. </Notes>
+			<params>
+			  1.830000e+10	  1.000000e+01	  9.410000e-04	  4.200000e-01	  1.240000e+09
+			  1.000000e+01	  2.087000e-03	  7.980000e+00	  1.370000e-02	  9.200000e+00
+			  1.940000e-02	  6.900000e+00
+			</params>
+		</Process>
+		<!--<Process name="N2+e->N2(vib)v= 0 -> 2" electrons="0" threshold="0.500000">
+			<Shirai/>
+			<Species>
+				<Specie name="N2" state="2"/>
+			</Species>
+			<Excitation/>
+			<legend>vib2</legend>
+			<Proc>N2(vib2)</Proc>
+			<Section>excitation</Section> 
+			<Emin> 0.5 </Emin>
+			<Emax> 3440.0 </Emax>
+		<uncertainty>25</uncertainty>
+			<Equation type="0" article_id="N2" article_number="6"/>
+			<params>
+			  1.370000e+02	  5.820000e-01	  4.010000e-04	  1.280000e-01	  9.290000e-03
+			  1.545000e+00	  1.960000e+07	  7.820000e+00	  2.370000e-03	  5.870000e+00
+			</params>
+		</Process> -->
+	<Process name="N2+e->2 * N*" electrons="0" threshold="9.760000">
+		<Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+		<Excitation/>
+		<Species>
+			<Specie name="N" state="*" number="2"/>
+		</Species>
+		<legend>Shirai dissoc</legend>
+		<Emin> 12.0 </Emin>
+		<Emax> 200.0 </Emax>
+		<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Extrapolated/>
+		<Notes>Review of  Tabata/Shirai. Analytic functions. </Notes>
+		<Proc>2*N</Proc>
+		<Section>dissociation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<uncertainty>25</uncertainty>
+		<Equation type="5" article_id="N2" article_number="61"/>
+		<params>
+			1.870000e+00    3.030000e+00    1.230000e-02    4.700000e-02    3.500000e-02
+			1.100000e+00
+		</params>
+	</Process>
+	<Process name="N2+e->2 * N*" electrons="0" threshold="9.760000">
+		<Shirai/><!-- Tabata,Shirai et al 2006 analytic cross section -->
+		<Excitation/>
+		<Species>
+			<Specie name="N" state="*" number="2"/>
+		</Species>
+		<legend>vib</legend>
+		<Emin> 12.0 </Emin>
+		<Emax> 200.0 </Emax>
+		<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Extrapolated/>
+		<Notes>Review of  Tabata/Shirai. Analytic functions. </Notes>
+		<Proc>vib</Proc>
+		<Section>dissociation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<uncertainty>25</uncertainty>
+		<Equation type="4" article_id="N2" article_number="5"/>
+		<params>
+			  1.830000e+10	  1.000000e+01	  9.410000e-04	  4.200000e-01	  1.240000e+09
+			  1.000000e+01	  2.087000e-03	  7.980000e+00	  1.370000e-02	  9.200000e+00
+			  1.940000e-02	  6.900000e+00
+		</params>
+
+	</Process>
+</crs>

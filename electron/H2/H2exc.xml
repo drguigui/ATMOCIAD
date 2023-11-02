@@ -1,0 +1,112 @@
+<crs>
+	<Name>H2</Name>
+	<Collider>e</Collider>
+	<title> H$_2$  + e $\rightarrow$ H${_2}{a^3\Sigma, b^3\Sigma, c^3\Pi}$</title>
+	<Emin>10</Emin>
+	<Emax>120000</Emax>
+	<Cmax>3E-16</Cmax>
+	<Cmin>1E-18</Cmin>
+	<plotname>seff_H2_e_H2exc.pdf</plotname>
+	<H2>
+		<Process electrons="0" name="H2+e -> c3piu" threshold="11.870">
+			<Species>
+				<Specie name="H2" state="c3piu"/>
+			</Species>
+			<Legend>c3piu Singhal</Legend>
+			<Proc>H2(c3piu)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>11.870 3.00 1.000 11.870 3.000 0.160000</params>
+			<AF>0</AF>
+			<Omega/>
+		</Process>
+	
+		
+		<Process electrons="0" name="H2+e -> b3sigma+u" threshold="10.000">
+			<Species>
+				<Specie name="H2" state="b3sigma+u"/>
+			</Species>
+			<Legend>b3sigma+u Singhal</Legend>
+			<Proc>H2(b3sigma+u)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>10.000 3.00 1.000 10.000 3.000 0.500000</params>
+			<AF>0</AF>
+			<Omega/>
+		</Process>
+	
+		<Process electrons="0" name="H2+e -> a3sigma+g" threshold="11.890">
+			<Species>
+				<Specie name="H2" state="a3sigma+g"/>
+			</Species>
+			<Legend>a3sigma+g Singhal</Legend>
+			<Proc>H2(a3sigma+g)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>11.890 3.00 1.000 11.890 3.000 0.125000</params>
+			<AF>0</AF>
+			<Omega/>
+		</Process>
+
+		<Process name="H2+e -> H2(abc3)" electrons="0" threshold="10">
+			<Species>
+				<Specie name="H2" state="a3Su" factor = "0.333"/>
+				<Specie name="H2" state="b3Su" factor = "0.333"/>
+				<Specie name="H2" state="c3Pu" factor = "0.333"/>
+			</Species>
+			<legend>H2(abc)</legend>
+			<Proc>H2(abc)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Janev 1987</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Estimated uncertainty| from Helene</Notes>
+			<Recommended/>
+			<Extrapolated/>
+			<Excitation/>
+			<Egrid unit="eV">
+				1.0500000e+01   1.1500000e+01   1.2500000e+01   1.3500000e+01   1.4500000e+01
+				1.5500000e+01   1.6500000e+01   1.7500000e+01   1.8500000e+01   1.9500000e+01
+				2.0000000e+01   2.0750000e+01   2.1500000e+01   2.2250000e+01   2.3000000e+01
+				2.5000000e+01   3.5000000e+01   5.0000000e+01   7.0000000e+01   9.0000000e+01
+				1.2000000e+02   1.6000000e+02   2.1000000e+02   2.7000000e+02   3.5000000e+02
+				4.5000000e+02   6.0000000e+02   8.0000000e+02   1.1000000e+03   1.5000000e+03
+				2.1000000e+03   2.9000000e+03   4.1000000e+03   5.7000000e+03   8.1000000e+03
+				1.1300000e+04   1.6100000e+04   2.2500000e+04   3.2100000e+04   4.4900000e+04
+				6.4100000e+04   8.9700000e+04 
+			</Egrid>
+			<Cross unit="cm2" uncertainty="30%">
+				4.1282613e-19   5.8062651e-18   2.0833333e-17   2.2500000e-17   2.4166667e-17
+				2.5833333e-17   2.7500000e-17   2.9166667e-17   3.0000000e-17   3.0000000e-17
+				3.0000000e-17   2.8915663e-17   2.7906977e-17   2.6966292e-17   2.6086957e-17
+				2.4000000e-17   1.1984987e-17   3.6649192e-18   9.9830279e-19   3.2157727e-19
+				8.7925439e-20   2.4040514e-20   7.0567085e-21   2.2731350e-21   7.0567085e-22
+				2.2731350e-22   6.2151905e-23   1.6993532e-23   4.0445833e-24   9.9933199e-25
+				2.1929394e-25   5.1187101e-26   1.0746942e-26   2.4338366e-27   4.9933221e-28
+				1.1133297e-28   2.2573330e-29   4.9933221e-30   1.0063967e-30   2.2173244e-31
+				4.4555915e-32   9.7970420e-33   
+			</Cross>
+		</Process>
+
+
+</H2>
+</crs>
+
+
+
+
+
+
