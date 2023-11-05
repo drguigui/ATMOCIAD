@@ -12,13 +12,13 @@
 		<Species>
 			<Specie name="CO2+" state="X"/>
 		</Species>
-		<legend>CO$_2$$^+$ + e (AMOP)</legend>
+		<legend>CO$_2$$^+$ + e (PHIDRATES)</legend>
 		<Proc>CO$_2$$^+$ + e</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website</Notes>
-		<texnote title="CO$_2$$^+$ + e (AMOP)">
-			Photoionization of CO$_2$ yielding CO$_2^+$ + e from the review of AMOP.
+		<texnote title="CO$_2$$^+$ + e (PHIDRATES)">
+			Photoionization of CO$_2$ yielding CO$_2^+$ + e from the review of PHIDRATES. \cite{Huebner2015}
 			The uncertainty, not claimed by the review, is estimated at 30\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>
@@ -169,7 +169,7 @@
 		<Proc>CO$_2$$^+$ + e</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted Torr ? origin, Avakyan (1998)? </Notes>
+		<Notes>Adapted Torr ? origin, Avakyan (1998)? In the database \cite{Witasse2003} </Notes>
 		<Egrid unit="eV">
 			13.773	14.169	15.028	15.706	15.997
 			16.093	16.203	17.101	17.627	18.367
@@ -221,7 +221,7 @@
 		<Proc>CO$_2$$^+$ + e</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted Torr nm -> eV, Avakyan (1998)</Notes>
+		<Notes>Adapted Torr nm -> eV, Avakyan (1998) \cite{Avakyan1998}</Notes>
 		<Egrid unit="eV">
 			8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -255,11 +255,11 @@
 		<Species>
 			<Specie name="CO2+" state="ABS*"/>
 		</Species>
-		<legend>CO$_2$$^+$ + e (AMOP + Avakyan 1998)</legend>
+		<legend>CO$_2$$^+$ + e (PHIDRATES + Avakyan 1998)</legend>
 		<Proc>CO$_2$$^+$ + e</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="adaptation"> AMOP+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted nm -> eV, website, Avakyan at energies E > 70eV</Notes>
+		<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Adapted nm -> eV, website, Avakyan at energies E > 70eV. Adaptation from \cite{Avakyan1998,Huebner2015}</Notes>
 		<Recommended/>
 		<Extrapolated/>
 		<EstimatedUncertainty/>

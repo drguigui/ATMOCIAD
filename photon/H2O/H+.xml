@@ -16,8 +16,8 @@
 			<legend>H$^+$ + products + e</legend>
 			<Proc>H$^+$ + products + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website</Notes>
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website.\cite{Huebner2015} </Notes>
 			<Recommended/>
 			<Egrid unit="eV">
 			     18.785485	     19.372531	     19.997452	     20.664033	     21.376586

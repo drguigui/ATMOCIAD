@@ -14,7 +14,7 @@
 			<legend>H$_2$ Total (Avakyan 1998)</legend>
 			<Proc>H$_2$ Total</Proc>
 			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV, Avakyan (1998)</Notes>
+			<Notes>Adapted Torr nm -> eV, Avakyan (1998) \cite{Avakyan1998}</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">

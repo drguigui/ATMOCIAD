@@ -14,10 +14,10 @@
 			<Specie name="O" state="X"/>
 		</Species>
 		<Proc>CO + O</Proc>
-		<legend>CO + O (AMOP)</legend>
+		<legend>CO + O (PHIDRATES)</legend>
 		<Section>dissociation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted nm -> eV, website</Notes>
+		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Adapted nm -> eV, website \cite{Huebner2015}</Notes>
 		<Egrid unit="eV">
 			5.449855	      6.358164	      6.525484	      6.701849	      6.888011
 			7.084811	      7.293188	      7.380012	      7.468928	      7.560012
@@ -242,7 +242,7 @@
 		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<legend>CO + O (BDD)</legend>
 		<Proc>CO + O</Proc>
-		<Notes>Adapted Torr ? origin, avakyan? </Notes>
+		<Notes>Adapted Torr ? origin, avakyan? \cite{Witasse2003}</Notes>
 		<Section>dissociation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Species>
 			<Specie name="CO" state="X"/>

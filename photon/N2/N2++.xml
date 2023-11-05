@@ -18,7 +18,7 @@
 			<legend>N$_2$$^{2+}$ + 2e (BDD)</legend>
 			<Proc>N$_2$$^{2+}$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Notes>Adapted Torr nm -> eV, old database. Ress + bratio?</Notes>
+			<Notes>Adapted Torr nm -> eV, old database \cite{Lilensten1994}. Lummerzheim thesis + bratio?</Notes>
 			<Source type="unknown">Pb Ress</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">

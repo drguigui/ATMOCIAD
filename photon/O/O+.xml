@@ -17,7 +17,7 @@
 			<Proc>O$^{+}$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV</Notes>
+			<Notes>Adapted Torr nm -> eV. \cite{Avakyan1998}</Notes>
 			<Recommended/>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -52,8 +52,8 @@
 			</Species>
 			<legend>O$^{+}$ + e (BDD)</legend>
 			<Proc>O$^{+}$ + e</Proc>
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr ? origin, avakyan? </Notes>
+			<Source type="unknown">Lummerzheim1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted Torr. \cite{Lilensten1994}  </Notes>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Egrid unit="eV">
 				12.015021	     12.087529	     12.103222	     12.690037	     12.724681

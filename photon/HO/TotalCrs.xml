@@ -13,7 +13,7 @@
 			<legend>OH Total</legend>
 			<Proc>OH Total</Proc>
 			<Source type="review">PHIDRATES</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV</Notes>
+			<Notes>Adapted nm -> eV \cite{Huebner2015}</Notes>
 			<Recommended/>	
 			<Egrid unit="eV">
 			      0.202192	      2.424408	      2.424408	      4.391931	      4.738552

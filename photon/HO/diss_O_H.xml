@@ -14,11 +14,11 @@
 				<Specie name="O" state="X"/>
 				<Specie name="H" state="X"/>
 			</Species>
-			<legend>O + H (AMOP)</legend>
+			<legend>O + H (PHIDRATES)</legend>
 			<Proc>O + H</Proc>
 			<Section>dissociation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website</Notes>
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website. \cite{Huebner2015}</Notes>
 			<Egrid unit="eV">
 			      0.202192	      2.424408	      2.424408	      4.391931	      4.738552
 			      4.740363	      4.742176	      4.742358	      4.744172	      4.745988

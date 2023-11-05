@@ -15,7 +15,7 @@
 			<legend>H$_2$$^{2+}$ + 2e</legend>
 			<Proc>H$_2$$^{2+}$ + 2e</Proc>
 			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV, Avakyan (1998)</Notes>
+			<Notes>Adapted Torr nm -> eV, Avakyan (1998) \cite{Avakyan1998}</Notes>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Species>
 				<Specie name="H2++" state="X" number="1."/>

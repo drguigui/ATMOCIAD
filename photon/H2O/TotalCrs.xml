@@ -13,7 +13,7 @@
 			<legend>H$_2$O Total (Avakyan 1998)</legend>
 			<Proc>H$_2$O Total</Proc>
 			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV, Avakyan (1998)</Notes>
+			<Notes>Adapted Torr nm -> eV, Avakyan (1998)\cite{Avakyan1998} </Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			  4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -44,10 +44,10 @@
 			</Cross>
 		</TotalCrs>
 		<TotalCrs>
-			<legend>H$_2$O Total (Wu and Chen 1978)</legend>
+			<legend>H$_2$O Total (Wu and Chen)</legend>
 			<Proc>H$_2$O Total</Proc>
-			<Source type="measurement">Wu and Chen 1978</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Review by Gael, using Wu and Chen (1978) </Notes>
+			<Source type="measurement">Wu and Chen 1993</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Review by Gael for the work on Ganymede, using Wu and Chen (1993) \cite{Wu1993}. </Notes>
 			<Egrid unit="eV">
 			      6.709501	      6.757590	      6.792203	      6.834098	      6.869502
 			      6.941577	      6.978224	      6.992707	      7.037439	      7.082424
@@ -192,10 +192,10 @@
 		</TotalCrs>
 
 		<TotalCrs> 
-			<legend>H$_2$O Total (AMOP)</legend>
+			<legend>H$_2$O Total (PHIDRATES)</legend>
 			<Proc>H$_2$O Total</Proc>
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website</Notes>
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			:<Notes>Adapted nm -> eV, website \cite{Huebner2015}</Notes>
 			<Egrid unit="eV">
 			      5.113594	      6.664026	      6.665817	      6.701849	      6.888011
 			      7.084811	      7.293188	      7.514194	      7.749013	      7.998981
@@ -275,8 +275,8 @@
 		<TotalCrs>
 			<legend>H$_2$O Total (Chem Phys CFA Harvard)</legend>
 			<Proc>H$_2$O Total</Proc>
-			<Source type="measurement">  Chem Phys 211, 387 (96); 387, 429 (97); 294,31 (08)</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Found on website: http://www.cfa.harvard.edu/amp/ampdata/cfamols.html</Notes>
+			<Source type="measurement"> CFAmol</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Found on website: http://www.cfa.harvard.edu/amp/ampdata/cfamols.html  \cite{Yoshino1996,Yoshino1997,Parkinson2003}</Notes>
 			<Egrid unit="eV">
 			      6.238858	      6.239051	      6.239244	      6.239437	      6.239630
 			      6.239823	      6.240017	      6.240210	      6.240403	      6.240596
@@ -3842,9 +3842,9 @@
 
 		</TotalCrs>
 		<TotalCrs>
-			<legend>H$_2$O Total (Avakyan 1998 + AMOP + CFA)</legend>
+			<legend>H$_2$O Total (Avakyan 1998 + PHIDRATES + CFA)</legend>
 			<Proc>H$_2$O Total</Proc>
-			<Source type="adaptation"> Avakyan 98 + AMOP + CFAMOL</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation"> Avakyan 98 + PHIDRATES + CFAMOL</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted from all the 3 sources above</Notes>
 			<Extrapolated/>
 			<EstimatedUncertainty/>

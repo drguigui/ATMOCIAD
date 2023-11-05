@@ -18,7 +18,7 @@
 			<legend>H$^+$ + e (AMOP)</legend>
 			<Proc>H$^+$ + e</Proc>
 			<Source type="review">AMOP</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV</Notes>
+			<Notes>Adapted Torr nm -> eV \cite{Huebner2015}</Notes>
 			<Egrid unit="eV" uncertainty="20%">
 				13.598486	     14.129254	     14.740720	     15.369307	     16.028985
 				16.720728	     17.440456	     18.190170	     18.969431	     19.780504
@@ -56,7 +56,7 @@
 				2.000000e-27
 			</Cross>
 		</TotalCrs>
-		<Process name="H + hv -> H+ + 1" electrons="1" threshold="13.5">
+		<Process name="H + hv -> H+ + e" electrons="1" threshold="13.5">
 			<Species>
 				<Specie name="H+" state="X" number="1."/>
 			</Species>
@@ -64,7 +64,7 @@
 			<Proc>H$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review">AMOP</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV</Notes>
+			<Notes>Adapted Torr nm -> eV \cite{Huebner2015}</Notes>
 			<Egrid unit="eV" uncertainty="20%">
 				13.598486	     14.129254	     14.740720	     15.369307	     16.028985
 				16.720728	     17.440456	     18.190170	     18.969431	     19.780504

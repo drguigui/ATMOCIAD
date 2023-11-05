@@ -16,7 +16,7 @@
 		<Proc>CO$_2$$^{2+}$ + 2e (non Auger)</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted Torr nm -> eV</Notes>
+		<Notes>Adapted Torr nm -> eV. \cite{Avakyan1998}</Notes>
 		<Egrid unit="eV">
 			8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -54,8 +54,8 @@
 		<legend>CO$_2$$^{2+}$ + 2e (non Auger) (BDD)</legend>
 		<Proc>CO$_2$$^{2+}$ + 2e (non Auger)</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="adaptation">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted Masuoka94? Recommended by Lilensten. GG: adapted for extrapolation+estimate uncert </Notes>
+		<Source type="adaptation">Lilensten 2013</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Adapted from Masuoka1994 by Lilensten et al. Recommended by Lilensten. Adapted for extrapolation and estimation of the unceratinty.  \cite{Masuoka1994, Lilensten2013} </Notes>
 		<EstimatedUncertainty/>
 		<Egrid unit="eV">
 			38.000    39.000    40.000    41.000    42.000

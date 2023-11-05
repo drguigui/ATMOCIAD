@@ -9,11 +9,11 @@
 	<plotname>seff_CO2_ph_Total.pdf</plotname>
 	<lambplotname>seff_CO2_ph_Total_lambda.pdf</lambplotname>
 	<TotalCrs>
-		<legend>CO$_2$ Total (AMOP)</legend>
-		<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<legend>CO$_2$ Total (PHIDRATES)</legend>
+		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website</Notes>
-		<texnote title="CO$_2$ total absorption (AMOP)">
-			Total photoabsorption of CO$_2$ from the review of AMOP.
+		<texnote title="CO$_2$ total absorption (PHIDRATES)">
+			Total photoabsorption of CO$_2$ from the review of PHIDRATES.\cite{Huebner2015}
 			The uncertainty, not claimed by the review, is estimated at 30\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>
@@ -245,7 +245,7 @@
 		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted Torr ? origin, avakyan? </Notes>
 		<texnote title="CO$_2$ total absorption (BDD)">
-			Total photoabsorption of CO$_2$ from the review of the BDD. Origin unknown
+			Total photoabsorption of CO$_2$ from the review of the BDD. Origin unknown \cite{Witasse2003}
 			The data, in nm, have been directly adapted in eV.
 		</texnote>
 		<Emin>7.2</Emin>
@@ -319,13 +319,13 @@
 	</TotalCrs>
 	<TotalCrs>
 		<legend>CO$_2$ recommended</legend>
-		<Source type="adaptation"> AMOP+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>CO$_2$ total absorption (AMOP + Avakyan [1998] at high energy (> 30 eV)</Notes>
+		<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>CO$_2$ total absorption (PHIDRATES + Avakyan [1998] at high energy (> 30 eV)</Notes>
 		<EstimatedUncertainty/>
 		<Recommended/>
 		<texnote title="CO$_2$ total absorption recommended">
-			Recommended total photoabsorption of CO$_2$ from the review of AMOP and the book of \citet{Avakyan1998}. 
-			The values at high energy, above 30 eV, were taken from Avakyan while the lower values were taken from AMOP.
+			Recommended total photoabsorption of CO$_2$ from the review of PHIDRATES \cite{Huebner2015} and the book of \citet{Avakyan1998}. 
+			The values at high energy, above 30 eV, were taken from Avakyan while the lower values were taken from PHIDRATES.
 			The final uncertainty is estimated at 20\%.
 		</texnote>
 		<Emin>5.45</Emin>

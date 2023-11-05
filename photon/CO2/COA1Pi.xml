@@ -19,8 +19,8 @@
 			<legend>CO(A$^1$$\Pi$) + O (BDD)</legend>
 			<Proc>CO(A$^1$$\Pi$) + O</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="measurement">Gentieu and Mentall 1972</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, old bdd. Extrapolation seems plausible. Uncertainty over wave: best case</Notes>
+			<Source type="measurement">Gentieu and Mentall 1973</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, old bdd. Extrapolation seems plausible. Uncertainty over wave: best case. \cite{Gentieu1973} </Notes>
 			<Extrapolated/>
 			<Egrid unit="eV">
 				13.413    14.181    15.042    15.706
@@ -44,8 +44,8 @@
 			<legend>CO(A$^1$$\Pi$) + O (processed)</legend>
 			<Proc>CO(A$^1$$\Pi$) + O</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="measurement">Gentieu and Mentall 1972</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, on GM grid. OCR Work by C Simon, last point for extrapolation</Notes>
+			<Source type="measurement">Gentieu and Mentall 1973</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, on GM grid. OCR Work by C Simon, last point for extrapolation \cite{Gentieu1973}</Notes>
 			<Extrapolated/>
 			<Recommended/>
 			<Egrid unit="eV">

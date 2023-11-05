@@ -19,7 +19,7 @@
 			<Proc>O$^{2+}$,O$^+$ + e + $\lambda$, Auger(X)</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV</Notes>
+			<Notes>Adapted Torr nm -> eV \cite{Avakyan1998}</Notes>
 			<Auger energy="474" fact=".31"/>
 			<Recommended/>
 			<Egrid unit="eV">
@@ -53,8 +53,8 @@
 			<legend>O$^{2+}$ + 2e, Auger, not ready for K-shell ionisation (BDD)</legend>
 			<Proc>O$^{2+}$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="unknown">?? Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV</Notes>
+			<Source type="unknown">Lummerzheim 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted Torr nm -> eV. \cite{Lilensten1994}</Notes>
 			<Species>
 				<Specie name="O++" state="X"/>
 			</Species>

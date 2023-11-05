@@ -12,11 +12,11 @@
 		<Species>
 			<Specie name="O+" state="X"/>
 		</Species>
-		<legend>O$^+$ + CO + e (AMOP)</legend>
+		<legend>O$^+$ + CO + e (PHIDRATES)</legend>
 		<Proc>O$^+$ + CO + e</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted nm -> eV, website. Recommended because ok with sum 2 processes Jean; take into account high E, more consistent.  Estimated at 30% </Notes>
+		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Adapted nm -> eV, website. Recommended because ok with the summation of the 2 processes in the old database take into account high E, more consistent.  Estimated at 30% \cite{Huebner2015}</Notes>
 		<EstimatedUncertainty/>
 		<Recommended/>
 		<Extrapolated/>
@@ -54,7 +54,7 @@
 		<Proc>O$^+$ + CO + e</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted Torr ? origin, avakyan? </Notes>
+		<Notes>Adapted Torr ? origin, avakyan? \cite{Witasse2003} </Notes>
 		<Egrid unit="eV">
 			19.070    19.445    19.446    19.688
 			19.837    20.326    21.217    21.562    22.364
@@ -98,7 +98,7 @@
 			<Proc>CO$^+$ + O$^+$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr ? origin, avakyan? </Notes>
+			<Notes>Adapted Torr ? origin, avakyan? \cite{Witasse2003}</Notes>
 			<Egrid unit="eV">
     40.000    41.000    42.000
     43.000    44.000    45.000    46.000    47.000

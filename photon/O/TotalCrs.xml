@@ -13,7 +13,7 @@
 			<legend>O Total (Avakyan 1998)</legend>
 			<Proc>O Total</Proc>
 			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr nm -> eV</Notes>
+			<Notes>Adapted Torr nm -> eV. \cite{Avakyan1998}</Notes>
 			<Recommnended/>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -46,8 +46,8 @@
 		<TotalCrs>
 			<legend>O Total (BDD)</legend>
 			<Proc>O Total</Proc>
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr ? origin, avakyan? </Notes>
+			<Source type="unknown">Lummerzheim 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted Torr. \cite{Lilensten1994} </Notes>
 			<Egrid unit="eV">
 				12.015021	     12.087529	     12.103222	     12.690037	     12.724681
 				13.413558	     14.181130	     15.042245	     15.706927	     16.014699
@@ -70,10 +70,10 @@
 			</Cross>
 		</TotalCrs>
 		<TotalCrs>
-			<legend>O Total (AMOP)</legend>
+			<legend>O Total (PHIDRATES)</legend>
 			<Proc>O Total</Proc>
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website</Notes>
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website\cite{Huebner2015}</Notes>
 			<Egrid unit="eV">
 				13.618651	     14.586376	     15.498025	     16.597617	     16.868599
 				16.891580	     17.712029	     18.560509	     18.588336	     19.074492

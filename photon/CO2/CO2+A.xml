@@ -17,7 +17,7 @@
 			<Proc>CO$_2$$^+$(A) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review">Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box</Notes>
+			<Notes>Adapted nm -> eV, Torr box. \cite{Avakyan1998}</Notes>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 				4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -56,7 +56,7 @@
 			<Proc>CO$_2$$^+$(A) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="measurement">Ukai 1992 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Digitized</Notes>
+			<Notes>Adapted nm -> eV, Digitized. \cite{Ukai1992}</Notes>
 			<Egrid unit="eV">
 				17.280606	     17.398337	     17.445855	     17.493658	     17.517658
 				17.541723	     17.614319	     17.638627	     17.687493	     17.761304

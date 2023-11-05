@@ -77,9 +77,9 @@
 		</TotalCrs>
 
 		<TotalCrs>
-			<legend>O$_2$ Total (AMOP)</legend>
+			<legend>O$_2$ Total (PHIDRATES)</legend>
 			<Proc>O$_2$ Total</Proc>
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website</Notes>
 			<Egrid unit="eV">
 			      5.115493	      5.166008	      5.275923	      5.390617	      5.510409
@@ -1120,10 +1120,10 @@
 		</TotalCrs>
 
 		<TotalCrs>
-			<legend>O$_2$ Recommended (AMOP + Avakyan 1998)</legend>
+			<legend>O$_2$ Recommended (PHIDRATES + Avakyan 1998)</legend>
 			<Proc>O$_2$ Recommended</Proc>
-			<Source type="adaptation"> AMOP + Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, AMOP+AVAKYAN > 75eV. </Notes>
+			<Source type="adaptation"> PHIDRATES + Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, PHIDRATES+AVAKYAN > 75eV. </Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Egrid unit="eV">

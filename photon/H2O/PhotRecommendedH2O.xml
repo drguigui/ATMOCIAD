@@ -16,7 +16,7 @@
 			<legend>H$_2$O Total</legend>
 			<Proc>H$_2$O Total</Proc>
 			<Source type="adaptation"> Avakyan 98 + PHIDRATES + CFAMOL</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted from all the 3 sources above</Notes>
+			<Notes>Adapted from all the 3 sources</Notes>
 			<Extrapolated/>
 			<EstimatedUncertainty/>
 			<Recommended/>

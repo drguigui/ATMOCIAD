@@ -22,7 +22,7 @@
 		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website, adapted from the ionization</Notes>
 		<texnote title="Fe$^+$ + e (PHIDRATES)">
-			Photoabsorption of Fe adapted from the photoionization from the review of AMOP/ PHIDRATES.
+			Photoabsorption of Fe adapted from the photoionization from the review of  PHIDRATES.\cite{Huebner2015}
 			The uncertainty, not claimed by the review, is estimated at 20\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>
@@ -455,7 +455,7 @@
 		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website</Notes>
 		<texnote title="Fe$^+$ + e (PHIDRATES)">
-			Photoionization of Fe yielding Fe$^+$ + e from the review of AMOP.
+			Photoionization of Fe yielding Fe$^+$ + e from the review of PHIDRATES.\cite{Huebner2015}
 			The uncertainty, not claimed by the review, is estimated at 20\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>

@@ -1,8 +1,8 @@
-0          References for Cross Section of he        hei     
- lambda=0.00-504.27a  barfield et al                                            
-                                                                                
-0 Branching ratio for he       hei          0 Branches
-  Lambda   Sigma 
+#0          References for Cross Section of he        hei     
+# lambda=0.00-504.27a  barfield et al                                            
+#                                                                                
+#0 Branching ratio for he       hei          0 Branches
+#  Lambda   Sigma 
     0.61  1.47E-26
     1.24  1.61E-25
     2.44  1.54E-24

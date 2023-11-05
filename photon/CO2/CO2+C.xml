@@ -18,7 +18,7 @@
 			<Proc>CO$_2$$^+$(C) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review">Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998). \cite{Avakyan1998}</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			  4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02

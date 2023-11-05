@@ -16,8 +16,8 @@
 	<CO2>
 		<TotalCrs>
 			<legend>Total CO$_2$ + $\lambda$</legend>
-			<Source type="adaptation"> AMOP+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>AMOP + Avakyan at high energy above 25???? eV</Notes>
+			<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>PHIDRATES + Avakyan at high energy above 25???? eV</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 
@@ -863,10 +863,10 @@
 				<Specie name="CO" state="X"/>
 			</Species>
 
-			<legend>O($^1$S) + CO (Lawrence 1972 + AMOP)</legend>
+			<legend>O($^1$S) + CO (Lawrence 1972 + PHIDRATES)</legend>
 			<Proc>O($^1$S) + CO</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="measurement">Lawrence 1972+AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="measurement">Lawrence 1972+PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Uncertainty in Lawrence (1972): pb photodissciation ratio. Correction near Lyman alpha</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
@@ -916,10 +916,10 @@
 			<Species>
 				<Specie name="CO2+" state="ABS*"/>
 			</Species>
-			<legend>CO$_2$$^+$ + e (AMOP + Avakyan, 1998)</legend>
+			<legend>CO$_2$$^+$ + e (PHIDRATES + Avakyan, 1998)</legend>
 			<Proc>CO$_2$$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation"> AMOP+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website, Avakyan (1998) at high energy (> 70 eV)</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -1131,10 +1131,10 @@
 			<Species>
 				<Specie name="CO+" state="X"/>
 			</Species>
-			<legend>CO$_+$ + O + e (AMOP)</legend>
+			<legend>CO$_+$ + O + e (PHIDRATES)</legend>
 			<Proc>CO$_+$ + O + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. Recommended because ok with sum 2 processes Jean; take into account high E, more consistent.  Estimated at 30% </Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
@@ -1166,10 +1166,10 @@
 			<Species>
 				<Specie name="O+" state="X"/>
 			</Species>
-			<legend>O$^+$ + CO + e (AMOP)</legend>
+			<legend>O$^+$ + CO + e (PHIDRATES)</legend>
 			<Proc>O$^+$ + Co + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. Recommended because ok with sum 2 processes Jean; take into account high E, more consistent.  Estimated at 30% </Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
@@ -1201,10 +1201,10 @@
 			<Species>
 				<Specie name="C+" state="X"/>
 			</Species>
-			<legend>C$^+$ + O$_2$ + e (AMOP)</legend>
+			<legend>C$^+$ + O$_2$ + e (PHIDRATES)</legend>
 			<Proc>C$^+$ + O$_2$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. Recommended because ok with sum 2 processes Jean; take into account high E, more consistent.  Estimated at 30% </Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
@@ -1365,7 +1365,7 @@
 			<Proc>CO$_2$$^{2+}$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted from Masuoka (1994)? Recommended by J. Lilensten. GG: adapted for extrapolation+estimate uncert </Notes>
+			<Notes>Adapted from Masuoka (1994) Recommended by J. Lilensten 2013. GG: adapted for extrapolation+estimate uncert </Notes>
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">
 				38.000    39.000    40.000    41.000    42.000

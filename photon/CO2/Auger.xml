@@ -52,7 +52,7 @@
 			<Proc>CO$_2$$^{2+}$ + 2e + $\lambda$ Auger (O)</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<texnote title="CO$_2$$^{2+}$ Auger (O) K-Shell (Avakyan 1998)">K-shell photoionization of CO$_2$, with excitation of the C, from the review work \cite{Avakyan1998}. Claimed uncertainty of 20\%. The rate for the double ionization (including the following dissociation, not studied) is 31\%, letting 69\% of Auger fluorescence. The energy of the Auger electron (ejected in the double ionization cases) is 467 eV. The reported values in \cite{Avakyan} were in nm, following several boxes, including lines, and were adapted in eV for the database.  </texnote>
+			<texnote title="CO$_2$$^{2+}$ Auger (O) K-Shell (Avakyan 1998)">K-shell photoionization of CO$_2$, with excitation of the C, from the review work \cite{Avakyan1998}. Claimed uncertainty of 20\%. The rate for the double ionization (including the following dissociation, not studied) is 31\%, letting 69\% of Auger fluorescence. The energy of the Auger electron (ejected in the double ionization cases) is 467 eV. The reported values in \cite{Avakyan1998} were in nm, following several boxes, including lines, and were adapted in eV for the database.  </texnote>
 			<Notes>Adapted nm -> eV, Torr box</Notes>
 			<Auger energy="467" fact=".31"/>
 			<Egrid unit="eV">

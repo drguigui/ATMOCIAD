@@ -1,7 +1,7 @@
 <crs>
 	<Name>Mg</Name>
 	<Collider>ph</Collider>
-	<title> Mg + $\lambda \rightarrow$ Ti${^{+}}$ + e</title>
+	<title> Mg + $\lambda \rightarrow$ Mg${^{+}}$ + e</title>
 	<Emin>6.828</Emin>
 	<Emax>124000</Emax>
 	<Cmax>1E-17</Cmax>
@@ -23,7 +23,7 @@
 		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website</Notes>
 		<texnote title="Mg$^+$ + e (PHIDRATES)">
-			Photoionization of Mg yielding Mg$^+$ + e from the review of AMOP.
+			Photoionization of Mg yielding Mg$^+$ + e from the review of PHIDRATES. \cite{Huebner2015}
 			The uncertainty, not claimed by the review, is estimated at 20\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>

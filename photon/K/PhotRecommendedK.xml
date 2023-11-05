@@ -23,7 +23,7 @@
 		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website, adapted from the ionization</Notes>
 		<texnote title="K$^+$ + e (PHIDRATES)">
-			Photoabsorption of K adapted from the photoionization from the review of AMOP/ PHIDRATES.
+			Photoabsorption of K adapted from the photoionization from the review of PHIDRATES. \cite{Huebner2015}
 			The uncertainty, not claimed by the review, is estimated at 20\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>
@@ -167,7 +167,7 @@
 		<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted nm -> eV, website</Notes>
 		<texnote title="K$^+$ + e (PHIDRATES)">
-			Photoionization of K yielding K$^+$ + e from the review of AMOP.
+			Photoionization of K yielding K$^+$ + e from the review of PHIDRATES.
 			The uncertainty, not claimed by the review, is estimated at 20\%.
 			The data, in nm, have been directly adapted in eV.
 		</texnote>
