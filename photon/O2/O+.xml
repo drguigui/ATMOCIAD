@@ -11,7 +11,7 @@
 	<O2>
 		<Process name="O2 + hv -> O+ + O" electrons="1" threshold="18.73">
 			<Species>
-				<Specie name="O" state="X"/>
+				<Specie name="O" state="3P"/>
 				<Specie name="O+" state="X"/>
 			</Species>
 			<legend>O$^+$ + O + e (BDD)</legend>
@@ -43,16 +43,16 @@
 
 		<Process name="O2 + hv -> O+ + O" electrons="1" threshold="18.73">
 			<Species>
-				<Specie name="O" state="X"/>
+				<Specie name="O" state="3P"/>
 				<Specie name="O+" state="X"/>
 			</Species>
-			<legend>O$^+$ + O + e (AMOP)</legend>
+			<legend>O$^+$ + O + e (PHIDRATES)</legend>
 			<Proc>O$^+$ + O + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Recommended/>
 			<EstimatedUncertainty/>
-			<Notes>Adapted nm -> eV, website, uncertainty estimated based on other uncertainties</Notes>
+			<Notes>Adapted nm -> eV, website, uncertainty estimated based on other uncertainties \cite{Huebner2015}</Notes>
 			<Egrid unit="eV">
 				5.115493	      5.166008	      5.275923	      5.390617	      5.510409
 				5.635645	      5.661379	      5.687349	      5.713558	      5.740009
