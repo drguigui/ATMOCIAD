@@ -3,9 +3,9 @@
     <Collider>e</Collider>
     <title>Ar_Singhal_excitation</title>
     <Emin>10</Emin>
-    <Emax>1E5</Emax>
-    <Cmin>1E-15</Cmin>
-    <Cmax>1E-18</Cmax>
+    <Emax>2E4</Emax>
+    <Cmin>1E-21</Cmin>
+    <Cmax>1E-15</Cmax>
     <plotname>Singhal_Ar_excitation.pdf</plotname>
     <Ar>
         <Process electrons="0" name="Ar+e -> Ar(4s_3/2)" threshold="11.6">
