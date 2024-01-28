@@ -697,7 +697,7 @@ def PlotStdNode(vNode,bRfile,vIsLambda,vIsEnergyTbl=False,vEtbl=[]):
                 for i in range(len(vEtbl)):
                     if(vEtbl[i]<threshold):
                         testcrs[i]=0
-            plot(enetoang(vEtbl),testcrs)
+            plot(enetoang(vEtbl),testcrs, label=leg)
             errorbar(enetoang(dataenergy),datacrs,yerr=datauncert,label=leg)
         else:
             errorbar(enetoang(dataenergy),datacrs,yerr=datauncert,label=leg)
@@ -712,7 +712,7 @@ def PlotStdNode(vNode,bRfile,vIsLambda,vIsEnergyTbl=False,vEtbl=[]):
                 for i in range(len(vEtbl)):
                     if(vEtbl[i]<threshold):
                         testcrs[i]=0
-            plot((vEtbl),testcrs)
+            plot((vEtbl),testcrs, label=leg)
             errorbar(dataenergy,datacrs,yerr=datauncert,label=leg)
         else:
             errorbar(dataenergy,datacrs,yerr=datauncert,label=leg)

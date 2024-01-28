@@ -479,7 +479,7 @@ def extrapolate(E, y, NewE, p=5, A_initial_guess=1):
         A_fitted=1
         c_fitted=1E-10
         WorkingExtrapolation=False
-    
+    print("Extrapolation", A_fitted, c_fitted, WorkingExtrapolation)
     # Initialize an array to hold the result
  #   result = np.empty_like(NewE)
     result = intloglog(E, y, NewE)  
