@@ -492,8 +492,8 @@
 		</Process>
 		<Process name="H2+e -> H2()" electrons="0" threshold="12.2">
 			<Species>
-				<Specie name="H2" state="ESg" factor = "0.5"/>
-				<Specie name="H2" state="FSg" factor = "0.5"/>
+				<Specie name="H2" state="ESg" fact = "0.5"/>
+				<Specie name="H2" state="FSg" fact = "0.5"/>
 			</Species>
 			<legend>H2(EF)</legend>
 			<Proc>H2(EF)</Proc>
@@ -546,9 +546,9 @@
 		</Process>
 		<Process name="H2+e -> H2(abc3)" electrons="0" threshold="10">
 			<Species>
-				<Specie name="H2" state="a3Su" factor = "0.333"/>
-				<Specie name="H2" state="b3Su" factor = "0.333"/>
-				<Specie name="H2" state="c3Pu" factor = "0.333"/>
+				<Specie name="H2" state="a3Su" fact = "0.333"/>
+				<Specie name="H2" state="b3Su" fact = "0.333"/>
+				<Specie name="H2" state="c3Pu" fact = "0.333"/>
 			</Species>
 			<legend>H2(abc)</legend>
 			<Proc>H2(abc)</Proc>
