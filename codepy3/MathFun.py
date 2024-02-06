@@ -463,9 +463,11 @@ from scipy.optimize import curve_fit
 def extrapolate(E, y, NewE, p=5, A_initial_guess=1):
     # We are going to extrapolate using a Born function which is fitted on the last points of the function
     # Define the extrapolation function for fitting
-    def extrapolation_function(E, A, c):
-        return A * E**(-1) * np.log(c * E)
     
+    def extrapolation_function(E, A, c):
+        # The two steps prevent to have rounding errors
+        tmp = E**(-1) * np.log(c * E)
+        return A * tmp
     # Get the last p points from E and y for fitting
     E_last_few = E[-p:]
     y_last_few = y[-p:]
@@ -494,6 +496,59 @@ def extrapolate(E, y, NewE, p=5, A_initial_guess=1):
     
     return result
 
+def extrapolate2(E, y, NewE, p=5, A_initial_guess=1):
+    # We are going to extrapolate using a Born function which is fitted on the last points of the function
+    # Define the extrapolation function for fitting
+    def extrapolation_function(E, A, c):
+        tmp = E**(-1) * np.log(c * E)
+        return A * tmp
+    # Get the last p points from E and y for fitting
+    E_last_few = E[-p:]
+    y_last_few = y[-p:]
+    
+    # Fit the extrapolation function to the last few data points
+    WorkingExtrapolation=True
+    try:
+        params, _ = curve_fit(extrapolation_function, E_last_few, y_last_few, p0=[A_initial_guess, 1])
+        A_fitted, c_fitted = params
+    except:
+        A_fitted=1
+        c_fitted=1E-10
+        WorkingExtrapolation=False
+#    print("Extrapolation", A_fitted, c_fitted, WorkingExtrapolation)
+    # Initialize an array to hold the result
+ #   result = np.empty_like(NewE)
+    result = intloglog(E, y, NewE)  
+    
+    WorkingExtrapolation2 = True
+    # Process each value in NewE
+    abort = False
+    for i, value in enumerate(NewE[::-1]):
+        if(abort):
+            continue
+        if value < np.min(E):
+            result[i] = 0
+        elif value >np.max(E) and WorkingExtrapolation:
+            tmpi = extrapolation_function(value, A_fitted, c_fitted)
+            pos = np.argmax(E)
+            if(tmpi > 1. * y[pos] ):
+                print("Issue with being too large at E=", value, result[i], "for higher energy of",np.max(E), "with", y[pos])
+                abort = True
+                WorkingExtrapolation2= False
+            else:
+                result[i] = tmpi
+                print(E, y)
+                print(value, result[i], A_fitted, c_fitted, c_fitted * value, log(c_fitted * value), log(c_fitted * value) * value ** -1)
+                #WorkingExtrapolation2 = False
+        if abort:
+            break
+    #print(NewE, result)
+    if(not WorkingExtrapolation2):
+        plot(NewE, result)
+#        else:
+            # we do nothing
+    
+    return result, A_fitted, c_fitted, WorkingExtrapolation, WorkingExtrapolation2
 # Example usage:
 #E = np.linspace(1, 100, 100)  # Replace with your data
 #y = E**(-1) * np.log(2 * E) + 3  # Replace with your data
