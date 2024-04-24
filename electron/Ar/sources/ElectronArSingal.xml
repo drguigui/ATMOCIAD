@@ -1,0 +1,279 @@
+<crs>
+    <Name>Ar</Name>
+    <Collider>e</Collider>
+    <title>Ar_Singhal_excitation</title>
+    <Emin>10</Emin>
+    <Emax>2E4</Emax>
+    <Cmin>1E-21</Cmin>
+    <Cmax>1E-15</Cmax>
+    <plotname>Singhal_Ar_excitation.pdf</plotname>
+    <Ar>
+        <Process electrons="0" name="Ar+e -> Ar(4s_3/2)" threshold="11.6">
+            <Species>
+                <Specie name="Ar" state="Ar(4s_3/2)"/>
+            </Species>
+            <Legend>4s_3/2</Legend>
+            <Proc>Ar(4s_3/2)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>11.6 1.0 2.0 11.6 0.75 0.08</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> Ar(4s_1/2)" threshold="11.8">
+            <Species>
+                <Specie name="Ar" state="Ar(4s_1/2)"/>
+            </Species>
+            <Legend>4s_1/2</Legend>
+            <Proc>Ar(4s_1/2)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>11.8 1.0 2.0 11.8 0.75 0.35</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> Ar(3d_1/2)" threshold="13.9">
+            <Species>
+                <Specie name="Ar" state="Ar(3d_1/2)"/>
+            </Species>
+            <Legend>3d_1/2</Legend>
+            <Proc>Ar(3d_1/2)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>13.9 1.0 2.0 13.9 0.75 0.003</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> Ar(5s_3/2)" threshold="14.1">
+            <Species>
+                <Specie name="Ar" state="Ar(5s_3/2)"/>
+            </Species>
+            <Legend>5s_3/2</Legend>
+            <Proc>Ar(5s_3/2)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>14.1 1.0 2.0 14.1 0.75 0.048</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> Ar(3d_3/2)" threshold="14.1">
+            <Species>
+            <Specie name="Ar" state="Ar(3d_3/2)"/>
+            </Species>
+            <Legend>3d_3/2</Legend>
+            <Proc>Ar(3d_3/2)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>14.1 1.0 2.0 14.1 0.75 0.18</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> Ar(5s_prime_1/2)" threshold="14.3">
+            <Species>
+            <Specie name="Ar" state="Ar(5s_prime_1/2)"/>
+            </Species>
+            <Legend>5s_prime_1/2</Legend>
+            <Proc>Ar(5s_prime_1/2)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>14.3 1.0 2.0 14.3 0.75 0.016</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> Ar(3d_prime_3/2)" threshold="14.3">
+            <Species>
+            <Specie name="Ar" state="Ar(3d_prime_3/2)"/>
+            </Species>
+            <Legend>3d_prime_3/2</Legend>
+            <Proc>Ar(3d_prime_3/2)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>14.3 1.0 2.0 14.3 0.75 0.23</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+            
+        <Process electrons="0" name="Ar+e -> a" threshold="14.9">
+            <Species>
+                <Specie name="Ar" state="a"/>
+            </Species>
+            <Legend>a</Legend>
+            <Proc>Ar(a)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>14.9 1.0 2.0 14.9 0.75 0.1</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> b" threshold="15.05">
+            <Species>
+                <Specie name="Ar" state="b"/>
+            </Species>
+            <Legend>b</Legend>
+            <Proc>Ar(b)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>15.05 1.0 2.0 15.05 0.75 0.066</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> c" threshold="15.2">
+            <Species>
+                <Specie name="Ar" state="c"/>
+            </Species>
+            <Legend>c</Legend>
+            <Proc>Ar(c)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>15.2 1.0 2.0 15.2 0.75 0.066</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> d" threshold="15.4">
+            <Species>
+            <Specie name="Ar" state="d"/>
+                </Species>
+            <Legend>d</Legend>
+            <Proc>Ar(d)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>15.4 1.0 2.0 15.4 0.75 0.05</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> e" threshold="15.5">
+            <Species>
+                <Specie name="Ar" state="e"/>
+            </Species>
+            <Legend>e</Legend>
+            <Proc>Ar(e)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>15.5 1.0 2.0 15.5 0.75 0.1</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        
+        <Process electrons="0" name="Ar+e -> Composite_forbidden" threshold="13.0">
+            <Species>
+                <Specie name="Ar" state="Composite_forbidden"/>
+            </Species>
+            <Legend>Composite_forbidden</Legend>
+            <Proc>Ar(Composite_forbidden)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>13.0 1.0 1.0 13 1.5 0.7</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+        <Process electrons="1" name="M_Shell" threshold="15.76">
+            <Species>
+                <Specie name="Ar+" state="M_Shell"/>
+            </Species>
+            <Legend>M_Shell</Legend>
+            <Proc>M_Shell</Proc>
+            <Section>ionization</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Ionization/>
+            <Singhal/>
+            <params>15.76 13.2 0.0 15.76 0.0 7.614 10.3 0.0 2.0 100.0 10.0</params>
+            <Ctype/>
+        </Process>
+        
+        <Process electrons="1" name="L_Shell" threshold="250.0">
+            <Species>
+                <Specie name="Ar+" state="L_Shell"/>
+            </Species>
+            <Legend>L_Shell</Legend>
+            <Proc>L_Shell</Proc>
+            <Section>ionization</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Ionization/>
+            <Singhal/>
+            <params>250.0 0.07 0.0 250.0 0.0 0.0 40.0 0.0 0.0 0.0 0.0</params>
+            <Ctype/>
+        </Process>
+
+    </Ar>
+</crs>
