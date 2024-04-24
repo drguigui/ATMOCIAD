@@ -62,6 +62,29 @@
 		</Cross>
 	</Process>
 
+	<Process name="O+e->O(3S3D)" electrons="0" threshold="12.53">
+		<Species>
+			<Specie name="O" state="(3S)3D"/>
+		</Species>
+		<legend>(3S)3D Majeed</legend>
+		<Excitation/>
+		<Proc>O((3S)3D)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Majeed 95 + extrapolation</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Recommended/>
+		<Notes> Review </Notes>
+		<Egrid unit="eV">
+			13	14	16	18	20
+			25	30	50	100	200
+			500	1000    1200    1500
+		</Egrid>
+		<Cross unit="cm2" fact="1E-17">
+			0.014	0.028	0.057	0.120	0.187
+			0.415	0.532	0.642	0.470	0.288
+			0.133	0.070   0.0611   0.0502
+		</Cross>
+	</Process>
+
 	<Process name="O+e->O(3S3D)" electrons="0" threshold="15.">
 		<Species>
 			<Specie name="O" state="(3S)3D"/>

@@ -52,7 +52,7 @@
 				<Specie name="O" state="finestructure 2->1"/>
 			</Species>
 			<legend>O Finestructure Itikawa 2-> 1 (th, est unc)</legend>
-			<Proc>O(finestr)</Proc>
+			<Proc>O(finestr 2->1)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review">Itikawa 1990</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes> Theory. Finestructure 2->1 Estimated uncertainty (Sum of 2->0 2-> should give a good estimation of the tot finestr)</Notes>
@@ -104,7 +104,7 @@
 				<Specie name="O" state="finestructure 2->0"/>
 			</Species>
 			<legend>O Finestructure Itikawa 2-> 0 (th, est unc)</legend>
-			<Proc>O(finestr)</Proc>
+			<Proc>O(finestr 2->0)</Proc>
 			<Source type="review">Itikawa 1990</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes> Theory. Finestructure 2->0 Estimated uncertainty (Sum of 2->0 2-> should give a good estimation of the tot finestr)</Notes>
 			<EstimatedUncertainty/>
