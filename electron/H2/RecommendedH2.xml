@@ -554,7 +554,7 @@
 			<Proc>H2(abc)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Janev 1987</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Estimated uncertainty| from Helene</Notes>
+			<Notes>Estimated uncertainty| from Helene Menager's work | Modified for extrapolation</Notes>
 			<Recommended/>
 			<Extrapolated/>
 			<Excitation/>
@@ -567,8 +567,8 @@
 				4.5000000e+02   6.0000000e+02   8.0000000e+02   1.1000000e+03   1.5000000e+03
 				2.1000000e+03   2.9000000e+03   4.1000000e+03   5.7000000e+03   8.1000000e+03
 				1.1300000e+04   1.6100000e+04   2.2500000e+04   3.2100000e+04   4.4900000e+04
-				6.4100000e+04   8.9700000e+04 
-			</Egrid>
+				6.4100000e+04   
+			</Egrid>8.9700000e+04 
 			<Cross unit="cm2" uncertainty="30%">
 				4.1282613e-19   5.8062651e-18   2.0833333e-17   2.2500000e-17   2.4166667e-17
 				2.5833333e-17   2.7500000e-17   2.9166667e-17   3.0000000e-17   3.0000000e-17
@@ -578,8 +578,9 @@
 				2.2731350e-22   6.2151905e-23   1.6993532e-23   4.0445833e-24   9.9933199e-25
 				2.1929394e-25   5.1187101e-26   1.0746942e-26   2.4338366e-27   4.9933221e-28
 				1.1133297e-28   2.2573330e-29   4.9933221e-30   1.0063967e-30   2.2173244e-31
-				4.4555915e-32   9.7970420e-33   
+				4.4555915e-32   
 			</Cross>
+				4.4555915e-32   9.7970420e-33   
 		</Process>
 		<Process name="H2+e -> H2(Rydberg)" electrons="0" threshold="15.5">
 			<Species>
