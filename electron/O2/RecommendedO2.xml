@@ -149,6 +149,8 @@
 				0.1305 0.075 0.039 0.013
 			</Cross>
 		</Process>
+
+
 		<Process name="O2 + e -> O2(B3Su)" electrons="0" threshold="6.120">
 			<Species>
 				<Specie name="O2" state="B3Su"/>
@@ -156,13 +158,13 @@
 			<Proc>B3Su</Proc> <!-- Name for the processus -->
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
+			<Notes> Review + modified for extrapolation</Notes>
 			<Excitation/>
 			<Egrid unit="eV">
-				10 15 20 30 
+				10 15 20 30 40 50
 			</Egrid>
 			<Cross unit="cm2" fact="1E-16" uncertainty="20%">
-				0.687  	0.790  0.598  0.2764 
+				0.687  	0.790  0.598  0.2764  0.2  0.13
 			</Cross>
 		</Process>
 
@@ -174,13 +176,13 @@
 			<Proc>B3Su - LB</Proc> <!-- Name for the processus -->
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
+			<Notes> Review + modified for extrapolation </Notes>
 			<Excitation/>
 			<Egrid unit="eV">
-				10 15 20 30 
+				10 15 20 30  40  50
 			</Egrid>
 			<Cross unit="cm2" fact="1E-16" uncertainty="20%">
-				0.0575 0.0669 0.0622 0.0236
+					0.0575 0.0669 0.0622 0.0236 0.020  0.013
 			</Cross>
 		</Process>
 
@@ -191,15 +193,17 @@
 			<Proc>B3Su - 2B</Proc> <!-- Name for the processus -->
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
+			<Notes> Review + modified for extrapolation</Notes>
 			<Excitation/>
 			<Egrid unit="eV">
-				10 15 20 30 
-			</Egrid>
+				10 15 20 30 40 50  60
+			</Egrid> 
 			<Cross unit="cm2" fact="1E-16" uncertainty="23%">
-				0.00720 0.00915 0.00871 0.00472
+				0.00720 0.00915 0.00871 0.00472 0.0035 0.0022  0.0015
 			</Cross>
 		</Process>
+
+
 
 
 		<Process name="O2 + e -> O* + O* (total dissociation)" electrons="0" threshold="13">
@@ -441,15 +445,15 @@
 			<Proc>O2+(B4Sg)</Proc> <!-- Name for the processus -->
 			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review, First negative band</Notes>
+			<Notes> Review, First negative band; modified for extrapolation</Notes>
 			<Egrid unit="eV">
 				19 20 22 25 
 				30 35 40 50 60 
 				70 80 90 100 120
 				140 160 180 200 220
 				240 260 280 300 325
-				350 375 400
-			</Egrid>
+				350 375 400 500
+			</Egrid> 
 			<Cross unit="cm2" fact="1E-18" uncertainty="24%">
 
 				1.5 1.84 4.03 7.00 11.5 
@@ -457,7 +461,7 @@
 				31.1 30.1 32.1 31.6 29.2 
 				28.7 26.2 26.8 26.5 25.2 
 				23.0 24.7 21.8 21.7 23.4 
-				22.5 20.8 
+				22.5 20.8 20
 			</Cross>
 		</Process>
 
@@ -469,14 +473,14 @@
 			<Proc>O2+(A2Pu)</Proc> <!-- Name for the processus -->
 			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review, Second negative band</Notes>
+			<Notes> Review, Second negative band; modified for extrapolation</Notes>
 			<Egrid unit="eV">
 				18 19 20 22 25 
 				30 35 40 50 60 
 				70 80 90 100 120
 				140 160 180 200 220
 				240 260 280 300 325
-				350 375 400
+				350 375 400  500
 			</Egrid>
 			<Cross unit="cm2" fact="1E-18" uncertainty="24%">
 
@@ -485,7 +489,7 @@
 				9.5 10.1 10.4 10.2 10.6
 				10.  10.8 10.4 10.4 9.79
 				9.6 9.22 8.78 8.57 8.28
-				8.2 8.09 7.72
+				8.2 8.09 7.72  7.2
 			</Cross>
 		</Process>
 		<Process name="O2 + e -> O(1S) + O" electrons="0" threshold="16.">
@@ -517,13 +521,13 @@
 			</Cross>
 		</Process>
 
-		<!-- Emission processes -->
+		<!-- Emission processes 
 		<Process name="O2+e->O2+(FirstNegative)" electrons="1" threshold="19">
 			<legend>O2+ Itikawa</legend>
-			<Proc>O2+</Proc> <!-- Name for the processus -->
-			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review</Notes>
+			<Proc>O2+(First Negative emission)</Proc> 
+			<Section>emission</Section> 
+			<Source type="adaptation">Itikawa 2009</Source>
+			<Notes> Review + extrapolation</Notes>
 			<Species>
 				<Specie name="O2+" state="FirstNegative"/>
 			</Species>
@@ -534,7 +538,7 @@
 				80 90 100 120 140
 				160 180 200 220 240
 				260 280 300 325 350
-				375 400
+				375 400 
 			</Egrid>
 			<Cross unit="cm2" fact="1E-18" uncertainty="24%">
 				1.5 1.84 4.03 7.00 11.5 
@@ -544,13 +548,15 @@
 				23.0 24.7 21.8 21.7 23.4 
 				22.5 20.8 
 			</Cross>
-			<!-- b4Sg- - a4Pu Terrel et al. 2004: Ratio: 5631.9 ang: 8.9 / 32.1 5295.7 ang: 3 / 32.1 6026.4 ang: 5.31 / 32.1		--> 
+			<! b4Sg- - a4Pu Terrel et al. 2004: Ratio: 5631.9 ang: 8.9 / 32.1 5295.7 ang: 3 / 32.1 6026.4 ang: 5.31 / 32.1		-> 
 		</Process>
+		-->
+		<!--
 		<Process name="O2+e->O2+(SecondNegative)" electrons="1" threshold="18">
 			<legend>O2+ Itikawa</legend>
-			<Proc>O2+</Proc> <!-- Name for the processus -->
-			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Proc>O2+(Second Negative emission))</Proc>
+			<Section>emission</Section>
+			<Source type="review">Itikawa 2009</Source>
 			<Notes> Review </Notes>
 			<Species>
 				<Specie name="O2+" state="SecondNegative"/>
@@ -572,8 +578,7 @@
 				9.66 9.22 8.78 8.57 8.28
 				8.23 8.09 7.72
 			</Cross>
-			<!-- A2Pu - X2Pg Terrel et al. 2004: --> 
-		</Process>
+		</Process> -->
 		<Process name="O2+e->O(777.4nm)" electrons="1" threshold="19">
 			<legend>777.4nm</legend>
 			<Proc>777.4nm</Proc> <!-- Name for the processus -->

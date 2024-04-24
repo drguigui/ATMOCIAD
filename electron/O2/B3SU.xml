@@ -1,0 +1,119 @@
+<crs>
+	<Name>O2</Name>
+	<Collider>e</Collider>
+	<title> O$_2$  + e $\rightarrow$ O$_2(B3SU)$</title>
+	<Emin>60</Emin>
+	<Emax>1200</Emax>
+	<Cmax>4E-18</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_O2_e_B3SU.pdf</plotname>
+
+		<Process name="O2 + e -> O2(B3Su)" electrons="0" threshold="6.120">
+			<Species>
+				<Specie name="O2" state="B3Su"/>
+			</Species>
+			<Proc>B3Su</Proc> <!-- Name for the processus -->
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review </Notes>
+			<Excitation/>
+			<Egrid unit="eV">
+				10 15 20 30 
+			</Egrid>
+			<Cross unit="cm2" fact="1E-16" uncertainty="20%">
+				0.687  	0.790  0.598  0.2764 
+			</Cross>
+		</Process>
+
+
+		<Process name="O2 + e -> O2(B3Su - LB)" electrons="0" threshold="6.120">
+			<Species>
+				<Specie name="O2" state="B3Su - LB"/>
+			</Species>
+			<Proc>B3Su - LB</Proc> <!-- Name for the processus -->
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review  </Notes>
+			<Excitation/>
+			<Egrid unit="eV">
+				10 15 20 30 
+			</Egrid>
+			<Cross unit="cm2" fact="1E-16" uncertainty="20%">
+				0.0575 0.0669 0.0622 0.0236
+			</Cross>
+		</Process>
+
+		<Process name="O2 + e -> O2(B3Su - 2B)" electrons="0" threshold="6.120">
+			<Species>
+				<Specie name="O2" state="B3Su - 2B"/>
+			</Species>
+			<Proc>B3Su - 2B</Proc> <!-- Name for the processus -->
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review </Notes>
+			<Excitation/>
+			<Egrid unit="eV">
+				10 15 20 30 
+			</Egrid>
+			<Cross unit="cm2" fact="1E-16" uncertainty="23%">
+				0.00720 0.00915 0.00871 0.00472
+			</Cross>
+		</Process>
+
+
+
+		<Process name="O2 + e -> O2(B3Su)" electrons="0" threshold="6.120">
+			<Species>
+				<Specie name="O2" state="B3Su"/>
+			</Species>
+			<Proc>B3Su</Proc> <!-- Name for the processus -->
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review + modified for extrapolation</Notes>
+			<Excitation/>
+			<Egrid unit="eV">
+				10 15 20 30 40 50
+			</Egrid>
+			<Cross unit="cm2" fact="1E-16" uncertainty="20%">
+				0.687  	0.790  0.598  0.2764  0.2  0.13
+			</Cross>
+		</Process>
+
+
+		<Process name="O2 + e -> O2(B3Su - LB)" electrons="0" threshold="6.120">
+			<Species>
+				<Specie name="O2" state="B3Su - LB"/>
+			</Species>
+			<Proc>B3Su - LB</Proc> <!-- Name for the processus -->
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review + modified for extrapolation </Notes>
+			<Excitation/>
+			<Egrid unit="eV">
+				10 15 20 30  40  50
+			</Egrid>
+			<Cross unit="cm2" fact="1E-16" uncertainty="20%">
+					0.0575 0.0669 0.0622 0.0236 0.020  0.013
+			</Cross>
+		</Process>
+
+		<Process name="O2 + e -> O2(B3Su - 2B)" electrons="0" threshold="6.120">
+			<Species>
+				<Specie name="O2" state="B3Su - 2B"/>
+			</Species>
+			<Proc>B3Su - 2B</Proc> <!-- Name for the processus -->
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review + modified for extrapolation</Notes>
+			<Excitation/>
+			<Egrid unit="eV">
+				10 15 20 30 40 50  60
+			</Egrid> 
+			<Cross unit="cm2" fact="1E-16" uncertainty="23%">
+				0.00720 0.00915 0.00871 0.00472 0.0035 0.0022  0.0015
+			</Cross>
+		</Process>
+
+
+
+</crs>
