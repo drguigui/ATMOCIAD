@@ -40,5 +40,34 @@
 	</Process>
 
 
+	<Process name="CO2+e -> CO+O(3S)" electrons="0" threshold="20">
+		<Species>
+			<Specie name="CO" state="X"/>
+			<Specie name="O" state="3S"/>
+		</Species>
+		<Excitation/>
+		<Proc>O(3S)</Proc>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<legend>O(3S) Ajello</legend>
+		<Notes> 30% uncertainties for all the emissions... </Notes>
+		<Source type="adaptation">Ajello 1971 + modification for extrapolatoin</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+
+		<Egrid unit="eV">
+			21.8727		23.0548		23.9871		25.6139		27.7114
+			29.9776		32.8548		35.0848		37.4662		39.4909
+			42.7226		46.2188		50.6547		55.5164		61.64
+			68.4355		76.9735		87.7083		98.6455		112.385
+			128.025		143.937		161.827		181.93		201.881
+			224.009		248.561		275.805		298.157		350
+		</Egrid>
+		<Cross unit="cm2" uncertainty="30%">
+			0.269876E-19	0.775144E-19	1.33682E-19	1.78568E-19	2.29057E-19
+			2.68302E-19	3.07527E-19	3.58035E-19	4.08543E-19	4.5907E-19
+			5.03937E-19	5.48804E-19	5.8803E-19	6.27255E-19	6.6084E-19
+			6.88802E-19	7.11123E-19	7.27803E-19	7.44501E-19	7.44314E-19
+			7.32882E-19	7.10223E-19	6.87565E-19	6.59284E-19	6.31022E-19
+			5.97138E-19	5.63254E-19	5.29369E-19	4.95522E-19     4.5E-19
+		</Cross>
+	</Process>
 
 </crs>
