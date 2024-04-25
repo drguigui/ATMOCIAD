@@ -35,70 +35,88 @@
 			</Cross>
 		</ElasticCrs>
 		<!-- Excitations -->
-		<Process name="O2 + e -> O2(v'=1)" electrons="0" threshold="0.3">
-			<Species>
-				<Specie name="O2" state="v1"/>
-			</Species>
-			<Excitation/>
-			<Proc>v1</Proc> <!-- Name for the processus -->
-			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
-			<Egrid unit="eV">
-				5 
-				7 
-				10
-				15
-			</Egrid>
-			<Cross unit="cm2" fact="1E-16">
-				0.095 
-				0.305 
-				0.44  
-				0.057 		
-			</Cross>
-		</Process>
-		<Process name="O2 + e -> O2(v'=2)" electrons="0" threshold="0.3">
-			<Species>
-				<Specie name="O2" state="v2"/>
-			</Species>
-			<Excitation/>
-			<Proc>v2</Proc> <!-- Name for the processus -->
-			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
-			<Egrid unit="eV">
-				5 
-				7 
-				10
-				15
-			</Egrid>
-			<Cross unit="cm2" fact="1E-16">
-				0.034
-				0.114
-				0.165
-				0.015
-			</Cross>
-		</Process>
-		<Process name="O2 + e -> O2(v'=3)" electrons="0" threshold="6">
-			<Species>
-				<Specie name="O2" state="v3"/>
-			</Species>
-			<Excitation/>
-			<Proc>v3</Proc> <!-- Name for the processus -->
-			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
-			<Egrid unit="eV">
-				7 
-				10
-				15
-			</Egrid>
-			<Cross unit="cm2" fact="1E-16">
-				0.045
-				0.075
-				0.0065
-			</Cross>
-		</Process>
+	<Process name="O2 + e -> O2(v'=1)" electrons="0" threshold="0.3">
+		<legend>v1 itikawa</legend>
+		<Proc>v1</Proc> <!-- Name for the processus -->
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review, modified for extrapolation </Notes>
+		<Species>
+			<Specie name="O2" state="v'=1"/>
+		</Species>
+		<Excitation/>
+		<Egrid unit="eV">
+			5 
+			7 
+			10
+			15
+			18.0 22.5 25.5
+
+		</Egrid>
+		<Cross unit="cm2" fact="1E-16">
+			0.095 
+			0.305 
+			0.44  
+			0.057 		
+4.75e-2 3.8e-2 3.352941176470588e-2
+		</Cross>
+	</Process>
+	<Process name="O2 + e -> O2(v'=2)" electrons="0" threshold="0.3">
+		<legend>v2 itikawa</legend>
+		<Proc>v2</Proc> <!-- Name for the processus -->
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review, modified for extrapolation </Notes>
+		<Species>
+			<Specie name="O2" state="v'=2"/>
+		</Species>
+		<Excitation/>
+		<Egrid unit="eV">
+			5 
+			7 
+			10
+			15
+			20
+			25
+			30
+		</Egrid>
+		<Cross unit="cm2" fact="1E-16">
+			0.034
+			0.114
+			0.165
+			0.015
+			0.0014
+			0.00013
+			0.000012
+		</Cross>
+	</Process>
+	<Process name="O2 + e -> O2(v'=3)" electrons="0" threshold="6">
+		<legend>v3 itikawa</legend>
+		<Proc>v3</Proc> <!-- Name for the processus -->
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Review, modified for extrapolation </Notes>
+		<Species>
+			<Specie name="O2" state="v'=3"/>
+		</Species>
+		<Excitation/>
+		<Egrid unit="eV">
+			7 
+			10
+			15
+			20
+			25
+			30
+		</Egrid>
+		<Cross unit="cm2" fact="1E-16">
+			0.045
+			0.075
+			0.0065
+			0.0006
+			0.000055
+			0.000005
+		</Cross>
+	</Process>
 
 		<Process name="O2 + e -> O2(A1Dg)" electrons="0" threshold="0.977">
 			<Species>
@@ -107,12 +125,12 @@
 			<Proc>A1Dg</Proc>
 			<Section>excitation</Section> 
 			<Source type="review">Itikawa 2009</Source> 
-			<Notes>Review</Notes>
+			<Notes>Review + addition for extrapolation</Notes>
 			<Excitation/>
-			<Egrid unit="eV"> 5 7 10 15 20 
+			<Egrid unit="eV"> 5 7 10 15 20  100
 			</Egrid>
 			<Cross unit="cm2" fact="1E-16" uncertainty="16%">
-					0.076 0.104 0.077 0.042 0.023
+					0.076 0.104 0.077 0.042 0.023 0.001
 			</Cross>
 		</Process> 
 		<Process name="O2 + e -> O2(b1Sg+)" electrons="0" threshold="1.627">
@@ -121,14 +139,14 @@
 			</Species>
 			<Proc>b1Sg+</Proc> <!-- Name for the processus -->
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Itikawa 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Itikawa 2009 + addition for extrapolation</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> Review </Notes>
 			<Excitation/>
 			<Egrid unit="eV">
-				5 7 10 15 20 
+				5 7 10 15 20  100
 			</Egrid>
 			<Cross unit="cm2" fact="1E-16" uncertainty="18%">
-				0.020 0.033 0.019 0.0078 0.0055
+				0.020 0.033 0.019 0.0078 0.0055 0.0002
 			</Cross>
 		</Process>
 		<Process name="O2 + e -> O2(A3Su A'3Du c1Su)" electrons="0" threshold="4.2">
@@ -218,12 +236,12 @@
 			<Egrid unit="eV">
 				13.5 18.5 21.0 23.5 28.5 
 				33.5 38.5 48.5 58.5 73.5 
-				98.5 148.5 198.5 1000 
+				98.5 148.5 198.5 
 			</Egrid>
 			<Cross unit="cm2" fact="1E-16" uncertainty="34%">
 				0.220 0.529 0.565 0.525 0.587
 				0.663 0.610 0.534 0.444 0.366
-				0.331 0.296 0.291 0.15
+				0.331 0.296 0.291 
 			</Cross>
 		</Process>
 
