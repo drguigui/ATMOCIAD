@@ -51,7 +51,7 @@
 		<Proc>O(finestr)</Proc>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="review">Itikawa 1990</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes> Theory. Finestructure 2->1 Estimated uncertainty (Sum of 2->0 2-> should give a good estimation of the tot finestr)</Notes>
+		<Notes> Theory. Finestructure 2->1 Estimated uncertainty (Sum of 2->0 2-> should give a good estimation of the tot finestr) + adapted for extrapolation</Notes>
 		<EstimatedUncertainty/>
 		<Recommended/>
 		<Excitation/>
@@ -89,7 +89,7 @@
 			19.7579		19.344		19.2956		19.084		19.0363		
 			18.8275		18.7805		18.5745		18.5509		18.3297		
 			18.3255		18.3222		18.3187		18.3153		18.3118		
-			18.4018		18.5474		18.6385		18.786		1.8  0.18   0.018 0.0018
+			18.4018		18.5474		18.6385		18.786		1.8  0.5   0.18 0.018
 		</Cross>
 	</Process>
 
@@ -100,7 +100,7 @@
 		<legend>O Finestructure Itikawa 2-> 0 (th,est unc)</legend>
 		<Proc>O(finestr)</Proc>
 		<Source type="review">Itikawa 1990</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes> Theory. Finestructure 2->0 Estimated uncertainty (Sum of 2->0 2-> should give a good estimation of the tot finestr)</Notes>
+		<Notes> Theory. Finestructure 2->0 Estimated uncertainty (Sum of 2->0 2-> should give a good estimation of the tot finestr) + adapted for extrapolation</Notes>
 		<EstimatedUncertainty/>
 		<Recommended/>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
@@ -139,7 +139,7 @@
 			7.02525 6.87808 6.84049 6.69328 6.66034
 			6.58728 6.57083 6.41407 6.39802 6.3125
 			6.30733 6.1474 6.10464 6.06478 5.97277
-			5.90528 5.85621 5.82591 5.77747	0.3 0.03 0.003 0.0003 
+				5.90528 5.85621 5.82591 5.77747	 2 0.5 0.25 0.03
 		</Cross>
 	</Process>
 
