@@ -239,7 +239,7 @@
 		<Process name="CO + e -> O+" electrons="1" threshold="24.7">
 			<Ionization/>
 			<Species>
-				<Specie name="O+" state="X"/>
+				<Specie name="O+" state="4S"/>
 			</Species>
 			<legend>O+ Straub adapted</legend>
 			<Emin> 15.0 </Emin>

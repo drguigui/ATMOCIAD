@@ -1,0 +1,745 @@
+<crs>
+    <Name>H2O</Name>
+    <Collider>e</Collider>
+    <title>H2O_Singhal_excitation</title>
+    <Emin>10</Emin>
+    <Emax>2E4</Emax>
+    <Cmin>1E-21</Cmin>
+    <Cmax>1E-15</Cmax>
+    <plotname>Singhal_H2O_excitation.pdf</plotname>
+    <!--
+A1v2 0.198 1.000 3.000 0.198 6.000 0.001840 0.0
+A2v2 0.391 1.000 3.000 0.391 6.000 0.000043 0.0
+A4v2 0.453 1.000 3.000 0.453 6.000 0.006780 0.0
+B1v3 0.466 1.000 3.000 0.466 6.000 0.007170 0.0
+B2v1+v3 0.661 1.000 3.000 0.661 6.000 0.000948 0.0
+B1v1+v3 0.899 1.000 3.000 0.899 6.000 0.001830 0.0
+B1v1+2v3 1.092 1.000 3.000 1.092 6.000 0.000113 0.0
+B2v1+2v3 1.316 1.000 3.000 1.316 6.000 0.000082 0.0
+Triplet 4.500 1.000 3.000 4.500 3.000 0.007000 0.0
+Triplet 12.500 1.000 1.000 9.810 3.000 0.018000 0.0
+Dissociative continuum 7.400 1.000 3.000 7.400 0.750 0.063000 0.0
+Dissociative continuum 9.670 1.000 3.000 9.670 0.800 0.138000 0.0
+	    Diffuse bands 13.320 1.000 3.000 13.320 0.750 0.626000 0.0
+	    H* Lyman α 28.500 0.300 1.000 17.000 1.000 3.490000 0.0
+H* Hα      28.500 0.300 1.000 19.000 1.000 0.735000 0.0
+H* Hβ      28.500 0.300 1.000 20.000 1.000 0.125000 0.0
+H* Hγ      28.500 0.300 1.000 20.000 1.000 0.050000 0.0
+H* Hδ      28.500 0.300 1.000 20.000 1.000 0.021000 0.0
+O* 1304 Å  32.500 1.000 3.000 16.000 1.250 0.089000 0.0
+O* 8447 Å (1) 38.000 1.000 2.000 17.000 4.850 0.220000 0.0
+O* 8447 Å (2) 50.000 1.000 3.000 34.000 1.850 0.175000 0.0
+OH* 3064 Å 14.200 5.350 1.000 10.000 1.000 0.053700 0.0
+OH* 2800 Å 16.400 2.350 1.000 11.000 1.000 0.005800 0.0
+Ij    α    β    δ      Ω     F*     ΔF-n    ΔF-n    ΔF-n
+Series A 12.620 1.000 3.000 0.729 0.750 0.427 0.0-3 0.0-4 0.0-5
+Series B 12.620 1.000 3.000 0.700 0.750 0.438 0.0-3 0.0-4 0.0-5
+Series C 12.620 1.000 3.000 0.050 0.750 1.850 0.0-3 0.0-4 0.0-5
+Series D 12.620 1.000 3.000 0.050 0.750 1.850 0.0-3 0.0-4 0.0-5
+Ij    K     Kb    J      Jb    Jc    Fs    B    Ts   Ta   Tb
+H2O+  12.620 4.050 110.00 1.00 30.000 11.40 -2.370 0.0 0.0
+OH+H  20.000 1.134 94.000 1.000 0.0    11.40 -2.370 0.0 0.0
+H+OH  20.000 1.550 147.000 1.000 0.0   11.40 -2.370 0.0 0.0
+O+H2  20.000 0.120 90.500 1.00 -19.00 11.40 -2.370 0.0 0.0
+O++H2 60.000 0.007 78.000 2.860 -20.00 11.40 -2.370 0.0 0.0
+H+O  23.000 0.009 29.400 1.00  0.0    11.40 -2.370 0.0 0.0
+
+
+
+    -->
+    <H2O>
+	    <!-- We are going to process 
+		    A1v2 0.198 1.000 3.000 0.198 6.000 0.001840 0.0
+	    -->
+	    <Process electrons="0" name="H2O+e -> H2O(A1v2)" threshold="0.198">
+            <Species>
+                <Specie name="H2O" state="A1v2"/>
+            </Species>
+            <Legend>H2O(A1v2)</Legend>
+            <Proc>H2O(A1v2)</Proc>
+            <Section>excitation</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Excitation/>
+            <Singhal/>
+            <params>0.198 1.000 3.000 0.198 6.000 0.001840 0.0</params>
+            <AF>0.0</AF>
+            <Omega/>
+        </Process>
+	<!-- We are going to process 
+		    A2v2 0.391 1.000 3.000 0.391 6.000 0.000043 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(A2v2)" threshold="0.391">
+	    <Species>
+		<Specie name="H2O" state="A2v2"/>
+	    </Species>
+	    <Legend>H2O(A2v2)</Legend>
+	    <Proc>H2O(A2v2)</Proc>
+	    <Section>excitation</Section>
+	    <Source type="review">Singhal</Source>
+	    <Notes>from the book Elements of Space Physics</Notes>
+	    <uncertainty>30%</uncertainty>
+	    <EstimatedUncertainty/>
+	    <Excitation/>
+	    <Singhal/>
+	    <params>0.391 1.000 3.000 0.391 6.000 0.000043 0.0</params>
+	    <AF>0.0</AF>
+	    <Omega/>
+    	</Process>
+
+    <!-- We are going to process 
+	    A4v2 0.453 1.000 3.000 0.453 6.000 0.006780 0.0
+    -->
+	<Process electrons="0" name="H2O+e -> H2O(A4v2)" threshold="0.453">
+		<Species>
+	    <Specie name="H2O" state="A4v2"/>
+	</Species>
+	<Legend>H2O(A4v2)</Legend>
+	<Proc>H2O(A4v2)</Proc>
+	<Section>excitation</Section>
+	<Source type="review">Singhal</Source>
+	<Notes>from the book Elements of Space Physics</Notes>
+	<uncertainty>30%</uncertainty>
+	<EstimatedUncertainty/>
+	<Excitation/>
+	<Singhal/>
+	<params>0.453 1.000 3.000 0.453 6.000 0.006780 0.0</params>
+	<AF>0.0</AF>
+	<Omega/>
+	</Process>
+	<!-- We are going to process
+		B1v3 0.466 1.000 3.000 0.466 6.000 0.007170 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(B1v3)" threshold="0.466">
+		<Species>
+			<Specie name="H2O" state="B1v3"/>
+		</Species>
+		<Legend>H2O(B1v3)</Legend>
+		<Proc>H2O(B1v3)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>0.466 1.000 3.000 0.466 6.000 0.007170 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+
+		B2v1+v3 0.661 1.000 3.000 0.661 6.000 0.000948 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(B2v1+v3)" threshold="0.661">
+		<Species>
+			<Specie name="H2O" state="B2v1+v3"/>
+		</Species>
+		<Legend>H2O(B2v1+v3)</Legend>
+		<Proc>H2O(B2v1+v3)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>0.661 1.000 3.000 0.661 6.000 0.000948 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		B1v1+v3 0.899 1.000 3.000 0.899 6.000 0.001830 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(B1v1+v3)" threshold="0.899">
+		<Species>
+			<Specie name="H2O" state="B1v1+v3"/>
+		</Species>
+		<Legend>H2O(B1v1+v3)</Legend>
+		<Proc>H2O(B1v1+v3)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>0.899 1.000 3.000 0.899 6.000 0.001830 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		B1v1+2v3 1.092 1.000 3.000 1.092 6.000 0.000113 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(B1v1+2v3)" threshold="1.092">
+		<Species>
+			<Specie name="H2O" state="B1v1+2v3"/>
+		</Species>
+		<Legend>H2O(B1v1+2v3)</Legend>
+		<Proc>H2O(B1v1+2v3)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>1.092 1.000 3.000 1.092 6.000 0.000113 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		B2v1+2v3 1.316 1.000 3.000 1.316 6.000 0.000082 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(B2v1+2v3)" threshold="1.316">
+		<Species>
+			<Specie name="H2O" state="B2v1+2v3"/>
+		</Species>
+		<Legend>H2O(B2v1+2v3)</Legend>
+		<Proc>H2O(B2v1+2v3)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>1.316 1.000 3.000 1.316 6.000 0.000082 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		Triplet4.5 4.500 1.000 3.000 4.500 3.000 0.007000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(Triplet4.5)" threshold="4.500">
+		<Species>
+			<Specie name="H2O" state="Triplet4.5"/>
+		</Species>
+		<Legend>H2O(Triplet4.5)</Legend>
+		<Proc>H2O(Triplet4.5)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>4.500 1.000 3.000 4.500 3.000 0.007000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		Triplet12.5 12.500 1.000 1.000 9.810 3.000 0.018000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(Triplet12.5)" threshold="12.500">
+		<Species>
+			<Specie name="H2O" state="Triplet12.5"/>
+		</Species>
+		<Legend>H2O(Triplet12.5)</Legend>
+		<Proc>H2O(Triplet12.5)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>12.500 1.000 1.000 9.810 3.000 0.018000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		Dissociative7.4 7.400 1.000 3.000 7.400 0.750 0.063000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(Dissociative7.4)" threshold="7.400">
+		<Species>
+			<Specie name="H2O" state="Dissociative7.4"/>
+		</Species>
+		<Legend>H2O(Dissociative7.4)</Legend>
+		<Proc>H2O(Dissociative7.4)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics We do not know what are the dissociative products from the book</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>7.400 1.000 3.000 7.400 0.750 0.063000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		Dissociative9.6 9.670 1.000 3.000 9.670 0.800 0.138000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(Dissociative9.6)" threshold="9.670">
+		<Species>
+			<Specie name="H2O" state="Dissociative9.6"/>
+		</Species>
+		<Legend>H2O(Dissociative9.6)</Legend>
+		<Proc>H2O(Dissociative9.6)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. We do not know what are the dissociative products from the book</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>9.670 1.000 3.000 9.670 0.800 0.138000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		Diffuse 13.320 1.000 3.000 13.320 0.750 0.626000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(Diffuse)" threshold="13.320">
+		<Species>
+			<Specie name="H2O" state="Diffuse"/>
+		</Species>
+		<Legend>H2O(Diffuse)</Legend>
+		<Proc>H2O(Diffuse)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. Diffuse bands</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>13.320 1.000 3.000 13.320 0.750 0.626000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		H(2p) 28.500 0.300 1.000 17.000 1.000 3.490000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(H(2p))" threshold="28.500">
+		<Species>
+			<Specie name="H2O" state="2p-NOTOT"/>
+		</Species>
+		<Legend>H(2p)</Legend>
+		<Proc>H(2p)</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. H(2p) Lyman α</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>28.500 0.300 1.000 17.000 1.000 3.490000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		Halpha      28.500 0.300 1.000 19.000 1.000 0.735000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H(alpha)" threshold="28.500">
+		<Species>
+			<Specie name="H" state="alpha-NOTOT"/>
+			<Specie name="OH" state="X"/>
+		</Species>
+		<Legend>Halpha</Legend>
+		<Proc>Halpha</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. Halpha</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>28.500 0.300 1.000 19.000 1.000 0.735000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+	<!-- We are going to process
+
+		Hbeta      28.500 0.300 1.000 20.000 1.000 0.125000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H(beta)" threshold="28.500">
+		<Species>
+			<Specie name="H" state="beta-NOTOT"/>
+			<Specie name="OH" state="X"/>
+		</Species>
+		<Legend>Hbeta</Legend>
+		<Proc>Hbeta</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. Hbeta</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>28.500 0.300 1.000 20.000 1.000 0.125000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+	<!-- We are going to process
+		Hgamma      28.500 0.300 1.000 20.000 1.000 0.050000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H(gamma)" threshold="28.500">
+		<Species>
+			<Specie name="H" state="gamma-NOTOT"/>
+			<Specie name="OH" state="X"/>
+		</Species>
+		<Legend>Hgamma</Legend>
+		<Proc>Hgamma</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. Hgamma</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>28.500 0.300 1.000 20.000 1.000 0.050000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>	
+	<!-- We are going to process
+		Hdelta      28.500 0.300 1.000 20.000 1.000 0.021000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H(delta)" threshold="28.500">
+		<Species>
+			<Specie name="H" state="delta-NOTOT"/>
+			<Specie name="OH" state="X"/>
+		</Species>
+		<Legend>Hdelta</Legend>
+		<Proc>Hdelta</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. Hdelta</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>28.500 0.300 1.000 20.000 1.000 0.021000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+	<!-- We are going to process
+		O1304      32.500 1.000 3.000 16.000 1.250 0.089000 0.0	
+	-->
+	<Process electrons="0" name="H2O+e -> O(1304)" threshold="32.500">
+		<Species>
+			<Specie name="O" state="1304-NOTOT"/>
+			<Specie name="H2" state="X"/>
+		</Species>
+		<Legend>O1304</Legend>
+		<Proc>O1304</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. O1304</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>32.500 1.000 3.000 16.000 1.250 0.089000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+	<!-- We are going to process
+		O8447_1      38.000 1.000 2.000 17.000 4.850 0.220000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> O(8447_1)" threshold="38.000">
+		<Species>
+			<Specie name="O" state="8447_1-NOTOT"/>
+			<Specie name="H2" state="X"/>
+		</Species>
+		<Legend>O8447_1</Legend>
+		<Proc>O8447_1</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. O8447_1</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>38.000 1.000 2.000 17.000 4.850 0.220000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+	<!-- We are going to process
+		O8447_2      50.000 1.000 3.000 34.000 1.850 0.175000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> O(8447_2)" threshold="50.000">
+		<Species>
+			<Specie name="O" state="8447_2-NOTOT"/>
+			<Specie name="H2" state="X"/>
+		</Species>
+		<Legend>O8447_2</Legend>
+		<Proc>O8447_2</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. O8447_2</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>50.000 1.000 3.000 34.000 1.850 0.175000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+	<!-- We are going to process
+		OH3064      14.200 5.350 1.000 10.000 1.000 0.053700 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> OH(3064)" threshold="14.200">
+		<Species>
+			<Specie name="OH" state="3064-NOTOT"/>
+			<Specie name="H" state="X"/>
+		</Species>
+		<Legend>OH3064</Legend>
+		<Proc>OH3064</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. OH3064</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>14.200 5.350 1.000 10.000 1.000 0.053700 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+	<!-- We are going to process
+		OH2800 16.400 2.350 1.000 11.000 1.000 0.005800 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> OH(2800)" threshold="16.400">
+		<Species>
+			<Specie name="OH" state="2800-NOTOT"/>
+			<Specie name="H" state="X"/>
+		</Species>
+		<Legend>OH2800</Legend>
+		<Proc>OH2800</Proc>
+		<Section>emission</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. OH2800</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Emission/>
+		<Excitation/>
+		<Singhal/>
+		<params>16.400 2.350 1.000 11.000 1.000 0.005800 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+	<!-- We are going to process
+		RydbergA 12.620 1.000 3.000 0.729 0.750 0.427 0.0 0.0 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(RydbergA)" threshold="12.620">
+		<Species>
+			<Specie name="H2O" state="RydbergA"/>
+		</Species>
+		<Legend>H2O(RydbergA)</Legend>
+		<Proc>H2O(RydbergA)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. RydbergA</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>12.620 1.000 3.000 0.729 0.750 0.427</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+	<!-- We are going to process
+		RydbergB 12.620 1.000 3.000 0.729 0.750 0.427 0.0 0.0 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(RydbergB)" threshold="12.620">
+		<Species>
+			<Specie name="H2O" state="RydbergB"/>
+		</Species>
+		<Legend>H2O(RydbergB)</Legend>
+		<Proc>H2O(RydbergB)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. RydbergB</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>12.620 1.000 3.000 0.729 0.750 0.427</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		RydbergC 12.620 1.000 3.000 0.729 0.750 0.427 0.0 0.0 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(RydbergC)" threshold="12.620">
+		<Species>
+			<Specie name="H2O" state="RydbergC"/>
+		</Species>
+		<Legend>H2O(RydbergC)</Legend>
+		<Proc>H2O(RydbergC)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. RydbergC</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>12.620 1.000 3.000 0.729 0.750 0.427</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		RydbergD 12.620 1.000 3.000 0.729 0.750 0.427 0.0 0.0 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(RydbergD)" threshold="12.620">
+		<Species>
+			<Specie name="H2O" state="RydbergD"/>
+		</Species>
+		<Legend>H2O(RydbergD)</Legend>
+		<Proc>H2O(RydbergD)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. RydbergD</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>12.620 1.000 3.000 0.729 0.750 0.427</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process the ionization
+		H2O+ 12.620 4.050 110.00 1.00 30.000 11.40 -2.370 0.0 0.0
+	-->
+	<Process electrons="1" name="H2O+e -> H2O+" threshold="12.620">
+		<Species>
+			<Specie name="H2O+" state="X"/>
+		</Species>
+		<Legend>H2O+</Legend>
+		<Proc>H2O+</Proc>
+		<Section>ionization</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. H2O+</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Ionization/>
+		<Singhal/>
+		<params>12.620 4.050 110.00 1.00 30.000 0.0 11.40 0.0 -2.370 0.0  0.0</params>
+	</Process>
+	<!-- We are going to process the ionization
+		OH+ 20.000 1.134 94.000 1.000 0.0    11.40 -2.370 0.0 0.0
+	-->
+	<Process electrons="1" name="H2O+e -> OH+" threshold="20.000">
+		<Species>
+			<Specie name="OH+" state="X"/>
+			<Specie name="H" state="X"/>
+		</Species>
+		<Legend>OH+</Legend>
+		<Proc>OH+</Proc>
+		<Section>ionization</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. OH+</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Ionization/>
+		<Singhal/>
+		<params>20.000 1.134 94.000 1.000 0.0  0.0  11.40 0.0 -2.370 0.0 0.0</params>
+	</Process>
+	<!-- We are going to process the ionization
+		H+  20.000 1.550 147.000 1.000 0.0   11.40 -2.370 0.0 0.0
+	-->
+	<Process electrons="1" name="H2O+e -> H+" threshold="20.000">
+		<Species>
+			<Specie name="H+" state="X"/>
+			<Specie name="OH" state="X"/>
+		</Species>
+		<Legend>H+</Legend>
+		<Proc>H+</Proc>
+		<Section>ionization</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. H+</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Ionization/>
+		<Singhal/>
+		<params>20.000 1.550 147.000 1.000 -18.000 0.0   11.40 0.0 -2.370 0.0 0.0</params>
+	</Process>
+	<!-- We are going to process the ionization
+		O+  20.000  0.120 90.500 1.00 -19.00 11.40 -2.370 0.0 0.0
+	-->
+	<Process electrons="1" name="H2O+e -> O+" threshold="20.000">
+		<Species>
+			<Specie name="O+" state="X"/>
+			<Specie name="H2" state="X"/>
+		</Species>
+		<Legend>O+</Legend>
+		<Proc>O+</Proc>
+		<Section>ionization</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. O+</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Ionization/>
+		<Singhal/>
+		<params>20.000  0.120 90.500 1.00 -19.00 0.0 11.40  0.0 -2.370 0.0 0.0</params>
+	</Process>
+	<!-- We are going to process the ionization
+		O++ 60.000 0.007 78.000 2.860 -20.00 11.40 -2.370 0.0 0.0
+	-->
+	<Process electrons="2" name="H2O+e -> O++" threshold="60.000">
+		<Species>
+			<Specie name="O++" state="X"/>
+			<Specie name="H2" state="X"/>
+		</Species>
+		<Legend>O++</Legend>
+		<Proc>O++</Proc>
+		<Section>ionization</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. O++</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Ionization/>
+		<Singhal/>
+		<params>60.000 0.007 78.000 2.860 -20.00 0.0 11.40 0.0 -2.370 0.0 0.0</params>
+	</Process>
+	<!-- We are going to process the ionization
+		H2+  23.000 0.009 29.400 1.00  0.0    11.40 -2.370 0.0 0.0
+	-->
+	<Process electrons="1" name="H2O+e -> H2+" threshold="23.000">
+		<Species>
+			<Specie name="H2+" state="X"/>
+			<Specie name="O" state="X"/>
+		</Species>
+		<Legend>H2+</Legend>
+		<Proc>H2+</Proc>
+		<Section>ionization</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. H2+</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Ionization/>
+		<Singhal/>
+		<params>23.000 0.009 29.400 1.00  0.0   0.0 11.40 0.0 -2.370 0.0 0.0</params>
+	</Process>
+
+
+		
+	
+    </H2O>
+</crs>
