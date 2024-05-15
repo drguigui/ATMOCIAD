@@ -59,7 +59,6 @@
 		</Cross>
 			8.160000e-18	6E-18		4.5E-18		2.8E-18
 	</Process>
-</crs>
 		<Process name="CO + e -> O+" electrons="1" threshold="24.7">
 			<Ionization/>
 			<Species>
@@ -92,3 +91,4 @@
 
 
 
+</crs>
