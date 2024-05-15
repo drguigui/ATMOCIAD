@@ -7,13 +7,13 @@
 	<Cmax>1E-18</Cmax>
 	<Cmin>1E-21</Cmin>
 	<plotname>seff_CO_e_auger.pdf</plotname>
-	<Process name="CO + e -> .52 x CO++(X-KSHELL) 0.48 x CO+(X) 0.48 x Fluo-auger(X-O) "  electrons="1" threshold="410">
+	<Process name="CO + e -> .9952 x CO++(X-KSHELL) 0.0048 x CO+(X) 0.0048 x Fluo-auger(X-O) "  electrons="1" threshold="410">
 		<Ionization/>
 		<legend>Auger with Straub CO+ (recommended)</legend>
 		<Species>
-			<Specie name="CO++" state="X-O-KSHELL" number=".52"/>
-			<Specie name="CO+" state="X" number="0.48"/>
-			<Specie name="Fluo-auger" state="X-CO" number="0.52"/>
+			<Specie name="CO++" state="X-O-KSHELL" number=".9952"/>
+			<Specie name="CO+" state="X" number="0.0048"/>
+			<Specie name="Fluo-auger" state="X-CO" number="0.0048"/>
 		</Species>
 
 		<Proc>CO++(Auger)</Proc>
@@ -26,7 +26,8 @@
 
 		<texnote title="Notes for CO$^{++}$ K-Shell ionization, Fr\'emont 2006 + Straub2004">The K-Shell ionization of CO by electron impact has not been studied in \cite{Fremont2006}, but we assumed that the K-Shell/single ionization ratio is close to the CH$_4$ one which is used here.
 		 The total cross section has been computed by multiplying this ratio by the recommended ionization cross section, coming from \cite{Straub2004}.</texnote>
-		<Auger energy="330" fact=".52"/>
+		<Auger energy="245" fact=".4976"/> <!-- This is for the C atom 	-->
+		<Auger energy="450" fact=".4976"/> <!-- This is for the O atom; it is slightly above the threshold but it is a good approximation here; more accurate computation will need to handle that better 	-->
 		<Egrid unit="eV">
 			1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
 			6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04

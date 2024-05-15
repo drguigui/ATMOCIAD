@@ -403,11 +403,11 @@
 		the ratio, defined between 400 and 5 KeV, was extrapolated (as a limit!)
 		the production ratio were computed on the basis of the K Shell photoionization
 		-->
-		<Process name="O2 + e -> .31 x O2++(X-KSHELL) 0.69 x O+(X) 0.69 x Fluo-auger(X) "  electrons="1" ions="1" threshold="539">
+		<Process name="O2 + e -> .9931 x O2++(X-KSHELL) 0.0069 x O+(X) 0.0069 x Fluo-auger(X) "  electrons="1" ions="1" threshold="539">
 			<Species>
-				<Specie name="O2++" state="X-KSHELL" number=".31"/>
-				<Specie name="O2+" state="X" number="0.69"/>
-				<Specie name="Fluo-auger" state="X" number="0.69"/>
+				<Specie name="O2++" state="X-KSHELL" number=".9931"/>
+				<Specie name="O2+" state="X" number="0.0069"/>
+				<Specie name="Fluo-auger" state="X" number="0.0069"/>
 			</Species>
 			<Ionization/>
 			<Proc>O2++(Auger)</Proc>
@@ -418,7 +418,7 @@
 			<Recommended/>
 			<Extrapolated/>
 			<EstimatedUncertainty/>
-			<Auger  energy="456" fact="0.31"/>
+			<Auger  energy="456" fact="0.9931"/>
 			<Egrid unit="eV">
 				1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
 				6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04

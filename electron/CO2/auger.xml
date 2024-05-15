@@ -17,25 +17,26 @@
 		the production ratio were computed on the basis of the K Shell photoionization
 		the auger energy and production is a barycenter of the energy and production of C and O
 		-->
-		<Process name="CO2 + e -> .45 x CO2++(KSHELL) 0.55 x CO2+(X) 0.55 x Fluo-auger(X) "  electrons="1" threshold="539">
+		<Process name="CO2 + e -> .9945 x CO2++(KSHELL) 0.0055 x CO2+(X) 0.0055 x Fluo-auger(X) "  electrons="1" threshold="539">
 			<Ionization/>
 			<Species>
-				<Specie name="CO2++" state="X-KSHELL" number=".45"/>
-				<Specie name="CO2+" state="X" number="0.55"/>
-				<Specie name="Fluo-auger" state="Total-CO2" number="0.55"/>
+				<Specie name="CO2++" state="X-KSHELL" number=".9945"/>
+				<Specie name="CO2+" state="X" number="0.0055"/>
+				<Specie name="Fluo-auger" state="Total-CO2" number="0.0055"/>
 			</Species>
 			<Proc>CO2++(Auger)</Proc>
 			<legend>CO2++(Auger) - adaptation</legend>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Fremont 2006 + Shirai 2001+Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2001+Straub</Notes>
+			<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2001+Straub. We estimate 2 O auger for 1 C Auger. With the probability of 0.69% for each O and 0.26% for each C</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
 
 			<texnote title="Notes for CO$_2^{++}$ K-Shell ionization, Fr\'emont 2006 + Straub 2004 + Shirai 2001">The K-Shell ionization of CO$_2$ by electron impact has not been studied in \cite{Fremont2006}, but we assumed that the K-Shell/single ionization ratio is close to the CH$_4$ one which is used here.
-				The total cross section has been computed by multiplying this ratio by the recommended ionization cross section, coming from \cite{Straub2004} and \cite{Shirai2001}.</texnote>
-			<Auger energy="335" fact=".45"/>
+				The total cross section has been computed by multiplying this ratio by the recommended ionization cross section, coming from \cite{Straub2004} and \cite{Shirai2001}. The Auger electrons are coming from Avakyan 1998. We consider that we have an equal chance to excite the Auger in any of the atoms of the molecules. I.e. we have twice more chance in an O than in a C</texnote>
+			<Auger energy="250" fact=".3315"/> <!-- This is for the C atom 	-->
+			<Auger energy="480" fact=".663"/> <!-- This is the total for the 2 O atoms 	-->
 			<Egrid unit="eV">
 				1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
 				6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04

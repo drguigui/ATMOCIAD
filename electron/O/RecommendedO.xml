@@ -49,7 +49,7 @@
 
 	<Process name="O+e->O(fine)" electrons="0" threshold="0.0178">
 		<Species>
-			<Specie name="O" state="finestructure"/>
+			<Specie name="O" state="finestructure 2->1"/>
 		</Species>
 		<legend>O Finestructure Itikawa 2-> 1 (th unce est)</legend>
 		<Proc>O(finestr)</Proc>
@@ -99,7 +99,7 @@
 
 	<Process name="O+e->O(fine)" electrons="0" threshold="0.0178">
 		<Species>
-			<Specie name="O" state="finestructure"/>
+			<Specie name="O" state="finestructure 2-> 0"/>
 		</Species>
 		<legend>O Finestructure Itikawa 2-> 0 (th,est unc)</legend>
 		<Proc>O(finestr)</Proc>
@@ -757,14 +757,14 @@
 		K-Shell ionization:  Comes from Glupe and mehlhorn 67
 		the threshold comes from itikawa (it was necessary to use it for scaling the energy!)
 		-->
-		 <Process name="O + e -> .31 x O++(X-KSHELL) 0.69 x O+(X) 0.69 x Fluo-auger(X) "  electrons="1" ions="1" threshold="539">
+		 <Process name="O + e -> .9931 x O++(X-KSHELL) 0.0069 x O+(X) 0.0069 x Fluo-auger(X) "  electrons="1" ions="1" threshold="539">
 			<Ionization/>
 			<Species>
-				<Specie name="O++" state="X-KSHELL" number=".31"/>
-				<Specie name="O+" state="4S" number="0.69"/>
-				<Specie name="Fluo-auger" state="X" number="0.69"/>
+				<Specie name="O++" state="X-KSHELL" number=".9931"/>
+				<Specie name="O+" state="4S" number="0.0069"/>
+				<Specie name="Fluo-auger" state="X" number="0.0069"/>
 			</Species>
-			<Auger energy="474" fact="0.31"/>
+			<Auger energy="474" fact="0.9931"/>
 			<legend>K-Shell Glupe 67</legend>
 			<Proc>O++(Auger)</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->

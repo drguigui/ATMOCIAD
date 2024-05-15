@@ -574,14 +574,14 @@
 				5.23518191e-20   4.48684153e-20   3.91607728e-20   3.46732477e-20
 			</Cross>
 		</Process>
-		<Process name="CH4 + e -> .74 x CH4++(X-C-KSHELL) 0.26 x CH4+(X) 0.26 x Fluo-auger(X-C) "  electrons="1" threshold="282">
+		<Process name="CH4 + e -> .9974 x CH4++(X-C-KSHELL) 0.0026 x CH4+(X) 0.0026 x Fluo-auger(X-C) "  electrons="1" threshold="282">
 			<Species>
-				<Specie name="CH4++" state="X" number=".74"/>
-				<Specie name="CH4+" state="X" number="0.26"/>
-				<Specie name="Fluo-auger" state="X-C" number="0.26"/>
+				<Specie name="CH4++" state="X" number=".9974"/>
+				<Specie name="CH4+" state="X" number="0.0026"/>
+				<Specie name="Fluo-auger" state="X-C" number="0.0026"/>
 			</Species>
 			<Ionization/>
-			<Auger energy="229" fact="0.26"/>
+			<Auger energy="229" fact="0.9974"/>
 			<Proc>CH4++(Auger)</Proc>
 			<legend>CH4++(Auger)</legend>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->

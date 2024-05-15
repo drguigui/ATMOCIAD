@@ -7,12 +7,12 @@
 	<Cmax>1E-18</Cmax>
 	<Cmin>1E-22</Cmin>
 	<plotname>seff_CH4_e_CH4pp_auger.pdf</plotname>
-	<Process name="CH4 + e -> .74 x CH4++(X-C-KSHELL) 0.26 x CH4+(X) 0.26 x Fluo-auger(X-C) "  electrons="1" threshold="282">
+	<Process name="CH4 + e -> .9974 x CH4++(X-C-KSHELL) 0.0026 x CH4+(X) 0.0026 x Fluo-auger(X-C) "  electrons="1" threshold="282">
 		<Ionization/>
 		<Species>
-			<Specie name="CH4++" state="X" number=".74"/>
-			<Specie name="CH4+" state="X" number="0.26"/>
-			<Specie name="Fluo-auger" state="X-C" number="0.26"/>
+			<Specie name="CH4++" state="X" number=".9974"/>
+			<Specie name="CH4+" state="X" number="0.0026"/>
+			<Specie name="Fluo-auger" state="X-C" number="0.0026"/>
 		</Species>
 
 		<Proc>CH4++(Auger)</Proc>
@@ -25,7 +25,7 @@
 		<EstimatedUncertainty/>
 		<Recommended/>
 		<Extrapolated/>
-		<Auger energy="229" fact="0.26"/>
+		<Auger energy="229" fact="0.9974"/>
 		<Egrid unit="eV">
 			1.00000000e+05   9.08093584e+04   8.24633361e+04   7.48843125e+04
 			6.80018007e+04   6.17517911e+04   5.60761570e+04   5.09221132e+04
