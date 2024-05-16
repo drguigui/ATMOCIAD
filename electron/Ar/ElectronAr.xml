@@ -1,22 +1,164 @@
 <crs>
+    <RecommendedFile/>
     <Name>Ar</Name>
     <Collider>e</Collider>
-    <title>Ar_Singhal_excitation</title>
-    <Emin>10</Emin>
+	<title> Ar  + e </title>
+    <Emin>5</Emin>
     <Emax>2E4</Emax>
     <Cmin>1E-21</Cmin>
-    <Cmax>1E-15</Cmax>
-    <plotname>Singhal_Ar_excitation.pdf</plotname>
+    <Cmax>1E-14</Cmax>
+    <plotname>seff_Ar_e_recommended.pdf</plotname>
+    <explotname>seff_Ar_e_recommendedex.pdf</explotname>
     <Ar>
+		<TotalCrsElectron/>
+		<ElasticCrs>
+			<legend>Elastic Ar</legend>
+
+			<Source type="review">Bretagne 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>From Bretagne 1994 and integrated in the Lilensten database</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Egrid unit="eV">
+				.1000E+06  .9598E+05  .9212E+05  .8843E+05  .8488E+05
+				.8147E+05  .7820E+05  .7506E+05  .7205E+05  .6915E+05
+				.6638E+05  .6371E+05  .6116E+05  .5870E+05  .5634E+05
+				.5408E+05  .5191E+05  .4983E+05  .4783E+05  .4591E+05
+				.4406E+05  .4230E+05  .4060E+05  .3897E+05  .3740E+05
+				.3590E+05  .3446E+05  .3308E+05  .3175E+05  .3047E+05
+				.2925E+05  .2808E+05  .2695E+05  .2587E+05  .2483E+05
+				.2383E+05  .2288E+05  .2196E+05  .2108E+05  .2023E+05
+				.1942E+05  .1864E+05  .1789E+05  .1717E+05  .1648E+05
+				.1582E+05  .1519E+05  .1458E+05  .1399E+05  .1343E+05
+				.1289E+05  .1237E+05  .1188E+05  .1140E+05  .1094E+05
+				.1050E+05  .1008E+05  .9676E+04  .9288E+04  .8915E+04
+				.8557E+04  .8213E+04  .7884E+04  .7567E+04  .7263E+04
+				.6972E+04  .6692E+04  .6423E+04  .6165E+04  .5918E+04
+				.5680E+04  .5452E+04  .5233E+04  .5023E+04  .4822E+04
+				.4628E+04  .4442E+04  .4264E+04  .4093E+04  .3928E+04
+				.3771E+04  .3619E+04  .3474E+04  .3334E+04  .3201E+04
+				.3072E+04  .2949E+04  .2830E+04  .2717E+04  .2608E+04
+				.2503E+04  .2402E+04  .2306E+04  .2213E+04  .2124E+04
+				.2039E+04  .1957E+04  .1879E+04  .1803E+04  .1731E+04
+				.1661E+04  .1595E+04  .1531E+04  .1469E+04  .1410E+04
+				.1354E+04  .1299E+04  .1247E+04  .1197E+04  .1149E+04
+				.1103E+04  .1058E+04  .1016E+04  .9751E+03  .9360E+03
+				.8984E+03  .8623E+03  .8276E+03  .7944E+03  .7625E+03
+				.7319E+03  .7025E+03  .6742E+03  .6472E+03  .6212E+03
+				.5962E+03  .5723E+03  .5493E+03  .5272E+03  .5060E+03
+				.4857E+03  .4662E+03  .4474E+03  .4295E+03  .4122E+03
+				.3956E+03  .3797E+03  .3645E+03  .3498E+03  .3358E+03
+				.3223E+03  .3093E+03  .2969E+03  .2849E+03  .2735E+03
+				.2625E+03  .2519E+03  .2418E+03  .2321E+03  .2227E+03
+				.2138E+03  .2052E+03  .1969E+03  .1890E+03  .1814E+03
+				.1741E+03  .1671E+03  .1604E+03  .1539E+03  .1477E+03
+				.1418E+03  .1360E+03  .1306E+03  .1253E+03  .1203E+03
+				.1154E+03  .1108E+03  .1063E+03  .1020E+03  .9789E+02
+				.9394E+02  .9015E+02  .8651E+02  .8302E+02  .7967E+02
+				.7645E+02  .7337E+02  .7040E+02  .6756E+02  .6483E+02
+				.6220E+02  .5969E+02  .5727E+02  .5496E+02  .5273E+02
+				.5060E+02  .4855E+02  .4658E+02  .4469E+02  .4288E+02
+				.4114E+02  .3947E+02  .3786E+02  .3632E+02  .3485E+02
+				.3343E+02  .3207E+02  .3076E+02  .2951E+02  .2831E+02
+				.2715E+02  .2604E+02  .2498E+02  .2396E+02  .2298E+02
+				.2203E+02  .2113E+02  .2026E+02  .1943E+02  .1863E+02
+				.1787E+02  .1713E+02  .1642E+02  .1575E+02  .1509E+02
+				.1447E+02  .1387E+02  .1329E+02  .1274E+02  .1221E+02
+				.1170E+02  .1121E+02  .1075E+02  .1030E+02  .9863E+01
+				.9448E+01  .9050E+01  .8668E+01  .8301E+01  .7949E+01
+				.7611E+01  .7287E+01  .6976E+01  .6677E+01  .6390E+01
+				.6115E+01  .5850E+01  .5597E+01  .5353E+01  .5120E+01
+				.4895E+01  .4680E+01  .4473E+01  .4275E+01  .4085E+01
+				.3902E+01  .3726E+01  .3558E+01  .3396E+01  .3241E+01
+				.3092E+01  .2949E+01  .2812E+01  .2681E+01  .2554E+01
+				.2433E+01  .2316E+01  .2205E+01  .2097E+01  .1994E+01
+				.1895E+01  .1801E+01  .1709E+01  .1622E+01  .1538E+01
+				.1458E+01  .1380E+01  .1306E+01  .1235E+01  .1166E+01
+				.1101E+01  .1038E+01  .9774E+00  .9194E+00  .8637E+00
+				.8102E+00  .7589E+00  .7096E+00  .6623E+00  .6170E+00
+				.5734E+00  .5316E+00  .4914E+00  .4529E+00  .4159E+00
+				.3804E+00  .3464E+00  .3137E+00  .2823E+00  .2522E+00
+				.2232E+00  .1955E+00  .1688E+00  .1433E+00  .1187E+00
+				.9516E-01  .7254E-01  .5084E-01  .3000E-01  .1000E-01
+			</Egrid>
+			<Cross unit="cm2">
+				.1387E-16  .1416E-16  .1446E-16  .1475E-16  .1506E-16
+				.1537E-16  .1569E-16  .1601E-16  .1635E-16  .1668E-16
+				.1703E-16  .1738E-16  .1774E-16  .1811E-16  .1848E-16
+				.1887E-16  .1926E-16  .1966E-16  .2006E-16  .2048E-16
+				.2090E-16  .2133E-16  .2178E-16  .2223E-16  .2269E-16
+				.2316E-16  .2363E-16  .2412E-16  .2462E-16  .2513E-16
+				.2565E-16  .2618E-16  .2673E-16  .2728E-16  .2784E-16
+				.2842E-16  .2901E-16  .2961E-16  .3022E-16  .3085E-16
+				.3149E-16  .3214E-16  .3280E-16  .3348E-16  .3417E-16
+				.3488E-16  .3560E-16  .3634E-16  .3709E-16  .3786E-16
+				.3864E-16  .3944E-16  .4026E-16  .4109E-16  .4194E-16
+				.4281E-16  .4370E-16  .4460E-16  .4553E-16  .4647E-16
+				.4743E-16  .4841E-16  .4941E-16  .5044E-16  .5148E-16
+				.5255E-16  .5363E-16  .5474E-16  .5588E-16  .5703E-16
+				.5821E-16  .5942E-16  .6065E-16  .6190E-16  .6319E-16
+				.6449E-16  .6583E-16  .6719E-16  .6858E-16  .7000E-16
+				.7145E-16  .7293E-16  .7444E-16  .7598E-16  .7755E-16
+				.7916E-16  .8080E-16  .8247E-16  .8418E-16  .8592E-16
+				.8770E-16  .8951E-16  .9137E-16  .9326E-16  .9519E-16
+				.9716E-16  .9917E-16  .1012E-15  .1033E-15  .1055E-15
+				.1076E-15  .1099E-15  .1121E-15  .1145E-15  .1168E-15
+				.1193E-15  .1217E-15  .1242E-15  .1268E-15  .1294E-15
+				.1321E-15  .1349E-15  .1377E-15  .1405E-15  .1434E-15
+				.1464E-15  .1494E-15  .1525E-15  .1557E-15  .1589E-15
+				.1622E-15  .1655E-15  .1690E-15  .1725E-15  .1760E-15
+				.1797E-15  .1834E-15  .1872E-15  .1911E-15  .1950E-15
+				.1991E-15  .2032E-15  .2074E-15  .2117E-15  .2161E-15
+				.2206E-15  .2252E-15  .2298E-15  .2346E-15  .2394E-15
+				.2444E-15  .2495E-15  .2546E-15  .2599E-15  .2653E-15
+				.2708E-15  .2764E-15  .2822E-15  .2880E-15  .2940E-15
+				.3001E-15  .3063E-15  .3127E-15  .3191E-15  .3258E-15
+				.3325E-15  .3394E-15  .3465E-15  .3537E-15  .3610E-15
+				.3685E-15  .3762E-15  .3840E-15  .3920E-15  .4001E-15
+				.4084E-15  .4169E-15  .4256E-15  .4344E-15  .4434E-15
+				.4527E-15  .4621E-15  .4717E-15  .4815E-15  .4915E-15
+				.5018E-15  .5122E-15  .5229E-15  .5338E-15  .5449E-15
+				.5563E-15  .5679E-15  .5797E-15  .5918E-15  .6042E-15
+				.6168E-15  .6297E-15  .6429E-15  .6563E-15  .6700E-15
+				.6841E-15  .6984E-15  .7130E-15  .7280E-15  .7432E-15
+				.7588E-15  .7748E-15  .7910E-15  .8077E-15  .8247E-15
+				.8420E-15  .8598E-15  .9087E-15  .9565E-15  .1001E-14
+				.1044E-14  .1083E-14  .1120E-14  .1153E-14  .1184E-14
+				.1212E-14  .1237E-14  .1259E-14  .1279E-14  .1296E-14
+				.1309E-14  .1320E-14  .1329E-14  .1334E-14  .1337E-14
+				.1338E-14  .1335E-14  .1331E-14  .1323E-14  .1314E-14
+				.1302E-14  .1288E-14  .1272E-14  .1253E-14  .1233E-14
+				.1211E-14  .1187E-14  .1161E-14  .1134E-14  .1105E-14
+				.1076E-14  .1045E-14  .1012E-14  .9794E-15  .9455E-15
+				.9111E-15  .8761E-15  .8407E-15  .8051E-15  .7693E-15
+				.7336E-15  .6981E-15  .6629E-15  .6281E-15  .5938E-15
+				.5602E-15  .5274E-15  .4954E-15  .4645E-15  .4346E-15
+				.4058E-15  .3782E-15  .3519E-15  .3270E-15  .3033E-15
+				.2810E-15  .2601E-15  .2406E-15  .2224E-15  .2055E-15
+				.1899E-15  .1755E-15  .1622E-15  .1500E-15  .1387E-15
+				.1283E-15  .1187E-15  .1098E-15  .1014E-15  .9348E-16
+				.8591E-16  .7862E-16  .7152E-16  .6455E-16  .5768E-16
+				.5087E-16  .4414E-16  .3752E-16  .3106E-16  .2488E-16
+				.1910E-16  .1390E-16  .9518E-17  .6262E-17  .4537E-17
+				.4894E-17  .8106E-17  .1529E-16  .2807E-16  .4889E-16
+				.8143E-16  .1314E-15  .2079E-15  .3281E-15  .5517E-15
+
+			</Cross>
+		</ElasticCrs>
+
+
+
+
+
         <Process electrons="0" name="Ar+e -> Ar(4s_3/2)" threshold="11.6">
             <Species>
-                <Specie name="Ar" state="Ar(4s_3/2)"/>
+		    <Specie name="Ar" state="Ar(4s_3/2)" /> 
+		    <!-- This is also Ar(3P1) -->
             </Species>
             <Legend>4s_3/2</Legend>
             <Proc>Ar(4s_3/2)</Proc>
             <Section>excitation</Section>
             <Source type="review">Singhal</Source>
-            <Notes>from the book Elements of Space Physics</Notes>
+            <Notes>from the book Elements of Space Physics. This is also Ar(3P1), see Dutuit 1974  It emits at 106.7nm</Notes>
             <uncertainty>30%</uncertainty>
             <EstimatedUncertainty/>
             <Excitation/>
@@ -28,13 +170,14 @@
         
         <Process electrons="0" name="Ar+e -> Ar(4s_1/2)" threshold="11.8">
             <Species>
-                <Specie name="Ar" state="Ar(4s_1/2)"/>
+		    <Specie name="Ar" state="Ar(4s_1/2)" />
+		    <!-- This is also Ar(1P1) -->
             </Species>
             <Legend>4s_1/2</Legend>
             <Proc>Ar(4s_1/2)</Proc>
             <Section>excitation</Section>
             <Source type="review">Singhal</Source>
-            <Notes>from the book Elements of Space Physics</Notes>
+            <Notes>from the book Elements of Space Physics. This is also Ar(1P1), see Dutuit 1974  It emits at 104.8 nm</Notes>
             <uncertainty>30%</uncertainty>
             <EstimatedUncertainty/>
             <Excitation/>
@@ -241,9 +384,11 @@
             <AF>0.0</AF>
             <Omega/>
         </Process>
-        <Process electrons="1" name="M_Shell" threshold="15.76">
+	<!-- Ionizations -->
+
+        <Process electrons="1" name="X" threshold="15.76">
             <Species>
-                <Specie name="Ar+" state="M_Shell"/>
+                <Specie name="Ar+" state="X"/>
             </Species>
             <Legend>M_Shell</Legend>
             <Proc>M_Shell</Proc>
@@ -258,22 +403,57 @@
             <Ctype/>
         </Process>
         
-        <Process electrons="1" name="L_Shell" threshold="250.0">
+        <Process electrons="1" name="Ar +e -> 0.88 x Ar++(M-Shell) + 0.12 x Ar+ 0.12 x Fluo-Auger" threshold="250.0">
             <Species>
-                <Specie name="Ar+" state="L_Shell"/>
+		    <Specie name="Ar+" state="X" number="0.12"/>
+		    <Specie name="Ar++" state="X-LSHELL" number="0.88"/>
+		    <Specie name="FLUO-Auger" state="X" number="0.12"/>
             </Species>
-            <Legend>L_Shell</Legend>
-            <Proc>L_Shell</Proc>
+            <Legend>Ar++(Auger)</Legend>
+            <Proc>Ar++(Auger)</Proc>
+	   <Auger energy="204" fact="0.88"/>
             <Section>ionization</Section>
             <Source type="review">Singhal</Source>
             <Notes>from the book Elements of Space Physics</Notes>
-            <uncertainty>30%</uncertainty>
+            <uncertainty>5%</uncertainty>
             <EstimatedUncertainty/>
             <Ionization/>
             <Singhal/>
             <params>250.0 0.07 0.0 250.0 0.0 0.0 40.0 0.0 0.0 0.0 0.0</params>
             <Ctype/>
         </Process>
-
+        <Process electrons="2" name="Ar++" threshold="43.40">
+            <Species>
+                <Specie name="Ar++" state="X" />
+            </Species>
+            <Legend>Adapatation Ar++</Legend>
+            <Proc>Ar++</Proc>
+            <Section>ionization</Section>
+            <Source type="adaptation">Singhal + Lilensten</Source>
+            <Notes>from the book Elements of Space Physics and the branching ratios from lilensten et al.</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Ionization/>
+            <Singhal/>
+            <params>43.40 0.4 0.0 15.76 0.0 7.614 10.3 0.0 2.0 100.0 10.0</params>
+            <Ctype/>
+        </Process>
+ 
+        <Process electrons="1" name="Ar+(4P)" threshold="35.40">
+            <Species>
+		    <Specie name="Ar+" state="4P" />
+            </Species>
+            <Legend>Adaptation Ar+(4P)</Legend>
+            <Proc>Ar+(4P)</Proc>
+            <Section>ionization</Section>
+            <Source type="review">Singhal + Lilensten</Source>
+            <Notes>from the book Elements of Space Physics andthe branching ratios from lilensten et al.</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Ionization/>
+            <Singhal/>
+            <params>35.40 0.066 0.0 15.76 0.0 7.614 10.3 0.0 2.0 100.0 10.0</params>
+            <Ctype/>
+    </Process>
     </Ar>
 </crs>
