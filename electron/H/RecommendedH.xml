@@ -442,7 +442,7 @@
 				0.442E-20 0.420E-20 0.400E-20 0.381E-20
 			</Cross>
 		</Process>
-		<Process name="H+e -> H(n=6)" electrons="0" threshold="12.0875">
+		<Process name="H+e -> H(n=6)" electrons="0" threshold="13.2207">
 			<Species>
 				<Specie name="H" state="n=6"/>
 			</Species>

@@ -179,7 +179,7 @@
 			<AF>0.0</AF>
 			<Omega/>
 		</Process>
-		<!-- These two are probably integrated somewhere
+		<!-- These two are probably integrated somewhere -->
 		<Process electrons="0" name="CO2+e -> 12.4" threshold="9.61">
 			<Species>
 				<Specie name="CO2" state="12.4"/>
@@ -214,7 +214,6 @@
 			<AF>0.0</AF>
 			<Omega/>
 			</Process>
-		-->
 		<Process electrons="0.75" name="CO2+e -> 15.5" threshold="15.5">
 			<Species>
 				<Specie name="CO2" state="15.5"/>
