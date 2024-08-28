@@ -447,6 +447,23 @@
             <params>15.76 13.2 0.0 15.76 0.0 7.614 10.3 0.0 2.0 100.0 10.0</params>
             <Ctype/>
         </Process>
+ 
+        <Process electrons="1" name="X" threshold="15.76">
+            <Species>
+                <Specie name="Ar+" state="X"/>
+            </Species>
+            <Legend>M_Shellv2</Legend>
+            <Proc>M_Shellv2</Proc>
+            <Section>ionization</Section>
+            <Source type="review">Singhal</Source>
+            <Notes>from the book Elements of Space Physics</Notes>
+            <uncertainty>30%</uncertainty>
+            <EstimatedUncertainty/>
+            <Ionization/>
+            <Singhal/>
+            <params>15.76 11.8 0.0 15.76 0.0 7.614 10.3 0.0 2.0 100.0 10.0</params>
+            <Ctype/>
+        </Process>
         
         <Process electrons="1" name="Ar +e -> 0.88 x Ar++(M-Shell) + 0.12 x Ar+ 0.12 x Fluo-Auger" threshold="250.0">
             <Species>
@@ -480,7 +497,7 @@
             <EstimatedUncertainty/>
             <Ionization/>
             <Singhal/>
-            <params>43.40 0.4 0.0 15.76 0.0 7.614 10.3 0.0 2.0 100.0 10.0</params>
+            <params>43.40 0.36 0.0 15.76 0.0 7.614 10.3 0.0 2.0 100.0 10.0</params>
             <Ctype/>
         </Process>
  
@@ -497,7 +514,7 @@
             <EstimatedUncertainty/>
             <Ionization/>
             <Singhal/>
-            <params>35.40 0.066 0.0 15.76 0.0 7.614 10.3 0.0 2.0 100.0 10.0</params>
+            <params>35.40 0.0594 0.0 15.76 0.0 7.614 10.3 0.0 2.0 100.0 10.0</params>
             <Ctype/>
         </Process>
 

@@ -2,10 +2,10 @@
 	<Name>O2</Name>
 	<Collider>e</Collider>
 	<title> O$_2$  + e $\rightarrow$ O$_2(B3SU)$</title>
-	<Emin>60</Emin>
+	<Emin>0.1</Emin>
 	<Emax>1200</Emax>
-	<Cmax>4E-18</Cmax>
-	<Cmin>1E-19</Cmin>
+	<Cmax>4E-16</Cmax>
+	<Cmin>1E-20</Cmin>
 	<plotname>seff_O2_e_B3SU.pdf</plotname>
 
 		<Process name="O2 + e -> O2(B3Su)" electrons="0" threshold="6.120">
@@ -112,6 +112,42 @@
 			<Cross unit="cm2" fact="1E-16" uncertainty="23%">
 				0.00720 0.00915 0.00871 0.00472 0.0035 0.0022  0.0015
 			</Cross>
+		</Process>
+
+                <Process electrons="0" name="O2+e -> O2(B3Su)" threshold="8.4">
+			<Species>
+				<Specie name="O2" state="B3Su"/>
+			</Species>
+			<Legend>Singal B3Su</Legend>
+			<Proc>O2(B3Su)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>8.400  1.190  2.310  8.400 0.037  0.254000</params>
+			<AF>0.0</AF>
+			<Ctype/>
+		</Process>
+
+                <Process electrons="0" name="O2+e -> O2(9.9)" threshold="9.9">
+			<Species>
+				<Specie name="O2" state="9.9"/>
+			</Species>
+			<Legend>Singal 9.9</Legend>
+			<Proc>O2(9.9)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>9.900  1.380  3.440  9.900 0.622  0.028500</params>
+			<AF>0.0</AF>
+			<Ctype/>
 		</Process>
 
 

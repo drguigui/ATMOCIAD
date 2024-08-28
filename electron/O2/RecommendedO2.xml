@@ -61,6 +61,45 @@
 4.75e-2 3.8e-2 3.352941176470588e-2
 		</Cross>
 	</Process>
+                <Process electrons="0" name="O2+e -> O2(B3Su)" threshold="8.4">
+			<Species>
+				<Specie name="O2" state="B3Su"/>
+			</Species>
+			<Legend>Singal B3Su</Legend>
+			<Proc>O2(B3Su)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>8.400  1.190  2.310  8.400 0.037  0.254000</params>
+			<AF>0.0</AF>
+			<Ctype/>
+		</Process>
+
+                <Process electrons="0" name="O2+e -> O2(9.9)" threshold="9.9">
+			<Species>
+				<Specie name="O2" state="9.9"/>
+			</Species>
+			<Legend>Singal 9.9</Legend>
+			<Proc>O2(9.9)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>9.900  1.380  3.440  9.900 0.622  0.028500</params>
+			<AF>0.0</AF>
+			<Ctype/>
+		</Process>
+
+
+
+
 	<Process name="O2 + e -> O2(v'=2)" electrons="0" threshold="0.3">
 		<legend>v2 itikawa</legend>
 		<Proc>v2</Proc> <!-- Name for the processus -->

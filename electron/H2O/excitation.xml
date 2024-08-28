@@ -1,0 +1,356 @@
+<crs>
+<Name>H2O</Name>
+<Collider>e</Collider>
+<title> H2O + e -> Excitation</title>
+<Emin>0.01</Emin>
+<Emax>120000</Emax>
+<Cmax>3E-15</Cmax>
+<Cmin>1E-23</Cmin>
+<plotname>seff_H2O_e_excitations.pdf</plotname>
+<explotname>seff_H2O_e_excitations.pdf</explotname>
+<figsize>3</figsize>
+	<Process electrons="0" name="H2O+e -> H2O(Triplet12.5)" threshold="12.500">
+		<Species>
+			<Specie name="H2O" state="Triplet12.5"/>
+		</Species>
+		<Legend>H2O(Triplet12.5)</Legend>
+		<Proc>H2O(Triplet12.5)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>12.500 1.000 1.000 9.810 3.000 0.018000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		Dissociative7.4 7.400 1.000 3.000 7.400 0.750 0.063000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(Dissociative7.4)" threshold="7.400">
+		<Species>
+			<Specie name="H2O" state="Dissociative7.4"/>
+		</Species>
+		<Legend>H2O(Dissociative7.4)</Legend>
+		<Proc>H2O(Dissociative7.4)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics We do not know what are the dissociative products from the book</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>7.400 1.000 3.000 7.400 0.750 0.063000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		Dissociative9.6 9.670 1.000 3.000 9.670 0.800 0.138000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(Dissociative9.6)" threshold="9.670">
+		<Species>
+			<Specie name="H2O" state="Dissociative9.6"/>
+		</Species>
+		<Legend>H2O(Dissociative9.6)</Legend>
+		<Proc>H2O(Dissociative9.6)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. We do not know what are the dissociative products from the book</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>9.670 1.000 3.000 9.670 0.800 0.138000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<!-- We are going to process
+		Diffuse 13.320 1.000 3.000 13.320 0.750 0.626000 0.0
+	-->
+	<Process electrons="0" name="H2O+e -> H2O(Diffuse)" threshold="13.320">
+		<Species>
+			<Specie name="H2O" state="Diffuse"/>
+		</Species>
+		<Legend>H2O(Diffuse)</Legend>
+		<Proc>H2O(Diffuse)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. Diffuse bands</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>13.320 1.000 3.000 13.320 0.750 0.626000 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+
+		<Process name="H2O + e -> O(1S)" electrons="0" threshold="18.5">
+			<Species>
+				<Specie name="O" state="1S"/>
+				<Specie name="H2" state="X"/>
+			</Species>
+			<legend>O(1S)</legend>
+			<Proc>O(1S)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Itikawa</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Estimated uncertainty</Notes>
+			<Recommended/>
+				<!--		<Extrapolated/> -->
+				<Excitation/>
+				<Egrid unit="eV">
+						18.56 22.52 26.48 30.44 34.4 
+						42.32 50.24 54.2 62.12 70.04
+						81.92 93.8 101.72 105.68 113.6 
+						121.52 125.48 133.4 137.36 141.32
+						145.28 153.2 157.16 161.12 165.08
+						173   176.96 180.92 184.88 192.8 
+						196.76 200.72 212.6 220.52 232.4 
+						240.32 252.2 260.12 272   283.88
+						291.8 303.68 311.6 319.52
+				</Egrid>
+				<Cross unit="cm2" uncertainty="10%" fact="1e-16">
+						0.2 0.36 0.48 0.67 0.78
+						1.04 1.20 1.25 1.36 1.39
+						1.45 1.49 1.50 1.50 1.50
+						1.49 1.48 1.47 1.46 1.46
+						1.45 1.43 1.43 1.42 1.40
+						1.36 1.34 1.33 1.33 1.30
+						1.29 1.28 1.26 1.24 1.20
+						1.16 1.12 1.11 1.07 1.05
+						1.03 1.00 0.98 0.95
+				</Cross>
+		</Process>
+
+
+		<Process name="H2O + e -> O(3S)" electrons="0" threshold="25">
+			<Species>
+				<Specie name="O" state="3S"/>
+				<!-- I do not add the H2 here because it is from a emissions -->
+			</Species>
+			<legend>O(3S -- 130.4)</legend>
+			<Proc>O(3S)</Proc>
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Itikawa</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Estimated uncertainty. I consider the excited state to be at the same of the 130.4 emission cross section from itikawa</Notes>
+			<Recommended/>
+				<!--		<Extrapolated/> -->
+				<Excitation/>
+				<Egrid unit="eV">
+						25   37.5 50   62.5 75   
+						87.5 100  112.5 125  137.5
+						150  175  200  225  250  
+				</Egrid>
+				<Cross unit="cm2" uncertainty="10%" fact="1e-16">
+						0.194 0.832 1.45 2.09 2.56 
+						2.78 2.83 2.81 2.75 2.68
+						2.60 2.39 2.22 2.02 1.86
+				</Cross>
+		</Process>
+
+		<Process name="H2O + e -> H(2p)" electrons="0" threshold="25">
+			<Species>
+				<Specie name="H" state="2p"/>
+				<!-- I do not add the H2 here because it is from a emissions -->
+			</Species>
+			<legend>H(2p -- 121.6)</legend>
+			<Proc>H(Ly alpha)</Proc>
+			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Itikawa</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Estimated uncertainty. I consider the excited state to be at the same of the 121.6 emission cross section from itikawa</Notes>
+			<Recommended/>
+				<!--		<Extrapolated/> -->
+				<Excitation/>
+				<Egrid unit="eV">
+						25   37.5 50   62.5 75   
+						87.5 100  112.5 125  137.5
+						150  175  200  225  250  
+				</Egrid>
+				<Cross unit="cm2" uncertainty="10%" fact="1e-16">
+						0.601 2.27 4.05 5.90 7.27
+						8.23 8.45 8.39 8.29 8.12
+						7.99 7.64 7.33 6.98 6.65
+				</Cross>
+			</Process>
+			<Process name="H2O + e -> H(beta)" electrons="0" threshold="20">
+				<Species>
+					<Specie name="H" state="beta"/>
+					<!-- I do not add the H2 here because it is from a emissions -->
+				</Species>
+				<legend>H(beta)</legend>
+				<Proc>H(beta)</Proc>
+				<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+				<Source type="adaptation">Itikawa</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+				<Notes>Estimated uncertainty. I consider the excited state to be at the same of the 121.6 emission cross section from itikawa</Notes>
+				<Recommended/>
+					<!--		<Extrapolated/> -->
+					<Excitation/>
+					<Egrid unit="eV">
+							20  22.5 25  27.5 30  
+							32.5 35  37.5 40  50  
+							60  70  80  90  100  
+							120 140 170 200 250 
+							300 350 400 450 500 
+							600 700 800 900 1000 
+					</Egrid>
+					<Cross unit="cm2" uncertainty="10%" fact="1e-16">
+							0.415 0.607 0.726 0.991 1.55
+							2.17 2.54 2.84 3.06 4.04
+							5.25 5.89 6.25 6.40 6.41
+							6.13 5.83 5.22 4.86 4.18
+							3.68 3.27 2.92 2.62 2.39
+							2.05 1.82 1.61 1.47 1.38
+					</Cross>
+				</Process>
+
+				<Process name="H2O + e -> O(3p3P)" electrons="0" threshold="20">
+					<Species>
+						<Specie name="O" state="3p3P"/>
+						<!-- I do not add the O(8446A) -->
+					</Species>
+					<legend>O(3p3P)</legend>
+					<Proc>O(3p3P)</Proc>
+					<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+					<Source type="adaptation">Itikawa</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+					<Notes>Estimated uncertainty. I consider the excited state to be at the same of the 121.6 emission cross section from itikawa</Notes>
+					<Recommended/>
+						<!--		<Extrapolated/> -->
+						<Excitation/>
+						<Egrid unit="eV">
+								20  22.5 25  27.5 30  
+								32.5 35  37.5 40  50  
+								60  70  80  90  100  
+								120 140 170 200 250 
+								300 350 400 450 500 
+								600 700 800 900 1000 
+						</Egrid>
+						<Cross unit="cm2" uncertainty="10%" fact="1e-16">
+								0.236 0.354 0.528 0.818 0.972
+								1.07 1.17 1.29 1.40 1.88
+								2.30 2.54 2.70 2.80 2.86
+								2.87 2.59 2.53 2.32 1.90
+								1.67 1.45 1.30 1.13 1.05
+								0.892 0.784 0.680 0.586 0.532
+						</Cross>
+					</Process>
+
+
+				<Process name="H2O + e -> O(5P)" electrons="0" threshold="20">
+					<Species>
+						<Specie name="O" state="5P"/>
+						<!--O(7774A) -->
+					</Species>
+					<legend>O(5P)</legend>
+					<Proc>O(5P)</Proc>
+					<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+					<Source type="adaptation">Itikawa</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+					<Notes>Estimated uncertainty. I consider the excited state to be at the same of the 121.6 emission cross section from itikawa</Notes>
+					<Recommended/>
+						<!--		<Extrapolated/> -->
+						<Excitation/>
+						<Egrid unit="eV">
+								20  22.5 25  27.5 30  
+								32.5 35  37.5 40  50  
+								60  70  80  90  100  
+								120 140 170 200 250 
+								300 350 400 450 500 
+								600 700 800 900 1000 
+						</Egrid>
+						<Cross unit="cm2" uncertainty="10%" fact="1e-16">
+								0.035 0.078 0.145 0.308 0.489
+								0.653 0.765 0.861 0.945 1.16
+								1.29 1.33 1.32 1.28 1.26
+								1.17 1.02 0.804 0.734 0.540
+								0.461 0.425 0.362 0.347 0.282
+								0.244 0.172 0.170 0.160 0.135
+						</Cross>
+					</Process>
+
+
+
+
+
+
+
+
+
+
+
+
+		<Process name="H2O + e -> OH(A)" electrons="0" threshold="10">
+			<Species>
+				<Specie name="H" state="X"/>
+				<Specie name="OH" state="A"/>
+			</Species>
+			<legend>OH(A)</legend>
+			<Proc>OH(A)</Proc>
+			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Itikawa</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Estimated uncertainty</Notes>
+			<Recommended/>
+				<!--		<Extrapolated/> -->
+				<Excitation/>
+				<Egrid unit="eV">
+						9   10   12.5 15   17.5 
+						20   22.5 25   27.5 30   
+						35   40   50   60   70   
+						80   90   100 120 140 
+						170 200 250 300 350 
+						400 450 500 600 700 
+						800 900 1000 
+				</Egrid>
+				<Cross unit="cm2" uncertainty="10%" fact="1e-18">
+						0 1.87 7.33 9.19 9.32
+						9.11 8.45 7.97 7.67 7.45
+						6.98 6.63 6.03 5.66 5.35
+						5.08 4.83 4.64 4.32 4.00
+						3.64 3.39 2.97 2.66 2.40
+						2.24 2.06 1.96 1.79 1.58
+						1.49 1.31 1.21
+
+				</Cross>
+		</Process>
+
+
+	<Process electrons="0" name="H2O+e -> OH(3064)" threshold="13.320">
+		<Species>
+			<Specie name="OH" state="3064"/>
+		</Species>
+		<Legend>OH(3064)</Legend>
+		<Proc>OH(3064)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics.</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>14.20 5.35 1.000 10.000 1. 0.0537 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+
+	<Process electrons="0" name="H2O+e -> OH(2800)" threshold="16.40">
+		<Species>
+			<Specie name="OH" state="2800"/>
+		</Species>
+		<Legend>OH(2800)</Legend>
+		<Proc>OH(2800)</Proc>
+		<Section>excitation</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics.</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Excitation/>
+		<Singhal/>
+		<params>16.4 2.35 1.000 11.000 1. 0.0058 0.0</params>
+		<AF>0.0</AF>
+		<Omega/>
+	</Process>
+</crs>
