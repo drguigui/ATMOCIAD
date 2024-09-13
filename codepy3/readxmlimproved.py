@@ -250,6 +250,52 @@ class NewShiraiN2:
 
 
 
+def PlotProtonElasticNode(vNode,bRfile,vIsEnergyTbl=False,vEtbl=[]):
+    """ Function to plot a proton node based on the N2 data of Kozelov and Ivanov 1992"""
+# 	// from Kozelov & Ivanov 1992, eq. (1), Table 1 for N2
+#	double a[5];
+#	a[0]=5.3746;
+#	a[1]=-0.20842;
+#	a[2]=0.40561E-2;
+#	a[3]=-0.33036E-2;
+#	a[4]=-0.67680E-3;
+    a = [5.3746,-0.20842,0.40561E-2,-0.33036E-2,-0.67680E-3]
+
+    ene=array(powerlaw(1E3,1E7,100))
+    if vIsEnergyTbl:
+        ene=array(vEtbl)
+
+    elastic = zeros((len(ene)))
+    for i in range(len(ene)):
+        kd = 0
+        if ene[i] < 2E5:
+            for j in range(5):
+                kd += a[j] * log(ene[i]*1E-3 )**j
+            elastic[i] = 1E-16 * 0.529 **2 * exp(kd)
+        else:
+        # mElasticCrscm2[i] = 1E-16*0.529*0.529*exp(8.658 -  log(mGrideV[i]*1E-3));
+            elastic[i] = 1E-16*0.529*0.529*exp(8.658 -  log(ene[i]*1E-3))
+
+    plot(ene,elastic,label="Elastic")
+
+def PlotHydrogenElasticNode(vNode,bRfile,vIsEnergyTbl=False,vEtbl=[]):
+    a = [4.183,-0.39348,0.65156E-2,0.30656E-2,0.59441E-3]
+    ene=array(powerlaw(1E3,1E7,100))
+    if vIsEnergyTbl:
+        ene=array(vEtbl)
+
+    elastic = zeros((len(ene)))
+    for i in range(len(ene)):
+        kd = 0
+        if ene[i] < 2E5:
+            for j in range(5):
+                kd += a[j]* log(ene[i] *1E-3 )**j
+            elastic[i] = 1E-16 * 0.529 **2 * exp(kd)
+        else:
+            elastic[i] = 1E-16*0.529*0.529*exp(6.147 - 0.7 *log(ene[i]*1E-3))
+
+
+    plot(ene,elastic,label="Elastic")
 
 
 def PlotShiraiNode(vNode,bRfile,vIsLambda,vIsEnergyTbl=False,vEtbl=[]):
@@ -567,7 +613,16 @@ def PlotFile(filename):
     for proc in processlist2:
         if(0 == len(proc.findall("Singhal"))):
             if(0==len(proc.findall("Shirai"))):
-                PlotStdNode(proc,bRfile,False,False,[], isphoton)
+                if(0==len(proc.findall("Zero"))):
+                    print("We are searching for proton or hydrogen function")
+                    if(0==len(proc.findall("use_proton_function"))):
+                       PlotProtonElasticNode(proc,bRfile,False)
+                    elif(0==len(proc.findall("use_hydrogen_function"))):
+                       PlotHydrogenElasticNode(proc,bRfile, False)
+                    else:
+                       PlotStdNode(proc,bRfile,False,False,[], isphoton)
+                else:
+                    print("We have a non-defined process")
             else:
                 PlotShiraiNode(proc,bRfile,False,False)
         else:
@@ -607,7 +662,16 @@ def PlotFile(filename):
         for proc in processlist2:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,True,False,[], isphoton)
+                    if(0==len(proc.findall("Zero"))):
+                        print("We are searching for proton or hydrogen function")
+                        if(0==len(proc.findall("use_proton_function"))):
+                           PlotProtonElasticNode(proc,bRfile,False)
+                        elif(0==len(proc.findall("use_hydrogen_function"))):
+                           PlotHydrogenElasticNode(proc,bRfile, False)
+                        else:
+                           PlotStdNode(proc,bRfile,True,False,[], isphoton)
+                    else:
+                          print("We have a non-defined process")
                 else:
                     PlotShiraiNode(proc,bRfile,True)
         for proc in processlist3:
@@ -644,7 +708,16 @@ def PlotFile(filename):
         for proc in processlist2:
             if(0 == len(proc.findall("Singhal"))):
                 if(0==len(proc.findall("Shirai"))):
-                    PlotStdNode(proc,bRfile,False,True,Etbl, isphoton)
+                    if(0==len(proc.findall("Zero"))):
+                        print("We are searching for proton or hydrogen function")
+                        if(0==len(proc.findall("use_proton_function"))):
+                           PlotProtonElasticNode(proc,bRfile, False)#True, Etbl)
+                        elif(0==len(proc.findall("use_hydrogen_function"))):
+                           PlotHydrogenElasticNode(proc,bRfile, False)#True, Etbl)
+                        else:
+                           PlotStdNode(proc,bRfile,False,True,Etbl, isphoton)
+                    else:
+                        print("We have a non-defined process")
                 else:
                     PlotShiraiNode(proc,bRfile,False,True,Etbl)
             else:

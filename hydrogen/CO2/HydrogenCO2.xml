@@ -3,6 +3,15 @@
 	<Collider>H</Collider>
 	<RecommendedFile/>
 	<title>Hydrogen cross section for CO$_2$</title>
+
+	<Emin>1E3</Emin>
+	<Emax>1E7</Emax>
+	<Cmax>1E-14</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CO2_H_recommended.pdf</plotname>
+	<explotname>seff_CO2_H_recommendedextr.pdf</explotname>
+	<figsize>3</figsize>
+
 	<CO2>
 		<!-- TODO say it is the same as P -->
 		<TotalCrsProton/>

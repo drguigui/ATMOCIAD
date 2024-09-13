@@ -251,10 +251,10 @@
 				<Specie name="He+" state="X"/>
 			</Species>
 			<Proc>He$^+$</Proc>
-			<legend>Wuilleumier 1995</legend>
+			<legend>Bizau and Wuilleumier 1995</legend>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="measurements">Wuilleumier 1995</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Wuilleumier et al. 1995 as reported in \cite{Yan1998}</Notes>
+			<Source type="measurements">Bizau 1995</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Bizau 1995 as reported in \cite{Yan1998}. </Notes>
 			<Egrid unit="eV">
 			     300.000000	    280.000000	    270.000000	    260.000000	    255.000000
 			     250.000000	    245.000000	    240.000000	    235.000000	    230.000000

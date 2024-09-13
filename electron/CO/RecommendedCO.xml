@@ -7,14 +7,14 @@
 	<Emin>0.1</Emin>
 	<Emax>120000</Emax>
 	<Cmax>1E-14</Cmax>
-	<Cmin>1E-21</Cmin>
+	<Cmin>1E-20</Cmin>
 	<plotname>seff_CO_e_recommended.pdf</plotname>
 	<explotname>seff_CO_e_recommendedex.pdf</explotname>
-	<figsize>3</figsize>
+	<figsize>2</figsize>
 
 	<CO>
 		<ElasticCrs>
-			<legend>Elastic Kanik et al. 93</legend>
+			<legend>Elastic</legend>
 			<Source type="review">Kanik 1993</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> </Notes>
 			<Recommended/>

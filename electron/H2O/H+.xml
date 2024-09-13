@@ -1,0 +1,115 @@
+<crs>
+<Name>H2O</Name>
+<Collider>e</Collider>
+<title> H2O + e -> Ionization</title>
+<Emin>0.01</Emin>
+<Emax>120000</Emax>
+<Cmax>3E-15</Cmax>
+<Cmin>1E-23</Cmin>
+<plotname>seff_H2O_e_Hp.pdf</plotname>
+<explotname>seff_H2O_e_Hpextr.pdf</explotname>
+<figsize>3</figsize>
+
+		<Process name="H2O + e -> OH+" electrons="1" threshold="17.5">
+			<Species>
+				<Specie name="OH+" state="X"/>
+				<Specie name="H" state="X"/>
+			</Species>
+			<legend>OH+</legend>
+			<Proc>OH+</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Itikawa</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Estimated uncertainty</Notes>
+			<Recommended/>
+				<!--		<Extrapolated/> -->
+			<Ionization/>
+			<Egrid unit="eV">
+					13.5   15   17.5 20   22.5 
+					25   30   35   40   45   
+					50   60   70   80   90   
+					100   110   125   150   175   
+					200   250   300   400   500   
+					600   700   800   900   1000   
+			</Egrid>
+			<Cross unit="cm2" uncertainty="10%" fact="1e-16">
+					0.00   0.00   0.0013 0.0145 0.0500 
+					0.0855 0.160  0.222  0.264  0.300  
+					0.329  0.364  0.389  0.409  0.412  
+					0.418  0.415  0.412  0.393  0.381  
+					0.363  0.334  0.311  0.266  0.230  
+					0.203  0.185  0.169  0.156  0.143  
+			</Cross>
+		</Process>
+
+
+		<Process name="H2O + e -> H+" electrons="1" threshold="20">
+			<Species>
+				<Specie name="H+" state="X"/>
+				<Specie name="OH" state="X"/>
+			</Species>
+			<legend>H+</legend>
+			<Proc>H+</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="adaptation">Itikawa</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Estimated uncertainty</Notes>
+			<Recommended/>
+				<!--		<Extrapolated/> -->
+			<Ionization/>
+			<Egrid unit="eV">
+					13.5   15   17.5 20   22.5 
+					25   30   35   40   45   
+					50   60   70   80   90   
+					100   110   125   150   175   
+					200   250   300   400   500   
+					600   700   800   900   1000   
+			</Egrid>
+			<Cross unit="cm2" uncertainty="10%" fact="1e-16">
+					0 0 0 0.0024 0.0091
+					0.0207 0.0433 0.0759 0.110 0.145
+					0.178 0.235 0.279 0.317 0.343
+					0.360 0.370 0.375 0.371 0.366
+					0.351 0.316 0.284 0.237 0.198
+					0.172 0.149 0.135 0.120 0.109
+			</Cross>
+		</Process>
+
+
+
+
+	<Process electrons="1" name="H2O+e -> OH+" threshold="20.000">
+		<Species>
+			<Specie name="OH+" state="X"/>
+			<Specie name="H" state="X"/>
+		</Species>
+		<Legend>OH+</Legend>
+		<Proc>OH+</Proc>
+		<Section>ionization</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. OH+</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Ionization/>
+		<Singhal/>
+		<params>20.000 1.134 94.000 1.000 0.0  0.0  11.40 0.0 -2.370 0.0 0.0</params>
+	</Process>
+	<!-- We are going to process the ionization
+		H+  20.000 1.550 147.000 1.000 0.0   11.40 -2.370 0.0 0.0
+	-->
+	<Process electrons="1" name="H2O+e -> H+" threshold="20.000">
+		<Species>
+			<Specie name="H+" state="X"/>
+			<Specie name="OH" state="X"/>
+		</Species>
+		<Legend>H+</Legend>
+		<Proc>H+</Proc>
+		<Section>ionization</Section>
+		<Source type="review">Singhal</Source>
+		<Notes>from the book Elements of Space Physics. H+</Notes>
+		<uncertainty>30%</uncertainty>
+		<EstimatedUncertainty/>
+		<Ionization/>
+		<Singhal/>
+		<params>20.000 1.550 147.000 1.000 -18.000 0.0   11.40 0.0 -2.370 0.0 0.0</params>
+	</Process>
+
+</crs>

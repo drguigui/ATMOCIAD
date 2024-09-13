@@ -8,8 +8,8 @@
 	<Emax>120000</Emax>
 	<Cmax>1E-14</Cmax>
 	<Cmin>1E-21</Cmin>
-	<plotname>seff_CO_e_recommended.pdf</plotname>
-	<explotname>seff_CO_e_recommendedex.pdf</explotname>
+	<plotname>seff_CO_e_singhal.pdf</plotname>
+	<explotname>seff_CO_e_singhal.pdf</explotname>
 	<figsize>3</figsize>
 	
 	<CO>

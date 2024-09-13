@@ -3,6 +3,15 @@
 	<Collider>p</Collider>
 	<RecommendedFile/>
 	<title>Proton cross section for CO$_2$</title>
+	<Emin>1E3</Emin>
+	<Emax>1E7</Emax>
+	<Cmax>1E-14</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CO2_p_recommended.pdf</plotname>
+	<explotname>seff_CO2_p_recommendedextr.pdf</explotname>
+	<figsize>3</figsize>
+
+
 	<CO2>
 		<!-- TODO ADD -->
 		<TotalCrsProton/>
@@ -22,7 +31,7 @@
 			<Proc>CO2*</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="adaptation">Avakyan Gronoff Basu</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="adaptation">Avakyan 1998 Gronoff Basu 1987</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> The excitation cross section for N2 is 0.1 times the ionization cross section. We took the same factor here for CO2 </Notes>
 			
 			<!-- I need to check the uncertainty -->
@@ -56,7 +65,7 @@
 			<Proc>CO2+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="unknown"></Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">basu 1987</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> Review </Notes>
 			
 			<!-- I need to check the uncertainty -->
@@ -89,7 +98,7 @@
 			<Proc>p->H/CO2</Proc>
 			<Section>exchange</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="review">Avakyan</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> Review </Notes>
 			<!-- I need to check the uncertainty -->
 			<EstimatedUncertainy/>

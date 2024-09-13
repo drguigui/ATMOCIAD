@@ -8,9 +8,9 @@
 	<Cmin>1E-19</Cmin>
 	<plotname>seff_CH4_e_elastic.pdf</plotname>
 	<ElasticCrs>
-		<legend>Elastic CH4 Dans la bdd</legend>
+		<legend>Elastic CH4 From Lilensten</legend>
 
-		<Source type="unknown">? Rees?</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Source type="unknown">? Rees  + Lilensten</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 		<Notes>Unknown origin </Notes>
 		<Egrid unit="eV">
 			1.00E-10   1.000E-02   1.500E-02   2.000E-02   3.000E-02
@@ -65,7 +65,7 @@
 		<Source type="review">Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 		<Extrapolated/>
 		<Recommended/>
-		<Notes>Review of Shirai. Analytic functions. </Notes>
+		<Notes>Review of Shirai 2002. Analytic functions. </Notes>
 		<uncertainty>20</uncertainty>
 		<Emin> 0.2 </Emin>
 		<Emax> 1000.0 </Emax>

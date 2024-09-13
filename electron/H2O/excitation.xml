@@ -7,7 +7,7 @@
 <Cmax>3E-15</Cmax>
 <Cmin>1E-23</Cmin>
 <plotname>seff_H2O_e_excitations.pdf</plotname>
-<explotname>seff_H2O_e_excitations.pdf</explotname>
+<explotname>seff_H2O_e_excitationsextr.pdf</explotname>
 <figsize>3</figsize>
 	<Process electrons="0" name="H2O+e -> H2O(Triplet12.5)" threshold="12.500">
 		<Species>

@@ -1,15 +1,28 @@
 <CO2>
+	<Name>CO2</Name>
+	<Collider>H</Collider>
+	<title>CO$_2$ charge-exchange with H</title>
+
+	<Emin>1E3</Emin>
+	<Emax>1E7</Emax>
+	<Cmax>1E-14</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CO2_H_CX.pdf</plotname>
+	<explotname>seff_CO2_H_CXextr.pdf</explotname>
+	<figsize>3</figsize>
+
+
 <Process name="CO2+H->CO2+ + H + e" electrons="1" threshold="17">
 			<Species>
 			</Species>
-			<legend>H->p / CO2 / charge exchange (Avakyan)</legend>
+			<legend>H->p / CO2 / charge exchange (Avakyan 1998)</legend>
 			<Proc>H->p/CO2</Proc>
 			<Section>exchange</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
 			<EstimatedUncertainy/>
 			<Exchange/>
-			<Source type="review">Avakyan</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
+			<Source type="review">Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review from Avakyan 1998</Notes>
 			<!-- I need to check the uncertainty -->
 			<EstimatedUncertainy/>
 			<Ionization/>
@@ -31,8 +44,8 @@
 			<Proc>H->p/CO2</Proc>
 			<Section>exchange</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="adaptation">Green and Peterson 68 - Avakyan - Gronoff</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> The similarity between the charge exchange or CO2 and for N2 as seen in the Avakyan and Gree and Peterson 68 let to the use of the N2 cross sections for the CO2. (Because it extends further in the energy grid) </Notes>
+			<Source type="adaptation">Green 1968 - Avakyan - Gronoff</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> The similarity between the charge exchange or CO2 and for N2 as seen in the Avakyan 1998 and Green and Peterson 68 \cite{Green1968} let to the use of the N2 cross sections for the CO2. (Because it extends further in the energy grid) </Notes>
 			<!-- I need to check the uncertainty -->
 			<EstimatedUncertainy/>
 			<Exchange/>

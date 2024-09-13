@@ -707,8 +707,8 @@
 		    <Specie name="Ar" state="Ar(4s_1/2)" />
 		    <!-- This is also Ar(1P1) -->
             </Species>
-            <Legend>4s_1/2</Legend>
-            <Proc>Ar(4s_1/2)</Proc>
+            <Legend>4s1/2</Legend>
+            <Proc>Ar(4s1/2)</Proc>
             <Section>excitation</Section>
             <Source type="review">Singhal</Source>
             <Notes>from the book Elements of Space Physics. This is also Ar(1P1), see Dutuit 1974  It emits at 104.8 nm</Notes>
@@ -743,8 +743,8 @@
             <Species>
                 <Specie name="Ar" state="Ar(5s_3/2)"/>
             </Species>
-            <Legend>5s_3/2</Legend>
-            <Proc>Ar(5s_3/2)</Proc>
+            <Legend>5s3/2</Legend>
+            <Proc>Ar(5s3/2)</Proc>
             <Section>excitation</Section>
             <Source type="review">Singhal</Source>
             <Notes>from the book Elements of Space Physics</Notes>
@@ -761,8 +761,8 @@
             <Species>
             <Specie name="Ar" state="Ar(3d_3/2)"/>
             </Species>
-            <Legend>3d_3/2</Legend>
-            <Proc>Ar(3d_3/2)</Proc>
+            <Legend>3d3/2</Legend>
+            <Proc>Ar(3d3/2)</Proc>
             <Section>excitation</Section>
             <Source type="review">Singhal</Source>
             <Notes>from the book Elements of Space Physics</Notes>
@@ -779,8 +779,8 @@
             <Species>
             <Specie name="Ar" state="Ar(5s_prime_1/2)"/>
             </Species>
-            <Legend>5s_prime_1/2</Legend>
-            <Proc>Ar(5s_prime_1/2)</Proc>
+            <Legend>5sprime1/2</Legend>
+            <Proc>Ar(5sprime1/2)</Proc>
             <Section>excitation</Section>
             <Source type="review">Singhal</Source>
             <Notes>from the book Elements of Space Physics</Notes>
@@ -797,8 +797,8 @@
             <Species>
             <Specie name="Ar" state="Ar(3d_prime_3/2)"/>
             </Species>
-            <Legend>3d_prime_3/2</Legend>
-            <Proc>Ar(3d_prime_3/2)</Proc>
+            <Legend>3dprime3/2</Legend>
+            <Proc>Ar(3dprime3/2)</Proc>
             <Section>excitation</Section>
             <Source type="review">Singhal</Source>
             <Notes>from the book Elements of Space Physics</Notes>
@@ -924,8 +924,8 @@
             <Species>
                 <Specie name="Ar+" state="X"/>
             </Species>
-            <Legend>M_Shell</Legend>
-            <Proc>M_Shell</Proc>
+            <Legend>M Shell</Legend>
+            <Proc>M Shell</Proc>
             <Section>ionization</Section>
             <Source type="review">Singhal + Lilensten</Source>
             <Notes>from the book Elements of Space Physics, adapted to the intensity in Bretagne et al</Notes>

@@ -18,7 +18,7 @@
 			<Source type="review">Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 			<Extrapolated/>
 			<Recommended/>
-			<Notes>Review of Shirai. Analytic functions. </Notes>
+			<Notes>Review of Shirai 2002. Analytic functions. </Notes>
 			<uncertainty>20</uncertainty>
 			<Emin> 0.2 </Emin>
 			<Emax> 1000.0 </Emax>
@@ -306,7 +306,7 @@
 			<Proc>CH4+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+			<Notes>The data of Straub 2004 have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -345,7 +345,7 @@
 			<Proc>CH3+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+			<Notes>The data of Straub 2004 have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -382,7 +382,7 @@
 			<Proc>CH2+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+			<Notes>The data of Straub 2004 have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -421,7 +421,7 @@
 			<Proc>CH+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+			<Notes>The data of Straub 2004 have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -466,7 +466,7 @@
 			<Proc>C+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+			<Notes>The data of Straub 2004 have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -501,7 +501,7 @@
 			<Proc>H2+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+			<Notes>The data of Straub 2004 have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -545,7 +545,7 @@
 			<Proc>H+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+			<Notes>The data of Straub 2004 have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -586,7 +586,7 @@
 			<legend>CH4++(Auger)</legend>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Fremont 2006 + Shirai 2002+Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2002+Straub</Notes>
+			<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2002+Straub 2004</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>

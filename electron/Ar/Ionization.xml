@@ -452,8 +452,8 @@
             <Species>
                 <Specie name="Ar+" state="X"/>
             </Species>
-            <Legend>M_Shellv2</Legend>
-            <Proc>M_Shellv2</Proc>
+            <Legend>M Shellv2</Legend>
+            <Proc>M Shellv2</Proc>
             <Section>ionization</Section>
             <Source type="review">Singhal</Source>
             <Notes>from the book Elements of Space Physics</Notes>

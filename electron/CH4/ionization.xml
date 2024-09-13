@@ -8,10 +8,10 @@
 	<Cmin>1E-19</Cmin>
 	<plotname>seff_CH4_e_CH4p.pdf</plotname>
 	<Process name="CH4+e->CH4+" electrons="1" threshold="12.10">
-		<legend>CH4+ Dans la BDD</legend>	
+		<legend>CH4+ from Lilensten</legend>	
 		<Proc>CH4+</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="unknown">? Rees?</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Source type="unknown">? Rees + Lilensten</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 		<Notes>Unknown origin </Notes>
 		<Species>
 			<Specie name="CH4+" state="X"/>
@@ -42,7 +42,7 @@
 		<Proc>CH4+</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="measurement">Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-		<Notes>Data on website </Notes>
+		<Notes>Data from Straub 2004 </Notes>
 		<Egrid unit="eV">
 			1.500000e+01	  1.750000e+01	  2.000000e+01	  2.250000e+01	  2.500000e+01
 			3.000000e+01	  3.500000e+01	  4.000000e+01	  4.500000e+01	  5.000000e+01
@@ -91,7 +91,7 @@
 		<Proc>CH4+</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+		<Notes>The data of Straub 2004 have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
 		<EstimatedUncertainty/>
 		<Recommended/>
 		<Extrapolated/>

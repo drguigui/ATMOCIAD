@@ -1,4 +1,17 @@
 <CO2>
+	<Name>CO2</Name>
+	<Collider>H</Collider>
+	<title>CO$_2$ ionization by H impact</title>
+
+	<Emin>1E3</Emin>
+	<Emax>1E7</Emax>
+	<Cmax>1E-14</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_CO2_H_Hp.pdf</plotname>
+	<explotname>seff_CO2_H_Hpextr.pdf</explotname>
+	<figsize>3</figsize>
+
+
 		<Process name="CO2+H->CO2+ + H + e" electrons="1" threshold="17">
 			<Species>
 				<Specie name="CO2+" state="X"/>
@@ -8,8 +21,8 @@
 			<Proc>CO2+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="review">Avakyan</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
+			<Source type="review">Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes> Review Avakyan 1998</Notes>
 			
 			<!-- I need to check the uncertainty -->
 			<EstimatedUncertainy/>
@@ -36,7 +49,7 @@
 			<Proc>CO2+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="unknown">Basu 87 - Avakyan - Gronoff</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="unknown">Basu 1987 - Avakyan - Gronoff</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> The ionization cross section of Avakyan for CO2 has been set as a reference to rescale the ionization cross section of N2  </Notes>
 			
 			<!-- I need to check the uncertainty -->
@@ -71,7 +84,7 @@
 			<Proc>CO2+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="unknown">Haider 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Haider 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> The ionization cross section of Haider et al. 2002 </Notes>
 			
 			<!-- I need to check the uncertainty -->

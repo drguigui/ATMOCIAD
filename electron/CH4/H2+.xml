@@ -44,7 +44,7 @@
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="review">Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 		<Extrapolated/>
-		<Notes>Review of Shirai, based on Straub. Analytic functions. </Notes>
+		<Notes>Review of Shirai 2002, based on Straub. Analytic functions. </Notes>
 		<uncertainty>20</uncertainty>
 		<Species>
 			<Specie name="" state=""/>
@@ -63,7 +63,7 @@
 		<Proc>H2+</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="adaptation">Straub 2004 + Shirai 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>The data of Straub have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
+		<Notes>The data of Straub 2004 have been extrapolated with Shirai 2002, hence the estimated uncertainty</Notes>
 		<EstimatedUncertainty/>
 		<Recommended/>
 		<Extrapolated/>

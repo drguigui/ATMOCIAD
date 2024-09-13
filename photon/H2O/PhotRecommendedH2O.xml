@@ -3,10 +3,10 @@
 	<Collider>ph</Collider>
 	<RecommendedFile/>
 	<title> H$_2$O  + $\lambda$</title>
-	<Emin>5</Emin>
+	<Emin>6</Emin>
 	<Emax>1E5</Emax>
 	<Cmax>1E-15</Cmax>
-	<Cmin>1E-28</Cmin>
+	<Cmin>1E-23</Cmin>
 	<plotname>seff_H2O_ph_recommended.pdf</plotname>
 	<lambplotname>seff_H2O_ph_recommended_lambda.pdf</lambplotname>
 	<explotname>seff_H2O_ph_recommendedex.pdf</explotname>

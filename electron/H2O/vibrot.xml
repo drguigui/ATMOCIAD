@@ -7,7 +7,7 @@
 	<Cmax>3E-15</Cmax>
 	<Cmin>1E-23</Cmin>
 	<plotname>seff_H2O_e_vib.pdf</plotname>
-	<explotname>seff_H2O_e_vib.pdf</explotname>
+	<explotname>seff_H2O_e_vibex.pdf</explotname>
 		<Process name="H2O+e -> H2O(rot 0-1)" electrons="0" threshold="0.005">
 			<Species>
 				<Specie name="H2O" state="rot(0-1)"/>

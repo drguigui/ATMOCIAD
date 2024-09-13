@@ -2,6 +2,17 @@
 	<Name>O</Name>
 	<Collider>H</Collider>
 	<RecommendedFile/>
+	<title>Hydrogen cross section for O</title>
+
+	<Emin>1E3</Emin>
+	<Emax>1E7</Emax>
+	<Cmax>1E-14</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_O_H_recommended.pdf</plotname>
+	<explotname>seff_O_H_recommendedextr.pdf</explotname>
+	<figsize>3</figsize>
+
+
 	<O>
 		<!-- TODO say it is the same as P -->
 		<TotalCrsProton/>
@@ -21,7 +32,7 @@
 			<Proc>O*</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="unknown">Basu 87 - crsprot.dat</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Basu 1987</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> Review </Notes>
 			
 			<!-- I need to check the uncertainty -->
@@ -57,7 +68,7 @@
 			<Proc>O+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="unknown">Basu 87 - crsprot.dat</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Basu 1987</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> Review </Notes>
 			
 			<!-- I need to check the uncertainty -->
@@ -97,7 +108,7 @@
 			<Proc>H->p/O</Proc>
 			<Section>exchange</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
-			<Source type="unknown">Green and Peterson 68 - crsprot.dat</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Green and Peterson 1968</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> Review </Notes>
 			<!-- I need to check the uncertainty -->
 			<EstimatedUncertainy/>

@@ -323,7 +323,7 @@ The electron cross sections from \citet{Shirai2001,Shirai2002,Tabata2006} can al
 \paragraph{/crs/species/Process/Emin} The minimum energy where it is defined (For non-Shirai system, it is the energy of the first non-zero data point. It can be automatically determined there. )
 \paragraph{/crs/species/Process/Emax} The maximum energy where it is defined (For non-Shirai system, it is the energy of the last non-zero data point. When the system is extrapolated, it could be a point defined for having a good shape, or the point where the extrapolation is expected to be valid It can be automatically determined there.).
 .
-\paragraph{/crs/species/Process/Equation} Gives the type of the equation, and the article id (and the number in the article, but not used).
+\paragraph{/crs/species/Process/Equation} Gives the type of the equation, and the article id (and the number in the article, but not used). Since the equations are dependent upon the species and the number, we are not reproducing them here. However, the example codes for plotting the cross-sections show an implementation of the equations. 
 
 \paragraph{/crs/species/Process/params} Gives the parameters for the cross section.
 
@@ -343,6 +343,115 @@ The electron cross sections from \citet{Shirai2001,Shirai2002,Tabata2006} can al
 	</params>
 </Process>
 \end{verbatim}
+
+
+The equation types for the Shirai cross sections are:
+
+\subsubsection{Singhal cross sections}
+The electron cross sections from \citet{Singhal2009} can also be included. The interface is the same as the Shirai cross sections, but the markup is different.
+
+\paragraph{/crs/species/Process/Singhal} To define that we are using the Singhal cross sections. 
+\paragraph{/crs/species/Process/params} Gives the parameters for the cross section.
+\paragraph{/crs/species/Process/AF} Gives the autoionization factor for the process.
+\paragraph{/crs/species/Process/Omega} Set up if the equation for this cross section is of Omega type
+\paragraph{/crs/species/Process/Ctype} Set up if the equation for this cross section is of C type
+
+\paragraph{Implementation of the cross-sections}
+There are 3 types of cross-sections for Shirai: first the ionization cross-sections type, then the excitation cross-sections types C and Omega. 
+Once you get the parameters from the database, from parray[0] to parray[n], and the energy E for the computation, you can go as follows:
+
+parray[0] is the threshold, so any E lower than parray[0] will return 0.0.
+We define
+\begin{equation}
+    q0=6.513E-14
+\end{equation}
+This allows to return a cross-section in cm$^2$.
+
+For a Omega type cross-section, the cross-section is computed as:
+\begin{eqnarray}
+	ratio &=& \frac{parray[0]}{E} \\
+	Term1 &=& \frac{q0 \times parray[5]}{parray[0]^2} \\
+	Term2 &=& (1 - (ratio ^ {parray[1]})) ^{parray[2]}\\
+	Term3 &=& ratio^{parray[4]}\\
+	CrossSection &=& Term1 \times Term2 \times Term3
+\end{eqnarray}
+For a C type cross-section, the cross-section is computed as (log is the natural logarithm):
+\begin{eqnarray}
+	ratio &=& \frac{parray[0]}{E} \\
+	Term1 &=& \frac{q0 \times parray[5]}{E \times parray[0])} \\
+	Term2 &=& (1 - (ratio ^ {parray[1]})) ^{parray[2]}\\
+	Term3 &=& \log( e + 4 * parray[4] / ratio)\\
+	CrossSection &=& Term1 \times Term2 \times Term3
+\end{eqnarray}
+For the ionization cross-section, the cross-section is computed as:
+%    Sigma_0 = 1E-16
+%            A_E = (parray[1] / (E + parray[2])) * log((E / parray[3]) + parray[4]+(parray[5] / E))
+%            Gamma = (parray[6] * E) / (E + parray[7])
+%            T_0 = parray[8] - (parray[9] / (E + parray[10]))
+%            T_m = 0.5*(E - parray[0])
+%            Term1 = A_E
+%            Term2 = Gamma
+%            Term3 = arctan((T_m-T_0) / Gamma) + arctan(T_0 / Gamma)
+%            Cross = Sigma_0 * Term1 * Term2 * Term3
+\begin{eqnarray}
+    \sigma_0 &=& 1E-16 \\
+    A_E &=& \frac{parray[1]}{E + parray[2]} \times \log\left(\frac{E}{parray[3]} + parray[4] + \frac{parray[5]}{E}\right)\\
+    \Gamma &=& \frac{parray[6] \times E}{E + parray[7]}\\
+    T_0 &=& parray[8] - \frac{parray[9]}{E + parray[10]}\\
+    T_m &=& 0.5 \times (E - parray[0])\\
+    Term1 &=& A_E\\
+    Term2 &=& \Gamma\\
+    Term3 &=& \arctan\left(\frac{T_m-T_0}{\Gamma}\right) + \arctan\left(\frac{T_0}{\Gamma}\right)\\
+    CrossSection &=& \sigma_0 \times Term1 \times Term2 \times Term3    
+\end{eqnarray}
+
+    
+
+
+
+
+\paragraph{Example of implementation in the database}
+\begin{verbatim}
+	<Process electrons="0" name="H2O+e -> H2O(A2v2)" threshold="0.391">
+	    <Species>
+		<Specie name="H2O" state="A2v2"/>
+	    </Species>
+	    <Legend>H2O(A2v2)</Legend>
+	    <Proc>H2O(A2v2)</Proc>
+	    <Section>excitation</Section>
+	    <Source type="review">Singhal</Source>
+	    <Notes>from the book Elements of Space Physics</Notes>
+	    <uncertainty>30%</uncertainty>
+	    <EstimatedUncertainty/>
+	    <Excitation/>
+	    <Singhal/>
+	    <params>0.391 1.000 3.000 0.391 6.000 0.000043 0.0</params>
+	    <AF>0.0</AF>
+	    <Omega/>
+    	</Process>
+	
+		<Process electrons="0" name="H2+e -> C1Pu" threshold="12.465">
+			<Species>
+				<Specie name="H2" state="C1Pu"/>
+			</Species>
+			<Legend>C1Pu</Legend>
+			<Proc>H2(C1Pu)</Proc>
+			<Section>excitation</Section>
+			<Source type="review">Singhal</Source>
+			<Notes>from the book Elements of Space Physics</Notes>
+			<uncertainty>30%</uncertainty>
+			<EstimatedUncertainty/>
+			<Excitation/>
+			<Singhal/>
+			<params>12.465 0.85 1.464 12.465 0.300 0.392300</params>
+			<AF>0</AF>
+			<Ctype/>
+		</Process>
+		
+\end{verbatim}
+
+
+
 \subsection{The Electron cross section file (extends the standard cross section!)}
 
 The electron cross section is basically the same file as the photoionization cross section\footnote{Heritage in C++! A fantastic concept!} .

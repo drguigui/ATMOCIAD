@@ -12,8 +12,8 @@
             <Species>
                 <Specie name="Ar" state="Ar(4s_3/2)"/>
             </Species>
-            <Legend>4s_3/2 3P1</Legend>
-            <Proc>Ar(4s_3/2) 3P1</Proc>
+            <Legend>4s3/2 3P1</Legend>
+            <Proc>Ar(4s3/2) 3P1</Proc>
             <Section>excitation</Section>
             <Source type="review">Singhal</Source>
             <Notes>from the book Elements of Space Physics</Notes>
@@ -135,8 +135,8 @@
             <Species>
                 <Specie name="Ar" state="Ar(4s_1/2)"/>
             </Species>
-            <Legend>4s_1/2 1P1</Legend>
-            <Proc>Ar(4s_1/2) 1P1</Proc>
+            <Legend>4s1/2 1P1</Legend>
+            <Proc>Ar(4s1/2) 1P1</Proc>
             <Section>excitation</Section>
             <Source type="review">Singhal</Source>
             <Notes>from the book Elements of Space Physics</Notes>
