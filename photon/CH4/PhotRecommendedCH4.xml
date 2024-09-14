@@ -565,11 +565,11 @@
 			</Cross>
 		</Process>
 
-		<Process name="CH4 + ph -> .74 x CH4++(X-C-KSHELL) 0.26 x CH4+(X) 0.26 x Fluo-auger(X-C) "  electrons="1" threshold="282">
+		<Process name="CH4 + ph -> .9974 x CH4++(X-C-KSHELL) 0.0026 x CH4+(X) 0.0026 x Fluo-auger(X-C) "  electrons="1" threshold="282">
 			<Species>
-				<Specie name="CH4++" state="X-C-KSHELL" number="0.74"/>
-				<Specie name="CH4+" state="X" number="0.26"/>
-				<Specie name="Fluo-auger" state="X-C" number="0.26"/>
+				<Specie name="CH4++" state="X-C-KSHELL" number="0.9974"/>
+				<Specie name="CH4+" state="X" number="0.0026"/>
+				<Specie name="Fluo-auger" state="X-C" number="0.0026"/>
 			</Species>
 			<legend>CH$_4$$^{2+}$,CH$_4$$^{+}$ + e + $\lambda$ Auger (C)</legend>
 			<Proc>CH$_4$$^{2+}$,CH$_4$$^{+}$ + e + $\lambda$ Auger (C)</Proc>
@@ -577,7 +577,7 @@
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Torr box</Notes>
 			<Recommended/>
-			<Auger energy="229" fact=".74"/>
+			<Auger energy="229" fact=".9974"/>
 			<Emin>340</Emin>
 			<Emax>8260</Emax>
 			<texnote title="CH$_4$ Auger, Avakyan (1998)">K-shell hotoionization of CH$_4$ from \cite{Avakyan1998}. Claimed uncertainty of 20\%. The rate for the double ionization (including the following dissociation, not studied) is 74\%, letting 26\% of Auger fluorescence. The energy of the Auger electron (ejected in the double ionization cases) is 229 eV. The reported values in \cite{Avakyan1998} were in nm, following the Torr boxes, and were adapted in eV for the database.  </texnote>

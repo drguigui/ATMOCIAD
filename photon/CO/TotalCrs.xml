@@ -13,7 +13,7 @@
 	<CO>
 		<TotalCrs>
 			<legend>Total CO (Avakyan 1998)</legend>
-			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr nm -> eV, Avakyan (1998)</Notes>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -46,7 +46,7 @@
 		</TotalCrs>
 		<TotalCrs>
 			<legend>Total CO (BDD)</legend>
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">BDD + Witasse 2002 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr ? origin, Avakyan (1998)?  \cite{Witasse2002}</Notes>
 			<Egrid unit="eV">
 				10 11
@@ -230,8 +230,8 @@
 
 		<TotalCrs>
 			<legend>Total CO Recommended</legend>
-			<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, PHIDRATES + Avakyan (1998) for energies E > 110 eV </Notes>
+			<Source type="adaptation"> PHIDRATES + Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, PHIDRATES + Avakyan (1998) for energies E > 110 eV with the aim to add Auger process</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">

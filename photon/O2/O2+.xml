@@ -16,7 +16,7 @@
 			<legend>O$_2$$^+$ + e (Avakyan 1998)</legend>
 			<Proc>O$_2$$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr nm -> eV</Notes>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -56,8 +56,8 @@
 			<legend>O$_2$$^+$ + e (BDD)</legend>
 			<Proc>O$_2$$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr ? origin, avakyan? </Notes>
+			<Source type="review">BDD + Lummerzheim 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted Torr ? origin, avakyan. </Notes>
 			<Egrid unit="eV">
 				12.015021	     12.087529	     12.103222	     12.690037	     12.724681
 				13.413558	     14.181130	     15.042245	     15.706927	     16.014699
@@ -88,7 +88,7 @@
 			<Proc>O$_2$$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website</Notes>
+			<Notes>Adapted nm -> eV, former website of PHIDRATES </Notes>
 			<Egrid unit="eV">
 				5.115493	      5.166008	      5.275923	      5.390617	      5.510409
 				5.635645	      5.661379	      5.687349	      5.713558	      5.740009
@@ -1134,7 +1134,7 @@
 			<legend>O$_2$$^+$ + e Recommended</legend>
 			<Proc>O$_2$$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation"> AMOP+BDD+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation"> AMOP + BDD + Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website</Notes>
 			<Egrid unit="eV">
 				12.027959	     12.044317	     12.065415	     12.087764	     12.503449

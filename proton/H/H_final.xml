@@ -1,1 +1,32 @@
-<crs><Name>H</Name><Collider>p</Collider><RecommendedFile /><H><item /><ElasticCrs><use_proton_function /></ElasticCrs><Process electrons="1" name="H+p-&gt;H+ + p + e" threshold="13.6"><Species><Specie name="H+" state="X" /></Species><Legend>H+ / proton</Legend><Proc>H+</Proc><Section>ionization</Section><Source type="review">Avakyan</Source><Notes>Review</Notes><EstimatedUncertainty /><Excitation /><Egrid unit="eV"> 0.5 0.7 1.0 1.5 2.0 3.0 4.0 5.0 6.0 7.0 10.0 15.0 20.0 30.0 40.0 50.0 60.0 70.0 80.0 100.0 150.0 200.0 300.0 400.0 500.0 700.0 1000.0 1500.0 2000.0 3000.0 4000.0 5000.0 </Egrid><Cross fact="1E-17" uncertainty="15%" unit="cm2"> 0.014 0.021 0.033 0.055 0.078 0.129 0.184 0.242 0.303 0.364 0.56 0.87 1.16 1.66 2.1 2.32 2.41 2.4 2.36 2.19 1.8 1.5 1.12 0.89 0.75 0.57 0.42 0.28 0.22 0.156 0.121 0.099 </Cross></Process></H></crs>
+<crs><Name>H</Name><Collider>p</Collider>
+	<RecommendedFile />
+	<title>Proton cross section for H</title>
+	<Emin>1E3</Emin>
+	<Emax>1E7</Emax>
+	<Cmax>1E-14</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_H_p_recommended.pdf</plotname>
+	<explotname>seff_H_p_recommendedextr.pdf</explotname>
+	<figsize>3</figsize>
+
+
+	<H>
+		<ElasticCrs><use_proton_function />
+
+			<Source type="adaptation">Gronoff +Kozelov and Ivanov 1992</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>From Kozelov 1992 for N2, considered as close enough for CO2 which is a major species at Mars and Venus</Notes>
+		</ElasticCrs>
+		<Process electrons="1" name="H+p->H+ + p + e" threshold="13.6">
+			<Species><Specie name="H+" state="X" /></Species>
+			<Legend>H+ / proton</Legend>
+			<Proc>H+</Proc>
+			<Section>ionization</Section>
+			<Source type="review">Avakyan</Source>
+			<Notes>Review Avakyan 1998</Notes>
+			<EstimatedUncertainty />
+			<Ionization />
+			<Egrid unit="eV"> 0.5 0.7 1.0 1.5 2.0 3.0 4.0 5.0 6.0 7.0 10.0 15.0 20.0 30.0 40.0 50.0 60.0 70.0 80.0 100.0 150.0 200.0 300.0 400.0 500.0 700.0 1000.0 1500.0 2000.0 3000.0 4000.0 5000.0 </Egrid>
+			<Cross fact="1E-17" uncertainty="15%" unit="cm2"> 0.014 0.021 0.033 0.055 0.078 0.129 0.184 0.242 0.303 0.364 0.56 0.87 1.16 1.66 2.1 2.32 2.41 2.4 2.36 2.19 1.8 1.5 1.12 0.89 0.75 0.57 0.42 0.28 0.22 0.156 0.121 0.099 </Cross>
+		</Process>
+	</H>
+</crs>

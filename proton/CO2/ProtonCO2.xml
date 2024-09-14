@@ -18,6 +18,8 @@
 		
 		<ElasticCrs>
 			<use_proton_function/>
+			<Source type="adaptation">Gronoff +Kozelov and Ivanov 1992</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>From Kozelov 1992 for N2, considered as close enough for CO2 which is a major species at Mars and Venus</Notes>
 			<!-- TODO : proton function, uncertainty -->
 		</ElasticCrs>
 

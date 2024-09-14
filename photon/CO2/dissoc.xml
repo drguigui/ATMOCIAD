@@ -239,7 +239,7 @@
 	</Process>
 
 	<Process name="CO2 + hv -> CO + O" electrons="0" threshold="16.440">
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review">BDD + Witasse 2003</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<legend>CO + O (BDD)</legend>
 		<Proc>CO + O</Proc>
 		<Notes>Adapted Torr ? origin, avakyan? \cite{Witasse2003}</Notes>

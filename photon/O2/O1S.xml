@@ -17,8 +17,8 @@
 			<legend>O($^1$S) + O (BDD)</legend>
 			<Proc>O($^1$S) + O</Proc>
 			<Section>excitation</Section>
-			<Source type="adaptation">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr. Origin Lawrence 73 needs rework  </Notes>
+			<Source type="adaptation">BDD + Lummerzheim 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted Torr. Origin Lawrence 1973 needs rework  </Notes>
 			<Egrid unit="eV">
 				1.341350e+01	  1.287550e+01	  1.269004e+01	  1.253923e+01	  1.224797e+01
 				1.208753e+01	  1.205127e+01	  1.201502e+01	  1.190652e+01	  1.107002e+01

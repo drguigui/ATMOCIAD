@@ -17,7 +17,7 @@
 		<Proc>CO($a$$^3$$\Pi$) + O</Proc>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="review"> AMOP </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted nm -> eV, website</Notes>
+		<Notes>Adapted nm -> eV, old website of PHIDRATES: AMOP</Notes>
 		<Egrid unit="eV">
 			5.449855	      6.358164	      6.525484	      6.701849	      6.888011
 			7.084811	      7.293188	      7.380012	      7.468928	      7.560012
@@ -243,7 +243,7 @@
 		<Proc>CO($a$$^3$$\Pi$) + O</Proc>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="measurement">Lawrence 1972</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes>Adapted nm -> eV, old bdd. Estimated uncertainty (not clear in Lawrence)</Notes>
+		<Notes>Adapted nm -> eV, old bdd. Estimated uncertainty (not clear in Lawrence) \cite{Lawrence1972}</Notes>
 		<EstimatedUncertainty/>
 		<Species>
 			<Specie name="CO" state="a3Pi"/>

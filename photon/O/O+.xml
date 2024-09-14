@@ -52,7 +52,7 @@
 			</Species>
 			<legend>O$^{+}$ + e (BDD)</legend>
 			<Proc>O$^{+}$ + e</Proc>
-			<Source type="unknown">Lummerzheim1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">Lummerzheim1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr. \cite{Lilensten1994}  </Notes>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Egrid unit="eV">

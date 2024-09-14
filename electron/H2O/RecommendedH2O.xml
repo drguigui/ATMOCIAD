@@ -5,7 +5,7 @@
 	<title> H2O + e</title>
 	<Emin>0.01</Emin>
 	<Emax>120000</Emax>
-	<Cmax>3E-15</Cmax>
+	<Cmax>3E-13</Cmax>
 	<Cmin>1E-23</Cmin>
 	<plotname>seff_H2O_e_recommended.pdf</plotname>
 	<explotname>seff_H2O_e_recommendedex.pdf</explotname>

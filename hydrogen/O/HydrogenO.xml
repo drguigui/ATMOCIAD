@@ -19,6 +19,8 @@
 		
 		<ElasticCrs>
 			<zero/>
+			<Source type="unknown">The work has to be done for this one</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>No cross sections for it now</Notes>
 			<!-- TODO : proton function, uncertainty -->
 		</ElasticCrs>
 
@@ -33,7 +35,7 @@
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
 			<Source type="review">Basu 1987</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
+			<Notes> Review Basu 1987 </Notes>
 			
 			<!-- I need to check the uncertainty -->
 			<EstimatedUncertainy/>
@@ -69,7 +71,7 @@
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
 			<Source type="review">Basu 1987</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
+			<Notes> Review Basu 1987 </Notes>
 			
 			<!-- I need to check the uncertainty -->
 			<EstimatedUncertainy/>
@@ -109,7 +111,7 @@
 			<Section>exchange</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			
 			<Source type="review">Green and Peterson 1968</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes> Review </Notes>
+			<Notes> Review Green 1968 </Notes>
 			<!-- I need to check the uncertainty -->
 			<EstimatedUncertainy/>
 			<Exchange/>

@@ -28,9 +28,8 @@
 			<legend>CO2++(Auger) - adaptation</legend>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="adaptation">Fremont 2006 + Shirai 2001+Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2001+Straub. We estimate 2 O auger for 1 C Auger. With the probability of 0.69% for each O and 0.26% for each C</Notes>
+			<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in \cite{Fremont2006} and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2001+Straub. We estimate 2 O auger for 1 C Auger. With the probability of 99.69% for each O and 0.26% for each C</Notes>
 			<EstimatedUncertainty/>
-			<Recommended/>
 			<Extrapolated/>
 
 			<texnote title="Notes for CO$_2^{++}$ K-Shell ionization, Fr\'emont 2006 + Straub 2004 + Shirai 2001">The K-Shell ionization of CO$_2$ by electron impact has not been studied in \cite{Fremont2006}, but we assumed that the K-Shell/single ionization ratio is close to the CH$_4$ one which is used here.
@@ -72,6 +71,92 @@
 				3.14512613e-19   2.92986896e-19   2.59120654e-19   2.22093288e-19
 				1.81526794e-19   1.39539680e-19   9.01926663e-20   3.42246021e-20
 				1.05441310e-20
+			</Cross>
+		</Process>
+
+
+		<Process name="CO2 + ph -> .9974 x CO2++(X-C-KSHELL) 0.0026 x CO2+(X) 0.0026 x Fluo-auger(X-C) "  electrons="1" threshold="282">
+			<Species>
+				<Specie name="CO2++" state="X-C-KSHELL" number=".9974"/>
+				<Specie name="CO2+" state="X" number="0.0026"/>
+				<Specie name="Fluo-auger" state="X-C" number="0.0026"/>
+			</Species>
+			<legend>CO$_2$$^+$ + e + Auger (C)</legend>
+			<Proc>CO$_2$$^+$ + e + Auger (C)</Proc>
+			<Auger energy="223" fact=".9974"/>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, Torr box, Avakyan 1998</Notes>
+			<Recommended/>
+			<Egrid unit="eV">
+				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
+				4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
+				1.033202e+02	  7.232412e+01	  5.579289e+01	  4.898916e+01	  4.837464e+01
+				4.600400e+01	  4.363336e+01	  4.247571e+01	  4.110756e+01	  4.087706e+01
+				4.084543e+01	  4.081381e+01	  3.811393e+01	  3.455950e+01	  3.368495e+01
+				3.233550e+01	  2.927405e+01	  2.709776e+01	  2.663349e+01	  2.571016e+01
+				2.366971e+01	  2.245873e+01	  2.236488e+01	  2.179153e+01	  2.121818e+01
+				2.093611e+01	  2.050366e+01	  2.033328e+01	  2.001087e+01	  1.968847e+01
+				1.937648e+01	  1.839326e+01	  1.767472e+01	  1.762742e+01	  1.707432e+01
+				1.637257e+01	  1.620391e+01	  1.614859e+01	  1.609328e+01	  1.590010e+01
+				1.570693e+01	  1.559748e+01	  1.504220e+01	  1.418120e+01	  1.341350e+01
+				1.287550e+01	  1.269004e+01	  1.253923e+01
+			</Egrid>
+			<Cross unit="cm2" uncertainty="20%" >
+				3.200000e-22	  1.300000e-21	  6.200000e-21	  5.900000e-20	  1.660000e-19
+				3.500000e-19	  7.700000e-19	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00
+			</Cross>
+		</Process>
+		<Process name="CO2 + ph -> .9931 x CO2++(X-O-KSHELL) 0.0069 x CO2+(X) 0.0069 x Fluo-auger(X-O) "  electrons="1" threshold="539">
+			<Species>
+				<Specie name="CO2++" state="X-O-KSHELL" number=".9931"/>
+				<Specie name="CO2+" state="X" number="0.0069"/>
+				<Specie name="Fluo-auger" state="X-O" number="0.0069"/>
+			</Species>
+			<legend>CO$_2$$^+$ + e + Auger (O)</legend>
+			<Proc>CO$_2$$^+$ + e + Auger (O)</Proc>
+			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, Torr box, Avakyan 1998</Notes>
+			<Auger energy="467" fact=".31"/>
+			<Recommended/>
+			<Egrid unit="eV">
+				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
+				4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
+				1.033202e+02	  7.232412e+01	  5.579289e+01	  4.898916e+01	  4.837464e+01
+				4.600400e+01	  4.363336e+01	  4.247571e+01	  4.110756e+01	  4.087706e+01
+				4.084543e+01	  4.081381e+01	  3.811393e+01	  3.455950e+01	  3.368495e+01
+				3.233550e+01	  2.927405e+01	  2.709776e+01	  2.663349e+01	  2.571016e+01
+				2.366971e+01	  2.245873e+01	  2.236488e+01	  2.179153e+01	  2.121818e+01
+				2.093611e+01	  2.050366e+01	  2.033328e+01	  2.001087e+01	  1.968847e+01
+				1.937648e+01	  1.839326e+01	  1.767472e+01	  1.762742e+01	  1.707432e+01
+				1.637257e+01	  1.620391e+01	  1.614859e+01	  1.609328e+01	  1.590010e+01
+				1.570693e+01	  1.559748e+01	  1.504220e+01	  1.418120e+01	  1.341350e+01
+				1.287550e+01	  1.269004e+01	  1.253923e+01
+			</Egrid>
+			<Cross unit="cm2" uncertainty="20%" >
+				2.160000e-21	  8.300000e-21	  3.800000e-20	  3.120000e-19	  8.800000e-19
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00	  0.000000e+00
+				0.000000e+00	  0.000000e+00	  0.000000e+00
 			</Cross>
 		</Process>
 	</CO2>

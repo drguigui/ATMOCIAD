@@ -10,7 +10,7 @@
 	<Cmin>1E-20</Cmin>
 	<plotname>seff_CO_e_recommended.pdf</plotname>
 	<explotname>seff_CO_e_recommendedex.pdf</explotname>
-	<figsize>2</figsize>
+	<figsize>1.5</figsize>
 
 	<CO>
 		<ElasticCrs>

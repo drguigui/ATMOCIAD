@@ -97,7 +97,7 @@
 			<legend>CO$^+$ + O$^+$ + 2e (BDD)</legend>
 			<Proc>CO$^+$ + O$^+$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">BDD + Witasse 2003</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr ? origin, avakyan? \cite{Witasse2003} </Notes>
 			<Egrid unit="eV">
     40.000    41.000    42.000

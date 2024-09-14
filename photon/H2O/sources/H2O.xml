@@ -194,11 +194,11 @@
 			  3.000000e-18	  2.200000e-18	  3.000000e-18
 			</Cross>
 		 </Process>
-		 <Process name="H2O + ph -> .31 x H2O++(X-KSHELL) 0.69 x H2O+(X) 0.69 x Fluo-auger(X) "  electrons="1" threshold="539">
+		 <Process name="H2O + ph -> .9931 x H2O++(X-KSHELL) 0.0069 x H2O+(X) 0.0069 x Fluo-auger(X) "  electrons="1" threshold="539">
 			<Species>
-				<Specie name="H2O++" state="X-KSHELL" number=".31"/>
-				<Specie name="H2O+" state="X" number="0.69"/>
-				<Specie name="Fluo-auger" state="X" number="0.69"/>
+				<Specie name="H2O++" state="X-KSHELL" number=".9931"/>
+				<Specie name="H2O+" state="X" number="0.0069"/>
+				<Specie name="Fluo-auger" state="X" number="0.069"/>
 			</Species>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02

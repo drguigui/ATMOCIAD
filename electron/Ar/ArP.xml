@@ -8,9 +8,9 @@
 	<Cmin>1E-20</Cmin>
 	<plotname>seff_Ar_e_3P1.pdf</plotname>
  
-        <Process electrons="0" name="Ar+e -> Ar(4s_3/2)" threshold="11.6">
+        <Process electrons="0" name="Ar+e -> Ar(4s3/2)" threshold="11.6">
             <Species>
-                <Specie name="Ar" state="Ar(4s_3/2)"/>
+                <Specie name="Ar" state="Ar(4s3/2)"/>
             </Species>
             <Legend>4s3/2 3P1</Legend>
             <Proc>Ar(4s3/2) 3P1</Proc>
@@ -28,7 +28,7 @@
  
 		<Process name="Ar + e -> Ar(1S)" electrons="0" threshold="11.548">
 			<Species>
-				<Specie name="Ar" state="1S 4s_3/2  3P1  1067A"/>
+				<Specie name="Ar" state="1S 4s3/2  3P1  1067A"/>
 			</Species>
 			<Excitation/>
 			<Source type="review">Bretagne 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
@@ -131,9 +131,9 @@
 
 			</Cross>
 		</Process>
-        <Process electrons="0" name="Ar+e -> Ar(4s_1/2)" threshold="11.8">
+        <Process electrons="0" name="Ar+e -> Ar(4s1/2)" threshold="11.8">
             <Species>
-                <Specie name="Ar" state="Ar(4s_1/2)"/>
+                <Specie name="Ar" state="Ar(4s1/2)"/>
             </Species>
             <Legend>4s1/2 1P1</Legend>
             <Proc>Ar(4s1/2) 1P1</Proc>

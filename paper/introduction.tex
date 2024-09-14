@@ -1,0 +1,88 @@
+\section*{Introduction}
+
+
+\subsection{History of the project}
+
+This database is the result of several decades of research in aeronomy, most of them happening before I even was born. 
+As we will see in this little section, some of the sources and their authors have been lost in the past compilations of data, and we wish to aknowledge them here.
+
+The objective of this project was to gather all the available cross-sections of interest for Aeronomy of the Earth and Planet, and to have a ``clean'' database, with the most possible sources, and the most possible information on the uncertainties.
+This latest part became a huge motivation for the project, as the uncertainties are often neglected in the databases, and are the most important parameter for the comparison of the different sources, and for the understanding of the differences between the models.
+I came to that realization during my PhD, in Grenoble, France, when I was working on creating a code for computing the airglow and ionization in the atmosphere of Venus under the direction of J. Lilensten. I was using the Trans* model, intitially Transsolo for the Earth, then Transmars/Titan for Mars and Titan; all of these models were developped for a specific planet and had their very specific cross-sections. The code was working well, but as long as we were adding planets, we were adding cross-sections, and the code was becoming more and more difficult to maintain.
+When I finished my PhD, I did my post-doc at NASA Langley Research center, in Hampton, Virginia. As a fresh French person coming into the us, the paperwork to let me go on-site took months, and I had to work off-site, with fewer resources for the initial project I was hired for. This is when I decided to create the Aeroplanets model, to have a single code for all the planets, and to have a single database for all the cross-sections. This is how the AtMoCiad project was born.
+
+The code was developped fast enough, in 2009 and 2010, and led to several papers in 2011 and 2012. The database was at a good level, but took more than a decade to come to the current level due to funding, time, etc. In the meantime, work was done on other papers \citep{gronoff2020}, other processes (such as cosmic rays, proton precipitations, etc) and led to incremental improvements of the databse.
+
+The full philosophy and approach is explained in the paper accompanying this database; however, the history of the project is not. This is why I wanted to write this introduction, to aknowledge the people who helped me in this project, and to explain the history of the project.
+
+In the following pages, you will see the word BDD appear. This is the French acronym for Database, and is used when I refer to the cross-sections I found in the Trans* models but for which I never figured out exactly where they came from. 
+My understanding is that several of these cross-sections were compiled by Lummerzheim for his PhD \citep{Lummerzheim1987}, but I never found the original sources.  Some must have been compiled for the original Transsolo/Transcar paper \citep{Lummerzheim1994}. These papers likely cover all the cross-sections for N2, O2, O, and Ar. Additional work on N2 and CH4 was done for Titan \citep{Lilensten2005} and Mars \cite{Witasse2002, Witasse2003}. Work on doubly ionized cross-sections was also done for Earth by  \citep{Simon2005}. 
+It is likely that other cross-sections computations were used in the creation of what we have here, maybe the work of Phelps \cite{phelps1972} was used somewhere, but I have no way to prove it. One of the reasons for that is the modifications done on cross-sections in the original compilation, due to the way the code was working, especially for the electrons. The cross-sections for the excitation was correctly handled, with a threshold, the energies and values. However, for the ionizations, a main cross-section was used and then a branching ratio was given for all the sub-species, with maybe a threshold for their productions. The code was not able to handle Auger electrons and it created some issues when trying to compute the average energy per ion-pair production. This is why the Aeroplanet model was so crucial and led to the \cite{SimonWedlund2011} paper. In addition, the work on understanding the uncertainties was on its way, and led to the 2012 papers \cite{Gronoff2012, Gronoff2012b}.
+I was able to get a small amount of funding for the database around 2014, at a time when money was scarce for NASA projects, and I had to spend too much time writing other grants to fully publish the results.  After that, I was able to get more funding for aeronomy projects, which enabled me to hire a colleague - Bradley Hegyi- part-time to clean the database and to add more cross-sections, and to publish a first version of the project.
+
+Now, additional work has been made to correctly add the H/p cross-sections, even if they are not filled with the same level of details as the other cross-sections. The database is now ready for the community, and I hope it will be useful for the aeronomy and chemistry communities.
+I wish to thank all my co-authors and colleagues who helped me in this project. It would never have happened without them.
+The errors, omissions, and mistakes in this database are all my fault, and I hope the community will help me correct them in the future.
+
+
+G.Gronoff,
+September 2024, Hampton, Virginia, USA
+
+
+
+
+
+
+
+
+
+\subsection{Presentation of the database}
+
+
+
+Ionization, excitation, dissociations are terms of the utmost importance when dealing with the physics of upper atmospheres.
+
+Several physical processes are at the origin of the creation of an ionosphere for the planets. The same are also at the origin of the heating, and the formation of different kinds of  airglow and aurorae in the thermospheres.
+
+To model these upper atmosphere, of either Earth, planets, or comets, along as other kinds of plasma, some parameters are needed.
+Among them, the cross sections for ionization, excitation, dissociation\ldots
+
+Up to now, no centralized database was available for these processes, leading to several problems:
+\begin{itemize}
+\item Each team has its own database, with its own history. Therefore, some processes are up to date, some very old\ldots
+\item It is impossible to compare two team databases, because of their standards. It is also impossible to compare two codes by different teams, since the high dependence on cross sections does not allow to discriminate whether the differences come from the implementation of the physical processes or from the inputs.
+\item Each time a cross section is measured, it takes a very long time to diffuse in the community, highlighting the precedent issues.
+\item The chemists and experimentalists, and especially the people measuring and/or computing the cross sections, hardly communicate with the aeronomy community. Therefore, they do not know the needs for specific cross section improvements, and have to perform a very important bibliographic work to compare their measurements with previous work. Unfortunately, such efforts are likely to be only partly published, leading to the same efforts for the following teams. %Besides the fact that this work is likely to be lost in the increasing number of papers, the lack of a database also 
+\item On the contrary, aeronomists can detect problems in dataset when they compare models and experiments. It is also possible for them to improve estimation of absolute values, and extrapolation of existing datasets. These results, independently of their quality, never reaches the chemistry community.
+\end{itemize}
+
+Among these problems, one parameter was always neglected in the previous models and databases: \textbf{the uncertainty of the cross sections}.
+
+This term is one of the most important for the comparison of the different sources, but also to understand the different outputs of the models.
+
+When we compare the sources, the claimed uncertainty the most important parameter for extracting the recommended cross section. The other cross sections can sometimes be used to refine the absolute value (correction of the discrepancy).
+
+For the models, the cross sections are the main sources of uncertainties. Therefore, the uncertainty of the model can be computed to a good extent through the variations of the cross sections. A fast technique is the use of a Monte Carlo technique (it will be used in the following to estimate the quality of the electron cross sections dataset).
+
+
+All these problems leads to the creation of a centralized database for cross sections, which makes a link between notably the aeronomy and chemistry communities. And has to include  the uncertainties,  the extrapolations and the most possible number of different sources for each processes, in order to select the recommended uncertainty.
+
+This database, described in the document, is named \textbf{AtMoCiad}, which stands for \textbf{At}omic and \textbf{Mo}lecular \textbf{C}ross section for \textbf{i}onization and \textbf{a}irglow\footnote{or \textbf{a}urora} \textbf{D}atabase\footnote{For the connoisseurs, it is also a recursive acronym: \textbf{AtMoC} \textbf{i}s \textbf{a}nother \textbf{D}atabase}.
+
+
+
+In a first chapter (\ref{physics}), we will describe the physics associated with these cross sections, and how to use them correctly. That part will briefly describes the \textit{Aeroplanets} model, which is used to check the dataset; but which is also the first aeronomy model using \textbf{AtMoCiad}.
+
+In a second chapter (\ref{photoionization}), we will present the data for the ionization, excitation and dissociation by the photons.
+
+In a third chapter (\ref{electronimpact}), we will present the electron impact cross sections.
+
+In a fourth chapter (\ref{evolution}), we will explain the future improvements of the database (proton impact cross sections\ldots).
+
+
+In the appendixes (\ref{appendixes}), we will describe the technical storage, plotting and web interfacing of the database.
+
+
+%\citet{Gronoff2008}
+
+

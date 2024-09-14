@@ -19,7 +19,7 @@
 			<legend>CO$^+$ + e (Avakyan 1998)</legend>
 			<Proc>CO$^+$</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr nm -> eV \cite{Avakyan1998}</Notes>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -58,7 +58,7 @@
 			<legend>CO$^+$ + e (BDD)</legend>
 			<Proc>CO$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="unknown">BDD + Witasse 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr ? origin, avakyan? Used in \cite{Witasse2002} </Notes>
 			<Egrid unit="eV">
 				12.015137	     12.087764	     12.103104	     12.690297	     12.724158
@@ -250,7 +250,7 @@
 			<legend>CO$^+$ + e Recommended</legend>
 			<Proc>CO$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> PHIDRATES+Avakyan+Masuoka 93 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> PHIDRATES + Avakyan 1998 + Masuoka 1993 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website. Avakyan (1998) \cite{Avakyan1998} above 30 eV (Masuoka [1993] \cite{Masuoka1993} give results closer to Avakyan at these E),  \cite{Huebner2015} for the lower energies. </Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>

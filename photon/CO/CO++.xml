@@ -17,7 +17,7 @@
 			<legend>CO$^{2+}$ + 2e (Avakyan 1998)</legend>
 			<Proc>CO$^{2+}$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr nm -> eV \cite{Avakyan1998}</Notes>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02

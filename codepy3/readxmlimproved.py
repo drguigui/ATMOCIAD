@@ -615,9 +615,9 @@ def PlotFile(filename):
             if(0==len(proc.findall("Shirai"))):
                 if(0==len(proc.findall("Zero"))):
                     print("We are searching for proton or hydrogen function")
-                    if(0==len(proc.findall("use_proton_function"))):
+                    if(0!=len(proc.findall("use_proton_function"))):
                        PlotProtonElasticNode(proc,bRfile,False)
-                    elif(0==len(proc.findall("use_hydrogen_function"))):
+                    elif(0!=len(proc.findall("use_hydrogen_function"))):
                        PlotHydrogenElasticNode(proc,bRfile, False)
                     else:
                        PlotStdNode(proc,bRfile,False,False,[], isphoton)
@@ -664,9 +664,9 @@ def PlotFile(filename):
                 if(0==len(proc.findall("Shirai"))):
                     if(0==len(proc.findall("Zero"))):
                         print("We are searching for proton or hydrogen function")
-                        if(0==len(proc.findall("use_proton_function"))):
+                        if(0!=len(proc.findall("use_proton_function"))):
                            PlotProtonElasticNode(proc,bRfile,False)
-                        elif(0==len(proc.findall("use_hydrogen_function"))):
+                        elif(0!=len(proc.findall("use_hydrogen_function"))):
                            PlotHydrogenElasticNode(proc,bRfile, False)
                         else:
                            PlotStdNode(proc,bRfile,True,False,[], isphoton)
@@ -710,9 +710,9 @@ def PlotFile(filename):
                 if(0==len(proc.findall("Shirai"))):
                     if(0==len(proc.findall("Zero"))):
                         print("We are searching for proton or hydrogen function")
-                        if(0==len(proc.findall("use_proton_function"))):
+                        if(0!=len(proc.findall("use_proton_function"))):
                            PlotProtonElasticNode(proc,bRfile, False)#True, Etbl)
-                        elif(0==len(proc.findall("use_hydrogen_function"))):
+                        elif(0!=len(proc.findall("use_hydrogen_function"))):
                            PlotHydrogenElasticNode(proc,bRfile, False)#True, Etbl)
                         else:
                            PlotStdNode(proc,bRfile,False,True,Etbl, isphoton)

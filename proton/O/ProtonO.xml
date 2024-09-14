@@ -2,12 +2,25 @@
 	<Name>O</Name>
 	<Collider>p</Collider>
 	<RecommendedFile/>
+	<title>Proton cross section for O</title>
+	<Emin>1E3</Emin>
+	<Emax>1E7</Emax>
+	<Cmax>1E-14</Cmax>
+	<Cmin>1E-21</Cmin>
+	<plotname>seff_O_p_recommended.pdf</plotname>
+	<explotname>seff_O_p_recommendedextr.pdf</explotname>
+	<figsize>3</figsize>
+
+
+
 	<O>
 		<!-- TODO ADD -->
 		<TotalCrsProton/>
 		
 		<ElasticCrs>
 			<zero/>
+			<Source type="unknown">The work has to be done for this one</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>No cross sections for it now</Notes>
 			<!-- TODO : proton function, uncertainty -->
 		</ElasticCrs>
 

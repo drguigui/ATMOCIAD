@@ -19,6 +19,8 @@
 		
 		<ElasticCrs>
 			<use_hydrogen_function/>
+			<Source type="review">Kozelov and Ivanov 1992</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>From Kozelov 1992</Notes>
 			<!-- TODO : proton function, uncertainty -->
 		</ElasticCrs>
 

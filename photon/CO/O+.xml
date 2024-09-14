@@ -18,7 +18,7 @@
 			<legend>O$^+$ + C + e (BDD)</legend>
 			<Proc>O$^+$ + C + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">BDD + Witasse 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr ? origin, avakyan? \cite{Witasse2002}</Notes>
 			<Egrid unit="eV">
 				12.015137	     12.087764	     12.103104	     12.690297	     12.724158

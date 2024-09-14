@@ -43,11 +43,15 @@ def replace_author_year_with_citations(tex_file, output_file, citation_keys):
 
 
     # We want to replace Avakyan 98 by \cite{Avakyan1998}
-    tex_content = re.sub(r' Avakyan 98', r'\\\cite{Avakyan1998}', tex_content)
+    pattern = re.compile(rf' Avakyan \d\d', re.IGNORECASE)
+    tex_content = pattern.sub(r'\\cite{Avakyan1998}', tex_content)
     # We want to replace Avakyan by \cite{Avakyan1998}
-    tex_content = re.sub(r' Avakyan ', r'\\\cite{Avakyan1998}', tex_content)
-    tex_content = re.sub(r'Gentieu and Mentall 1973 ', r'\\\cite{Gentieu1973}', tex_content)
-    tex_content = re.sub(r'Glass-Maujean and Schmoranzer 2005 ', r'\\\cite{Glass2005}', tex_content)
+    pattern = re.compile(rf' Avakyan ', re.IGNORECASE)
+    tex_content = pattern.sub(r'\\cite{Avakyan1998}', tex_content)
+    pattern = re.compile(rf'Gentieu and Mentall \d\d\d\d ', re.IGNORECASE)
+    tex_content = pattern.sub( r'\\cite{Gentieu1973}', tex_content)
+    pattern = re.compile(rf'Glass-Maujean and Schmoranzer \d\d\d\d ', re.IGNORECASE)
+    tex_content = pattern.sub( r'\\cite{Glass2005}', tex_content)
 
 
     # Save the modified content to a new file
@@ -93,3 +97,10 @@ if __name__ == "__main__":
     Change(bibtex_file, tex_directory)
     tex_directory = "../../photon/resultat/"
     Change(bibtex_file, tex_directory)
+    tex_directory = "../../hydrogen/resultat/"
+    Change(bibtex_file, tex_directory)
+    tex_directory = "../../proton/resultat/"
+    Change(bibtex_file, tex_directory)
+
+
+

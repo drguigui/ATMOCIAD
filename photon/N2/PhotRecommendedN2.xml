@@ -16,8 +16,8 @@
 		<TotalCrs>
 			<legend>N$_2$ Total recommended</legend>
 			<Proc>N$_2$ Total</Proc>
-			<Source type="adaptation"> PHIDRATES + Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website+Avakyan</Notes>
+			<Source type="adaptation"> PHIDRATES + Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, website + Avakyan 1998</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
 
@@ -185,7 +185,7 @@
 			<legend>N$_2$$^+$ + e recommended</legend>
 			<Proc>N$_2$$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation"> PHIDRATES + Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website, Avakyan > 80 eV</Notes>
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">
@@ -283,7 +283,7 @@
 			<legend>N$_2$$^{2+}$ + 2e</legend>
 			<Proc>N$_2$$^{2+}$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Notes>Adapted Torr nm -> eV, old database. Ress + bratio?</Notes>
+			<Notes>Adapted Torr nm -> eV, old database. Rees 1989 + bratio?</Notes>
 			<Source type="unknown">Pb Ress</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">
@@ -308,18 +308,18 @@
 			</Cross>
 		</Process>
 		
-		<Process name="N2 + ph -> .57 x N2++(X-KSHELL) 0.43 x O+(X) 0.43 x Fluo-auger(X) "  electrons="1" threshold="400">
+		<Process name="N2 + ph -> .9957 x N2++(X-KSHELL) 0.0043 x O+(X) 0.0043 x Fluo-auger(X) "  electrons="1" threshold="400">
 			<Species>
-				<Specie name="N2++" state="X-KSHELL" number=".57"/>
-				<Specie name="N2+" state="X" number="0.43"/>
-				<Specie name="Fluo-auger" state="X" number="0.43"/>
+				<Specie name="N2++" state="X-KSHELL" number=".9957"/>
+				<Specie name="N2+" state="X" number="0.0043"/>
+				<Specie name="Fluo-auger" state="X" number="0.0043"/>
 			</Species>
 			<legend>N$_2$$^{2+}$,N$_2$$^+$, + e + $\lambda$ Auger (X)</legend>
 			<Proc>N$_2$$^{2+}$,N$_2$$^+$, + e + $\lambda$ Auger (X)</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Torr box</Notes>
-			<Auger energy="315" fact=".57"/>
+			<Auger energy="315" fact=".9957"/>
 			<Recommended/>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -361,7 +361,7 @@
 			<legend>N$_2$$^{+}$(A) + e</legend>
 			<Proc>N$_2$$^{+}$(A) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Torr box</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -401,7 +401,7 @@
 			<legend>N$_2$$^{+}$(B) + e</legend>
 			<Proc>N$_2$$^{+}$(B) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Torr box</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -441,7 +441,7 @@
 			<legend>N$_2$$^{+}$(F) + e</legend>
 			<Proc>N$_2$$^{+}$(F) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Torr box</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -481,7 +481,7 @@
 			<legend>N$_2$$^{+}$(G) + e</legend>
 			<Proc>N$_2$$^{+}$(G) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Torr box</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -521,7 +521,7 @@
 			<legend>N$_2$$^{+}$($^2$$\Sigma$$_g$) + e</legend>
 			<Proc>N$_2$$^{+}$($^2$$\Sigma$$_g$) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Torr box</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02

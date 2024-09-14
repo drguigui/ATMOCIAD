@@ -12,7 +12,7 @@
 		<TotalCrs>
 			<legend>O$_2$ Total (Avakyan 1998)</legend>
 			<Proc>O$_2$ Total</Proc>
-			<Source type="review"> Avakyan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr nm -> eV</Notes>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -48,7 +48,7 @@
 		<TotalCrs>
 			<legend>O$_2$ Total (BDD)</legend>
 			<Proc>O$_2$ Total</Proc>
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">BDD + Lummerzheim 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr ? origin, avakyan? </Notes>
 			<Egrid unit="eV">
 		 	7.189000e+00	  7.403691e+00	  7.631603e+00	  7.873997e+00	  8.132297e+00
@@ -1122,8 +1122,8 @@
 		<TotalCrs>
 			<legend>O$_2$ Recommended (PHIDRATES + Avakyan 1998)</legend>
 			<Proc>O$_2$ Recommended</Proc>
-			<Source type="adaptation"> PHIDRATES + Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, PHIDRATES+AVAKYAN > 75eV. </Notes>
+			<Source type="adaptation"> PHIDRATES + Avakyan 1998</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, PHIDRATES+AVAKYAN > 75eV. Adapted so that we can add the Auger ionization to the total </Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Egrid unit="eV">

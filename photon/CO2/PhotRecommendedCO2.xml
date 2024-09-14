@@ -17,7 +17,7 @@
 		<TotalCrs>
 			<legend>Total CO$_2$ + $\lambda$</legend>
 			<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>PHIDRATES + Avakyan at high energy above 25???? eV</Notes>
+			<Notes>PHIDRATES + Avakyan 1998 at high energy above 25 eV</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 
@@ -252,11 +252,11 @@
 				<Specie name="CO" state="A1Pi"/>
 				<Specie name="O" state="X"/>
 			</Species>
-			<legend>CO(A$^1$$\Pi$) + O (Gentieu and Mentall 1972)</legend>
+			<legend>CO(A$^1$$\Pi$) + O (Gentieu 1972)</legend>
 			<Proc>CO(A$^1$$\Pi$) + O</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="measurement">Gentieu and Mentall 1972</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, on GM grid. OCR Work by C Simon, last point for extrapolation</Notes>
+			<Source type="measurement">Gentieu 1972</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, on GM grid. OCR Work by C Simon, last point for extrapolation. The measurements are from Gentieu and Mentall 1972 \cite{Gentieu1972}</Notes>
 			<Extrapolated/>
 			<Recommended/>
 			<Egrid unit="eV">
@@ -866,7 +866,7 @@
 			<legend>O($^1$S) + CO (Lawrence 1972 + PHIDRATES)</legend>
 			<Proc>O($^1$S) + CO</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="measurement">Lawrence 1972+PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="measurement">Lawrence 1972 + PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Uncertainty in Lawrence (1972): pb photodissciation ratio. Correction near Lyman alpha</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
@@ -916,10 +916,10 @@
 			<Species>
 				<Specie name="CO2+" state="ABS*"/>
 			</Species>
-			<legend>CO$_2$$^+$ + e (PHIDRATES + Avakyan, 1998)</legend>
+			<legend>CO$_2$$^+$ + e (PHIDRATES + Avakyan 1998)</legend>
 			<Proc>CO$_2$$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation"> PHIDRATES+Avakyan </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation"> PHIDRATES + Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, website, Avakyan (1998) at high energy (> 70 eV)</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -1043,18 +1043,18 @@
 		<!-- Avakyan Auger emission-ionization -->
 
 
-		<Process name="CO2 + ph -> .74 x CO2++(X-C-KSHELL) 0.26 x CO2+(X) 0.26 x Fluo-auger(X-C) "  electrons="1" threshold="282">
+		<Process name="CO2 + ph -> .9974 x CO2++(X-C-KSHELL) 0.0026 x CO2+(X) 0.0026 x Fluo-auger(X-C) "  electrons="1" threshold="282">
 			<Species>
-				<Specie name="CO2++" state="X-C-KSHELL" number=".74"/>
-				<Specie name="CO2+" state="X" number="0.26"/>
-				<Specie name="Fluo-auger" state="X-C" number="0.26"/>
+				<Specie name="CO2++" state="X-C-KSHELL" number=".9974"/>
+				<Specie name="CO2+" state="X" number="0.0026"/>
+				<Specie name="Fluo-auger" state="X-C" number="0.0026"/>
 			</Species>
 			<legend>CO$_2$$^+$ + e + Auger (C)</legend>
 			<Proc>CO$_2$$^+$ + e + Auger (C)</Proc>
-			<Auger energy="223" fact=".74"/>
+			<Auger energy="223" fact=".9974"/>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, Torr box, Avakyan 1998</Notes>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 				4.695054e+02	  3.408657e+02	  2.648753e+02	  2.247844e+02	  1.627923e+02
@@ -1084,17 +1084,17 @@
 				0.000000e+00	  0.000000e+00	  0.000000e+00
 			</Cross>
 		</Process>
-		<Process name="CO2 + ph -> .31 x CO2++(X-O-KSHELL) 0.69 x CO2+(X) 0.69 x Fluo-auger(X-O) "  electrons="1" threshold="539">
+		<Process name="CO2 + ph -> .9931 x CO2++(X-O-KSHELL) 0.0069 x CO2+(X) 0.0069 x Fluo-auger(X-O) "  electrons="1" threshold="539">
 			<Species>
-				<Specie name="CO2++" state="X-O-KSHELL" number=".31"/>
-				<Specie name="CO2+" state="X" number="0.69"/>
-				<Specie name="Fluo-auger" state="X-O" number="0.69"/>
+				<Specie name="CO2++" state="X-O-KSHELL" number=".9931"/>
+				<Specie name="CO2+" state="X" number="0.0069"/>
+				<Specie name="Fluo-auger" state="X-O" number="0.0069"/>
 			</Species>
 			<legend>CO$_2$$^+$ + e + Auger (O)</legend>
 			<Proc>CO$_2$$^+$ + e + Auger (O)</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review"> Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Torr box, Avakyan (1998)</Notes>
+			<Source type="review"> Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted nm -> eV, Torr box, Avakyan 1998</Notes>
 			<Auger energy="467" fact=".31"/>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -1135,7 +1135,7 @@
 			<Proc>CO$_+$ + O + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website. Recommended because ok with sum 2 processes Jean; take into account high E, more consistent.  Estimated at 30% </Notes>
+			<Notes>Adapted nm -> eV, website. Recommended because this is in agreement with the total ionization and it takes into account high E, more consistent with the auger process. Uncertainty estimated at 30% </Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -1167,10 +1167,10 @@
 				<Specie name="O+" state="X"/>
 			</Species>
 			<legend>O$^+$ + CO + e (PHIDRATES)</legend>
-			<Proc>O$^+$ + Co + e</Proc>
+			<Proc>O$^+$ + CO + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website. Recommended because ok with sum 2 processes Jean; take into account high E, more consistent.  Estimated at 30% </Notes>
+			<Notes>Adapted nm -> eV, website. Recommended following the same idea as fo CO+ ionization. Uncertainty estimated at 30% </Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -1205,7 +1205,7 @@
 			<Proc>C$^+$ + O$_2$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="review"> PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, website. Recommended because ok with sum 2 processes Jean; take into account high E, more consistent.  Estimated at 30% </Notes>
+			<Notes>Adapted nm -> eV, from PHIDRATES website.  </Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>
 			<Extrapolated/>
@@ -1235,7 +1235,7 @@
 			<Proc>CO$_2$$^+$(A) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="measurement">Ukai 1992 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Ukai (1992), Digitized</Notes>
+			<Notes>Adapted nm -> eV, Ukai 1992, Digitized</Notes>
 			<Egrid unit="eV">
 				17.280606	     17.398337	     17.445855	     17.493658	     17.517658
 				17.541723	     17.614319	     17.638627	     17.687493	     17.761304
@@ -1280,7 +1280,7 @@
 			<Proc>CO$_2$$^+$(B) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="measurement">Ukai 1992 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Ukai (1992), Digitized</Notes>
+			<Notes>Adapted nm -> eV, Ukai 1992, Digitized</Notes>
 			<Egrid unit="eV">
 				18.036925	     18.071944	     18.121073	     18.144543	     18.199622
 				18.229137	     18.280096	     18.283519	     18.304655	     18.356037
@@ -1325,7 +1325,7 @@
 			<legend>CO$_2$$^+$(C) + e</legend>
 			<Proc>CO$_2$$^+$(C) + e</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Avakyan 98 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">Avakyan 1998 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted nm -> eV, Torr box</Notes>
 			<Egrid unit="eV">
 				8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
@@ -1364,7 +1364,7 @@
 			<legend>CO$_2$$^{2+}$ + 2e (BDD)</legend>
 			<Proc>CO$_2$$^{2+}$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">Masuoka 1994 + Lilensten 2013</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted from Masuoka (1994) Recommended by J. Lilensten 2013. GG: adapted for extrapolation+estimate uncert </Notes>
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">

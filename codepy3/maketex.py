@@ -58,16 +58,18 @@ def ReadNode2(node,plotlist):
         mynode["TexTitle"]=""
 
 
-    
-    if(len(node.findall("uncertainty"))>0):
-        uncertainty=node.find("uncertainty").text+"%"
-        mynode["EstimatedUncertainty"]=False
-    else:
-        if("uncertainty" in list(node.find("Cross").keys())):
-            uncertainty=node.find("Cross").attrib.get("uncertainty")
+    try:
+        if(len(node.findall("uncertainty"))>0):
+            uncertainty=node.find("uncertainty").text+"%"
             mynode["EstimatedUncertainty"]=False
-    mynode["Uncertainty"]=uncertainty
-    
+        else:
+            if("uncertainty" in list(node.find("Cross").keys())):
+                uncertainty=node.find("Cross").attrib.get("uncertainty")
+                mynode["EstimatedUncertainty"]=False
+        mynode["Uncertainty"]=uncertainty
+    except:
+        mynode["Uncertainty"]=uncertainty
+
     try:
         threshold=(node.attrib["threshold"])
     except:
@@ -167,6 +169,8 @@ def ReadFile(file,total,elastic,ionization,dissociation,excitation,emission,reco
             elif section=="excitation":
                 ReadNode(proc,excitation,figlist)
             elif section=="emission":
+                ReadNode(proc,emission,figlist)
+            elif section=="exchange":
                 ReadNode(proc,emission,figlist)
             else:
                 print(("Impossible to find you process section: "+section+" in file "+file))
