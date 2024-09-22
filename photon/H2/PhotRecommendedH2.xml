@@ -108,7 +108,7 @@
 			<EstimatedUncertainty/>
 			<Proc>H+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">   Chung 93  </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">  \cite{Chung1993}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>From the work of Menager \cite{Menager2010}. The source is \cite{Chung1993} </Notes>
 			<Egrid unit="eV">
 			     12.015021	     12.087529	     12.103222	     12.690037	     12.724681

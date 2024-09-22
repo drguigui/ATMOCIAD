@@ -35,7 +35,7 @@
 			<Auger energy="229" fact=".9974"/>
 			<Emin>340</Emin>
 			<Emax>8260</Emax>
-			<texnote title="CH$_4$$^{2+}$ Auger, (Avakyan 1998)">K-shell photoionization of CH$_4$ from the review work of \citet{Avakyan1998}. Claimed uncertainty of 20\%. The rate for the double ionization (including the following dissociation, not studied) is 74\%, letting 26\% of Auger fluorescence. The energy of the Auger electron (ejected in the double ionization cases) is 229 eV. The reported values in \citet{Avakyan1998} were in nm, averaged over several boxes, which corresponds to ranges of wavelength, and were adapted in eV for the database.  </texnote>
+			<texnote title="CH$_4$$^{2+}$ Auger, (Avakyan 1998)">K-shell photoionization of CH$_4$ from the review work of \citet{Avakyan1998}. Claimed uncertainty of 20\%. The rate for the double ionization (including the following dissociation, not studied) is 99.74\%, letting 0.26\% of Auger fluorescence. The energy of the Auger electron (ejected in the double ionization cases) is 229 eV. The reported values in \citet{Avakyan1998} were in nm, averaged over several boxes, which corresponds to ranges of wavelength, and were adapted in eV for the database.  </texnote>
 			<Egrid unit="eV">
 			  8.265613e+03	  3.475315e+03	  2.183813e+03	  1.119302e+03	  6.139314e+02
 			  4.695054e+02	  3.408657e+02	  

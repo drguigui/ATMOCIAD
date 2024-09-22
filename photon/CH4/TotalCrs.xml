@@ -51,7 +51,7 @@
 		</TotalCrs>
 		<TotalCrs>
 			<legend>CH$_4$ Total (BDD)</legend>
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review"> \cite{Lilensten2005b}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr ? origin, avakyan? </Notes>
 			<texnote title="CH4 total absorption BDD">
 				Total photoabsorption of CH$_4$ from the review of the BDD \cite{Lilensten2005b}.

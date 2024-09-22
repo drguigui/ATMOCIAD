@@ -17,8 +17,8 @@
 			</Species>
 			<legend>CH$_3$$^+$ (Lilensten)</legend>
 			<Proc>CH$_3$$^+$ + H + e</Proc>
-			<Source type="unknown">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr ? origin, avakyan? </Notes>
+			<Source type="review"> \cite{Lilensten2005b}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted BDD </Notes>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<texnote title="CH$_3$$^+$ (BDD)">
 				Original source unknown. In the BDD review in \cite{Lilensten2005b} . It is probable a branching ratio from the simple ionization.

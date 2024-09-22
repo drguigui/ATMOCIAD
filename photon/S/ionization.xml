@@ -4,7 +4,7 @@
 	<title> S + $\lambda \rightarrow$ S${^{+}}$ + e</title>
 	<Emin>6.828</Emin>
 	<Emax>124000</Emax>
-	<Cmax>1E-17</Cmax>
+	<Cmax>2E-16</Cmax>
 	<Cmin>1E-23</Cmin>
 	<plotname>seff_S_ph_Sp.pdf</plotname>
 	<lambplotname>seff_S_ph_Sp_lambda.pdf</lambplotname>

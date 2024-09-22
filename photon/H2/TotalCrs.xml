@@ -53,7 +53,7 @@
 
 			<legend>H$_2$ Total (Yan 1998)</legend>
 			<Proc>H$_2$ Total</Proc>
-			<Source type="review"> Yan 98</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">\cite{Yan1998,Yan2001}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr nm -> eV, Yan (1998)  \cite{Yan1998,Yan2001}</Notes>
 
 		<Egrid unit="eV">

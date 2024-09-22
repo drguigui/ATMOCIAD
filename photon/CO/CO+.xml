@@ -58,7 +58,7 @@
 			<legend>CO$^+$ + e (BDD)</legend>
 			<Proc>CO$^+$ + e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="unknown">BDD + Witasse 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">BDD + Witasse 2002</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr ? origin, avakyan? Used in \cite{Witasse2002} </Notes>
 			<Egrid unit="eV">
 				12.015137	     12.087764	     12.103104	     12.690297	     12.724158

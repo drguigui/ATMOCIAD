@@ -53,8 +53,8 @@
 			<legend>O$^{2+}$ + 2e (BDD)</legend>
 			<Proc>O$^{2+}$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Lummerzheim1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted Torr ? \cite{Lilensten1994} </Notes>
+			<Source type="review">\cite{Lilensten1994}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>Adapted from Torr grid? From BDD \cite{Lilensten1994} </Notes>
 			<Egrid unit="eV">
 				12.015021	     12.087529	     12.103222	     12.690037	     12.724681
 				13.413558	     14.181130	     15.042245	     15.706927	     16.014699

@@ -5,7 +5,7 @@
 	<title> Fe + $\lambda$</title>
 	<Emin>6.828</Emin>
 	<Emax>124000</Emax>
-	<Cmax>1E-17</Cmax>
+	<Cmax>1E-16</Cmax>
 	<Cmin>1E-23</Cmin>
 	<plotname>seff_Fe_ph_recommended.pdf</plotname>
 	<lambplotname>seff_Fe_ph_recommended_lambda.pdf</lambplotname>

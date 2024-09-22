@@ -242,7 +242,7 @@
 	</TotalCrs>
 	<TotalCrs>
 		<legend>CO$_2$ Total (BDD)</legend>
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review"> \cite{Witasse2003} BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Adapted Torr ? origin, avakyan? </Notes>
 		<texnote title="CO$_2$ total absorption (BDD)">
 			Total photoabsorption of CO$_2$ from the review of the BDD. Origin unknown \cite{Witasse2003}

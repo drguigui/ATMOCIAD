@@ -108,7 +108,8 @@
 			<Proc>He Total</Proc>
 			<Section>total</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 
-			<Source type="review">BDD </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">BDD \cite{Lilensten1994}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+
 			<Notes>Review from the database \cite{Lilensten1994}. First version</Notes>
 			<legend>BDD1</legend>
 
@@ -136,7 +137,7 @@
 
 		<TotalCrs>
 
-			<Source type="measurements">BDD v2 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">BDD v2 \cite{Lilensten1994}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Review from the database \cite{Lilensten1994}. Second version</Notes>
 			<legend>BDD2</legend>
 

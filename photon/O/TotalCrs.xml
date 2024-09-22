@@ -46,7 +46,7 @@
 		<TotalCrs>
 			<legend>O Total (BDD)</legend>
 			<Proc>O Total</Proc>
-			<Source type="unknown">Lummerzheim 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">Lummerzheim 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Adapted Torr. \cite{Lilensten1994} </Notes>
 			<Egrid unit="eV">
 				12.015021	     12.087529	     12.103222	     12.690037	     12.724681

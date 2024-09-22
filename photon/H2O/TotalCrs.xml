@@ -46,7 +46,7 @@
 		<TotalCrs>
 			<legend>H$_2$O Total (Wu and Chen)</legend>
 			<Proc>H$_2$O Total</Proc>
-			<Source type="measurement">Wu and Chen 1993</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="measurement"> \cite{Wu1993} </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Review by Gael for the work on Ganymede, using Wu and Chen (1993) \cite{Wu1993}. </Notes>
 			<Egrid unit="eV">
 			      6.709501	      6.757590	      6.792203	      6.834098	      6.869502

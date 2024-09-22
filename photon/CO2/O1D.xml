@@ -246,7 +246,7 @@
 			<legend>O($^1$D) + CO (BDD)</legend>
 			<Proc>O($^1$D) + CO</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Slanger 74</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">\cite{Slanger1974} </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Torr adaptation -> nm. \cite{Slanger1974} </Notes>
 			<Egrid unit="eV">
 				1.341350e+01	  1.287550e+01	  1.269004e+01	  1.253923e+01	  1.224797e+01
@@ -271,7 +271,7 @@
 			<legend>O($^1$D) + CO (Slanger 1974 + PHIDRATES)</legend>
 			<Proc>O($^1$D) + CO</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Slanger 74</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">\cite{Slanger1974} + PHIDRATES</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Slanger 74 converted to ratio. ratio used with amop total cross section. Adaptation from \cite{Huebner2015,Slanger1974}</Notes>
 			<Recommended/>
 			<Extrapolated/>

@@ -283,8 +283,9 @@
 			<legend>N$_2$$^{2+}$ + 2e</legend>
 			<Proc>N$_2$$^{2+}$ + 2e</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Notes>Adapted Torr nm -> eV, old database. Rees 1989 + bratio?</Notes>
-			<Source type="unknown">Pb Ress</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Notes>The ionization was adapted from the ionization cross-section for N2. The work of \cite{Samson1990b} for the ratio of double photoionization to single ionization was used for the estimate as explained in \cite{Gronoff2007}</Notes>
+			<texnote title="N$_2$$^{2+}$ BDD">The ionization was adapted from the ionization cross-section for N2. The work of \cite{Samson1990b} for the ratio of double photoionization to single ionization was used for the estimate as explained in \cite{Gronoff2007}</texote>
+			<Source type="review">\cite{Gronoff2007}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<EstimatedUncertainty/>
 			<Egrid unit="eV">
 				12.015021	     12.087529	     12.103222	     12.690037	     12.724681
