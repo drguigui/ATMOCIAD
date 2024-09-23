@@ -13,8 +13,8 @@
 		</Species>
 		<Proc>O+</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes> Probably from Itikawa, Rees or Strickland </Notes>
+		<Source type="review">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes> Probably from  Rees or Strickland </Notes>
 		<texnote title="Notes for O$^+$ BDD">
 		That ionization source comes from the old database (BDD), probable from Rees. It is adapted for extrapolation, but the uncertainty is unknown.
 		</texnote>
@@ -136,7 +136,7 @@
 		<legend>Laher 90</legend>
 		<Proc>O+</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="review">Laher 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Source type="review">Laher 1990</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 		<Notes> Review </Notes>
 		<texnote title="Notes for O$^+$ Laher 1995">
 			The cross section, was adapted from the disponible bibliography at that time.	The claimed uncertainty was close to 10\%, but probably more important.
@@ -166,12 +166,12 @@
 		</Species>
 		<Proc>O+(4S)</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<legend>Avakyan 1998 + Lahar  90 O+(4S)</legend>
-		<Source type="review">Avakyan 1998 + Lahar 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<legend>Avakyan 1998 + Laher  90 O+(4S)</legend>
+		<Source type="review">Avakyan 1998 + Laher 1990</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 		<Notes>Based on Thompson 1995. With extrapolation </Notes>
 		<texnote title="Notes for O$^+$ Avakyan 1998">
 			The cross section, from Avakyan 1998, comes from the measurements of Thompson 1995, smoothed, and adapted for extrapolation.
-			The claimed uncertainty is 10\%. This cross section was adapted with the branching ratio of Lahar 90
+			The claimed uncertainty is 10\%. This cross section was adapted with the branching ratio of Laher 1990
 		</texnote>
 		<Recommended/>
 		<Extrapolated/>
@@ -215,11 +215,11 @@
 		<Proc>O+(2D)</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<legend>Avakyan 1998  (adapt)</legend>
-		<Source type="review">Avakyan 1998 + Lahar 90 O+(2D)</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Source type="review">Avakyan 1998 + Laher 1990 O+(2D)</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 		<Notes>Based on Thompson 1995. With extrapolation </Notes>
 		<texnote title="Notes for O$^+$ Avakyan 1998">
 			The cross section, from Avakyan 1998, comes from the measurements of Thompson 1995, smoothed, and adapted for extrapolation.
-			The claimed uncertainty is 10\%. This cross section was adapted with the branching ratio of Lahar 90
+			The claimed uncertainty is 10\%. This cross section was adapted with the branching ratio of Laher 1990
 		</texnote>
 		<Recommended/>
 		<Extrapolated/>
@@ -263,12 +263,12 @@
 		</Species>
 		<Proc>O+(2P)</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<legend>Avakyan 1998 + Lahar 90 O+(2P)</legend>
-		<Source type="review">Avakyan 1998 + Lahar 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<legend>Avakyan 1998 + Laher 90 O+(2P)</legend>
+		<Source type="review">Avakyan 1998 + Laher 1990</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 		<Notes>Based on Thompson 1995. With extrapolation </Notes>
 		<texnote title="Notes for O$^+$ Avakyan 1998">
 			The cross section, from Avakyan 1998, comes from the measurements of Thompson 1995, smoothed, and adapted for extrapolation.
-			The claimed uncertainty is 10\%. This cross section was adapted with the branching ratio of Lahar 90
+			The claimed uncertainty is 10\%. This cross section was adapted with the branching ratio of Laher 1990
 		</texnote>
 		<Recommended/>
 		<Extrapolated/>
@@ -312,12 +312,12 @@
 		</Species>
 		<Proc>O+(2P*)</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<legend>Avakyan 1998 + Lahar 90  O+(2P*)</legend>
-		<Source type="review">Avakyan 1998 + Lahar 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<legend>Avakyan 1998 + Laher 90  O+(2P*)</legend>
+		<Source type="review">Avakyan 1998 + Laher 1990</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 		<Notes>Based on Thompson 1995. With extrapolation </Notes>
 		<texnote title="Notes for O$^+$ Avakyan 1998">
 			The cross section, from Avakyan 1998, comes from the measurements of Thompson 1995, smoothed, and adapted for extrapolation.
-			The claimed uncertainty is 10\%. This cross section was adapted with the branching ratio of Lahar 90
+			The claimed uncertainty is 10\%. This cross section was adapted with the branching ratio of Laher 1990
 		</texnote>
 		<Recommended/>
 		<Extrapolated/>

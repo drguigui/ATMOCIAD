@@ -14,7 +14,7 @@
 				<Specie name="CO" state="a3Pi"/>
 			</Species>
 			<Excitation/>
-			<Source type="measurement">Furlong and Newell 1996</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="measurement">Furlong and Newell 1996 \cite{Furlong1996}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Proc>CO(a3Pi)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Notes> Furlong and Newell 1996: extrapolated Cyril </Notes>

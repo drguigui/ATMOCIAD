@@ -10,7 +10,7 @@
 		<ElasticCrs>
 		<legend>H2 elastic</legend>
 			<NoStdExtrapolate/>
-			<Source type="review">Nockel et al. 92</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="review">Nickel 1992</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainties | from Helene file</Notes>
 			<EstimatedUncertainty/>
 			<Extrapolated/>

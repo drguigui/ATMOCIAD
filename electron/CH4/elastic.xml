@@ -8,9 +8,9 @@
 	<Cmin>1E-19</Cmin>
 	<plotname>seff_CH4_e_elastic.pdf</plotname>
 	<ElasticCrs>
-		<legend>Elastic CH4 From Lilensten</legend>
+		<legend>Elastic CH4 From Lilensten BDD</legend>
 
-		<Source type="unknown">? Rees  + Lilensten</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Source type="review">BDD \cite{Lilensten2005b}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 		<Notes>Unknown origin </Notes>
 		<Egrid unit="eV">
 			1.00E-10   1.000E-02   1.500E-02   2.000E-02   3.000E-02

@@ -14,7 +14,7 @@
 		<Excitation/>
 		<Proc>O((3S)1D)</Proc>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes> Probably from Rees </Notes>
 		<legend>(3S)1D BDD</legend>
 		<Egrid unit="eV">

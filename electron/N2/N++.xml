@@ -83,7 +83,7 @@
 		<legend>N++ tabata</legend>
 		<Proc>N++</Proc>
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Source type="review">Tabata 2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 		<Extrapolated/>
 		<Notes>Review of Shirai, based on Straub. Analytic functions. </Notes>
 		<Emin> 70.0 </Emin>

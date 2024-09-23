@@ -4,7 +4,7 @@
 	<title>H$_2$  + e $\rightarrow$ H$_2$(rot)</title>
 	<Emin>0.10</Emin>
 	<Emax>100</Emax>
-	<Cmax>1E-16</Cmax>
+	<Cmax>1E-15</Cmax>
 	<Cmin>5E-19</Cmin>
 	<plotname>seff_H2_e_rot.pdf</plotname>
 

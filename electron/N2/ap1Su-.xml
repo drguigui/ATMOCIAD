@@ -14,7 +14,7 @@
 			<Specie name="N2" state="a'1Su-"/>
 		</Species>
 		<legend>Tabata</legend>
-		<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Source type="review">Tabata 2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 		<Extrapolated/>
 		<Notes>Review of  Tabata/Shirai. Analytic functions. </Notes>
 		<Proc>N2(a'1Su-)</Proc>

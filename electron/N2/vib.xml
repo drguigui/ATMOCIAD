@@ -44,7 +44,7 @@
 			<Emax> 48.5 </Emax>
 			<Equation type="4" article_id="N2" article_number="5"/>
 			<Extrapolated/>
-			<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+			<Source type="review">Tabata 2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 			<Notes>Review of  Tabata/Shirai. Analytic functions. </Notes>
 			<params>
 			  1.830000e+10	  1.000000e+01	  9.410000e-04	  4.200000e-01	  1.240000e+09
@@ -79,7 +79,7 @@
 		<legend>Shirai dissoc</legend>
 		<Emin> 12.0 </Emin>
 		<Emax> 200.0 </Emax>
-		<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Source type="review">Tabata 2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 		<Extrapolated/>
 		<Notes>Review of  Tabata/Shirai. Analytic functions. </Notes>
 		<Proc>2*N</Proc>
@@ -100,7 +100,7 @@
 		<legend>vib</legend>
 		<Emin> 12.0 </Emin>
 		<Emax> 200.0 </Emax>
-		<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Source type="review">Tabata 2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 		<Extrapolated/>
 		<Notes>Review of  Tabata/Shirai. Analytic functions. </Notes>
 		<Proc>vib</Proc>

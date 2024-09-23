@@ -75,10 +75,10 @@
 			</Species>
 			<Proc>CO2+(A)</Proc> <!-- Name for the processus -->
 			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<legend>Dans la DB</legend>
 
-			<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, unknown-->
-			<Notes>From Avakyan maybe?</Notes>
+			<legend>BDD</legend>
+			<Notes> Witasse 2002 </Notes>
+			<Source type="review"> BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Egrid unit="eV">
 				18.8 19.9 21.1 22.4 23.7
 				25.1 26.6 28.2 29.8 31.6

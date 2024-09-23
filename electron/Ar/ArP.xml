@@ -31,8 +31,8 @@
 				<Specie name="Ar" state="1S 4s3/2  3P1  1067A"/>
 			</Species>
 			<Excitation/>
-			<Source type="review">Bretagne 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes>Bretagne 1994</Notes>
+			<Source type="review">Bretagne 1986</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>Bretagne 1986</Notes>
 			<Proc>Ar(1S) --- Is it 1P1</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Egrid unit="eV">
@@ -154,8 +154,8 @@
 				<Specie name="Ar" state="2P"/>
 			</Species>
 			<Excitation/>
-			<Source type="review">Bretagne 1994</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes>Bretagne 1994</Notes>
+			<Source type="review">Bretagne 1986</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>Bretagne 1986</Notes>
 			<Proc>Ar(2P)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Egrid unit="eV">

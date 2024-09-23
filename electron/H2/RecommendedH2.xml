@@ -16,7 +16,7 @@
 		<Section>elastic</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<legend>H2 elastic</legend>
 		<NoStdExtrapolate/>
-		<Source type="review">Nockel et al. 92</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review">Nickel 1992</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes>Estimated uncertainties | from Helene file</Notes>
 		<EstimatedUncertainty/>
 		<Extrapolated/>
@@ -196,7 +196,7 @@
 			<legend>H2(B1Su)</legend>
 			<Proc>H2(B1Su)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">H2(B 1S+u (2pS))Dalgarno 99</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">H2(B 1S+u (2pS)) Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -247,7 +247,7 @@
 			<legend>H2(Bprime)</legend>
 			<Proc>H2(Bprime)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Dalgarno 99</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -296,7 +296,7 @@
 			<legend>H2(Bseconde)</legend>
 			<Proc>H2(Bseconde)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Dalgarno 99</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -343,7 +343,7 @@
 			<legend>H2(C1Pu)</legend>
 			<Proc>H2(C1Pu)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Dalgarno 99</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -400,7 +400,7 @@
 			<legend>H2(D)</legend>
 			<Proc>H2(D)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Dalgarno 99</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -449,7 +449,7 @@
 			<legend>H2(Dprime)</legend>
 			<Proc>H2(Dprime)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Dalgarno 99</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -498,7 +498,7 @@
 			<legend>H2(EF)</legend>
 			<Proc>H2(EF)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Dalgarno 99</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -680,7 +680,7 @@
 			<legend>H+</legend>
 			<Proc>H+</Proc>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Janev et al 87 + Yoon 08</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">Janev 1987 + Yoon 2008 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>

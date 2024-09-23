@@ -71,7 +71,7 @@
 
 		<legend>CO2 Total BDD</legend>
 		<Notes> Total computed from the sum of the old bdd </Notes>
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review">Witasse 2002  BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Egrid unit="eV">
 			1.600000000e+03 1.501880652e+03 1.409672559e+03 1.323114440e+03 1.241860096e+03
 			1.165584544e+03 1.093982713e+03 1.026768223e+03 9.636722450e+02 9.044424200e+02
@@ -122,8 +122,8 @@
 
 		<Notes> Total computed from the sum of the new bdd </Notes>
 		<EstimatedUncertainty/>
-		<Source type="adaptation">Itikawa+Shirai+Straub+...</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<legend>CO2 Total BDD Recommended (w extrapolation)</legend>
+		<Source type="adaptation">Itikawa 2002 + Shirai 2001 + Straub 2004 +...</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<legend>CO2 Total (w extrapolation)</legend>
 		<Egrid unit="eV">
 			1.000000000e+05 9.819350012e+04 9.641289125e+04 9.466456783e+04 9.294794447e+04
 			9.126244640e+04 8.960750926e+04 8.798257893e+04 8.638711134e+04 8.482057227e+04

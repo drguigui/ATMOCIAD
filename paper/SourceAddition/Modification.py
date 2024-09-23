@@ -52,6 +52,8 @@ def replace_author_year_with_citations(tex_file, output_file, citation_keys):
     tex_content = pattern.sub( r'\\cite{Gentieu1973}', tex_content)
     pattern = re.compile(rf'Glass-Maujean and Schmoranzer \d\d\d\d ', re.IGNORECASE)
     tex_content = pattern.sub( r'\\cite{Glass2005}', tex_content)
+    pattern = re.compile(rf' Singhal ', re.IGNORECASE)
+    tex_content = pattern.sub(r'\\cite{Singhal2009}', tex_content)
 
 
     # Save the modified content to a new file

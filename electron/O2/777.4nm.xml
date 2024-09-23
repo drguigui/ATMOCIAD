@@ -4,7 +4,7 @@
 	<title> O$_2$  + e $\rightarrow$ O (777.4 nm emission)</title>
 	<Emin>10</Emin>
 	<Emax>1000</Emax>
-	<Cmax>3E-18</Cmax>
+	<Cmax>3E-16</Cmax>
 	<Cmin>8E-19</Cmin>
 	<plotname>seff_O2_e_O777_4nm.pdf</plotname>
 	<Process name="O2+e->O(777.4nm)" electrons="1" threshold="19">

@@ -8,8 +8,8 @@
 	<Cmin>1E-18</Cmin>
 	<plotname>seff_N2_e_elastic.pdf</plotname>
 	<ElasticCrs>
-		<Notes> Probably from Rees </Notes>
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes> Probably from Rees 1989 </Notes>
+		<Source type="review">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<legend>BDD</legend>
 		<Egrid unit="eV">
 			5.000E-02   1.500E-01   2.500E-01   3.500E-01   4.500E-01
@@ -79,7 +79,7 @@
 		<Species>
 			<Specie name="" state=""/>
 		</Species>
-		<Source type="review">Tabata2006</Source> <!-- types : measurement, bratio, theory, review, unknown-->
+		<Source type="review">Tabata 2006 + Tabata 2012</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 		<Extrapolated/>
 		<Notes>Review of Shirai. Analytic functions. </Notes>
 		<uncertainty>20</uncertainty>

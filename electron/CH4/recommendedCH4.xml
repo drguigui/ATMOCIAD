@@ -585,7 +585,7 @@
 			<Proc>CH4++(Auger)</Proc>
 			<legend>CH4++(Auger)</legend>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Fremont 2006 + Shirai 2002+Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">Fremont 2006 + Shirai 2002 + Straub 2004</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>K-Shell ionization: The ratio Kshell/simple ionization was taken in Fremont 2006 and corresponds to the CH4 ratio. The ionization rate, wich was x by the ratio, comes from Shirai 2002+Straub 2004</Notes>
 			<EstimatedUncertainty/>
 			<Recommended/>

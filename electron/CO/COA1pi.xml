@@ -13,7 +13,7 @@
 				<Specie name="CO" state="A1Pi"/>
 			</Species>
 			<Excitation/>
-			<Source type="measurement"> Beegle et al 99 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="measurement"> Beegle 1999 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Proc>CO(A1Pi)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Notes> Beegle 1999 </Notes>

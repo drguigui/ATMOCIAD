@@ -44,10 +44,10 @@
 				<Specie name="CO" state="vib"/>
 			</Species>
 			<Excitation/>
-			<Source type="unknown">? Rees?</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Proc>CO(rot+vib)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Notes>Unknown origin </Notes>
+			<Notes>BDD </Notes>
 			<Egrid unit="eV">
 				0.1     1    2    3    4   
 				5      6         
@@ -63,10 +63,10 @@
 				<Specie name="CO" state="exc"/>
 			</Species>
 			<Excitation/>
-			<Source type="unknown">? Rees?</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Proc>CO(exc)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Notes>Unknown origin </Notes>
+			<Notes>Witasse 2002 </Notes>
 			<Egrid unit="eV">
 				0.1	1	2	3	4
 				5	6	7	8	9
@@ -91,7 +91,7 @@
 				<Specie name="CO" state="A1Pi"/>
 			</Species>
 			<Excitation/>
-			<Source type="measurement"> Beegle et al 99 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="measurement"> Beegle 1999 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Proc>CO(A1Pi)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Notes> Beegle 1999 </Notes>
@@ -127,7 +127,7 @@
 				<Specie name="CO" state="a3Pi"/>
 			</Species>
 			<Excitation/>
-			<Source type="measurement">Furlong and Newell 1996</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="measurement">Furlong and Newell 1996 \cite{Furlong1996}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Proc>CO(a3Pi)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Notes> Furlong and Newell 1996: extrapolated Cyril </Notes>
@@ -248,8 +248,8 @@
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Recommended/>
 			<Extrapolated/>
-			<Source type="adapation">Straub 2004 adapted for extrapolation</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-			<Notes>Data on website </Notes>
+			<Source type="adaptation"> Straub 2004 + extrapolation</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Notes>Data on website; adapted for extrapolation </Notes>
 			<Egrid unit="eV">
 				1.500000e+01    2.000000e+01    2.500000e+01    3.000000e+01    3.500000e+01
 				4.000000e+01    5.000000e+01    6.000000e+01    7.000000e+01    8.000000e+01

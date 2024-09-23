@@ -21,14 +21,14 @@
 	
 	<Process name="CO2+e -> CO(A1Pi) + O" electrons="0" threshold="13.48">
 		<Excitation/>
-		<legend>CO(A1Pi) dans la bdd</legend>
+		<legend>CO(A1Pi) BDD</legend>
 		<Proc>CO(A1Pi)</Proc>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<legend>CO(A1Pi) Dans la DB</legend>
+		<legend>CO(A1Pi) BDD</legend>
 		<Notes> Ajello 1971 for the cross section, but recalibrated to take into account the whole excitation, and not only one band emission </Notes>
 		<Recommended/>
 		<EstimatedUncertainty/>
-		<Source type="adaptation"> Ajello 1971+Simon2008 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="adaptation"> Ajello 1971 + Simon2008 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Species>
 			<Specie name="O" state="X"/>
 			<Specie name="CO" state="A1Pi"/>

@@ -99,7 +99,7 @@
 		<Excitation/>
 		<Proc>O2(vib0-3)</Proc> <!-- Name for the processus -->
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes> Probably from Rees </Notes>
 		<Egrid unit="eV">
 			2.500E-01   3.500E-01   4.500E-01   5.500E-01   6.500E-01
@@ -123,7 +123,7 @@
 		<legend>vib 0.6</legend>
 		<Proc>O2(vib3-4)</Proc> <!-- Name for the processus -->
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes> Probably from Rees </Notes>
 		<Species>
 			<Specie name="O2" state=".630"/>

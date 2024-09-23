@@ -13,13 +13,12 @@
 		<Species>
 			<Specie name="CO2" state="8.60"/>
 		</Species>
-		<legend>8.60? dans la bdd</legend>
 		<Proc>CO2(8.60)</Proc>
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes> Witasse 2002 </Notes>
+		<Source type="review"> BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<legend>Dans la DB</legend>
+		<legend>BDD</legend>
 		<Excitation/>
-		<Notes> Probably from Rees??? </Notes>
 		<Egrid unit="eV">
 			15    25    35    45    55
 			65    75    85    95   105

@@ -103,11 +103,11 @@
 		<Species>
 			<Specie name="O+" state="X"/>
 		</Species>
-		<legend>Dans la DB</legend>
+		<legend>BDD</legend>
 		<Proc>O+</Proc> <!-- Name for the processus -->
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Notes> Probably from Rees </Notes>
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes> Witasse 2002 </Notes>
+		<Source type="review"> BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Egrid unit="eV">
 			25.0000 30.0000 35.0000 40.0000 45.0000
 			50.0000 60.0000 70.0000 80.0000 90.0000

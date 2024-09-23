@@ -1,9 +1,9 @@
 <crs>
 	<Name>H2O</Name>
 	<Collider>e</Collider>
-	<title> H2O + e -> vib</title>
+	<title> H2O + e $\rightarrow$ vib</title>
 	<Emin>0.01</Emin>
-	<Emax>120000</Emax>
+	<Emax>100</Emax>
 	<Cmax>3E-15</Cmax>
 	<Cmin>1E-23</Cmin>
 	<plotname>seff_H2O_e_vib.pdf</plotname>

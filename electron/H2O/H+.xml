@@ -1,7 +1,7 @@
 <crs>
 <Name>H2O</Name>
 <Collider>e</Collider>
-<title> H2O + e -> Ionization</title>
+<title> H2O + e $\rightarrow$ H+</title>
 <Emin>0.01</Emin>
 <Emax>120000</Emax>
 <Cmax>3E-15</Cmax>

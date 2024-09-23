@@ -8,8 +8,8 @@
 	
 	<Emin>30</Emin>
 	<Emax>3500</Emax>
-	<Cmax>1E-18</Cmax>
-	<Cmin>1E-21</Cmin>
+	<Cmax>1E-15</Cmax>
+	<Cmin>1E-17</Cmin>
 	<plotname>seff_CO2_e_COa3Pi.pdf</plotname>
 	<explotname>seff_CO2_e_COa3Piext.pdf</explotname>
 
@@ -21,7 +21,7 @@
 		<Proc>CO(a3Pi)</Proc>
 		<Notes> Avakyan 1998 divided by 2 to account for the Spicam observations on Mars </Notes>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<Source type="adaptation"> Avakyan 1998+Simon 2008 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="adaptation"> Avakyan 1998 + Simon 2008 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Species>
 			<Specie name="CO" state="a3Pi"/>
 			<Specie name="O" state="X"/>
@@ -39,9 +39,10 @@
 	</Process>
 
 	<Process name="CO2+e -> CO(A3Pi)+ O" electrons="0" threshold="11.46">
-		<legend>Gronoff et al. 2011</legend>
+		<legend>Gronoff et al. 2012</legend>
 		
 		<Proc>CO(a3Pi)</Proc>
+		<texnotes title="CO(a3Pi)"> Avakyan divided by 3 to account for both the theory and Mars observations: the measurements we calibrated with respect to a tracable source; however, that source was recalibrated with a factor 3 after publication of the measurements. Therefore, the measurement cross sections were re-calibrated. The observations at Mars with ESA/Mars Express' SPICAV instrument are better fitted with these observations. See Gronoff et al. 2012, and subsequent references.</texnotes>
 		<Notes> Avakyan divided by 3 to account for both the theory and Mars observations: the measurements we calibrated with respect to a tracable source; however, that source was recalibrated with a factor 3 after publication of the measurements. Therefore, the measurement cross sections were re-calibrated. The observations at Mars with ESA/Mars Express' SPICAV instrument are better fitted with these observations. See Gronoff et al. 2012, and subsequent references.</Notes>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="adaptation">Avakyan +  Gronoff 2012</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->

@@ -5,7 +5,7 @@
 	<Emin>10</Emin>
 	<Emax>120000</Emax>
 	<Cmax>3E-16</Cmax>
-	<Cmin>1E-18</Cmin>
+	<Cmin>1E-19</Cmin>
 	<plotname>seff_N2_e_N2pfirstnegative.pdf</plotname>
 
 		 <Process name="N2+e->N2+( 391.4nm - first negative)" electrons="0" threshold="18">
@@ -46,7 +46,7 @@
 			<Proc>N2(391.4)</Proc>
 			 <legend>N2(391.4 nm) Tabata</legend>
 			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Tabata 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Tabata 2012</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> First negative 319.4 nm </Notes>
 			<Emin> 19.0 </Emin>
 			<EstimatedUncertainty/>
@@ -66,7 +66,7 @@
                         </Species>
 			 <legend>N2(427.8 nm) Tabata</legend>
 			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Tabata 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Tabata 2012</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> First negative 427.8 nm </Notes>
 			<EstimatedUncertainty/>
 			<uncertainty>20</uncertainty>
@@ -85,7 +85,7 @@
                         </Species>
 			<EstimatedUncertainty/>
 			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Tabata 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Tabata 2012</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> First negative 470.9 nm </Notes>
 			 <legend>N2(470.9 nm) Tabata</legend>
 			<uncertainty>20</uncertainty>
@@ -107,7 +107,7 @@
 			 <legend>N2(358.2 nm) Tabata</legend>
 			<EstimatedUncertainty/>
 			<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Tabata 2009</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Tabata 2012</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes> First negative 358.2 nm </Notes>
 			<uncertainty>20</uncertainty>
                         <Emin> 29.2 </Emin>

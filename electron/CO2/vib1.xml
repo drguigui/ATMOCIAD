@@ -39,9 +39,9 @@
 		<Excitation/>
 		<Proc>CO2(vib1)</Proc>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<legend>Dans la DB</legend>
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes> ? origin, avakyan? </Notes>
+		<legend>BDD</legend>
+		<Notes> Witasse 2002 </Notes>
+		<Source type="review"> BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Egrid unit="eV">
 			0.0844      0.0862     0.0932    0.1035   0.1208
 			0.1382      0.1726     0.2070    0.2750   0.3450

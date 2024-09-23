@@ -4,7 +4,7 @@
 	<title> O$_2$  + e $\rightarrow$ O${_{2}}{^{+}}$(Second Negative emission)</title>
 	<Emin>10</Emin>
 	<Emax>1000</Emax>
-	<Cmax>3E-18</Cmax>
+	<Cmax>3E-15</Cmax>
 	<Cmin>8E-19</Cmin>
 	<plotname>seff_O2_e_O2psecondneg.pdf</plotname>
 	<Process name="O2+e->O2+(SecondNegative)" electrons="1" threshold="18">

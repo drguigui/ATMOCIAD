@@ -2,7 +2,7 @@
 	<Name>H2O</Name>
 	<Collider>e</Collider>
 	<RecommendedFile/>
-	<title> H2O + e</title>
+	<title>H2O + e</title>
 	<Emin>0.01</Emin>
 	<Emax>120000</Emax>
 	<Cmax>3E-13</Cmax>

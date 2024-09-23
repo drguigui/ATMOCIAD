@@ -28,7 +28,7 @@
 
 	<ElasticCrs>
 
-		<legend>CO2 Elastic Tanaka (dans la bdd)</legend>
+		<legend>CO2 Elastic Tanaka (BDD)</legend>
 		<Source type="review">Tanaka 1998</Source> <!-- types : measurement, bratio, theory, review, unknown-->
 		
 		<Notes>In BDD. </Notes>

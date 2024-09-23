@@ -9,7 +9,7 @@
 	<plotname>seff_O_e_elastic.pdf</plotname>
 	<ElasticCrs>
 		<legend>O elastic old database</legend>
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes> Probably from Itikawa, Rees or Strickland </Notes>
 		<Egrid unit="eV">
 			5.000E-02   1.500E-01   2.500E-01   3.500E-01   4.500E-01
@@ -89,7 +89,7 @@
 
 	<ElasticCrs>
 		<legend>O elastic Itikawa+Williams </legend>
-		<Source type="adaptation">Itikawa 1990+Williams</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="adaptation">Itikawa 1990 + Williams 1989</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes> Adaptation of measurments at low energy and computation at high energy. Estimated uncertainty</Notes>
 		<EstimatedUncertainty/>
 		<Extrapolated/>
@@ -121,7 +121,7 @@
 
 	<ElasticCrs>
 		<legend>O elastic Itikawa+Williams+modif (rec)</legend>
-		<Source type="adaptation">Itikawa 1990+Williams+High E estimation</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="adaptation">Itikawa 1990 + Williams 1989 + High E estimation</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes> Adaptation of measurments at low energy and computation at high energy. Estimated uncertainty. Improvements based on the total cross section and the correlated shape of ionization and elastic cross sections</Notes>
 		<EstimatedUncertainty/>
 		<Extrapolated/>

@@ -15,7 +15,7 @@
 			<legend>H2(B1Su)</legend>
 			<Proc>H2(B1Su)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">H2(B 1S+u (2pS))Dalgarno 99</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">H2(B 1S+u (2pS)) Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>
@@ -66,7 +66,7 @@
 			<legend>H2(C1Pu)</legend>
 			<Proc>H2(C1Pu)</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="adaptation">Dalgarno 99</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+			<Source type="adaptation">Dalgarno 1999</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 			<Notes>Estimated uncertainty| from Helene</Notes>
 			<Recommended/>
 			<Extrapolated/>

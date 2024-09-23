@@ -32,7 +32,7 @@
 
 	<ElasticCrs>
 		<legend>O2 Elastic BDD</legend>
-		<Source type="unknown">? BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="review">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 		<Notes> Probably from Rees </Notes>
 		<Egrid unit="eV">
 			5.000E-02   1.500E-01   2.500E-01   3.500E-01   4.500E-01

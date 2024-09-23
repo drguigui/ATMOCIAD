@@ -106,7 +106,7 @@
 				<Specie name="H2+" state="X"/>
 			</Species>
 			<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-			<Source type="review">Phelps</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+			<Source type="review">Phelps \cite{Phelps}</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes>  </Notes>
 			<Egrid unit="eV">
 				0.0000 15.4000 19.5000 21.0000 23.0000

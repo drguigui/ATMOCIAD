@@ -16,8 +16,8 @@
 		<Proc>O(1D)</Proc>
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="adaptation"> Itikawa 90</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-		<Notes> Adaptation from the early measurements Recommended by comparison with the Itikawa 90 paper: the decrease is too important in Laher</Notes>
-		<legend>1D BDD</legend>
+		<Notes> Adaptation from the early measurements Recommended by comparison with the Itikawa 1990 paper: the decrease is too important in Laher</Notes>
+		<legend>1D BDD; Itikawa 90</legend>
 		<Recommended/>
 		<Extrapolated/>
 		<Excitation/>

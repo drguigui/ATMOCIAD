@@ -34,9 +34,9 @@
 		</Species>
 		<Proc>CO+</Proc> <!-- Name for the processus -->
 		<Section>ionization</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
-		<legend>Dans la BDD</legend>
-		<Source type="unknown">? Rees?</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
-		<Notes>Unknown origin </Notes>
+		<legend>BDD  Witasse 2002</legend>
+		<Source type="review">BDD</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes>BDD Witasse 2002</Notes>
 		<Ionization/>
 		<Egrid unit="eV">
 			0.0145E3 0.0150E3 0.0155E3 0.0160E3 0.0165E3 0.0170E3
