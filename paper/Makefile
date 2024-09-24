@@ -48,7 +48,7 @@ commit: initial svn complet
 
 initial: propre
 	 @echo "Suppression des fichiers cibles"
-	 @rm -rf *.pdf *.ps
+	 @rm -rf atmociad.pdf *.ps
 
 %.pdf:%.tex
 #	@echo '\\newcommand{\myRevision}{' > version.tex ;	

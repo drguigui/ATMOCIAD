@@ -1,0 +1,20 @@
+# Cross section for O
+# Energy in eV
+# Cross section in cm2
+# Total Cross Section
+# Elastic Cross Section
+# Process 0 : O+p->O*
+# Process 1 : O+p->O+ + p + e
+# Process 2 : O+p->O+ + H
+# Process 3 : O+p->H alpha
+# Process 4 : O+p->H beta
+#	AeroPlanets 1.3, 2009-2024
+#	Copyright G Gronoff 2009
+#	Report bugs : guillaume.gronoff@gmail.com
+#
+#	Launched :Tue Sep 24 00:41:10 2024
+# Planet:Anonymous
+# Photoionization used, SZA = 45
+# Electron impact ionization used
+# Electron impact ionization error: 0.331248% (>0 : gain)
+
