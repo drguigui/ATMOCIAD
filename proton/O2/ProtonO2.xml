@@ -7,8 +7,8 @@
 	<Emax>1E7</Emax>
 	<Cmax>1E-14</Cmax>
 	<Cmin>1E-21</Cmin>
-	<plotname>seff_O_p_recommended.pdf</plotname>
-	<explotname>seff_O_p_recommendedextr.pdf</explotname>
+	<plotname>seff_O2_p_recommended.pdf</plotname>
+	<explotname>seff_O2_p_recommendedextr.pdf</explotname>
 	<figsize>3</figsize>
 
 
@@ -17,7 +17,7 @@
 		<TotalCrsProton/>
 		
 		<ElasticCrs>
-			<zero/>
+			<Zero/>
 			<Source type="adaptation">Gronoff +Kozelov and Ivanov 1992</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes>From Kozelov 1992 for N2</Notes>
 			<!-- TODO : proton function, uncertainty -->

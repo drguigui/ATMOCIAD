@@ -18,7 +18,7 @@
 		<TotalCrsProton/>
 		
 		<ElasticCrs>
-			<zero/>
+			<Zero/>
 			<Source type="unknown">The work has to be done for this one</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 			<Notes>No cross sections for it now</Notes>
 			<!-- TODO : proton function, uncertainty -->
