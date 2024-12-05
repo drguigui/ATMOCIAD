@@ -6,8 +6,8 @@
 	<Emax>1E5</Emax>
 	<Cmax>1E-15</Cmax>
 	<Cmin>1E-26</Cmin>
-	<plotname>seff_Ar_ph_Arp.pdf</plotname>
-	<lambplotname>seff_Ar_ph_Arp_lambda.pdf</lambplotname>
+	<plotname>seff_Ar_ph_Arpp.pdf</plotname>
+	<lambplotname>seff_Ar_ph_Arpp_lambda.pdf</lambplotname>
 	<Ar>
 		<Process name="Ar + hv -> Ar++ + e" electrons="2" threshold="24.6">
 			<Species>
