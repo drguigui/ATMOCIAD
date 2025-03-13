@@ -42,7 +42,7 @@
 			<Proc>O($^1$S) + CO</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="measurement">Lawrence 1972 </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Uncertainty in Lawrence: pb photodissciation ratio. PHIDRATES for the total. But pb near Ly alpha</Notes>
+			<Notes>Adapted nm -> eV, Uncertainty in Lawrence: pb photodissciation ratio. PHIDRATES for the total. But pb near Ly alpha.</Notes>
 			<EstimatedUncertainty/>
 			<Extrapolated/>
 			<Egrid unit="eV">
@@ -95,7 +95,7 @@
 			<Proc>O($^1$S) + CO</Proc>
 			<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 			<Source type="measurement">Lawrence 1972+PHIDRATES </Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
-			<Notes>Adapted nm -> eV, Uncertainty in Lawrence: pb photodissciation ratio. Correction near ly alpha. Adaptation \cite{Lawrence1972,Huebner2015}</Notes>
+			<Notes>Adapted nm -> eV, Uncertainty in Lawrence: pb photodissciation ratio. Correction near ly alpha. Adaptation \cite{Lawrence1972,Huebner2015}. The quantum efficiency is near the values reported in Gkouvelis 2024</Notes>
 			<Recommended/>
 			<EstimatedUncertainty/>
 			<Extrapolated/>

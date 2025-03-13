@@ -1,0 +1,27 @@
+<crs>
+	<Name>O</Name>
+	<Collider>e</Collider>
+	<title>O + e $\rightarrow$ O(${^5}$S) emission (direct excitation + cascades)</title>
+	<Emin>9</Emin>
+	<Emax>120000</Emax>
+	<Cmax>5E-17</Cmax>
+	<Cmin>1E-19</Cmin>
+	<plotname>seff_O_e_O5Semit.pdf</plotname>
+	<Process name="O+e->O(5S)" electrons="0" threshold="10.">
+		<Species>
+			<Specie name="O" state="35"/>
+		</Species>
+		<Emission/>
+		<Proc>O(5S)</Proc>
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="measurements">Zipf 1985</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Notes>Zipf 1985 reports on the paper by Stone and Zipf 1974. The 1974 paper appears to not be online; however, Avakyan divided its value by 3 (when one compare with the abstract of the 1974 paper; and it seems in agreement with the Figure 1 in Strickland and Anderson 1983). Zipf 1985 reports on an 'in-press' paper (Kao and Zipf 1985), but it does not appear to exist </Notes>
+
+		<Egrid unit="eV">
+			11 12 15 20 25 30 35 80
+		</Egrid>
+		<Cross unit="cm2" fact="3E-18" uncertainty="50%">
+			4.1 7.1 8.9 6.1 4.1 2.9 1.8 0.71
+		</Cross>
+	</Process>
+</crs>

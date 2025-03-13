@@ -50,7 +50,7 @@
 		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<legend>O(3S) Ajello</legend>
 		<Notes> 30% uncertainties for all the emissions... </Notes>
-		<Source type="adaptation">Ajello 1971 + modification for extrapolatoin</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Source type="adaptation">Ajello 1971 + modification for extrapolation</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
 
 		<Egrid unit="eV">
 			21.8727		23.0548		23.9871		25.6139		27.7114

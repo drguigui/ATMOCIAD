@@ -44,12 +44,11 @@
 		<Species>
 			<Specie name="O" state="3S"/>
 		</Species>
-		<legend>O(3S) EMIT Johnson (recommended)</legend>
+		<legend>O(3S) Johnson (2005)</legend>
 		<Proc>O(3S)</Proc>
 		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
 		<Source type="review">Johnson 05</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
 		<Notes> Including cascades (emission cross section). </Notes>
-		<Recommended/>
 		<Excitation/>
 		<Egrid unit="eV">
 			9.51 10 11 12 13
@@ -72,6 +71,58 @@
 			8.23 7.49 6.84 6.33 5.89
 			5.05 4.43 3.53 2.98 2.53
 			1.89 1.57
+		</Cross>
+	</Process>
+	<Process name="O+e->O(3S)" electrons="0" threshold="10.">
+		<Species>
+			<Specie name="O" state="3S"/>
+		</Species>
+		<legend>O(3S) EMIT Johnson (2003)</legend>
+		<Proc>O(3S)</Proc>
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="review">Johnson 2003</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Including cascades (emission cross section). </Notes>
+		<Excitation/>
+		<Egrid unit="eV">
+			9.51 10 11 12 13
+			14 15 16 18
+			20 25 30  40
+			50 75 100 200 300 
+			400 500 750 1000  
+		</Egrid>
+		<Cross unit="cm2" uncertainty="24%" fact="1E-18">
+			0 0.8 4.35 9.42 14.12
+			15.28 16.45 16.75 16.95
+			16.90 16.44 15.60 14.18
+			12.63  9.96  8.55 5.97 4.53
+			3.68  3.08  2.52 2.35  
+		</Cross>
+	</Process>
+
+	<Process name="O+e->O(3S)" electrons="0" threshold="10.">
+		<Species>
+			<Specie name="O" state="3S"/>
+		</Species>
+		<legend>O(3S) EMIT Johnson (Recommended ) adapted</legend>
+		<Proc>O(3S)</Proc>
+		<Section>emission</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="adaptation">Johnson 2003 + Johnson 2005</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown? -->
+		<Notes> Including cascades (emission cross section), and corrected at high energy. </Notes>
+		<Recommended/>
+		<Excitation/>
+		<Egrid unit="eV">
+			9.51 10 11 12 13
+			14 15 16 18
+			20 25 30  40
+			50 75 100 200 300 
+			400 500 800 1000 
+		</Egrid>
+		<Cross unit="cm2" uncertainty="24%" fact="1E-18">
+			0 0.8 4.35 9.42 14.12
+			15.28 16.45 16.75 16.95
+			16.90 16.44 15.60 14.18
+			12.63  9.96  8.55 5.97 4.53
+			3.68  3.08 1.89 1.57
 		</Cross>
 	</Process>
 

@@ -63,6 +63,46 @@
 		</Cross>
 	</Process>
 
+	<Process name="CO2+e -> CO(A3Pi)+ O" electrons="0" threshold="11.46">
+		<legend>Lee et al. 2021</legend>
+		
+		<Proc>CO(a3Pi)</Proc>
+		<texnotes title="CO(a3Pi)"> New measurements </texnotes>
+		<Notes> </Notes>
+		<Section>excitation</Section> <!-- total | elastic | ionization | dissociation | excitation | emission -->
+		<Source type="measurement">Lee 2021</Source> <!-- types : measurement, bratio, theory, review, adaptation, unknown -->
+		<Species>
+			<Specie name="CO" state="a3Pi"/>
+			<Specie name="O" state="X"/>
+		</Species>
+		<Excitation/>
+		<Recommended/>
+		<EstimatedUncertainty/>
+		<Egrid unit="eV">
+			5.704  6.432  7.039  7.767  8.859  
+			9.587  10.68  11.408  12.015  12.621  
+			12.985  14.078  15.17  16.505  17.718  
+			19.175  20.995  22.33  23.908  25.85  
+			27.67  29.612  31.796  33.981  36.408  	
+			38.835  41.383  44.175  46.602  49.393  
+			52.67  55.947  59.466  63.228  66.869  
+			70.631  75.121  79.369  84.345  89.199  
+			94.175  100.121  
+		</Egrid>
+		<Cross unit="cm2"  uncertainty="25%">
+			1.9733e-18 1.25338e-17 2.5576e-17 3.0454e-17 3.2121e-17
+			3.5522e-17 4.0128e-17 4.345e-17 4.3922e-17 4.44e-17
+			4.4642e-17 4.2815e-17 3.9572e-17 3.3438e-17 2.7228e-17
+			2.1033e-17 1.6079e-17 1.26182e-17 9.9034e-18 8.3704e-18
+			7.458e-18 6.6805e-18 6.1774e-18 5.8035e-18 5.5106e-18
+			5.3442e-18 5.1558e-18 5.0807e-18 4.8755e-18 4.729e-18
+			4.6366e-18 4.4745e-18 4.4107e-18 4.3483e-18 4.2415e-18
+			4.1815e-18 4.1236e-18 4.0021e-18 3.8855e-18 3.8729e-18
+			3.8201e-18 3.7102e-18
+		</Cross>
+	</Process>
+
+
 
 
 </crs>
